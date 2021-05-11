@@ -20,10 +20,10 @@ export const Header = observer(() => {
 
     const navConfig = [
       {name: lang.t("get.started"), path: '/'},
-      {name: lang.t("ecosystem"), path: '/ecosystem'},
-      {name: lang.t("developers"), path: '/developers'},
-      {name: lang.t("resources"),path: '/resources'},
-      {name: lang.t("foundation"),path: '/foundation'},
+      {name: lang.t("ecosystem"), path: '/'},
+      {name: lang.t("developers"), path: '/'},
+      {name: lang.t("resources"),path: '/'},
+      {name: lang.t("foundation"),path: '/'},
     ]
 
     const store = useLocalStore(() => ({
@@ -78,7 +78,7 @@ export const Header = observer(() => {
                       navConfig.map(item => {
                         return<Link href={item.path} key={item.name} style={{textDecoration: 'none'}}> 
                             <MenuItem color="black">
-                              <Text >{item.name}</ Text>
+                              <Text css={{userSelect: 'none'}}>{item.name}</ Text>
                             </MenuItem>
                         </Link>
                         })

@@ -19,8 +19,9 @@ export const JoinRevolution = observer(() => {
     return (
       <Box pb="30rem">
         <Box  maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" borderRadius="1.125rem" css={{
-            background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%)',
-            boxShadow: 'inset -1px -1px 0px rgba(172, 208, 254, 0.25)',
+            backgroundImage: 'url(/images/join_bg.png)',
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat'
           }}>
             <Flex direction="column" pt="5rem" pb="7.5rem" alignItems="center">
               <Text fontSize={{xl: "3rem", "2xl": "4rem"}} lineHeight="6rem" fontWeight="semibold" maxWidth="100%" mb="1rem">
