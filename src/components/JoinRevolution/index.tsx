@@ -17,10 +17,15 @@ export const JoinRevolution = observer(() => {
   ]
 
     return (
-      <Box pb="30rem">
+      <Box pb="30rem"  css={{
+        backgroundImage: 'url(/images/join_bg2.png)',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '40vw 27rem'
+      }}>
         <Box  maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" borderRadius="1.125rem" css={{
-            backgroundImage: 'url(/images/join_bg.png)',
-            backgroundSize: '100% 100%',
+            backgroundImage: 'url(/images/join_bg.png),url(/images/join_bg3.png)',
+            backgroundSize: '100% 100%, 100% 100%',
             backgroundRepeat: 'no-repeat'
           }}>
             <Flex direction="column" pt="5rem" pb="7.5rem" alignItems="center">

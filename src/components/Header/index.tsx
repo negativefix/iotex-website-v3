@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
-import {  useHistory } from 'react-router-dom';
+import {  Link, useHistory } from 'react-router-dom';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { useStore } from '../../store';
-import { Link } from "@chakra-ui/react"
+// import { Link } from "@chakra-ui/react"
 import { observer, useLocalStore } from 'mobx-react-lite';
 import { IoMenu } from "react-icons/io5";
 
@@ -19,11 +19,11 @@ export const Header = observer(() => {
   const { location } = history
 
     const navConfig = [
-      {name: lang.t("get.started"), path: '/'},
-      {name: lang.t("ecosystem"), path: '/'},
-      {name: lang.t("developers"), path: '/'},
-      {name: lang.t("resources"),path: '/'},
-      {name: lang.t("foundation"),path: '/'},
+      {name: lang.t("get.started"), path: '/getStarted'},
+      {name: lang.t("ecosystem"), path: '/ecosystem'},
+      {name: lang.t("developers"), path: '/developers'},
+      {name: lang.t("resources"),path: '/resources'},
+      {name: lang.t("foundation"),path: '/foundation'},
     ]
 
     const store = useLocalStore(() => ({
@@ -46,14 +46,26 @@ export const Header = observer(() => {
                   <Flex>
                     {
                       navConfig.map(item => {
-                        return <Link key={item.name} href={item.path} style={{textDecoration: 'none'}} display="block" ml="5rem"  >
-                          <Text color="white" fontSize="xl" textDecoration="none">{item.name}</Text>
+                        return <Link key={item.name} to={item.path} style={{
+                          textDecoration: 'none',
+                          marginLeft:"5rem",
+                          '&:hover': {
+                            color: '#000  !important'
+                          }
+                          }} >
+                          <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} fontSize="xl" textDecoration="none" fontWeight="semibold" css={{
+                            '&:hover': {
+                              color: '#44FFB2 !important'
+                            }
+                          }}>
+                            {item.name}
+                          </Text>
                         </Link> 
                       })
                     }
                   </Flex>
                   <Menu isLazy>
-                    <MenuButton ml="4rem" bg="transparent" color="white" border="none">{store.curLang.name}</MenuButton>
+                    <MenuButton ml="4rem" fontWeight="semibold" bg="transparent" color="white" border="none">{store.curLang.name}</MenuButton>
                     <MenuList color="mainColor" minWidth="60px" defaultValue={store.curLang.name}>
                         {Object.values(langGroups).map(item => {
                             return <MenuItem key={item.name}  css={{textAlign: 'center'}} value={item.name} onClick={() => lang.setLang(item.text)}>
@@ -76,7 +88,7 @@ export const Header = observer(() => {
                 <MenuList color="white">
                     {
                       navConfig.map(item => {
-                        return<Link href={item.path} key={item.name} style={{textDecoration: 'none'}}> 
+                        return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}> 
                             <MenuItem color="black">
                               <Text css={{userSelect: 'none'}}>{item.name}</ Text>
                             </MenuItem>
