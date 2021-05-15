@@ -10,7 +10,8 @@ export const customTheme = extendTheme({
         btnBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
         btnTextColor: '#1C1F24',
         brandColor: '#44FEB0',
-        brandColor2: '#44FFB2'
+        brandColor2: '#44FFB2',
+        textColor: "#43C9BA"
     },
     fonts: {
         body: 'Montserrat',
@@ -48,7 +49,34 @@ export const customTheme = extendTheme({
                 left: 0,
                 width: '100%',
                 height: '2px'
-            }
+            },
+            "@keyframes bigBall": {
+              '0%': {
+                top: '5%'
+              },
+              '100%': {
+                top: '12%'
+              }
+            },
+            "@keyframes smallBall": {
+              '0%': {
+                top: '45%'
+              },
+              '100%': {
+                top: '52%'
+              }
+            },
+            "@keyframes upAnimate": {
+              '0': {
+                marginTop: '0px'
+              },
+              '50%': {
+                marginTop: '-20px'
+              },
+              '100%': {
+                marginTop: '0px'
+              }
+            },
         }
     }
 });

@@ -1,31 +1,26 @@
 import React from 'react';
 import { Box, Flex, Text  } from '@chakra-ui/react';
 import { useStore } from '../../store';
-import { Link } from "@chakra-ui/react"
+import { LogoCardItem } from "../LogoCardItem/index"
 import { observer } from 'mobx-react-lite';
 
 export const AwardWinning = observer(() => {
   const { lang } = useStore();
+  
+  const logos = [
+    {icon: '/images/icon-logo1.png', iocn_active: '/images/icon-logo1_s.png'},
+    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png'},
+    {icon: '/images/icon-logo3.png', iocn_active: '/images/icon-logo3_s.png'},
+    {icon: '/images/icon-logo4.png', iocn_active: '/images/icon-logo4_s.png'},
+  ]
 
     return (
       <Box maxWidth="1554px" mx="auto">
         <Flex justifyContent="space-between">
             <Flex flexWrap="wrap" maxWidth="50%" justifyContent="space-between"  alignContent="space-between">
               {
-                [1, 2, 3, 4].map(item => {
-                  return <Flex key={item} w="46%" h="48%" maxHeight="140px" justifyContent="center" alignItems="center" css={{
-                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
-                      mixBlendMode: 'normal',
-                      borderRadius: '1.125rem',
-                      '&:hover': {
-                        backgroundColor: '#fff',
-                        img: {
-                          content: `url(/images/icon-logo${item}_s.png)`
-                        }
-                      }
-                  }}>
-                    <img style={{width: '60%'}} src={`/images/icon-logo${item}.png`} alt="" />
-                  </Flex>
+                logos.map(item => {
+                  return <LogoCardItem item={item} width="47%" height="8.75rem" />
                 })
               }
             </Flex>

@@ -6,14 +6,14 @@ import { observer } from 'mobx-react-lite';
 interface ComponentsProps {
   icon: string;
   title: string;
-  desc: string
+  desc: string;
 }
 
 export const DropCard = observer(({icon, title, desc} : ComponentsProps) => {
     return (
-      <Box w="100%" p="1.25rem" pb="0" borderBottom="1px" borderRight="1px" borderColor="borderColor" css={{
+      <Box key={title} w="100%" p="1.25rem" pb="0" borderBottom="1px" borderRight="1px" borderColor="borderColor" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
-        transition: 'height 0.3s',
+        transition: 'height 0.6s',
         height: '170px',
         overflow: 'hidden',
         '&:hover': {

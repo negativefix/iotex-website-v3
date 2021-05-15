@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import { observer, useLocalStore } from 'mobx-react-lite';
+import { Link } from "@chakra-ui/react"
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
@@ -14,11 +15,16 @@ export const NextGen = observer(() => {
       {name: lang.t("dEFIoT"), desc: lang.t("advantage1.tips"), icon: '/images/deflot.png',selectedIcon: '/images/card4.png', show: false },
     ],
     dapps1: [
-      {name: lang.t("ucam"), desc: lang.t("ucam.desc"), icon: "/images/ucam.png" },
+      {name: lang.t("ucam"), desc: lang.t("ucam.desc"), icon: "/images/ucam.png", href: "https://ucam.iotex.io/" },
       {name: lang.t("pebble"), desc: lang.t("pebble.desc"), icon: "/images/pebble.png" },
       {name: lang.t("ucam"), desc: lang.t("ucam.desc"), icon: "/images/ucam.png" },
     ],
     dapps2: [
+      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
+      {name: lang.t("mimo"), desc: lang.t("mimo.desc"), icon: "/images/mimo.png" },
+      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
+    ],
+    dapps3: [
       {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
       {name: lang.t("mimo"), desc: lang.t("mimo.desc"), icon: "/images/mimo.png" },
       {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
@@ -101,25 +107,27 @@ export const NextGen = observer(() => {
               <Flex justifyContent="space-between">
                 {
                   store.dapps1.map((item, index) => {
-                    return <Flex p="1.25rem" maxWidth="450px" w="30%" key={index} cursor="pointer" css={{
-                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
-                      mixBlendMode: 'normal',
-                      borderRadius: '1.25rem',
-                      boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
-                      backdropFilter: 'blur(100px)'
-                    }}>
-                      <Image
-                        boxSize="3.75rem"
-                        objectFit="cover"
-                        src={item.icon}
-                        alt={item.name}
-                        mr="1.25rem"
-                      />
-                      <Box textAlign="left">
-                        <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                        <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
-                      </Box>
-                    </Flex>
+                    return <Link to={item.href} key={index} w="30%" maxWidth="450px" textDecoration="none">
+                        <Flex p="1.25rem" cursor="pointer" css={{
+                        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+                        mixBlendMode: 'normal',
+                        borderRadius: '1.25rem',
+                        boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
+                        backdropFilter: 'blur(100px)'
+                      }}>
+                        <Image
+                          boxSize="3.75rem"
+                          objectFit="cover"
+                          src={item.icon}
+                          alt={item.name}
+                          mr="1.25rem"
+                        />
+                        <Box textAlign="left">
+                          <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
+                          <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
+                        </Box>
+                      </Flex>
+                    </Link>
                   })
                 }
               </Flex>
@@ -142,7 +150,7 @@ export const NextGen = observer(() => {
                         alt={item.name}
                         mr="1.25rem"
                       />
-                      <Box>
+                      <Box textAlign="left">
                         <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
                         <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
                       </Box>
@@ -169,7 +177,7 @@ export const NextGen = observer(() => {
                         alt={item.name}
                         mr="1.25rem"
                       />
-                      <Box>
+                      <Box textAlign="left">
                         <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
                         <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
                       </Box>
