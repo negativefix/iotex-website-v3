@@ -202,7 +202,7 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle4")}
             </Text>
             <a href="">
-              <Box bg="btnBgColor" className="commonBtn" className="commonBtn" borderRadius="10px" width="80%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="80%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
                 <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("touch.us")}</Text>
               </Box>
             </a>
@@ -239,7 +239,7 @@ export const Developers = observer(() => {
           </Text>
 
           <a href="/">
-            <Box bg="btnBgColor" className="commonBtn" className="commonBtn" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+            <Box bg="btnBgColor" className="commonBtn" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
               <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("power.by.iotex")}</Text>
             </Box>
           </a>
