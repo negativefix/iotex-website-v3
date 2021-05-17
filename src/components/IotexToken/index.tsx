@@ -27,7 +27,7 @@ export const IotexToken = observer(() => {
           <Text fontSize={{xl: "1.5rem", "2xl": "1.75rem"}} fontWeight="medium"  mb="4.25rem"maxWidth="55%" >
             {lang.t("subtitle5")}
           </Text>
-          <Box bg="btnBgColor" borderRadius="10px" width="16rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+          <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="16rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
             <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
           </Box>
           <Box mt="7.25rem">

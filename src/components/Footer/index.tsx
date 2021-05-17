@@ -52,7 +52,7 @@ export const Footer = observer(() => {
                 <Flex direction="column">
                   {
                     item.list.map(option => {
-                      return <Text key={option.name} fontSize="1rem" color="textColor">{option.name}</Text>
+                      return <Text key={option.name} fontSize="1rem" color="textColor"  cursor="pointer">{option.name}</Text>
                     })
                   }
                 </Flex>

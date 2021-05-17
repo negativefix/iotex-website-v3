@@ -8,6 +8,7 @@ export const { styled, css, global } = createCss({
       purple500: 'hsl(252,78%,60%)',
       green500: 'hsl(148,60%,60%)',
       red500: 'hsl(352,100%,62%)',
+      btnHoverBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
     },
     space: {
       1: '5px',

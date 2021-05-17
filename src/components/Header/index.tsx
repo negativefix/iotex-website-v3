@@ -34,7 +34,7 @@ export const Header = observer(() => {
     }));
 
     return (
-        <Box w="100%" pt="1.125rem" px="1.25rem" boxSizing="border-box">
+        <Box w="100%" pt="1.125rem" px="1.25rem" boxSizing="border-box" position="absolute" top="0" left="0">
             <Flex
                 zIndex="999"
                 justify={'center'}

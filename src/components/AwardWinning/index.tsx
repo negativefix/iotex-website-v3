@@ -19,8 +19,10 @@ export const AwardWinning = observer(() => {
         <Flex justifyContent="space-between">
             <Flex flexWrap="wrap" maxWidth="50%" justifyContent="space-between"  alignContent="space-between">
               {
-                logos.map(item => {
-                  return <LogoCardItem item={item} width="47%" height="8.75rem" />
+                logos.map((item, index) => {
+                  return <Box key={index} width="47%">
+                    <LogoCardItem item={item} width="100%" height="8.75rem" />
+                  </Box>
                 })
               }
             </Flex>
@@ -28,9 +30,11 @@ export const AwardWinning = observer(() => {
               <Text fontSize="1.25rem">{lang.t("backed.by")}</Text>
               <Text fontSize="4rem" fontWeight="semibold" lineHeight="5.5rem">{lang.t("award.winning")}</Text>
               <Text fontSize="1.125rem" fontWeight="medium" lineHeight="2.25rem" mb="2.875rem">{lang.t("award.winning.content")}</Text>
-              <Box bg="btnBgColor" borderRadius="10px" maxWidth="448px" px="1rem"  py="1.6rem" cursor="pointer">
-                <Text fontSize="1.75rem" color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
-              </Box>
+              <a href="https://iotex.io/research" target="_blank">
+                <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" px="1rem"  py="1.6rem" cursor="pointer">
+                  <Text fontSize="1.75rem" color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
+                </Box>
+              </a>
             </Box>
         </Flex>
       </Box>

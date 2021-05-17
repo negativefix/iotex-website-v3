@@ -16,7 +16,7 @@ export const DropLinkItem = observer(({icon, title, desc} : ComponentsProps) => 
       <Box w="100%" p="1.25rem" pb="0" maxWidth="329px" css={{
         height: '170px',
         overflow: 'hidden',
-        transition: 'height 0.3s',
+        transition: 'height 0.8s',
         '&:hover': {
           height: "340px",
         }

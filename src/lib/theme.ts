@@ -8,6 +8,7 @@ export const customTheme = extendTheme({
         grayColor: "rgba(255,255,255,0.8)",
         grayColor2: "#999999",
         btnBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
+        btnHoverBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
         btnTextColor: '#1C1F24',
         brandColor: '#44FEB0',
         brandColor2: '#44FFB2',
@@ -52,18 +53,18 @@ export const customTheme = extendTheme({
             },
             "@keyframes bigBall": {
               '0%': {
-                top: '5%'
+                top: '15%'
               },
               '100%': {
-                top: '12%'
+                top: '20%'
               }
             },
             "@keyframes smallBall": {
               '0%': {
-                top: '45%'
+                top: '50%'
               },
               '100%': {
-                top: '52%'
+                top: '55%'
               }
             },
             "@keyframes upAnimate": {
@@ -77,6 +78,23 @@ export const customTheme = extendTheme({
                 marginTop: '0px'
               }
             },
+            '.commonBtn': {
+              opacity: 1,
+              transition: 'opacity 0.5s',
+              '&:hover': {
+                opacity: 0.8
+              }
+            },
+            '.showTwoLine': {
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: '-webkit-box',
+              WebkitLineClamp: '2',
+              WebkitBoxOrient: 'vertical',
+              wordWrap: 'break-word',
+              wordBreak: 'break-all',
+              whiteSpace: 'normal'
+            }
         }
     }
 });

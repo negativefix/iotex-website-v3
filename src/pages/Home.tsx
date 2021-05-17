@@ -4,10 +4,8 @@ import { useStore } from '../store/index';
 import { Flex, Box, Text, Image, Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,} from '@chakra-ui/react';
+  ModalBody
+} from '@chakra-ui/react';
 import BasicLayout from '../Layouts/BasicLayout'
 import {Banner} from '@/components/Banner/index'
 import {DropCard} from '@/components/DropCardItem/index'
@@ -16,6 +14,7 @@ import {NextGen} from '@/components/NextGen/index'
 import {BuildOnIotex} from '@/components/BuildOnIotex/index'
 import {IotexToken} from '@/components/IotexToken/index'
 import {JoinRevolution} from '@/components/JoinRevolution/index'
+import CountTo from 'react-count-to';
 
 export const Home = observer(() => {
   const { lang } = useStore();
@@ -35,12 +34,13 @@ export const Home = observer(() => {
 
   const store = useLocalStore(() => ({
     isOpen: false,
+    hoverIndex: 0,
     open() {
       store.isOpen = true
     },
     onClose() {
       store.isOpen = false
-    }
+    },
   }));
   
   return (
@@ -51,9 +51,9 @@ export const Home = observer(() => {
           analysis.map(item => {
             return <Box key={item.name} w="24rem" textAlign="center">
               <Text fontWeight="medium" fontSize="4rem">
-                {item.amount}{item.coin}
+                <CountTo from={0} to={item.amount} speed={5000}  />{item.coin}
               </Text>
-              <Text fontSize="1.25rem" fontWeight="medium">{item.name}</Text>
+              <Text fontSize="1.25rem" fontWeight="semibold">{item.name}</Text>
             </Box>
           })
         }
@@ -79,7 +79,7 @@ export const Home = observer(() => {
         backgroundImage: 'url(/images/award_wing_bg.png)',
         backgroundSize: '80%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '30% 100%'
+        backgroundPosition: '30% 90%'
       }}>
         <Box mx="auto" position="relative">
           <Box onClick={store.open}>
@@ -100,7 +100,7 @@ export const Home = observer(() => {
                 <ModalBody  p="0.5rem">
                   <iframe 
                     width="100%" height="100%" 
-                    src="https://www.youtube.com/embed/gIVskvgzG9M" 
+                    src="https://www.youtube.com/embed/gIVskvgzG9M?rel=0&amp&autoplay=1" 
                     title="YouTube video player" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   ></iframe>
@@ -108,10 +108,17 @@ export const Home = observer(() => {
               </ModalContent>
             </Modal>
         </Box>
-        <Flex maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" h="337px" mb="8.56rem">
+        <Flex h="337px" mb="8.56rem">
           {
-            advantages.map(item => {
-              return <DropCard title={item.title} icon={item.icon} desc={item.desc}  />
+            advantages.map((item, index) => {
+              return <Box key={item.title}>
+                <DropCard 
+                  hoverIndex={store.hoverIndex} 
+                  index={index} title={item.title} 
+                  icon={item.icon} desc={item.desc}
+                  changeHoverIndex={() => store.hoverIndex = -1}
+                />
+              </Box>
             })
           }
         </Flex>

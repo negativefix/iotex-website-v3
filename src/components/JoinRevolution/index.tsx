@@ -1,23 +1,21 @@
 import React from 'react';
-import { Box, Flex, Menu, MenuButton, Input, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
-import {  useHistory } from 'react-router-dom';
+import { Box, Flex, Input, Image, Text } from '@chakra-ui/react';
 import { useStore } from '../../store';
-import { Link } from "@chakra-ui/react"
-import { observer, useLocalStore } from 'mobx-react-lite';
-import { IoMenu } from "react-icons/io5";
+import { observer } from 'mobx-react-lite';
+import {Footer} from '@/components/Footer/index'
 
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
 
   const infos = [
-    {title: lang.t("telegram"), icon: "/images/icon_telegram.png", desc: lang.t("telegram.desc")},
-    {title: lang.t("twitter"), icon: "/images/icon_twitter.png", desc: lang.t("twitter.desc")},
-    {title: lang.t("github"), icon: "/images/icon_gitHub.png", desc: lang.t("github.desc")},
-    {title: lang.t("youtube"), icon: "/images/icon_youtube.png", desc: lang.t("youtube.desc")},
+    {title: lang.t("telegram"), icon: "/images/icon_telegram.png", desc: lang.t("telegram.desc"), href: "https://t.me/iotexchannel"},
+    {title: lang.t("twitter"), icon: "/images/icon_twitter.png", desc: lang.t("twitter.desc"), href: "https://twitter.com/iotex_io"},
+    {title: lang.t("github"), icon: "/images/icon_gitHub.png", desc: lang.t("github.desc"), href: "https://github.com/iotexproject"},
+    {title: lang.t("youtube"), icon: "/images/icon_youtube.png", desc: lang.t("youtube.desc"), href: "https://www.youtube.com/c/IoTeXOfficialChannel/"},
   ]
 
     return (
-      <Box pb="30rem"  css={{
+      <Box pb="10rem"  css={{
         backgroundImage: 'url(/images/join_bg2.png)',
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
@@ -38,17 +36,22 @@ export const JoinRevolution = observer(() => {
               <Flex w="55%" mb="8.56rem" justifyContent="space-between">
                 {
                   infos.map(item => {
-                    return <Box key={item.title} textAlign="center" maxWidth="9.5rem">
-                      <Image
-                        boxSize="4.5rem"
-                        objectFit="cover"
-                        src={item.icon}
-                        alt={item.title}
-                        mx="auto"
-                        mb="2rem"
-                      />
-                      <Text fontSize="1.25rem" fontWeight="semibold" lineHeight="3.25rem">{item.title}</Text>
-                      <Text fontSize="1rem" color="grayColor2" fontWeight="medium" lineHeight="1.375rem">{item.desc}</Text>
+                    return <Box key={item.title} textAlign="center" maxWidth="9.5rem" cursor="pointer">
+                      <a href={item.href} target="_blank">
+                        <Image
+                          boxSize="4.5rem"
+                          objectFit="cover"
+                          src={item.icon}
+                          alt={item.title}
+                          mx="auto"
+                          mb="2rem"
+                          css={{
+                            filter: 'drop-shadow(0px 256px 200px rgba(0, 24, 0, 0.15)), drop-shadow(0px 110px 80px rgba(0, 1, 0, 0.07)), drop-shadow(0px 60px 55px rgba(0, 1, 0, 0.09)), drop-shadow(0px 35px 30px rgba(0, 21, 0, 0.0329042)), drop-shadow(0px 20px 16px rgba(0, 1, 0, 0.1))'
+                          }}
+                        />
+                        <Text fontSize="1.25rem" fontWeight="semibold" lineHeight="3.25rem">{item.title}</Text>
+                        <Text fontSize="1rem" color="grayColor2" fontWeight="medium" lineHeight="1.375rem">{item.desc}</Text>
+                      </a>
                     </Box>
                   })
                 }
@@ -67,6 +70,7 @@ export const JoinRevolution = observer(() => {
               </Box>
             </Flex>
           </Box>
+        <Footer />
       </Box>
     );
 });

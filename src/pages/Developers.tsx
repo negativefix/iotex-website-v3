@@ -65,62 +65,69 @@ export const Developers = observer(() => {
 
   return (
     <BasicLayout>
-      <Box maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto">
-        <DevBanner />
-        <Flex justifyContent="space-between" alignItems="center" mt="13rem">
-          {
-            tools.map(item => {
-              return <Flex key={item.name} direction="column" justifyContent="center" alignItems="center">
-                <Image
-                    boxSize="4rem"
-                    objectFit="cover"
-                    src="/images/evm-icon.png"
-                    alt="img_circular3"
-                    mb="1rem"
-                  />
-                <Text fontSize="0.875rem">{item.name}</Text>
-              </Flex>
-            })
-          }
-        </Flex>
-        <Image
-          boxSize="9.6rem"
-          objectFit="cover"
-          src="/images/dev_ball.png"
-          alt="img_circular3"
-          ml="10%"
-          mt="13.25rem"
-        />
-        <Flex justifyContent="space-between">
-          <Box w="20vw" pt="2rem">
+      <Box css={{
+          backgroundImage: 'url(/images/dev_banner_bg1.png), url(/images/dev_banner_bg3.png), url(/images/dev_banner_bg2.png)',
+          backgroundSize: '100%, 100% 100%, 100% 65%',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '-5vw 0, 100% 0, 35vw 8%'
+        }}>
+        <Box maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto" >
+          <DevBanner />
+          <Flex justifyContent="space-between" alignItems="center" mt="21.25rem">
             {
-               products.map(item => {
-                return <Flex key={item.title} direction="column" justifyContent="center" alignItems="flex-start" mb="4rem">
+              tools.map(item => {
+                return <Flex key={item.name} direction="column" justifyContent="center" alignItems="center">
                   <Image
                       boxSize="4rem"
                       objectFit="cover"
                       src="/images/evm-icon.png"
                       alt="img_circular3"
-                      mb="2rem"
+                      mb="1rem"
                     />
-                  <Text fontSize="1.75rem" fontWeight="semibold" mb="2rem">{item.title}</Text>
-                  <Text fontSize="1.125rem" fontWeight="medium">{item.desc}</Text>
+                  <Text fontSize="0.875rem">{item.name}</Text>
                 </Flex>
               })
             }
-          </Box>
-          <Box w="50%">
-            <Text fontSize={{xl: "5rem", "2xl": "5rem"}} lineHeight="6rem" fontWeight="semibold" mb="1.8rem" whiteSpace="pre-line">
-              {lang.t("dev.title2")}
-            </Text>
-            <Text fontSize={{xl: "1.5rem", "2xl": "1.75rem"}} fontWeight="medium" mb="5.125rem" opacity="0.8">
-              {lang.t("dev.subtitle2")}
-            </Text>
-            <Box bg="btnBgColor" borderRadius="10px" width="16rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
-              <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
+          </Flex>
+          <Image
+            boxSize="9.6rem"
+            objectFit="cover"
+            src="/images/dev_ball.png"
+            alt="img_circular3"
+            ml="10%"
+            mt="13.25rem"
+          />
+          <Flex justifyContent="space-between">
+            <Box w="20vw" pt="2rem">
+              {
+                products.map(item => {
+                  return <Flex key={item.title} direction="column" justifyContent="center" alignItems="flex-start" mb="4rem">
+                    <Image
+                        boxSize="4rem"
+                        objectFit="cover"
+                        src="/images/evm-icon.png"
+                        alt="img_circular3"
+                        mb="2rem"
+                      />
+                    <Text fontSize="1.75rem" fontWeight="semibold" mb="2rem">{item.title}</Text>
+                    <Text fontSize="1.125rem" fontWeight="medium">{item.desc}</Text>
+                  </Flex>
+                })
+              }
             </Box>
-          </Box>
-        </Flex>
+            <Box w="50%">
+              <Text fontSize={{xl: "5rem", "2xl": "5rem"}} lineHeight="6rem" fontWeight="semibold" mb="1.8rem" whiteSpace="pre-line">
+                {lang.t("dev.title2")}
+              </Text>
+              <Text fontSize={{xl: "1.5rem", "2xl": "1.75rem"}} fontWeight="medium" mb="5.125rem" opacity="0.8">
+                {lang.t("dev.subtitle2")}
+              </Text>
+              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="16rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+                <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
+              </Box>
+            </Box>
+          </Flex>
+        </Box>
       </Box>
 
       <Flex  maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto"  mt="16rem" mb="30rem" justifyContent="space-between">
@@ -135,7 +142,7 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle3")}
             </Text>
             <a href="">
-              <Box bg="btnBgColor" borderRadius="10px" width="50%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="50%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
                 <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("read.documents")}</Text>
               </Box>
             </a>
@@ -195,7 +202,7 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle4")}
             </Text>
             <a href="">
-              <Box bg="btnBgColor" borderRadius="10px" width="80%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+              <Box bg="btnBgColor" className="commonBtn" className="commonBtn" borderRadius="10px" width="80%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
                 <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("touch.us")}</Text>
               </Box>
             </a>
@@ -220,7 +227,7 @@ export const Developers = observer(() => {
           <Text fontSize={{xl: "1.5rem", "2xl": "1.5rem"}} opacity="0.85" fontWeight="medium" textAlign="center" mt="3.5rem" mb="2rem">
             {lang.t("dev.title5.desc")}
           </Text>
-          <Box bg="btnBgColor" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+          <Box bg="btnBgColor" className="commonBtn" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
             <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("power.by.iotex")}</Text>
           </Box>
 
@@ -232,7 +239,7 @@ export const Developers = observer(() => {
           </Text>
 
           <a href="/">
-            <Box bg="btnBgColor" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+            <Box bg="btnBgColor" className="commonBtn" className="commonBtn" mx="auto" borderRadius="10px" width="38%" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
               <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center" >{lang.t("power.by.iotex")}</Text>
             </Box>
           </a>
@@ -254,7 +261,7 @@ export const Developers = observer(() => {
               <Box maxWidth={{base: '45%', "2xl": "35%"}}>
                 <Text fontSize="4rem" fontWeight="semibold" lineHeight="5.5rem">{lang.t("dev.title7")}</Text>
                 <Text fontSize="1.125rem" opacity="0.85" fontWeight="medium" lineHeight="2.25rem" mb="2.5rem">{lang.t("dev.subtitle7")}</Text>
-                <Box bg="btnBgColor" borderRadius="10px" maxWidth="448px" px="1rem"  py="1.6rem" cursor="pointer">
+                <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" px="1rem"  py="1.6rem" cursor="pointer">
                   <Text fontSize="1.75rem" color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("Interact with Dapps")}</Text>
                 </Box>
               </Box>

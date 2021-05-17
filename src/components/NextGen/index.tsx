@@ -16,18 +16,18 @@ export const NextGen = observer(() => {
     ],
     dapps1: [
       {name: lang.t("ucam"), desc: lang.t("ucam.desc"), icon: "/images/ucam.png", href: "https://ucam.iotex.io/" },
-      {name: lang.t("pebble"), desc: lang.t("pebble.desc"), icon: "/images/pebble.png" },
-      {name: lang.t("ucam"), desc: lang.t("ucam.desc"), icon: "/images/ucam.png" },
+      {name: lang.t("pebble"), desc: lang.t("pebble.desc"), icon: "/images/pebble.png", href: "https://iotex.io/pebble" },
+      {name: lang.t("smart.lock"), desc: lang.t("smart.lock.desc"), icon: "/images/logo_samrtlock.png", href: "https://ecosystem.iotex.io/post/840" },
     ],
     dapps2: [
-      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
-      {name: lang.t("mimo"), desc: lang.t("mimo.desc"), icon: "/images/mimo.png" },
-      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
+      {name: lang.t("ioTube"), desc: lang.t("ioTube.desc"), icon: "/images/logo_iotube.png", href: "https://tube.iotex.io/" },
+      {name: lang.t("mimo"), desc: lang.t("mimo.desc"), icon: "/images/mimo.png", href: "https://mimo.finance/" },
+      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png", href: "https://cyclone.xyz/" },
     ],
     dapps3: [
-      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
-      {name: lang.t("mimo"), desc: lang.t("mimo.desc"), icon: "/images/mimo.png" },
-      {name: lang.t("cyclone"), desc: lang.t("cyclone.desc"), icon: "/images/cyc.png" },
+      {name: lang.t("IoTT.portal"), desc: lang.t("IoTT.portal.desc"), icon: "/images/logo_iott.png", href: "https://iott.network/" },
+      {name: lang.t("hermes"), desc: lang.t("hermes.desc"), icon: "/images/logo_hermes.png", href: "https://hermes.to/" },
+      {name: lang.t("minttoken"), desc: lang.t("minttoken.desc"), icon: "/images/logo_minttoken.png", href: "https://minttoken.io/" },
     ],
     changeCard (item, index)  {
       let isShowArr = store.configs.filter(item => item.show === true)
@@ -65,9 +65,11 @@ export const NextGen = observer(() => {
             {lang.t("subtitle3")}
           </Text>
           <Flex justifyContent="space-between">
-            <Box bg="btnBgColor" borderRadius="10px" width="375px" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
-              <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("explore.ecosystem")}</Text>
-            </Box>
+            <a href="https://ecosystem.iotex.io/">
+              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="375px" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+                <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("explore.ecosystem")}</Text>
+              </Box>
+            </a>
             <Flex flexWrap="wrap" maxWidth="60%" justifyContent="space-between"  alignContent="space-between">
               {
                 store.configs.map((item, index) => {
@@ -77,6 +79,7 @@ export const NextGen = observer(() => {
                         mixBlendMode: 'normal',
                         borderRadius: '0.625rem',
                         backgroundSize: '100% 100%',
+                        transition: 'background 0.6s',
                         '&:hover': {
                           background: `url(${item.selectedIcon})`,
                           backgroundSize: '100% 100%'
@@ -107,27 +110,27 @@ export const NextGen = observer(() => {
               <Flex justifyContent="space-between">
                 {
                   store.dapps1.map((item, index) => {
-                    return <Link to={item.href} key={index} w="30%" maxWidth="450px" textDecoration="none">
-                        <Flex p="1.25rem" cursor="pointer" css={{
+                    return <Flex  key={index} p="1.25rem" cursor="pointer" w="30%" maxWidth="450px"  css={{
                         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                         mixBlendMode: 'normal',
                         borderRadius: '1.25rem',
                         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
                         backdropFilter: 'blur(100px)'
                       }}>
-                        <Image
-                          boxSize="3.75rem"
-                          objectFit="cover"
-                          src={item.icon}
-                          alt={item.name}
-                          mr="1.25rem"
-                        />
-                        <Box textAlign="left">
-                          <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                          <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
-                        </Box>
+                        <a href={item.href} style={{display: 'flex'}} target="_blank">
+                          <Image
+                            boxSize="3.75rem"
+                            objectFit="cover"
+                            src={item.icon}
+                            alt={item.name}
+                            mr="1.25rem"
+                          />
+                          <Box textAlign="left">
+                            <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
+                            <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                          </Box>
+                        </a>
                       </Flex>
-                    </Link>
                   })
                 }
               </Flex>
@@ -143,17 +146,19 @@ export const NextGen = observer(() => {
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
                       backdropFilter: 'blur(100px)'
                     }}>
-                      <Image
-                        boxSize="3.75rem"
-                        objectFit="cover"
-                        src={item.icon}
-                        alt={item.name}
-                        mr="1.25rem"
-                      />
-                      <Box textAlign="left">
-                        <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                        <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
-                      </Box>
+                       <a href={item.href} style={{display: 'flex'}} target="_blank">
+                        <Image
+                          boxSize="3.75rem"
+                          objectFit="cover"
+                          src={item.icon}
+                          alt={item.name}
+                          mr="1.25rem"
+                        />
+                        <Box textAlign="left">
+                          <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
+                          <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                        </Box>
+                      </a>
                     </Flex>
                   })
                 }
@@ -170,17 +175,19 @@ export const NextGen = observer(() => {
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
                       backdropFilter: 'blur(100px)'
                     }}>
-                      <Image
-                        boxSize="3.75rem"
-                        objectFit="cover"
-                        src={item.icon}
-                        alt={item.name}
-                        mr="1.25rem"
-                      />
-                      <Box textAlign="left">
-                        <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                        <Text fontSize="1rem" lineHeight="1.25rem">{item.desc}</Text>
-                      </Box>
+                       <a href={item.href} style={{display: 'flex'}} target="_blank">
+                          <Image
+                            boxSize="3.75rem"
+                            objectFit="cover"
+                            src={item.icon}
+                            alt={item.name}
+                            mr="1.25rem"
+                          />
+                          <Box textAlign="left">
+                            <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
+                            <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                          </Box>
+                        </a>
                     </Flex>
                   })
                 }

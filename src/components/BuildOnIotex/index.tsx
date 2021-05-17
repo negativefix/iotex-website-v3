@@ -64,16 +64,22 @@ export const BuildOnIotex = observer(() => {
                   alt=""
                   mr="3.45rem"
                 />
-                <Box bg="btnBgColor" borderRadius="10px" width="22rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
-                  <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("read.documents")}</Text>
-                </Box>
+                <a href="https://docs.iotex.io/">
+                  <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="22rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
+                    <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("read.documents")}</Text>
+                  </Box>
+                </a>
             </Flex>
-            <Box mt="5rem" borderRadius="1.25rem" py="1.8rem" px="2.5rem" bg="whiteAlpha.100">
+            <Box mt="5rem" borderRadius="1.25rem" py="1.8rem" px="2.5rem" bg="url('/images/read_build_bg.png')" css={{
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
+            }}>
               <Text fontSize="1.75rem" fontWeight="semibold" lineHeight="2rem" mb="0.875rem">{lang.t("ready.to.build")}</Text>
-              <Text fontSize="1.25rem" lineHeight="2rem" mb="0.5rem">{lang.t("ready.to.build.desc")}</Text>
-              <a href="/" target="_blank">
-                <Text fontSize="1.125rem" color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
-              </a>
+              <Text fontSize="1.25rem" lineHeight="2rem" mb="0.5rem">
+                {lang.t("ready.to.build.desc")} <a style={{display: 'inline-block'}} href="https://iotex.io/halo" target="_blank">
+                  <Text fontSize="1.125rem" color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
+                </a>
+              </Text>
             </Box>
             <Image
                   boxSize="14rem"

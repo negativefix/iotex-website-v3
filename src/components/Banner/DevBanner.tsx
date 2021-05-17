@@ -11,7 +11,7 @@ export const DevBanner = observer(() => {
   const { lang } = useStore();
 
     return (
-        <Box pt="6.125rem">
+        <Box pt="14rem">
           <Flex  alignItems="left" justifyContent="center" direction="column">
             <Text fontSize={{xl: "5rem", "2xl": "5rem"}} w="70%" fontWeight="semibold" mb="2.5rem">
               {lang.t("dev.title")}
