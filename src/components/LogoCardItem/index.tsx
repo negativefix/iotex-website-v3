@@ -14,7 +14,7 @@ export const LogoCardItem = observer(({item, width, height} : ComponentsProps) =
       <Flex key={item.icon} w={width} h={height} justifyContent="center" alignItems="center" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
         mixBlendMode: 'normal',
-        borderRadius: '1.125rem',
+        borderRadius: '10px',
         transition: 'background 0.6s',
         '&:hover': {
           backgroundColor: '#fff',

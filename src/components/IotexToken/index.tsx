@@ -21,20 +21,24 @@ export const IotexToken = observer(() => {
 
     return (
       <Box  maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{xl: "5rem", "2xl": "5rem"}} lineHeight="6rem" fontWeight="semibold" maxWidth="100%" mb="1.25rem">
+          <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", lg: "1.25rem"}}>
             {lang.t("title5")}
           </Text>
-          <Text fontSize={{xl: "1.5rem", "2xl": "1.75rem"}} fontWeight="medium"  mb="4.25rem"maxWidth="55%" >
+          <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}}  fontWeight="medium"   mb={{base: "2rem", lg: "4.25rem"}} maxWidth={{base: "90%", xl: "55%"}} >
             {lang.t("subtitle5")}
           </Text>
-          <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" width="16rem" height="93px" px="1rem"  py="1.6rem" cursor="pointer">
-            <Text fontSize="1.75rem" color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
-          </Box>
-          <Box mt="7.25rem">
-            <Flex maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" h="330px" mb="8.56rem" justifyContent="space-between">
+          <a href="/">
+            <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", lg: "16rem"}} lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
+              <Text fontSize={{base: "1.25rem", md: "1.75rem"}}  color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
+            </Box>
+          </a>
+          <Box mt={{base: "4rem", lg: "7.25rem"}}>
+            <Flex flexWrap={{base: "warp", lg: "nowrap"}} h={{base: "480px", lg: "330px"}} mb="8.56rem" justifyContent="space-between">
               {
                 advantages.map(item => {
-                  return <DropLinkItem key={item.title} title={item.title} icon={item.icon} desc={item.desc}  />
+                  return <Box  key={item.title} h={{base: "240px", lg: "330px"}} w={{base: "48%", lg: "100%"}}>
+                    <DropLinkItem title={item.title} icon={item.icon} desc={item.desc}  />
+                  </Box>
                 })
               }
             </Flex>

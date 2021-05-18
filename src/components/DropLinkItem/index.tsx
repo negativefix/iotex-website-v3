@@ -13,8 +13,7 @@ interface ComponentsProps {
 export const DropLinkItem = observer(({icon, title, desc} : ComponentsProps) => {
   const { lang } = useStore();
     return (
-      <Box w="100%" p="1.25rem" pb="0" maxWidth="329px" css={{
-        height: '170px',
+      <Box w="100%" h={{base: "32%", lg: "180px", xl: "170px"}} py={{base: "0.5rem", lg:"1.25rem"}} pb="0" maxWidth="329px" css={{
         overflow: 'hidden',
         transition: 'height 0.8s',
         '&:hover': {
@@ -22,16 +21,16 @@ export const DropLinkItem = observer(({icon, title, desc} : ComponentsProps) => 
         }
       }}>
         <Image
-          boxSize="4rem"
+          boxSize={{base: "2rem", lg: "4rem"}}
           objectFit="cover"
           src={icon}
           alt={title}
           mb="1.25rem"
         />
-        <Text fontSize="1.75rem" fontWeight="semibold" lineHeight="2.125rem">{title}</Text>
-        <Text fontSize="1.125rem" color="white" fontWeight="medium" mt="1.8rem" mb="2rem" lineHeight="1.75rem">{desc}</Text>
+        <Text fontSize={{base: "1rem", lg: "1.75rem"}} fontWeight="semibold">{title}</Text>
+        <Text fontSize={{base: "0.875rem", lg: "1.125rem"}} color="white" fontWeight="medium" mt={{base: "1rem", lg: "1.8rem"}} mb={{base: "1rem", lg: "2rem"}}>{desc}</Text>
         <a href="" target="_blank">
-          <Text fontSize="1.125rem" color="brandColor" lineHeight="1.275rem">{lang.t("stake.now")} &gt;&gt;</Text>
+          <Text fontSize={{base: "0.875rem", lg: "1.125rem"}} color="brandColor" lineHeight="1.275rem">{lang.t("stake.now")} &gt;&gt;</Text>
         </a>
       </Box>
     );

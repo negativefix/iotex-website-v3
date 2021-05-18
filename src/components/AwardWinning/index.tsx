@@ -16,23 +16,23 @@ export const AwardWinning = observer(() => {
 
     return (
       <Box maxWidth="1554px" mx="auto">
-        <Flex justifyContent="space-between">
-            <Flex flexWrap="wrap" maxWidth="50%" justifyContent="space-between"  alignContent="space-between">
+        <Flex justifyContent="space-between" flexDirection={{base: "column", lg: "row"}}>
+            <Flex flexWrap="wrap" maxWidth={{base: "100%", lg: "50%"}} justifyContent="space-between"  alignContent="space-between">
               {
                 logos.map((item, index) => {
-                  return <Box key={index} width="47%">
-                    <LogoCardItem item={item} width="100%" height="8.75rem" />
+                  return <Box key={index} width="47%" mb={{base: "1rem", md: "2rem", lg: 0}} h={{base: "15vw", lg: "46%", xl: "8.75rem"}}>
+                    <LogoCardItem item={item} width="100%" height="100%" />
                   </Box>
                 })
               }
             </Flex>
-            <Box maxWidth={{base: '45%', "2xl": "35%"}}>
-              <Text fontSize="1.25rem">{lang.t("backed.by")}</Text>
-              <Text fontSize="4rem" fontWeight="semibold" lineHeight="5.5rem">{lang.t("award.winning")}</Text>
-              <Text fontSize="1.125rem" fontWeight="medium" lineHeight="2.25rem" mb="2.875rem">{lang.t("award.winning.content")}</Text>
+            <Box maxWidth={{base: '100%', lg: "40%"}} mt={{base: '2rem', lg: 0}}>
+              <Text fontSize={{base: "0.75rem", md: "1.25rem"}}>{lang.t("backed.by")}</Text>
+              <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" lineHeight={{base: "3rem", xl: "5.5rem"}}>{lang.t("award.winning")}</Text>
+              <Text fontSize={{base: "0.875rem", md: "1.25rem"}} fontWeight="medium" lineHeight={{base: "1.5rem", md: "2.25rem"}} mb={{base: "1.8rem", xl: "2.875rem"}}>{lang.t("award.winning.content")}</Text>
               <a href="https://iotex.io/research" target="_blank">
-                <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" px="1rem"  py="1.6rem" cursor="pointer">
-                  <Text fontSize="1.75rem" color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
+                <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
+                  <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
                 </Box>
               </a>
             </Box>

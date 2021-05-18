@@ -34,26 +34,26 @@ export const Header = observer(() => {
     }));
 
     return (
-        <Box w="100%" pt="1.125rem" px="1.25rem" boxSizing="border-box" position="absolute" top="0" left="0" zIndex="5">
-            <Flex
-                zIndex="999"
-                justify={'center'}
-            >
-                <Link to={'/'} >
-                    <Image src="/images/logo.png" alt="" objectFit="cover" style={{width: '13rem'}} />
+        <Box w="100%" p={{base: "0.5rem", md: "1.125rem"}} boxSizing="border-box" position="absolute" top="0" left="0" zIndex="5">
+            <Flex justifyContent="space-between">
+                <Link to={'/'}>
+                    <Box w={{base: "5rem", md: "6rem",  lg: "8rem", xl: "13rem"}}>
+                      <img src="/images/logo.png" alt="" />
+                    </Box>
                 </Link>
-                <Flex flex="1" alignItems="center" justifyContent="flex-end">
+                <Flex flex="1" alignItems="center" justifyContent="flex-end" display={{base: 'none', md: 'flex'}}>
                   <Flex>
                     {
                       navConfig.map(item => {
-                        return <Link key={item.name} to={item.path} style={{
+                        return <Link key={item.name} to={item.path}  style={{
                           textDecoration: 'none',
-                          marginLeft:"5rem",
                           '&:hover': {
                             color: '#000  !important'
                           }
                           }} >
-                          <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} fontSize="xl" textDecoration="none" fontWeight="semibold" css={{
+                          <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
+                            ml={{ base: "1rem", lg: "2rem", xl: "4rem" }}
+                            fontSize={{ base: "0.875rem", lg: "1rem", xl: "1.25rem" }} textDecoration="none" fontWeight="semibold" css={{
                             '&:hover': {
                               color: '#44FFB2 !important'
                             }
@@ -65,8 +65,10 @@ export const Header = observer(() => {
                     }
                   </Flex>
                   <Menu isLazy>
-                    <MenuButton ml="4rem" fontWeight="semibold" bg="transparent" color="white" border="none">{store.curLang.name}</MenuButton>
-                    <MenuList color="mainColor" minWidth="60px" defaultValue={store.curLang.name}>
+                    <MenuButton  ml={{ base: "1rem", lg: "2rem", xl: "4rem" }} fontWeight="semibold" bg="transparent" color="white" border="none"  fontSize={{ base: "0.875rem", lg: "1rem", xl: "1.25rem" }} >
+                      {store.curLang.name}
+                    </MenuButton>
+                    <MenuList color="black" minWidth="60px" defaultValue={store.curLang.name}>
                         {Object.values(langGroups).map(item => {
                             return <MenuItem key={item.name}  css={{textAlign: 'center'}} value={item.name} onClick={() => lang.setLang(item.text)}>
                                 <Center w="100%">{item.name}</Center>
@@ -75,29 +77,31 @@ export const Header = observer(() => {
                     </MenuList>
                 </Menu>
               </Flex>
+              <Box display={{base: 'block', md: 'none'}}>
+                <Menu>
+                    <MenuButton
+                      aria-label="Options"
+                      variant="ghost"
+                      border="none"
+                      boxSize="1.5rem"
+                  >
+                    <Image src="/images/menue.png" alt="" />
+                  </MenuButton>
+                  <MenuList color="white">
+                      {
+                        navConfig.map(item => {
+                          return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}> 
+                              <MenuItem color="black">
+                                <Text css={{userSelect: 'none'}}>{item.name}</ Text>
+                              </MenuItem>
+                          </Link>
+                          })
+                      }
+                  </MenuList>
+                </Menu>
+              </Box>
             </Flex>
-            <Box display={['block', 'none']}>
-              <Menu>
-                  <MenuButton
-                    as={IconButton}
-                    aria-label="Options"
-                    icon={<IoMenu />}
-                    variant="ghost"
-                    border="none"
-                />
-                <MenuList color="white">
-                    {
-                      navConfig.map(item => {
-                        return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}> 
-                            <MenuItem color="black">
-                              <Text css={{userSelect: 'none'}}>{item.name}</ Text>
-                            </MenuItem>
-                        </Link>
-                        })
-                    }
-                </MenuList>
-              </Menu>
-            </Box>
+           
         </Box>
     );
 });

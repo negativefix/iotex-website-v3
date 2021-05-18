@@ -46,47 +46,46 @@ export const Home = observer(() => {
   return (
     <BasicLayout>
       <Banner />
-      <Flex color="white" justifyContent="center" alignItems="center">
+      <Flex color="white" justifyContent="space-between" alignItems="center" w={{base: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "1rem", md: 0}}>
         {
           analysis.map(item => {
-            return <Box key={item.name} w="24rem" textAlign="center">
-              <Text fontWeight="medium" fontSize="4rem">
+            return <Box key={item.name}   textAlign="center">
+              <Text fontWeight="medium" fontSize={{base: "1rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} mb={{base: "0.5rem", md: "1rem"}}>
                 <CountTo from={0} to={item.amount} speed={5000}  />{item.coin}
               </Text>
-              <Text fontSize="1.25rem" fontWeight="semibold">{item.name}</Text>
+              <Text fontSize={{base: "0.65rem",  lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="semibold">{item.name}</Text>
             </Box>
           })
         }
       </Flex>
-      <Box mt="4rem" maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto" position="relative">
+      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "4rem"}} maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto" position="relative">
         <Image
-          boxSize="5.25rem"
+          boxSize={{base: "2rem", md:"4rem", xl: "5.25rem"}}
           objectFit="cover"
           src="/images/img_circular3.png"
           alt="img_circular3"
-          mx="10%"
+          mx={{base: "5%", md: "5%", lg: "8%", xl: "10%"}}
         />
       </Box>
-      <Box mt="3.3rem" mx="auto">
-        <Text fontSize={{base: '3rem', xl: "5rem", "2xl": "5.25rem"}} fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
+      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.3rem"}} mx="auto" maxWidth={{base: "90%", "2xl": "1554px"}}>
+        <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="bold" width="70%" mx="auto" textAlign="center" mb={{base: "1rem", md: "1.75rem"}}>
           {lang.t("title2")}
         </Text>
-        <Text fontSize={{base: '1.125rem', xl: "1.5rem", "2xl": "1.75rem"}} fontWeight="medium" color="white" textAlign="center" mb="4.1875rem" maxWidth="1154px" mx="auto">
+        <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium" textAlign="center" mb={{base: "1rem", md: "4.1875rem" }}whiteSpace="pre-line">
           {lang.t("subtitle2")}
         </Text>
       </Box>
-      <Box pb="4.5rem" maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" css={{
+      <Box pb="4.5rem" maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" backgroundPosition={{base: "30% 12%", xl: "30% 90%"}} css={{
         backgroundImage: 'url(/images/award_wing_bg.png)',
         backgroundSize: '80%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '30% 90%'
       }}>
         <Box mx="auto" position="relative">
           <Box onClick={store.open}>
             <img src="/images/video.png" alt="" />
             <Flex w="100%" h="100%" justifyContent="center" alignItems="center" position="absolute" top="0" left="0">
               <Image
-                boxSize="12.5rem"
+                boxSize={{base: "15vw", md: "20vw", xl: "10rem"}}
                 objectFit="cover"
                 src="/images/play-icon.png"
                 alt="img_circular3"
@@ -96,7 +95,7 @@ export const Home = observer(() => {
           </Box>
             <Modal isOpen={store.isOpen} onClose={store.onClose} size="6xl">
               <ModalOverlay />
-              <ModalContent w="90%" h="80vh"> 
+              <ModalContent w="90%" h={{base: "50vh", md: "70vh"}}> 
                 <ModalBody  p="0.5rem">
                   <iframe 
                     width="100%" height="100%" 
@@ -108,7 +107,7 @@ export const Home = observer(() => {
               </ModalContent>
             </Modal>
         </Box>
-        <Flex h="337px" mb="8.56rem">
+        <Flex h={{base: "280px", md: "399px", xl: "337px"}} mb={{base: "2rem", xl: "8.56rem"}}>
           {
             advantages.map((item, index) => {
               return <Box key={item.title}>
