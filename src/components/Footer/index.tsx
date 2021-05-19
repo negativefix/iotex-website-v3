@@ -44,10 +44,10 @@ export const Footer = observer(() => {
 
     return (
       <Box mt="15rem" maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto">
-        <Flex justifyContent="space-between">
+        <Flex justifyContent="space-between" flexWrap="wrap">
           {
             config.map(item => {
-              return <Box key={item.name}>
+              return <Box key={item.name} w={{base: "100%", lg: "auto"}} mb={{base: "2rem", lg: "0"}}>
                 <Text fontSize="1.125rem" fontWeight="medium"  mb="1.5rem">{item.name}</Text>
                 <Flex direction="column">
                   {
@@ -60,7 +60,7 @@ export const Footer = observer(() => {
             })
           }
         </Flex>
-        <Text fontSize="1rem" lineHeight="1.875rem" mt="8.125rem" textAlign="center">©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{lang.t("footer.tips")}</Text>
+        <Text fontSize={{base: "0.875rem", lg: "1rem"}} lineHeight="1.875rem" mt="8.125rem" textAlign="center">©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{lang.t("footer.tips")}</Text>
       </Box>
     );
 });

@@ -23,7 +23,7 @@ export const BuildOnIotex = observer(() => {
         backgroundPosition: '100% 0%'
       }}>
         <Flex justifyContent="space-between" maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
-          <Box w={{base: "85%", lg: "35%", xl: "40%"}} mx="auto">
+          <Box w={{base: "85%", lg: "35%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
             <Box position="relative" pb="36%">
               <img src="/images/code.png" alt="" />
               <Box position="absolute" width="100%" height="100%" top="24%" left="10%">
@@ -57,7 +57,8 @@ export const BuildOnIotex = observer(() => {
               {lang.t("subtitle4")}
             </Text>
             <Flex mt={{base: "5%", xl: "4.125rem"}} ml={{base: "0", lg: "10%", xl: "7.5rem"}} alignItems={{base: "flex-start", lg: "center"}} direction={{base: "column", lg: "row"}}>
-              <Image
+              <a href="https://github.com/iotexproject" target="_blank">
+                <Image
                   boxSize="3.75rem"
                   objectFit="fill"
                   src="/images/github_empty.png"
@@ -65,20 +66,21 @@ export const BuildOnIotex = observer(() => {
                   mr="5vw"
                   mb={{base: "3rem", lg: 0}}
                 />
-                <a href="https://docs.iotex.io/" style={{width: "max-content"}}>
+              </a>
+                <a href="https://docs.iotex.io/" style={{width: "100%"}}>
                   <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", lg: "375px"}} lineHeight={{base: "4rem", md: "6rem"}}  cursor="pointer">
                     <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("read.documents")}</Text>
                   </Box>
                 </a>
             </Flex>
-            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="1.25rem" py="1.8rem" px="2.5rem" bg="url('/images/read_build_bg.png')" css={{
+            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "1rem", lg: "1.8rem"}} px={{base: "1rem", lg: "2.5rem"}} bg="url('/images/read_build_bg.png')" css={{
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat'
             }}>
-              <Text fontSize="1.75rem" fontWeight="semibold" lineHeight="2rem" mb="0.875rem">{lang.t("ready.to.build")}</Text>
-              <Text fontSize="1.25rem" lineHeight="2rem" mb="0.5rem">
+              <Text fontSize={{base: "1rem", lg: "1.75rem"}} fontWeight="semibold" mb="0.875rem">{lang.t("ready.to.build")}</Text>
+              <Text fontSize={{base: "1rem", lg: "1.25rem"}} mb="0.5rem">
                 {lang.t("ready.to.build.desc")} <a style={{display: 'inline-block'}} href="https://iotex.io/halo" target="_blank">
-                  <Text fontSize="1.125rem" color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
+                  <Text fontSize={{base: "1rem", lg: "1.25rem"}} color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
                 </a>
               </Text>
             </Box>
