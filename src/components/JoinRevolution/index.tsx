@@ -21,19 +21,19 @@ export const JoinRevolution = observer(() => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '40vw 27rem'
       }}>
-        <Box  maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" borderRadius="1.125rem" css={{
+        <Box  maxWidth={{base: "90%", md: '80%', "2xl": "1554px"}} mx="auto" borderRadius="1.125rem" css={{
             backgroundImage: 'url(/images/join_bg.png),url(/images/join_bg3.png)',
             backgroundSize: '100% 100%, 100% 100%',
             backgroundRepeat: 'no-repeat'
           }}>
-            <Flex direction="column" pt={{base: "2rem", lg: "5rem"}} pb={{base: "3rem", lg: "7.5rem"}} alignItems="center">
+            <Flex direction="column" pt={{base: "3rem", lg: "5rem"}} pb={{base: "3rem", lg: "7.5rem"}} alignItems="center">
               <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" maxWidth="100%" mb="1rem">
                 {lang.t("title6")}
               </Text>
               <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium" mb="4.685rem" textAlign="center" maxWidth={{base: "90%", lg: "55%"}} >
                 {lang.t("subtitle6")}
               </Text>
-              <Flex w={{base: "95%", lg: "55%"}} mb="8.56rem" justifyContent="space-between" flexWrap="wrap">
+              <Flex w={{base: "95%", lg: "70%"}} mb={{base: "4rem", lg: "8.56rem"}} justifyContent="space-between" flexWrap="wrap">
                 {
                   infos.map(item => {
                     return <Box key={item.title} textAlign="center" maxWidth="9.5rem" cursor="pointer" mb={{base: "2rem", lg: 0}}>
@@ -58,7 +58,7 @@ export const JoinRevolution = observer(() => {
               </Flex>
               <Text fontSize={{base: "1.5rem", lg: "2.25rem"}} fontWeight="semibold" lineHeight="2rem" mb="1rem">{lang.t("stay.updated")}</Text>
               <Text fontSize={{base: "0.875rem", lg: "1.125rem"}} fontWeight="medium" lineHeight="1.375rem" mb="2.5rem">{lang.t("stay.updated.desc")}</Text>
-              <Box position="relative" w={{base: "90%", lg: "28%"}}>
+              <Box position="relative" w={{base: "90%", md: "40vw"}}>
                 <Input h={{base: "3rem", lg: "4.5rem"}} css={{
                   borderColor: 'rgba(255, 255, 255, 0.2)',
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',

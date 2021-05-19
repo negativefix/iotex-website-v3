@@ -26,6 +26,7 @@ export const customTheme = extendTheme({
             'html, #__next': {
                 height: '100%',
                 padding: 0,
+                background: "#110F1C"
             },
             '#__next': {
                 display: 'flex',
@@ -35,6 +36,7 @@ export const customTheme = extendTheme({
                 overflowY: 'scroll',
                 margin: 0,
                 color: "white",
+                background: "#110F1C"
             },
             html: {
                 scrollBehavior: 'smooth'
@@ -56,35 +58,41 @@ export const customTheme = extendTheme({
                 top: '15%'
               },
               '100%': {
-                top: '20%'
+                top: '18%'
               }
             },
-            "@keyframes smallBall": {
-              '0%': {
-                top: '50%'
-              },
-              '100%': {
-                top: '55%'
-              }
-            },
-            "@keyframes upAnimate": {
+            "@keyframes btnHover": {
               '0': {
                 marginTop: '0px'
               },
-              '50%': {
-                marginTop: '-20px'
+              '100%': {
+                marginTop: '-10px'
+              },
+            },
+            "@keyframes upAnimate": {
+              '0': {
+                top: '0px'
               },
               '100%': {
-                marginTop: '0px'
-              }
+                top: '-10px'
+              },
             },
-            '.commonBtn': {
-              opacity: 1,
-              transition: 'opacity 0.5s',
-              '&:hover': {
-                opacity: 0.8
-              }
-            },
+           '.commonBtnBox': {
+             position: "relative",
+             display: "block",
+              '.commonBtn': {
+                  width: "100%",
+                  position: "absolute",
+                  top: 0,
+                  opacity: 1,
+                  marginTop: "0px",
+                  transition: 'margin 0.5s',
+                  '&:hover': {
+                    opacity: 0.8,
+                    marginTop: '-10px'
+                  }
+              },
+           },
             '.showTwoLine': {
               overflow: 'hidden',
               textOverflow: 'ellipsis',

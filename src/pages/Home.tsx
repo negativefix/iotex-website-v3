@@ -46,7 +46,7 @@ export const Home = observer(() => {
   return (
     <BasicLayout>
       <Banner />
-      <Flex color="white" justifyContent="space-between" alignItems="center" w={{base: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "1rem", md: 0}}>
+      <Flex color="white" justifyContent="space-between" alignItems="center" w={{base: "80%", md: "80%", "2xl": "1554px"}} mx="auto" mt={{base: "3rem", md: 0}}>
         {
           analysis.map(item => {
             return <Box key={item.name}   textAlign="center">
@@ -58,7 +58,7 @@ export const Home = observer(() => {
           })
         }
       </Flex>
-      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "4rem"}} maxWidth={{base: "90%", "2xl": "1554px"}} mx="auto" position="relative">
+      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "4rem"}} maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" position="relative">
         <Image
           boxSize={{base: "2rem", md:"4rem", xl: "5.25rem"}}
           objectFit="cover"
@@ -67,7 +67,7 @@ export const Home = observer(() => {
           mx={{base: "5%", md: "5%", lg: "8%", xl: "10%"}}
         />
       </Box>
-      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.3rem"}} mx="auto" maxWidth={{base: "90%", "2xl": "1554px"}}>
+      <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.3rem"}} mx="auto" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}>
         <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="bold" width="70%" mx="auto" textAlign="center" mb={{base: "1rem", md: "1.75rem"}}>
           {lang.t("title2")}
         </Text>
@@ -75,7 +75,7 @@ export const Home = observer(() => {
           {lang.t("subtitle2")}
         </Text>
       </Box>
-      <Box pb="4.5rem" maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto" backgroundPosition={{base: "30% 12%", xl: "30% 90%"}} css={{
+      <Box pb="4.5rem" maxWidth={{base: '80%', "2xl": "1554px"}} mx="auto" backgroundPosition={{base: "30% 12%", xl: "30% 90%"}} css={{
         backgroundImage: 'url(/images/award_wing_bg.png)',
         backgroundSize: '80%',
         backgroundRepeat: 'no-repeat',
@@ -85,7 +85,7 @@ export const Home = observer(() => {
             <img src="/images/video.png" alt="" />
             <Flex w="100%" h="100%" justifyContent="center" alignItems="center" position="absolute" top="0" left="0">
               <Image
-                boxSize={{base: "15vw", md: "20vw", xl: "10rem"}}
+                boxSize={{base: "15vw", md: "20vw", xl: "80px"}}
                 objectFit="cover"
                 src="/images/play-icon.png"
                 alt="img_circular3"
@@ -95,7 +95,7 @@ export const Home = observer(() => {
           </Box>
             <Modal isOpen={store.isOpen} onClose={store.onClose} size="6xl">
               <ModalOverlay />
-              <ModalContent w="90%" h={{base: "50vh", md: "70vh"}}> 
+              <ModalContent w="80%" h={{base: "50vh", md: "70vh"}}> 
                 <ModalBody  p="0.5rem">
                   <iframe 
                     width="100%" height="100%" 

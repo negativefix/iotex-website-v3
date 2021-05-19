@@ -57,7 +57,7 @@ export const NextGen = observer(() => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '0% 80%'
       }}>
-        <Box maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto">
+        <Box maxWidth={{base: '80%', "2xl": "1554px"}} mx="auto">
           <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" maxWidth="75%" mb="1.25rem">
             {lang.t("title3")}
           </Text>
@@ -65,15 +65,20 @@ export const NextGen = observer(() => {
             {lang.t("subtitle3")}
           </Text>
           <Flex justifyContent="space-between" flexDirection={{base: "column", xl: "row"}}>
-            <a href="https://ecosystem.iotex.io/">
+          <Box w={{base: "100%", lg: "375px"}} className="commonBtnBox" h={{base: "4rem", md: "6rem"}}>
+            <a href="https://ecosystem.iotex.io/" style={{width: "100%"}}>
               <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", md: "375px"}} lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
                 <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("explore.ecosystem")}</Text>
               </Box>
             </a>
+           </Box>
             <Flex flexWrap="wrap" maxWidth={{base: "100%", xl: "60%"}} justifyContent="space-between"  alignContent="space-between" mt={{base: "3rem", xl: 0}}>
               {
                 store.configs.map((item, index) => {
-                  return <Flex key={item.name} w={{base: "100%", md: "48%", lg: "48%"}} h={{base: "7.875rem", lg: "46%"}}  mb={{base: "2rem", xl: 0}} maxHeight="254px" p={{base: "1.25rem", lg: "2.5rem"}} justifyContent="space-between" 
+                  return <Flex key={item.name} 
+                    w={{base: "100%", md: "48%", lg: "48%"}} h={{base: "7.875rem", md: "14vw"}}  
+                    mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , lg: "1.8rem", "2xl": "2.5rem"}} 
+                    justifyContent="space-between"  alignItems="center"
                     css={{
                         background: 'url(/images/next_card.png)',
                         mixBlendMode: 'normal',
@@ -90,9 +95,12 @@ export const NextGen = observer(() => {
                       item.show ? <>
                       <Text fontSize={{base: "1rem", lg: "1.2rem"}} fontWeight="semibold" lineHeight={{base: "1.8rem", lg: "2.625rem"}}>{item.desc}</Text>
                       </> : <>
-                        <Text fontSize={{base: "1rem", lg: "2rem"}} w={{base: "40%", lg:"max-content"}} fontWeight="semibold" >{item.name}</Text>
+                        <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}} 
+                        w={{base: "40%", lg:"max-content"}} fontWeight="semibold" 
+                        mb="3rem"
+                        >{item.name}</Text>
                         <Image
-                          boxSize={{base: "5rem", lg: "10rem"}}
+                          boxSize={{base: "5rem", lg: "7rem", "2xl": "10rem"}}
                           objectFit="cover"
                           src={item.icon}
                           alt={item.name}
@@ -109,12 +117,12 @@ export const NextGen = observer(() => {
           </Flex>
         </Box>
         <Box mt="12.75rem" textAlign="right" position="relative" height="28.25rem" display={{base: 'none', xl: "block"}}>
-            <Box position="absolute" height="7.5rem"  mb="2.875rem" maxWidth="1446px" top="0" right="-15%">
+            <Box position="absolute" height="7.5rem"  mb="2.875rem" maxWidth={{base: "80%", "2xl": "1446px"}} top="0" right="-15%">
               <Flex justifyContent="space-between">
                 {
                   store.dapps1.map((item, index) => {
                     return <Flex  key={index} p="1.25rem" cursor="pointer" w="30%" maxWidth="450px"  css={{
-                        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                         mixBlendMode: 'normal',
                         borderRadius: '1.25rem',
                         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
@@ -138,12 +146,12 @@ export const NextGen = observer(() => {
                 }
               </Flex>
             </Box>
-            <Box height="7.5rem"  mb="2.875rem" position="absolute"  maxWidth="1446px"  top="10.375rem" right="-5%">
-              <Flex justifyContent="space-between" maxWidth="1446px"  mb="2.875rem">
+            <Box height="7.5rem"  mb="2.875rem" position="absolute"  maxWidth={{base: "80%", "2xl": "1446px"}} top="10.375rem" right="-5%">
+              <Flex justifyContent="space-between" mb="2.875rem">
                 {
                   store.dapps2.map((item, index) => {
                     return <Flex p="1.25rem" maxWidth="450px" w="30%" key={index} cursor="pointer"  css={{
-                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                       mixBlendMode: 'normal',
                       borderRadius: '1.25rem',
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
@@ -167,12 +175,12 @@ export const NextGen = observer(() => {
                 }
               </Flex>
             </Box>
-            <Box height="7.5rem"  mb="2.875rem" position="absolute"  maxWidth="1446px"  top="20.75rem" right="1.6875rem">
-              <Flex justifyContent="space-between" maxWidth="1446px">
+            <Box height="7.5rem"  mb="2.875rem" position="absolute"  maxWidth={{base: "80%", "2xl": "1446px"}}  top="20.75rem" right="1.6875rem">
+              <Flex justifyContent="space-between" w="100%">
                 {
-                  store.dapps1.map((item, index) => {
+                  store.dapps3.map((item, index) => {
                     return <Flex p="1.25rem" maxWidth="450px" w="30%" key={index} cursor="pointer"  css={{
-                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+                      background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                       mixBlendMode: 'normal',
                       borderRadius: '1.25rem',
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
@@ -197,7 +205,7 @@ export const NextGen = observer(() => {
               </Flex>
             </Box>
         </Box>
-        <Box display={{base: "block", xl: "none"}} w="90%" mx="auto">
+        <Box display={{base: "block", xl: "none"}} w={{base: "90%", md: "80%"}} mx="auto">
             {
               [store.dapps1, store.dapps2, store.dapps3].map((item, index) => {
                 return <Flex key={`dapps${index}`} justifyContent="space-between" mb="2rem">
@@ -209,7 +217,7 @@ export const NextGen = observer(() => {
                         display: 'flex', 
                         alignItems: "center",
                         justifyContent: "center",
-                        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+                        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                         mixBlendMode: 'normal',
                         borderRadius: '10px',
                         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',

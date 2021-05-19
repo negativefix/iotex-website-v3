@@ -43,7 +43,7 @@ export const Footer = observer(() => {
   ]
 
     return (
-      <Box mt="15rem" maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto">
+      <Box mt="15rem" maxWidth={{base: "90%", md: '80%', "2xl": "1554px"}} mx="auto">
         <Flex justifyContent="space-between" flexWrap="wrap">
           {
             config.map(item => {

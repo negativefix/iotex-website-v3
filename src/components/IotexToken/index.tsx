@@ -20,23 +20,25 @@ export const IotexToken = observer(() => {
   ]
 
     return (
-      <Box  maxWidth={{base: '90%', "2xl": "1554px"}} mx="auto">
+      <Box  maxWidth={{base: "90%", md: '80%', "2xl": "1554px"}} mx="auto">
           <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", lg: "1.25rem"}}>
             {lang.t("title5")}
           </Text>
           <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}}  fontWeight="medium"   mb={{base: "2rem", lg: "4.25rem"}} maxWidth={{base: "90%", xl: "55%"}} >
             {lang.t("subtitle5")}
           </Text>
-          <a href="/">
-            <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", lg: "16rem"}} lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
-              <Text fontSize={{base: "1.25rem", md: "1.75rem"}}  color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
-            </Box>
-          </a>
+          <Box w={{base: "100%", lg: "16rem"}} className="commonBtnBox" h={{base: "4rem", md: "6rem"}}>
+            <a href="/" style={{width: '100%'}}>
+              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px"  lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
+                <Text fontSize={{base: "1.25rem", md: "1.75rem"}}  color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("learn.more")}</Text>
+              </Box>
+            </a>
+          </Box>
           <Box mt={{base: "4rem", lg: "7.25rem"}}>
             <Flex h={{base: "480px", lg: "360px"}} mb="8.56rem" justifyContent="space-between" flexWrap="wrap">
               {
                 advantages.map(item => {
-                  return <Box  key={item.title} h={{base: "240px", lg: "360px"}} w={{base: "48%", lg: "25%"}}>
+                  return <Box  key={item.title} h={{base: "240px", lg: "360px"}} w={{base: "48%", lg: "25%"}}  px="1rem">
                     <DropLinkItem title={item.title} icon={item.icon} desc={item.desc}  />
                   </Box>
                 })
