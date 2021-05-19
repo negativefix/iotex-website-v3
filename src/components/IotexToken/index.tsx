@@ -33,10 +33,10 @@ export const IotexToken = observer(() => {
             </Box>
           </a>
           <Box mt={{base: "4rem", lg: "7.25rem"}}>
-            <Flex h={{base: "480px", lg: "330px"}} mb="8.56rem" justifyContent="space-between" flexWrap="wrap">
+            <Flex h={{base: "480px", lg: "360px"}} mb="8.56rem" justifyContent="space-between" flexWrap="wrap">
               {
                 advantages.map(item => {
-                  return <Box  key={item.title} h={{base: "240px", lg: "330px"}} w={{base: "48%", lg: "25%"}}>
+                  return <Box  key={item.title} h={{base: "240px", lg: "360px"}} w={{base: "48%", lg: "25%"}}>
                     <DropLinkItem title={item.title} icon={item.icon} desc={item.desc}  />
                   </Box>
                 })
