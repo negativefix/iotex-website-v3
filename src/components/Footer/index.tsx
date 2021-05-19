@@ -47,7 +47,7 @@ export const Footer = observer(() => {
         <Flex justifyContent="space-between" flexWrap="wrap">
           {
             config.map(item => {
-              return <Box key={item.name} w={{base: "100%", lg: "auto"}} mb={{base: "2rem", lg: "0"}}>
+              return <Box key={item.name} w={{base: "100%", md: "auto"}} mb={{base: "2rem", md: "0"}}>
                 <Text fontSize="1.125rem" fontWeight="medium"  mb="1.5rem">{item.name}</Text>
                 <Flex direction="column">
                   {

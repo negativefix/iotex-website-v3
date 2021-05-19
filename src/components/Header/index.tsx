@@ -37,7 +37,7 @@ export const Header = observer(() => {
         <Box w="100%" p={{base: "0.5rem", md: "1.125rem"}} boxSizing="border-box" position="absolute" top="0" left="0" zIndex="5">
             <Flex justifyContent="space-between">
                 <Link to={'/'}>
-                    <Box w={{base: "5rem", md: "6rem",  lg: "8rem", xl: "13rem"}}>
+                    <Box w={{base: "5rem", md: "6rem",  "2xl": "10rem"}}>
                       <img src="/images/logo.png" alt="" />
                     </Box>
                 </Link>
@@ -52,8 +52,9 @@ export const Header = observer(() => {
                           }
                           }} >
                           <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
-                            ml={{ base: "1rem", lg: "2rem", xl: "4rem" }}
-                            fontSize={{ base: "0.875rem", lg: "1rem", xl: "1.25rem" }} textDecoration="none" fontWeight="semibold" css={{
+                            letterSpacing="1px"
+                            ml={{ base: "1rem", lg: "4rem", "2xl": "3rem" }}
+                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} textDecoration="none" fontWeight="semibold" css={{
                             '&:hover': {
                               color: '#44FFB2 !important'
                             }
@@ -65,7 +66,7 @@ export const Header = observer(() => {
                     }
                   </Flex>
                   <Menu isLazy>
-                    <MenuButton  ml={{ base: "1rem", lg: "2rem", xl: "4rem" }} fontWeight="semibold" bg="transparent" color="white" border="none"  fontSize={{ base: "0.875rem", lg: "1rem", xl: "1.25rem" }} >
+                    <MenuButton  ml={{ base: "1rem", lg: "4rem", "2xl": "3rem" }} letterSpacing="1px" fontWeight="semibold" bg="transparent" color="white" border="none"  fontSize={{ base: "0.875rem", lg: "1rem", '2xl': "1.25rem" }} >
                       {store.curLang.name}
                     </MenuButton>
                     <MenuList color="black" minWidth="60px" defaultValue={store.curLang.name}>

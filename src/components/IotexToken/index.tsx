@@ -21,10 +21,10 @@ export const IotexToken = observer(() => {
 
     return (
       <Box  maxWidth={{base: "90%", md: '80%', "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", lg: "1.25rem"}}>
+          <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", lg: "1.25rem"}}>
             {lang.t("title5")}
           </Text>
-          <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}}  fontWeight="medium"   mb={{base: "2rem", lg: "4.25rem"}} maxWidth={{base: "90%", xl: "55%"}} >
+          <Text fontSize={{base: "1rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}}  fontWeight="medium"   mb={{base: "2rem", lg: "4.25rem"}} maxWidth={{base: "90%", xl: "55%"}} >
             {lang.t("subtitle5")}
           </Text>
           <Box w={{base: "100%", lg: "16rem"}} className="commonBtnBox" h={{base: "4rem", md: "6rem"}}>

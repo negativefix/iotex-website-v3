@@ -15,7 +15,7 @@ export const AwardWinning = observer(() => {
   ]
 
     return (
-      <Box maxWidth="1554px" mx="auto">
+      <Box mx="auto">
         <Flex justifyContent="space-between" flexDirection={{base: "column", lg: "row"}}>
             <Flex flexWrap="wrap" maxWidth={{base: "100%", lg: "50%"}} justifyContent="space-between">
               {
@@ -27,14 +27,16 @@ export const AwardWinning = observer(() => {
               }
             </Flex>
             <Box maxWidth={{base: '100%', lg: "40%"}} mt={{base: '2rem', lg: 0}}>
-              <Text fontSize={{base: "0.75rem", md: "1.25rem"}}>{lang.t("backed.by")}</Text>
-              <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" lineHeight={{base: "3rem", xl: "5.5rem"}}>{lang.t("award.winning")}</Text>
-              <Text fontSize={{base: "0.875rem", md: "1.25rem"}} fontWeight="medium" lineHeight={{base: "1.5rem", md: "2.25rem"}} mb={{base: "1.8rem", xl: "2.875rem"}}>{lang.t("award.winning.content")}</Text>
-              <a href="https://iotex.io/research" target="_blank" className="commonBtnBox">
-                <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
-                  <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
-                </Box>
-              </a>
+              <Text fontSize={{base: "0.75rem", md: "1.25rem"}} mb={{base: "0.8rem", md: "0.5rem", "2xl": "2.875rem"}}>{lang.t("backed.by")}</Text>
+              <Text fontSize={{base: "2rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} mb={{base: "0.8rem", xl: "1.5rem"}} fontWeight="semibold">{lang.t("award.winning")}</Text>
+              <Text fontSize={{base: "1rem", md: "1.25rem"}} fontWeight="medium" mb={{base: "2rem", xl: "2.875rem"}}>{lang.t("award.winning.content")}</Text>
+              <Box className="commonBtnBox"  h={{base: "4rem", md: "6rem"}}>
+                <a href="https://iotex.io/research" target="_blank" style={{width: "100%"}}>
+                  <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" maxWidth="448px" lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
+                    <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="extrabold" textAlign="center">{lang.t("award.winning.btn")}</Text>
+                  </Box>
+                </a>
+              </Box>
             </Box>
         </Flex>
       </Box>

@@ -23,10 +23,12 @@ export const BuildOnIotex = observer(() => {
         backgroundPosition: '100% 0%'
       }}>
         <Flex justifyContent="space-between" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
-          <Box w={{base: "100%", lg: "35%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
+          <Box w={{base: "100%", lg: "45%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
             <Box position="relative" pb="36%">
-              <img src="/images/code.png" alt="" />
-              <Box position="absolute" width="100%" height="100%" top="24%" left="10%">
+              <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
+                <img src="/images/code.png" alt="" />
+              </Box>
+              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}} top="24%" left="10%">
                 <img src="/images/code.png" alt="" />
               </Box>
             </Box>
@@ -50,10 +52,10 @@ export const BuildOnIotex = observer(() => {
             </Flex>
           </Box>
           <Box  w={{base: "100%", lg: "55%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
-            <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" maxWidth="100%" mb="1.25rem">
+            <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" maxWidth="100%" mb="1.25rem">
               {lang.t("title4")}
             </Text>
-            <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}} maxWidth={{base: "90%", xl: "75%"}} >
+            <Text fontSize={{base: "1rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
               {lang.t("subtitle4")}
             </Text>
             <Flex mt={{base: "5%", xl: "4.125rem"}}  w="100%" alignItems={{base: "flex-start", lg: "center"}} justifyContent="flex-end" direction={{base: "column", lg: "row"}}>
