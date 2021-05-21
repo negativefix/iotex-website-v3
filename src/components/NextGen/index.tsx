@@ -51,7 +51,7 @@ export const NextGen = observer(() => {
         backgroundPosition: '0% 80%'
       }}>
         <Box maxWidth={{base: '90%', md: "80%", "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
+          <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
             {lang.t("title3")}
           </Text>
           <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "50%"}} >

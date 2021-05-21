@@ -56,7 +56,7 @@ export const Home = observer(() => {
           {
             analysis.map(item => {
               return <Box key={item.name}   textAlign="center" w={{base: "45%", md: "25%"}} mb={{base: "3rem", md: "0"}}>
-                <Text fontWeight="medium" fontSize={{base: "2rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} mb={{base: "0.5rem", md: "1rem"}}>
+                <Text fontWeight="medium" fontSize={{base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} mb={{base: "0.5rem", md: "1rem"}}>
                   <CountTo from={0} to={item.amount} speed={5000}  />{item.coin}
                 </Text>
                 <Text fontSize={{base: "1rem",  lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="semibold">{item.name}</Text>
@@ -74,7 +74,7 @@ export const Home = observer(() => {
         />
       </Box>
         <Box mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.3rem"}} mx="auto" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}>
-          <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="bold" width={{base: "70%", sm: "90%"}} mx="auto" textAlign="center" mb={{base: "1rem", md: "1.75rem"}}>
+          <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="bold" width={{base: "90%", sm: "90%"}} mx="auto" textAlign="center" mb={{base: "1rem", md: "1.75rem"}}>
             {lang.t("title2")}
           </Text>
           <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium" textAlign="center" mb={{base: "1rem", md: "4.1875rem" }}whiteSpace="pre-line">

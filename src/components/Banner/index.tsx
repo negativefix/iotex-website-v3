@@ -21,9 +21,9 @@ export const Banner = observer(() => {
               left="0" alignItems="center" justifyContent="center" direction="column"
               pt={{base: "6rem", md: "4rem", lg: "5rem", xl: "6rem", "2xl": "5rem"}}>
               <Text 
-                fontSize={{base: "1.5rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
+                fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
                 mb={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.5rem", "2xl": "3.125rem"}}
-                fontWeight="semibold" color="white" w="70%" 
+                fontWeight="semibold" color="white" w="90%" 
                 textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}
               >
                 {lang.t("title")}
