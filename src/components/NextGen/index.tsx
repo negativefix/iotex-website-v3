@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import { observer, useLocalStore } from 'mobx-react-lite';
-import { Link } from "@chakra-ui/react"
+import { Button } from "../Button/index"
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
@@ -30,24 +30,15 @@ export const NextGen = observer(() => {
       {name: lang.t("minttoken"), desc: lang.t("minttoken.desc"), icon: "/images/logo_minttoken.png", href: "https://minttoken.io/" },
     ],
     changeCard (item, index)  {
-      let isShowArr = store.configs.filter(item => item.show === true)
       const arr = [...store.configs]
-      console.log(isShowArr, item)
-      if(isShowArr.length === 0) {
-        arr[index].show = true
-        store.configs = arr
-        return false
-      } else {
-        if(item.name === isShowArr[0].name) {
-          arr[index].show = false
-        } else {
-          arr.filter(item => item.show = false)
-          arr[index].show = true
-        }
-        console.log(arr)
-        store.configs = arr
-      }
+      arr[index].show = true
+      store.configs = arr
     },
+    resetCard(item, index) {
+      const arr = [...store.configs]
+      arr[index].show = false
+      store.configs = arr
+    }
   }));
 
     return (
@@ -58,26 +49,20 @@ export const NextGen = observer(() => {
         backgroundPosition: '0% 80%'
       }}>
         <Box maxWidth={{base: '90%', md: "80%", "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
+          <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem",}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
             {lang.t("title3")}
           </Text>
-          <Text fontSize={{base: "1rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "50%"}} >
+          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "50%"}} >
             {lang.t("subtitle3")}
           </Text>
           <Flex justifyContent="space-between" flexDirection={{base: "column", xl: "row"}}>
-          <Box w={{base: "100%", lg: "375px"}} className="commonBtnBox" h={{base: "4rem", md: "6rem"}}>
-            <a href="https://ecosystem.iotex.io/" style={{width: "100%"}}>
-              <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", md: "375px"}} lineHeight={{base: "4rem", md: "6rem"}} cursor="pointer">
-                <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("explore.ecosystem")}</Text>
-              </Box>
-            </a>
-           </Box>
+            <Button href="https://ecosystem.iotex.io/" size={{base: "100%", md: "375px"}} name={lang.t("explore.ecosystem")} />
             <Flex flexWrap="wrap" maxWidth={{base: "100%", xl: "60%"}} justifyContent="space-between"  alignContent="space-between" mt={{base: "3rem", xl: 0}}>
               {
                 store.configs.map((item, index) => {
                   return <Flex key={item.name} 
-                    w={{base: "100%", md: "48%", lg: "48%"}} h={{base: "7.875rem", md: "14vw"}}  
-                    mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , lg: "1.8rem", "2xl": "2.5rem"}} 
+                    w={{base: "100%", sm: "48%"}} maxW="28.125rem" maxH="15.75rem" h={{base: "10rem", sm: "10rem",  lg: "12rem", "2xl": "15.75rem"}}  
+                    mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , md: "1.8rem", "2xl": "2.5rem"}} 
                     justifyContent="space-between"  alignItems="center"
                     css={{
                         background: 'url(/images/next_card.png)',
@@ -90,13 +75,14 @@ export const NextGen = observer(() => {
                           backgroundSize: '100% 100%'
                         }
                     }}
-                    onClick={() => store.changeCard(item, index)}>
+                    onClick={() => store.changeCard(item, index)}
+                    onMouseOut={() => store.resetCard(item, index)}>
                     {
                       item.show ? <>
                       <Text fontSize={{base: "1rem", lg: "1.2rem"}} fontWeight="semibold" lineHeight={{base: "1.8rem", lg: "2.625rem"}}>{item.desc}</Text>
                       </> : <>
                         <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}} 
-                        w={{base: "40%", lg:"max-content"}} fontWeight="semibold" 
+                        w={{base: "40%", xl:"max-content"}} fontWeight="semibold" 
                         mb="3rem"
                         >{item.name}</Text>
                         <Image
@@ -121,24 +107,31 @@ export const NextGen = observer(() => {
               <Flex justifyContent="space-between">
                 {
                   store.dapps1.map((item, index) => {
-                    return <Flex  key={index} p="1.25rem" cursor="pointer" w="30%" maxWidth="450px"  css={{
+                    return <Flex  key={index} px="1.25rem" py="1rem" cursor="pointer" w="30%" maxWidth="450px"  css={{
                       background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                         mixBlendMode: 'normal',
                         borderRadius: '1.25rem',
                         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
-                        backdropFilter: 'blur(100px)'
+                        backdropFilter: 'blur(100px)',
+                        transition: 'all 0.5s',
+                        marginTop: 0,
+                        opacity: 0.8,
+                        '&:hover': {
+                          marginTop: '-10px',
+                          opacity: 1
+                        },
                       }}>
                         <a href={item.href} style={{display: 'flex'}} target="_blank">
                           <Image
-                            boxSize="3.75rem"
+                            boxSize="3rem"
                             objectFit="cover"
                             src={item.icon}
                             alt={item.name}
-                            mr="1.25rem"
+                            mr="1rem"
                           />
                           <Box textAlign="left">
                             <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                            <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                            <Text fontSize="1rem" wordBreak="break-word" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
                           </Box>
                         </a>
                       </Flex>
@@ -150,16 +143,21 @@ export const NextGen = observer(() => {
               <Flex justifyContent="space-between" mb="2.875rem">
                 {
                   store.dapps2.map((item, index) => {
-                    return <Flex p="1.25rem" maxWidth="450px" w="30%" key={index} cursor="pointer"  css={{
+                    return <Flex px="1.25rem" py="1rem" w="30%" key={index} cursor="pointer" maxWidth="450px"  css={{
                       background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                       mixBlendMode: 'normal',
                       borderRadius: '1.25rem',
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
-                      backdropFilter: 'blur(100px)'
+                      backdropFilter: 'blur(100px)',
+                      transition: 'all 0.5s',
+                      marginTop: 0,
+                      '&:hover': {
+                        marginTop: '-10px',
+                      },
                     }}>
                        <a href={item.href} style={{display: 'flex'}} target="_blank">
                         <Image
-                          boxSize="3.75rem"
+                          boxSize="3rem"
                           objectFit="cover"
                           src={item.icon}
                           alt={item.name}
@@ -167,7 +165,7 @@ export const NextGen = observer(() => {
                         />
                         <Box textAlign="left">
                           <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                          <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                          <Text fontSize="1rem" wordBreak="break-word" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
                         </Box>
                       </a>
                     </Flex>
@@ -179,16 +177,23 @@ export const NextGen = observer(() => {
               <Flex justifyContent="space-between" w="100%">
                 {
                   store.dapps3.map((item, index) => {
-                    return <Flex p="1.25rem" maxWidth="450px" w="30%" key={index} cursor="pointer"  css={{
+                    return <Flex px="1.25rem" py="1rem" w="30%" key={index} cursor="pointer" maxWidth="450px"  css={{
                       background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                       mixBlendMode: 'normal',
-                      borderRadius: '1.25rem',
+                      borderRadius: '20px',
                       boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
-                      backdropFilter: 'blur(100px)'
+                      backdropFilter: 'blur(100px)',
+                      transition: 'all 0.5s',
+                      marginTop: 0,
+                      opacity: 0.8,
+                      '&:hover': {
+                        marginTop: '-10px',
+                        opacity: 1
+                      },
                     }}>
                        <a href={item.href} style={{display: 'flex'}} target="_blank">
                           <Image
-                            boxSize="3.75rem"
+                            boxSize="3rem"
                             objectFit="cover"
                             src={item.icon}
                             alt={item.name}
@@ -196,7 +201,7 @@ export const NextGen = observer(() => {
                           />
                           <Box textAlign="left">
                             <Text fontSize="1.125rem" lineHeight="1.25rem" fontWeight="semibold" mb="0.5rem">{item.name}</Text>
-                            <Text fontSize="1rem" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
+                            <Text fontSize="1rem" wordBreak="break-word" lineHeight="1.25rem" className="showTwoLine">{item.desc}</Text>
                           </Box>
                         </a>
                     </Flex>
@@ -205,7 +210,7 @@ export const NextGen = observer(() => {
               </Flex>
             </Box>
         </Box>
-        <Box display={{base: "block", xl: "none"}} w={{base: "90%", md: "80%"}} mx="auto">
+        <Box display={{base: "none", sm: 'block', xl: "none"}} w={{base: "90%", md: "80%"}} mx="auto">
             {
               [store.dapps1, store.dapps2, store.dapps3].map((item, index) => {
                 return <Flex key={`dapps${index}`} justifyContent="space-between" mb="2rem">

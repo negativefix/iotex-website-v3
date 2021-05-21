@@ -4,7 +4,7 @@ import {  useHistory } from 'react-router-dom';
 import { useStore } from '../../store';
 import { Link } from "@chakra-ui/react"
 import { observer, useLocalStore } from 'mobx-react-lite';
-import { IoMenu } from "react-icons/io5";
+import { Button } from "../Button/index"
 
 export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
@@ -23,7 +23,7 @@ export const BuildOnIotex = observer(() => {
         backgroundPosition: '100% 0%'
       }}>
         <Flex justifyContent="space-between" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
-          <Box w={{base: "100%", lg: "45%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
+          <Box w={{base: "100%", lg: "40%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
             <Box position="relative" pb="36%">
               <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
                 <img src="/images/code.png" alt="" />
@@ -32,30 +32,30 @@ export const BuildOnIotex = observer(() => {
                 <img src="/images/code.png" alt="" />
               </Box>
             </Box>
-            <Flex flexWrap="wrap"  justifyContent="space-between"  alignContent="space-between">
+            <Flex flexWrap="wrap"  justifyContent="space-between">
               {
                 configs.map((item, index) => {
-                  return <Flex key={index} w={{base: "100%", md: "48%" ,g: "100%", xl: "48%"}}  h="48%" maxHeight="170px" justifyContent="space-between" direction="column" mb={{base: "3rem", xl: "6.25rem"}}>
+                  return <Flex key={index} w={{base: "45%", md: "48%", lg: "100%", xl: "48%"}}  h="48%" maxHeight="170px" justifyContent="space-between" direction="column" mb={{base: "3rem", xl: "6.25rem"}}>
                     <Image
-                      boxSize={{base: "3rem", lg: "2.5rem", xl: "3.875rem"}}
+                      boxSize={{base: "3rem", lg: "2.5rem", "2xl": "3.875rem"}}
                       objectFit="cover"
                       src={item.icon}
                       alt={item.name}
                     />
-                    <Text fontSize={{base: "1.25rem", lg: "1.25rem", "2xl": "2rem"}} fontWeight="semibold" lineHeight="3.25rem" mb="0.5rem" mt="1rem">{item.name}</Text>
+                    <Text fontSize={{base: "1rem", lg: "1.25rem", "2xl": "2rem"}} fontWeight="semibold" lineHeight="3.25rem" mb="0.5rem" mt="1rem">{item.name}</Text>
                     <a href={item.href} target="_blank">
-                      <Text fontSize={{base: "1rem", lg: "0.875rem", "2xl": "1.125rem"}} color="brandColor" lineHeight="1.275rem">{item.desc} &gt;&gt;</Text>
+                      <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} color="brandColor" lineHeight="1.275rem">{item.desc} &gt;&gt;</Text>
                     </a>
                   </Flex>
                 })
               }
             </Flex>
           </Box>
-          <Box  w={{base: "100%", lg: "55%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
-            <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" maxWidth="100%" mb="1.25rem">
+          <Box  w={{base: "100%", lg: "50%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
+            <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", md: "1.25rem"}}>
               {lang.t("title4")}
             </Text>
-            <Text fontSize={{base: "1rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
+            <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
               {lang.t("subtitle4")}
             </Text>
             <Flex mt={{base: "5%", xl: "4.125rem"}}  w="100%" alignItems={{base: "flex-start", lg: "center"}} justifyContent="flex-end" direction={{base: "column", lg: "row"}}>
@@ -69,15 +69,9 @@ export const BuildOnIotex = observer(() => {
                   mr="3rem"
                 />
               </a>
-              <Box w={{base: "100%", lg: "375px"}} className="commonBtnBox" h={{base: "4rem", md: "6rem"}}>
-                <a href="https://docs.iotex.io/" style={{width: "100%"}}>
-                  <Box bg="btnBgColor" className="commonBtn" borderRadius="10px" w={{base: "100%", lg: "375px"}} lineHeight={{base: "4rem", md: "6rem"}}  cursor="pointer">
-                    <Text fontSize={{base: "1.25rem", md: "1.75rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{lang.t("read.documents")}</Text>
-                  </Box>
-                </a>
-              </Box>
+              <Button href="https://docs.iotex.io/" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
             </Flex>
-            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "1rem", lg: "1.8rem"}} px={{base: "1rem", lg: "2.5rem"}} bg="url('/images/read_build_bg.png')" css={{
+            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat'
             }}>
@@ -93,7 +87,7 @@ export const BuildOnIotex = observer(() => {
               objectFit="fill"
               src="/images/build_small_ball.png"
               alt=""
-              mt={{base: "6rem", lg: "6.25rem"}}
+              mt={{base: "4rem", lg: "6.25rem"}}
               ml={{base: "60%", lg: "13.75rem"}}
               mb={{base: "4rem", lg: "0"}}
             />

@@ -56,7 +56,7 @@ export const DropCard = observer(({index, icon, title, desc, hoverIndex, changeH
         </Box>
         <Text fontSize={{base: "0.5rem", md: "1.125rem"}}  className="desc" color="white"
         borderLeft="1px" borderColor="transparent"  px={{base: "0.5rem", md: '0.8rem',  lg: "1.25rem"}}
-        fontWeight="medium" mt="0.875rem" pb={{base: "0.6rem", md: "3.375rem"}}>{desc}</Text>
+        fontWeight="medium" mt="0.875rem" pb={{base: "0.6rem", md: '1rem', xl: "3.375rem"}}>{desc}</Text>
       </Box>
     );
 });

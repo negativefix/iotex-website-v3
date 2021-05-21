@@ -52,9 +52,10 @@ export const Header = observer(() => {
                           }
                           }} >
                           <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
-                            letterSpacing="1px"
-                            ml={{ base: "1rem", lg: "4rem", "2xl": "3rem" }}
-                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} textDecoration="none" fontWeight="semibold" css={{
+                            letterSpacing="0.5px"
+                            ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}
+                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} 
+                            textDecoration="none" fontWeight="semibold" css={{
                             '&:hover': {
                               color: '#44FFB2 !important'
                             }

@@ -15,8 +15,8 @@ export const customTheme = extendTheme({
         textColor: "#43C9BA"
     },
     fonts: {
-        body: 'Montserrat',
-        heading: 'Montserrat'
+        body: "Montserrat, sans-serif",
+        heading: 'Montserrat, sans-serif'
     },
     shadows: {
         largeSoft: 'rgba(60, 64, 67, 0.15) 0px 2px 10px 6px;'
@@ -66,7 +66,7 @@ export const customTheme = extendTheme({
                 marginTop: '0px'
               },
               '100%': {
-                marginTop: '-10px'
+                marginTop: '-5px'
               },
             },
             "@keyframes upAnimate": {
@@ -74,7 +74,7 @@ export const customTheme = extendTheme({
                 top: '0px'
               },
               '100%': {
-                top: '-10px'
+                top: '-5px'
               },
             },
            '.commonBtnBox': {
@@ -89,8 +89,8 @@ export const customTheme = extendTheme({
                   transition: 'margin 0.5s',
                   '&:hover': {
                     opacity: 0.8,
-                    marginTop: '-10px',
-                    marginLeft: '10px'
+                    marginTop: '-5px',
+                    marginLeft: '5px'
                   }
               },
            },

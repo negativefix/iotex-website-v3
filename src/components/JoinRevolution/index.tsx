@@ -27,30 +27,29 @@ export const JoinRevolution = observer(() => {
             backgroundRepeat: 'no-repeat'
           }}>
             <Flex direction="column" pt={{base: "3rem", lg: "5rem"}} pb={{base: "3rem", lg: "7.5rem"}} alignItems="center">
-              <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}} fontWeight="semibold" maxWidth="100%" mb="1rem">
+              <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" maxWidth="100%" mb="1rem">
                 {lang.t("title6")}
               </Text>
-              <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.8rem"}} fontWeight="medium" mb="4.685rem" textAlign="center" maxWidth={{base: "90%", lg: "55%"}} >
+              <Text fontSize={{base: "0.75rem", md: "1rem", lg: "1.25rem"}} opacity="0.85" fontWeight="medium" mb="4.685rem" textAlign="center" maxWidth={{base: "90%", lg: "70%"}} >
                 {lang.t("subtitle6")}
               </Text>
               <Flex w={{base: "95%", lg: "70%"}} mb={{base: "4rem", lg: "8.56rem"}} justifyContent="space-between" flexWrap="wrap">
                 {
                   infos.map(item => {
-                    return <Box key={item.title} textAlign="center" maxWidth="9.5rem" cursor="pointer" mb={{base: "2rem", lg: 0}}>
+                    return <Box key={item.title} textAlign="center" maxWidth={{base: "46%", sm: "24%"}} cursor="pointer" mb={{base: "2rem", lg: 0}}>
                       <a href={item.href} target="_blank">
-                        <Image
-                          boxSize={{base: "1.5rem", lg: "4.5rem"}}
-                          objectFit="cover"
-                          src={item.icon}
-                          alt={item.title}
-                          mx="auto"
-                          mb={{base: "1rem", lg: "2rem"}}
-                          css={{
-                            filter: 'drop-shadow(0px 256px 200px rgba(0, 24, 0, 0.15)), drop-shadow(0px 110px 80px rgba(0, 1, 0, 0.07)), drop-shadow(0px 60px 55px rgba(0, 1, 0, 0.09)), drop-shadow(0px 35px 30px rgba(0, 21, 0, 0.0329042)), drop-shadow(0px 20px 16px rgba(0, 1, 0, 0.1))'
-                          }}
-                        />
-                        <Text fontSize={{base: "1rem", lg: "1.25rem"}} fontWeight="semibold" lineHeight="3.25rem">{item.title}</Text>
-                        <Text fontSize={{base: "0.75rem", lg: "1rem"}} color="grayColor2" fontWeight="medium" lineHeight="1.375rem">{item.desc}</Text>
+                       <Flex w={{base: "1.5rem", lg: "7.5rem"}} h={{base: "1.5rem", lg: "7.5rem"}} mx="auto" justifyContent="center" alignItems="center" mb={{base: "1rem", lg: "2rem"}}>
+                          <Image
+                            w={{base: "1.5rem", lg: "4.5rem"}}
+                            src={item.icon}
+                            alt={item.title}
+                            css={{
+                              filter: 'drop-shadow(0px 256px 200px rgba(0, 24, 0, 0.15)), drop-shadow(0px 110px 80px rgba(0, 1, 0, 0.07)), drop-shadow(0px 60px 55px rgba(0, 1, 0, 0.09)), drop-shadow(0px 35px 30px rgba(0, 21, 0, 0.0329042)), drop-shadow(0px 20px 16px rgba(0, 1, 0, 0.1))'
+                            }}
+                          />
+                       </Flex>
+                        <Text fontSize={{base: "1rem", lg: "1.125rem"}} fontWeight="semibold" mb="0.5rem">{item.title}</Text>
+                        <Text fontSize={{base: "0.75rem", lg: "1rem"}} color="grayColor2" fontWeight="medium" lineHeight="1.375rem" w="90%">{item.desc}</Text>
                       </a>
                     </Box>
                   })
