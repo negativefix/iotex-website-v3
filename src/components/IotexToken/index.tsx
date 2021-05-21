@@ -14,7 +14,7 @@ export const IotexToken = observer(() => {
 
   const advantages = [
     {title: lang.t("stake.earn"), icon: "/images/stake.png", desc: lang.t("stake.earn.desc")},
-    {title: lang.t("interact.apps"), icon: "/images/interact_with_dapps.svg", desc: lang.t("interact.apps.desc")},
+    {title: lang.t("Interact with Dapps"), icon: "/images/interact_with_dapps.svg", desc: lang.t("Interact with Dapps.desc")},
     {title: lang.t("decentralized.exchange"), icon: "/images/decentralized.png", desc: lang.t("decentralized.exchange.desc")},
     {title: lang.t('burn.drop.tokenomics'), icon: "/images/burn.png", desc: lang.t("burn.drop.tokenomics.desc")},
   ]

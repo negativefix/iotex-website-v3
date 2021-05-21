@@ -62,10 +62,8 @@
   "stake.earn": "Stake & Earn",
   "stake.earn.desc": "Stake IOTX to help secure the network and earn up to 12% APR",
   "stake.now": "Stake Now",
-  "interact": "Interact with \n Dapps",
-  "interact.desc": "Stake IOTX to help secure the network and earn up to 12% APR",
-  "interact.apps": "Interact with \n Dapps",
-  "interact.apps.desc": "Stake IOTX to help secure the network and earn up to 12% APR",
+  "Interact with Dapps": "Interact with \n Dapps",
+  "Interact with Dapps.desc": "Stake IOTX to help secure the network and earn up to 12% APR",
   "decentralized.exchange": "Decentralized \n Exchange",
   "decentralized.exchange.desc": "Stake IOTX to help secure the network and earn up to 12% APR",
   "burn.drop.tokenomics": "Burn-drop \n Tokenomics",
@@ -164,5 +162,7 @@
   "app2": "Web3js",
   "app2.desc": "compatible",
   "app3": "SDKs",
-  "app3.desc": "Go, Java, Python, etc."
+  "app3.desc": "Go, Java, Python, etc.",
+  "interact.with": "Interact with \n Dapps",
+  "interact.with.dapps": "Stake IOTX to help secure the network and earn up to 12% APR"
 }
