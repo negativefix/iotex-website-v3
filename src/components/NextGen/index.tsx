@@ -3,9 +3,11 @@ import { Box, Flex, Text, Image } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import { observer, useLocalStore } from 'mobx-react-lite';
 import { Button } from "../Button/index"
+import { useMediaQuery } from "@chakra-ui/react"
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
+  const [isMaxThan468] = useMediaQuery("(min-width: 468px)")
 
   const store = useLocalStore(() => ({
     configs: [
@@ -49,7 +51,7 @@ export const NextGen = observer(() => {
         backgroundPosition: '0% 80%'
       }}>
         <Box maxWidth={{base: '90%', md: "80%", "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem",}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
+          <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
             {lang.t("title3")}
           </Text>
           <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "50%"}} >
@@ -65,7 +67,7 @@ export const NextGen = observer(() => {
                     mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , md: "1.8rem", "2xl": "2.5rem"}} 
                     justifyContent="space-between"  alignItems="center"
                     css={{
-                        background: 'url(/images/next_card.png)',
+                        background: isMaxThan468 ?  'url(/images/next_card.png)' : `url(${item.selectedIcon})`,
                         mixBlendMode: 'normal',
                         borderRadius: '0.625rem',
                         backgroundSize: '100% 100%',
@@ -75,16 +77,20 @@ export const NextGen = observer(() => {
                           backgroundSize: '100% 100%'
                         }
                     }}
-                    onClick={() => store.changeCard(item, index)}
-                    onMouseOut={() => store.resetCard(item, index)}>
+                    onClick={() => isMaxThan468 ? store.changeCard(item, index) : ''}
+                    onMouseOut={() => isMaxThan468 ? store.resetCard(item, index) : ''}>
                     {
                       item.show ? <>
-                      <Text fontSize={{base: "1rem", lg: "1.2rem"}} fontWeight="semibold" lineHeight={{base: "1.8rem", lg: "2.625rem"}}>{item.desc}</Text>
+                      <Text fontSize={{base: "1rem", lg: "1.2rem", "2xl": "1.5rem"}} fontWeight="semibold">{item.desc}</Text>
                       </> : <>
-                        <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}} 
-                        w={{base: "40%", xl:"max-content"}} fontWeight="semibold" 
-                        mb="3rem"
-                        >{item.name}</Text>
+                        <Box w={{base: "100%", sm: "40%", xl:"max-content"}}>
+                          <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}} 
+                            fontWeight="semibold" 
+                            mb={{base: "1rem", sm: "3rem"}}>
+                            {item.name}
+                          </Text>
+                          <Text display={{base: "block", sm: "none"}} opacity="0.85" fontSize="0.75rem" fontWeight="semibold">{item.desc}</Text>
+                        </Box>
                         <Image
                           boxSize={{base: "5rem", lg: "7rem", "2xl": "10rem"}}
                           objectFit="cover"

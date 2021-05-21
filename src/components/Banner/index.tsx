@@ -33,7 +33,7 @@ export const Banner = observer(() => {
                 fontWeight="medium" color="white" w="70%" textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}>
                 {lang.t("subtitle")}
               </Text>
-              <Box w={{base: "8rem", sm: "10rem", lg: "14rem",  xl: "20rem"}} height={{xl: "6rem"}}  position="relative" cursor="pointer" >
+              <Box w={{base: "8rem", sm: "10rem", xl: "14rem",  "2xl": "20rem"}} height={{"2xl": "6rem"}}  position="relative" cursor="pointer" >
                 <Box w="100%" position="absolute" top="0" css={{
                   transition: 'all 0.6s',
                   marginTop: 0,

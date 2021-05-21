@@ -84,11 +84,9 @@ export const customTheme = extendTheme({
                   width: "100%",
                   position: "absolute",
                   top: 0,
-                  opacity: 1,
                   marginTop: "0px",
                   transition: 'margin 0.5s',
                   '&:hover': {
-                    opacity: 0.8,
                     marginTop: '-5px',
                     marginLeft: '5px'
                   }

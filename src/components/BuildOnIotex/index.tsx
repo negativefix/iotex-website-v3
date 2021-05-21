@@ -52,7 +52,7 @@ export const BuildOnIotex = observer(() => {
             </Flex>
           </Box>
           <Box  w={{base: "100%", lg: "50%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
-            <Text fontSize={{base: "1.5rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", md: "1.25rem"}}>
+            <Text fontSize={{base: "1.5rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", md: "1.25rem"}}>
               {lang.t("title4")}
             </Text>
             <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
