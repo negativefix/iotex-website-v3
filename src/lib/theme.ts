@@ -7,6 +7,7 @@ export const customTheme = extendTheme({
         borderColor: '#333',
         grayColor: "rgba(255,255,255,0.8)",
         grayColor2: "#999999",
+        grayColor3: "#ccc",
         btnBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
         btnHoverBgColor: "linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)",
         btnTextColor: '#1C1F24',

@@ -12,18 +12,20 @@ interface ComponentsProps {
 export const LogoCardItem = observer(({item, width, height} : ComponentsProps) => {
     return (
       <Flex key={item.icon} w={width} h={height} justifyContent="center" alignItems="center" css={{
-        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.2) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+        boxShadow: 'inset -1px -1px 0px rgb(255 255 255 / 25%)',
         mixBlendMode: 'normal',
-        borderRadius: '10px',
-        transition: 'background 0.6s',
+        backdropFilter: 'blur(50px)',
+        borderRadius: '20px',
+        transition: 'all 0.6s linear',
         '&:hover': {
-          backgroundColor: '#fff',
+          background: '#fff',
           img: {
             content: `url(${item.iocn_active})`
           }
         }
     }}>
-      <img style={{width: '60%'}} src={item.icon} alt="" />
+      <img style={{width: '65%'}} src={item.icon} alt="" />
     </Flex>
     );
 });

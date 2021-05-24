@@ -29,7 +29,7 @@ export const AwardWinning = observer(() => {
             </Flex>
             <Box maxWidth={{base: '100%', lg: "42%"}} mt={{base: '2rem', lg: 0}}>
               <Text fontSize={{base: "0.75rem", md: "1.25rem"}} mb={{base: "0.5rem", md: "0", "2xl": "0.4rem"}}>{lang.t("backed.by")}</Text>
-              <Text fontSize={{base: "1rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "3rem"}} mb={{base: "0.5rem", xl: "0.5rem"}} fontWeight="semibold">{lang.t("award.winning")}</Text>
+              <Text fontSize={{base: "1.25rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "3rem"}} mb={{base: "0.5rem", xl: "0.5rem"}} fontWeight="semibold">{lang.t("award.winning")}</Text>
               <Text fontSize={{base: "0.875rem", md: "1.25rem"}} fontWeight="medium" opacity="0.85" mb={{base: "2rem", xl: "2.875rem"}}>{lang.t("award.winning.content")}</Text>
               <Button 
                 href="https://iotex.io/research" 
