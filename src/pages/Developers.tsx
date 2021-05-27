@@ -18,8 +18,8 @@ export const Developers = observer(() => {
   const tools = [
     {name: lang.t("tool1"), icon: '/images/dev/tool1.png'},
     {name: lang.t("tool2"), icon: '/images/dev/tool2.png'},
-    {name: lang.t("tool3"), icon: '/images/dev/tool3.png'},
-    {name: lang.t("tool4"), icon: '/images/dev/tool4.png'},
+    {name: lang.t("tool3"), icon: '/images/dev/smart-contracts.png'},
+    {name: lang.t("tool4"), icon: '/images/dev/evm-compatible.png'},
     {name: lang.t("tool5"), icon: '/images/dev/tool5.png'},
     {name: lang.t("tool6"), icon: '/images/dev/tool6.png'},
     {name: lang.t("tool7"), icon: '/images/dev/tool7.png'},
@@ -87,7 +87,9 @@ export const Developers = observer(() => {
                     <Box w={{base: "2.5rem", sm: "4rem"}} h={{base: "2.5rem", sm: "4rem"}}>
                       <img src={item.icon} alt={item.name} />
                     </Box>
-                  <Text fontSize={{base: "0.75rem", md: "0.875rem"}} whiteSpace="pre-line" textAlign="center">{item.name}</Text>
+                  <Text fontSize={{base: "0.75rem", md: "0.875rem"}} whiteSpace="pre-line" textAlign="center">
+                    {item.name}
+                  </Text>
                 </Flex>
               })
             }
@@ -122,9 +124,17 @@ export const Developers = observer(() => {
                         alt={item.title}
                         mb={{base: "1rem", sm: "2rem"}}
                       />
-                    <Text fontSize={{base: "1rem", lg: "1.25rem", "2xl": "1.75rem"}} fontWeight="semibold" 
-                      mb={{base: "1rem", sm: "2rem"}}
-                    >{item.title}</Text>
+                    <Flex alignItems="center" mb={{base: "1rem", sm: "2rem"}}>
+                      <Text fontSize={{base: "1rem", lg: "1.25rem", "2xl": "1.75rem"}} mr="0.5rem" fontWeight="semibold" 
+                      >{item.title}</Text>
+                      <Image
+                          boxSize="2rem"
+                          objectFit="cover"
+                          src="/public/images/dev/link2.svg"
+                          alt="arrow"
+                          cursor="pointer"
+                        />
+                    </Flex>
                     <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} opacity="0.85" fontWeight="medium">{item.desc}</Text>
                   </Flex>
                 })
@@ -132,7 +142,7 @@ export const Developers = observer(() => {
             </Box>
             <Box w={{base: "100%",md: "48%",  lg: "55%", "2xl": "50%",}} mb={{base: "4rem", md: 0}}>
               <Text 
-                fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} 
+                fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}}
                 w={{base: "100%", md: "70%", lg: "max-content"}} 
                 textAlign={{base: "center", sm: "left"}}
                 whiteSpace={{base: "inherit", lg: "pre-line"}}
@@ -140,7 +150,7 @@ export const Developers = observer(() => {
                 {lang.t("dev.title2")}
               </Text>
               <Text 
-                fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} 
+                fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}}  
                 textAlign={{base: "center", sm: "left"}}
                 whiteSpace={{base: "pre-line", lg: "inherit"}}
                 mb={{base: "2rem", lg: "4.25rem"}}
@@ -232,7 +242,7 @@ export const Developers = observer(() => {
                           <Image
                             boxSize="2rem"
                             objectFit="cover"
-                            src="/public/images/dev/link.png"
+                            src="/public/images/dev/link.svg"
                             alt="arrow"
                           />
                         </Flex>
@@ -246,7 +256,7 @@ export const Developers = observer(() => {
                 }
               </Box>
               <Box w={{base: "100%", md: "50%"}} mb={{base: "4rem", md: 0}}>
-                <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold" mb="1.8rem" whiteSpace="pre-line">
+                <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" mb="1.8rem" whiteSpace="pre-line">
                   {lang.t("dev.title4")}
                 </Text>
                 <Text 
@@ -259,7 +269,7 @@ export const Developers = observer(() => {
               </Box>
             </Flex>
           <Box>
-            <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
+            <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
               {lang.t("dev.title5")}
             </Text>
             <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}}   
@@ -293,7 +303,7 @@ export const Developers = observer(() => {
           backgroundPosition: `${isMaxThan768 ? '0 70%' :  '0 40%'}`
         }}>
         <Box maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">
-          <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
+          <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}}fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
               {lang.t("dev.title6")}
             </Text>
             <Text 
@@ -321,7 +331,7 @@ export const Developers = observer(() => {
                   </Flex>
                   <Box w={{base:"100%", md: '46%', "2xl": "40%"}} mb={{base: "4rem", md: 0}}>
                     <Text 
-                      fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} 
+                      fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}}
                       whiteSpace={{base: "inherit", md: "pre-line"}}
                       mb="2.8rem"
                       wordBreak="break-word" fontWeight="semibold">
