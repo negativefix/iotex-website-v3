@@ -269,7 +269,7 @@ export const Developers = observer(() => {
               </Box>
             </Flex>
           <Box>
-            <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}} fontWeight="semibold" color="white" textAlign="center" mb="1.75rem">
+            <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "3rem", "2xl": "4rem"}} whiteSpace="pre-line" fontWeight="semibold" textAlign="center" mb="1.75rem">
               {lang.t("dev.title5")}
             </Text>
             <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}}   
@@ -280,7 +280,7 @@ export const Developers = observer(() => {
             <Flex flexWrap="wrap" justifyContent="space-between"  alignContent="space-between">
               {
                 logos.map((item, index) => {
-                  return <Box key={index} mb="3rem"  width={{base: "46%",  lg: "30%"}} height={{base: "6rem", sm: "8rem", lg: "11.625rem"}}>
+                  return <Box key={index} mb="3rem"  width={{base: "46%",  lg: "30%"}} height={{base: "6rem", sm: "8rem", md: "9rem", "2xl": "11.625rem"}}>
                     <LogoCardItem item={item} width="100%" height="100%" />
                   </Box>
                 })

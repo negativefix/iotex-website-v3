@@ -25,7 +25,7 @@ export const LogoCardItem = observer(({item, width, height} : ComponentsProps) =
           }
         }
     }}>
-      <img style={{width: '65%'}} src={item.icon} alt="" />
+      <img style={{width: '60%'}} src={item.icon} alt="" />
     </Flex>
     );
 });
