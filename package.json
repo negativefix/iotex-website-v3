@@ -35,6 +35,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "video-react": "^0.14.1",
+    "vite-imagetools": "^3.6.8",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
