@@ -35,7 +35,8 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "video-react": "^0.14.1",
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.10",
+    "react-sticky-el": "^2.0.9"
   },
   "devDependencies": {
     "@cypress/react": "^4.16.4",

@@ -5,7 +5,7 @@ import { Flex, Box, Text, Image } from "@chakra-ui/react";
 import BasicLayout from "../Layouts/BasicLayout";
 import { DevBanner } from "@/components/Banner/DevBanner";
 import { LogoCardItem } from "@/components/LogoCardItem/index";
-import { Footer } from "@/components/Footer/index";
+import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
 
