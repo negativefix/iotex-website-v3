@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
 import { useStore } from "../../store";
 import { observer } from "mobx-react-lite";
-import { Footer } from "@/components/Footer/index";
+import { Footer } from "@/components/Footer/index";
 //@ts-ignore
 import join_bg2 from "../../assets/images/join_bg2.png?w=600&h=500quality=10&format=webp";
 export const JoinRevolution = observer(() => {
