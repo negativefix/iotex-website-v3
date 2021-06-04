@@ -24,12 +24,10 @@ const Faq = () => {
 
 			const blockElements = [...document.getElementsByClassName('block')]
 			const navElement = [...document.getElementsByClassName('nav')]
-
 			for (let [index, element] of blockElements.entries()) {
 				//@ts-ignore
 				const offsetTop = element.offsetTop;
-				const scrollHeight = element.scrollHeight;
-				if (scrollTop >= offsetTop + scrollHeight&&scrollTop>0) {
+				if (scrollTop >= offsetTop ) {
 					const lastActiveElement = document.getElementsByClassName('active')
 					lastActiveElement[0].classList.remove('active')
 					navElement[index].classList.add('active')
