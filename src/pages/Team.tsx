@@ -429,39 +429,17 @@ export const Team = observer(() => {
           })}
         </SimpleGrid>
       </Box>
-      {/* <article >
-        <div className="mw-container teamUsersBox">
-          {userConfig.map((item) => {
-            return (
-              <div className="team-user-item" key={item.name}>
-                <img className="avatar" src={item.avatar} alt="" />
-                <div className="name">{item.name}</div>
-                <div className="jobs">{item.job}</div>
-                <div className="links">
-                  {item.links &&
-                    item.links.map((item) => {
-                      return (
-                        <a href={item.href} key={item.href}>
-                          <img src={item.src} alt="" />
-                        </a>
-                      )
-                    })}
-                </div>
-                <div className="intros">{item.intros}</div>
-              </div>
-            )
-          })}
-          <div className="team-user-item"></div>
-          <div className="team-user-item"></div>
-        </div>
-      </article> */}
 
       {/* investors */}
-      {/* <article className={styles.teamInvestors}>
-        <div className="mw-container">
-          <img src="/images/team/investors.png" alt="" />
-        </div>
-      </article> */}
+      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt="10rem" p="2rem 2.5rem" css={{
+        background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+        boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
+        backdropFilter: 'blur(100px)',
+        borderRadius: '20px'
+      }}>
+        <img src="/images/team/investors.png" alt="" />
+      </Box>
+     
       <Footer />
     </BasicLayout>
   )
