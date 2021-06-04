@@ -25,7 +25,7 @@ const SideBar = () => {
 			<a
 				// @ts-ignore
 				className={i === 1 ? 'nav active' : 'nav'}
-				onClick={(e) => scrollToAnchor(e, `block${i}`)}
+				href={`#block${i}`}
 				key={i}
 			>
 				{/*@ts-ignore*/}
