@@ -357,81 +357,82 @@ export const Team = observer(() => {
 
   return (
     <BasicLayout>
-      {/* banner */}
-      <Box h={{base: "sm", md: "md", lg: "2xl", "2xl": "3xl"}} mb="6rem" css={{
+      <Box css={{
         backgroundImage: 'url(/images/team/banner.png)',
-        backgroundSize: "contain",
-        backgroundBlendMode: "soft-light",
-        backdropFilter: 'blur(50px)',
-        mixBlendMode: 'normal',
+        backgroundSize: "100%",
+        backgroundRepeat: 'no-repeat',
       }}>
-        <Flex alignItems="center" justifyContent="flex-end" direction="column" w="100%" h="100%" maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">
-          <Text  fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
-            mb={{base: "1rem", md: "2rem", lg: "3rem"}}
-            textAlign={{base: "center", sm: "left"}}
-            fontWeight="semibold" whiteSpace={{base: "inherit", md: "pre-line"}}>
-            {lang.t("team.title")}
-          </Text>
-          <Text 
-            fontSize={{base: "0.75rem", sm: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.75rem"}} 
-            mb={{base:  "6rem", lg: "10rem", "2xl": "8rem"}} opacity="0.85" width="80%"
-            fontWeight="medium" textAlign="center">
-            {lang.t("team.subtitle")}
-          </Text>
-        </Flex>
-      </Box>
 
-      {/* team users */}
-      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto">
-        <SimpleGrid columns={[1, 2, 2, 3, 4]} spacing={16}>
-          {userConfig.map((item) => {
-            return (
-              <Box key={item.name} p="1rem 1rem 1.25rem 1rem" css={{
-                background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
-                boxShadow: 'inset -1px -1px 0px rgb(255,255, 255, 25%)',
-                mixBlendMode: 'normal',
-                backdropFilter: 'blur(50px)',
-                borderRadius: '20px',
-                transition: '0.5s transform ease-in-out',
-                border: '1px solid transparent',
-                '&:hover': {
-                  transform: 'scale(1.1)',
+        <Box 
+          pt={{base: "8rem", md: "10rem", lg: "12rem", xl: "13rem", "2xl": "22.875rem"}} 
+          pb={{base: "5rem", md: "5rem", lg: "6rem", xl: "8rem", "2xl": "13rem"}}>
+          <Flex alignItems="center" justifyContent="flex-end" direction="column" w="100%" h="100%" maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">
+            <Text  fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
+              mb={{base: "1rem", md: "1.875rem", "2xl": "2.875rem"}}
+              textAlign={{base: "center", sm: "left"}}
+              fontWeight="semibold" whiteSpace={{base: "inherit", md: "pre-line"}}>
+              {lang.t("team.title")}
+            </Text>
+            <Text 
+              fontSize={{base: "0.75rem", sm: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.75rem"}}  opacity="0.85" 
+              width={{base: "90%", lg: "80%", xl: "81%", "2xl": "70%"}}
+              fontWeight="medium" textAlign="center">
+              {lang.t("team.subtitle")}
+            </Text>
+          </Flex>
+        </Box>
+
+        <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto">
+          <SimpleGrid columns={[1, 2, 2, 3, 4]} spacing={16}>
+            {userConfig.map((item) => {
+              return (
+                <Box key={item.name} p="1rem 1rem 1.25rem 1rem" css={{
+                  background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
                   boxShadow: 'inset -1px -1px 0px rgb(255,255, 255, 25%)',
-                }
-              }}>
-                <Image
-                  htmlWidth="100%"
-                  borderRadius="10px"
-                  objectFit="cover"
-                  src={item.avatar}
-                  alt="Dan Abramov"
-                />
-                <Text fontSize={{base: "1rem", md: "1.25rem"}} fontWeight="bold" mt="0.5rem">{item.name}</Text>
-                <Text fontSize={["lg"]} mt="0.2rem" mb="0.8rem">{item.job}</Text>
-                <Flex mb="0.8rem">
-                  {item.links &&
-                    item.links.map((option) => {
-                      return (
-                        <a href={option.href} key={option.href} target="_blank">
-                          <Image
-                              objectFit="cover"
-                              src={option.src}
-                              alt="Dan Abramov"
-                              mr="2"
-                            />
-                        </a>
-                      )
-                    })}
-                </Flex>
-                <Text fontSize={["xs", "sm", "md"]} w="full" lineHeight="1.5rem">{item.intros}</Text>
-              </Box>
-            )
-          })}
-        </SimpleGrid>
+                  mixBlendMode: 'normal',
+                  backdropFilter: 'blur(50px)',
+                  borderRadius: '20px',
+                  transition: '0.5s transform ease-in-out',
+                  border: '1px solid transparent',
+                  '&:hover': {
+                    transform: 'scale(1.1)',
+                    boxShadow: 'inset -1px -1px 0px rgb(255,255, 255, 25%)',
+                  }
+                }}>
+                  <Image
+                    htmlWidth="100%"
+                    borderRadius="10px"
+                    objectFit="cover"
+                    src={item.avatar}
+                    alt="Dan Abramov"
+                  />
+                  <Text fontSize={{base: "1rem", md: "1.25rem"}} fontWeight="bold" mt="0.5rem">{item.name}</Text>
+                  <Text fontSize={["lg"]} mt="0.2rem" mb="0.8rem">{item.job}</Text>
+                  <Flex mb="0.8rem">
+                    {item.links &&
+                      item.links.map((option) => {
+                        return (
+                          <a href={option.href} key={option.href} target="_blank">
+                            <Image
+                                objectFit="cover"
+                                src={option.src}
+                                alt="Dan Abramov"
+                                mr="2"
+                              />
+                          </a>
+                        )
+                      })}
+                  </Flex>
+                  <Text fontSize={["xs", "sm", "md"]} w="full" lineHeight="1.5rem">{item.intros}</Text>
+                </Box>
+              )
+            })}
+          </SimpleGrid>
+        </Box>
       </Box>
+      
 
-      {/* investors */}
-      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt="10rem" p="2rem 2.5rem" css={{
+      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "5rem", lg: "10rem"}} p="2rem 2.5rem" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
         backdropFilter: 'blur(100px)',
