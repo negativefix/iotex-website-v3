@@ -7,6 +7,7 @@ import { Team } from './pages/Team';
 import { useStore } from '@/store/index';
 import { customTheme } from './lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
+import Enterprise from "./pages/Enterprise";
 import Faq from "./pages/Faq/Faq";
 
 export const App = observer(() => {
@@ -22,6 +23,7 @@ export const App = observer(() => {
           <Route path="/developers" exact component={Developers} />
 	        <Route path='/faq' exact component={Faq}/>
 	        <Route path='/team' exact component={Team}/>
+          <Route path="/enterprise" exact component={Enterprise} />
         </Switch>
       </Router>
     </ChakraProvider>
