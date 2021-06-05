@@ -27,6 +27,7 @@ const SideBar = () => {
 				className={i === 1 ? 'nav active' : 'nav'}
 				href={`#block${i}`}
 				key={i}
+				onClick={(e) => scrollToAnchor(e, `block${i}`)}
 			>
 				{/*@ts-ignore*/}
 				{lang.t(`faq.sidebar.option${i}`)}

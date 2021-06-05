@@ -18,28 +18,6 @@ const Faq = () => {
 	const {lang} = useStore()
 	const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
 
-	useEffect(() => {
-		const handleScroll = () => {
-			const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-			const blockElements = [...document.getElementsByClassName('block')]
-			const navElement = [...document.getElementsByClassName('nav')]
-			for (let [index, element] of blockElements.entries()) {
-				//@ts-ignore
-				const offsetTop = element.offsetTop;
-				if (scrollTop >= offsetTop ) {
-					const lastActiveElement = document.getElementsByClassName('active')
-					lastActiveElement[0].classList.remove('active')
-					navElement[index].classList.add('active')
-				}
-			}
-		}
-		document.addEventListener('scroll', handleScroll);
-		return () => {
-			document.removeEventListener('scroll', handleScroll);
-		}
-	}, [])
-
 	return (
 		<BasicLayout>
 			<Container
@@ -62,7 +40,7 @@ const Faq = () => {
 					<Heading
 						as={'h1'}
 						textAlign="center"
-						fontSize={{base: '1.75rem', sm: '3.75rem'}}
+						fontSize={{base: '1.75rem', sm: '4rem'}}
 					>
 						{lang.t("faq.banner.title")}
 					</Heading>
@@ -70,6 +48,7 @@ const Faq = () => {
 				<Flex
 					flexDirection={{base: "column", md: "row"}}
 					padding={{base: '0', md: '1.875rem 0 3.75rem'}}
+					justifyContent={'space-between'}
 					css={{
 						width: '100%',
 						flexBetweenTop: "row",
@@ -77,16 +56,12 @@ const Faq = () => {
 					}}
 				>
 					<Box
-						padding={{
-							base: '0rem',
-							sm: '0rem 3.125rem 2.5rem'
-						}}
 						w={{
 							base: '100%',
-							sm: '29.5%'
+							sm: '25%'
 						}}
 						css={{
-							fontSize: "0.875rem",
+							fontSize: "1rem",
 							fontWeight: 500,
 							a: {
 								display: "block",

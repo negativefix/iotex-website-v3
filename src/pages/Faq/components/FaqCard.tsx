@@ -7,8 +7,7 @@ export const FaqCard = observer(({children, id}: { children: React.ReactNode, id
 		<Box
 			className='block'
 			id={id}
-			maxWidth={{base: "100%", md: "80%", "2xl": "1554px"}}
-			mx="auto"
+			maxWidth={{base: "100%", md: "100%", "2xl": "1554px"}}
 			borderRadius="1.125rem"
 			padding={{
 				base: '20px',
