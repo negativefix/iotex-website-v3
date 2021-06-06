@@ -5,6 +5,7 @@ import BasicLayout from '../../Layouts/BasicLayout';
 import { Footer } from '@/components/Footer/index';
 import { Flex, Box, Text, Image, Grid, GridItem } from '@chakra-ui/react';
 import researchTopImg from '@/assets/images/research/ing_research_top.png';
+import bgOne from '@/assets/images/research/ing_research_1.png';
 import bgTwo from '@/assets/images/research/ing_research_2.png';
 import bgThree from '@/assets/images/research/bg.png';
 import { Card } from './Card';
@@ -14,6 +15,14 @@ export const Research = observer(() => {
 
   return (
     <BasicLayout>
+      <Image
+        css={{
+          position: 'absolute',
+          top: '710px',
+          left: '-50px'
+        }}
+        src={bgOne}
+      />
       <Image
         css={{
           position: 'absolute',
@@ -30,6 +39,7 @@ export const Research = observer(() => {
         }}
         src={bgThree}
       />
+
       <Box
         css={{
           backgroundImage: `url('${researchTopImg}')`,
@@ -68,7 +78,7 @@ export const Research = observer(() => {
                 '2xl': '1.75rem'
               }}
               opacity="0.85"
-              width={{ base: '90%', lg: '80%', xl: '81%', '2xl': '70%' }}
+              width={{ base: '95%', lg: '80%', xl: '81%', '2xl': '70%' }}
               fontWeight="medium"
               textAlign="center"
             >
@@ -79,83 +89,107 @@ export const Research = observer(() => {
       </Box>
 
       <Box
-        maxWidth={{ base: '90%', lg: '90%', '2xl': '1554px' }}
+        maxWidth={{ base: '98%', lg: '90%', '2xl': '1554px' }}
         mx="auto"
-        mt={{ base: '5rem', lg: '-4rem' }}
+        mt={{ base: '0rem', lg: '-4rem' }}
         mb="35rem"
-        p="2rem 2rem"
+        p={{base: '1rem', lg: '2rem'}}
       >
         <Grid
-          height="2400"
-          templateRows="repeat(5, 1fr)"
+          height={{ base: 4300, xl: 2400 }}
+          templateRows={{ base: 'repeat(8, 1fr)', xl: 'repeat(5, 1fr)' }}
           templateColumns="repeat(10, 1fr)"
           rowGap={20}
           columnGap={4}
         >
-          <GridItem rowSpan={1} colSpan={6}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              readMoreHref="https://iotex.io/white-paper"
               h="436"
               title={lang.t('research.white.pager.title')}
               desc={[lang.t('research.white.pager.desc'), lang.t('research.white.pager.desc2')]}
               langArr={[
-                { name: 'RU', href: '#' },
-                { name: 'ZH', href: '#' },
-                { name: 'KO', href: '#' },
-                { name: 'IT', href: '#' },
-                { name: 'PT', href: '#' }
+                {
+                  name: 'RU',
+                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_RU.pdf'
+                },
+                {
+                  name: 'ZH',
+                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.4_ZH_CN.pdf'
+                },
+                {
+                  name: 'KO',
+                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_KO.pdf'
+                },
+                {
+                  name: 'IT',
+                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_IT.pdf'
+                },
+                {
+                  name: 'PT',
+                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_PT-BR.pdf'
+                }
               ]}
             />
           </GridItem>
-          <GridItem rowSpan={1} colSpan={4} gridRowGap={0}>
+          <GridItem rowSpan={1} colSpan={{base:10, xl: 4}}>
             <Card
+              readMoreHref="http://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
               h="436"
               title={lang.t('research.yellow.pager.title')}
               desc={[lang.t('research.yellow.pager.desc'), lang.t('research.yellow.pager.desc2')]}
             />
           </GridItem>
 
-          <GridItem h="410" rowSpan={1} colSpan={4}></GridItem>
-          <GridItem rowSpan={1} colSpan={6}>
+          <GridItem display={{base: 'none', xl: 'block'}}  h="410" rowSpan={1} colSpan={{ base: 10, xl: 4 }}></GridItem>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              readMoreHref="https://ieeexplore.ieee.org/document/8977444"
               h="410"
               title={lang.t('research.framework.title')}
               desc={[lang.t('research.framework.desc'), lang.t('research.framework.desc2')]}
             />
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={4}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
             <Card
+              readMoreHref="http://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
               h="500"
               title={lang.t('research.iot.title')}
               desc={[lang.t('research.iot.desc'), lang.t('research.iot.desc2')]}
             />
           </GridItem>
-          <GridItem rowSpan={1} colSpan={6}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              readMoreHref="http://files.iotex.io/publications/PBFT.pdf"
               h="500"
               title={lang.t('research.signature.title')}
               desc={[lang.t('research.signature.desc'), lang.t('research.signature.desc2')]}
             />
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={6}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              showOneDescOnSmallScrren={true}
+              readMoreHref="https://ieeexplore.ieee.org/document/8977822"
               h="470"
               title={lang.t('research.support.title')}
               desc={[lang.t('research.support.desc'), lang.t('research.support.desc2')]}
             />
           </GridItem>
-          <GridItem h="470" rowSpan={1} colSpan={4}></GridItem>
+          <GridItem display={{base: 'none', xl: 'block'}} h="470" rowSpan={1} colSpan={{base: 10, xl: 4}}></GridItem>
 
-          <GridItem rowSpan={1} colSpan={4}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
             <Card
+              readMoreHref="http://files.iotex.io/publications/ucam-whitepaper.pdf"
               h="600"
               title={lang.t('research.ucam.title')}
               desc={[lang.t('research.ucam.desc'), lang.t('research.ucam.desc2')]}
             />
           </GridItem>
-          <GridItem rowSpan={1} colSpan={6}>
+          <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              readMoreHref="https://ieeexplore.ieee.org/document/9221130"
               h="600"
               title={lang.t('research.auth.title')}
               desc={[
