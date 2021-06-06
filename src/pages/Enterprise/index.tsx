@@ -6,7 +6,7 @@ import {
 	Box,
 	Heading,
 	Flex,
-	Text,
+	Text, SimpleGrid,
 } from "@chakra-ui/react";
 import {Button} from "@/components/Button";
 import IconCard from "./components/IconCard";
@@ -18,21 +18,21 @@ const Enterprise = () => {
 	const iconCardItems = [
 		{
 			icon: 'images/icon-logo1.png',
-			iocn_active: 'images/icon-logo1_s.png',
 			title: lang.t('enterprise.group1.case1'),
-			desc: lang.t('enterprise.group1.desc1')
+			desc: lang.t('enterprise.group1.desc1'),
+			link: 'https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f'
 		},
 		{
 			icon: 'images/icon-logo2.png',
-			iocn_active: 'images/icon-logo2_s.png',
 			title: lang.t('enterprise.group1.case2'),
-			desc: lang.t('enterprise.group1.desc2')
+			desc: lang.t('enterprise.group1.desc2'),
+			link: 'https://medium.com/iotex/iotex-publishes-ieee-reports-on-blockchain-iot-c6650c26f443'
 		},
 		{
 			icon: 'images/icon-logo3.png',
-			iocn_active: 'images/icon-logo3_s.png',
 			title: lang.t('enterprise.group1.case3'),
-			desc: lang.t('enterprise.group1.desc3')
+			desc: lang.t('enterprise.group1.desc3'),
+			link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium'
 		}
 	]
 
@@ -53,14 +53,15 @@ const Enterprise = () => {
 					<Heading
 						as={'h1'}
 						textAlign="center"
-						fontSize={{base: '1.75rem', sm: '3.75rem'}}
+						fontSize={{base: '1.75rem', md: '5rem'}}
+						lineHeight={{base:'70px',md:'100px'}}
 					>
 						{lang.t("enterprise.lager.title")}
 					</Heading>
 					<Heading
 						fontSize={{base: '0.88rem', sm: '1.5rem'}}
 						textAlign="center"
-						padding={{sm: '120px'}}
+						padding={{sm: '64px'}}
 						marginTop={{base: '1rem', sm: '0'}}
 					>
 						{lang.t("enterprise.sub.title")}
@@ -88,7 +89,7 @@ const Enterprise = () => {
 
 				<Box marginTop={'10rem'} width={'100%'}>
 					<Flex flexDirection={{base: 'column', md: 'row'}} justifyContent={'space-between'}>
-						<Flex flexDirection={'column'} width={{base: '100%', md: '40%'}}>
+						<Flex flexDirection={'column'} width={{base: '100%', md: '45%'}}>
 							{
 								iconCardItems.map((item) => {
 									return (
@@ -97,94 +98,90 @@ const Enterprise = () => {
 								})
 							}
 						</Flex>
-						<Box width={{base: '100%', md: '50%'}} marginTop={{base: '1rem', md: '0'}}>
+						<Box width={{base: '100%', md: '50%'}} marginTop={{base: '1rem', md: '0'}} maxWidth='760px'>
 							<Box>
-								<Text fontSize={{md: '4rem', base: '2rem'}}
+								<Text fontSize={{md: '5rem', base: '2rem'}}
 								      fontWeight={'semibold'}>{lang.t('enterprise.group1.title')}</Text>
 								<Text marginTop={'1rem'}
-								      fontSize={{md: "2rem", base: '1rem'}}>{lang.t('enterprise.group1.subtitle')}</Text>
+								      fontSize={{md: "1.75rem", base: '1rem'}}>{lang.t('enterprise.group1.subtitle')}</Text>
 							</Box>
-							<img src='images/bg_enterprise_2.png' alt='bg_enterprise_2' style={{position: 'absolute'}}/>
+							<img src='images/bg_enterprise_2.png' alt='bg_enterprise_2'
+							     style={{position: 'absolute', right: '0', zIndex: 0, marginTop: '1rem', width: '55%'}}/>
 						</Box>
 					</Flex>
 				</Box>
 
-				<Box marginTop={'1rem'} padding={{base: '0', md: '1rem'}} width={{base: '100%', md: '50%'}}>
-					<Text fontSize={{md: '4rem', base: '2rem'}} fontWeight={'semibold'}>
+				<Box marginTop={'15rem'} padding={{base: '0', md: '1rem'}} maxWidth='927px'>
+					<Text fontSize={{md: '5rem', base: '2rem'}} fontWeight={'semibold'}>
 						{lang.t('enterprise.group2.title')}
 					</Text>
-					<Text padding={'1rem 0'} fontSize={{md: "2rem", base: '1rem'}}>
+					<Text padding={'1rem 0'} fontSize={{md: "1.75rem", base: '1rem'}}>
 						{lang.t('enterprise.group2.subtitle')}
 					</Text>
-					<Button href="https://docs.iotex.io/" size={{base: "100%", lg: "16rem"}} name={lang.t("learn.more")}/>
+					<Box marginTop='5rem'>
+						<Button href="https://docs.iotex.io/" size={{base: "100%", lg: "16rem"}} name={lang.t("learn.more")}/>
+					</Box>
 				</Box>
 
 				<Box marginTop={'5rem'}>
 					<Flex justifyContent={'space-between'} flexDirection={{base: 'column', md: 'row'}}>
 						<Flex flexDirection={'column'} width={{base: '100%', md: '40%'}}>
-							<Box>
-								<img src='images/icon_hardware.png' alt='icon_hardware' width={'40px'} height={'40px'}/>
-								<Text fontSize={'2rem'}>{lang.t('enterprise.group2.core1.title')}</Text>
-								<Text fontSize={'1.2rem'}>{lang.t('enterprise.group2.core1.desc')}</Text>
+							<Box maxWidth='420px'>
+								<img src='images/icon_hardware.png' alt='icon_hardware' width={'60px'} height={'60px'}/>
+								<Text fontSize={'2rem'} marginTop='20px'>{lang.t('enterprise.group2.core1.title')}</Text>
+								<Text fontSize={'1.12rem'}>{lang.t('enterprise.group2.core1.desc')}</Text>
 							</Box>
-							<Box marginTop={'1rem'}>
-								<img src='images/icon_cloud.png' width={'40px'} height={'40px'}/>
-								<Text fontSize={'2rem'}>{lang.t('enterprise.group2.core2.title')}</Text>
-								<Text fontSize={'1.2rem'}>{lang.t('enterprise.group2.core2.desc')}</Text>
+							<Box marginTop={'4rem'} maxWidth='420px'>
+								<img src='images/icon_cloud.png' width={'60px'} height={'60px'}/>
+								<Text fontSize={'2rem'} marginTop='20px'>{lang.t('enterprise.group2.core2.title')}</Text>
+								<Text fontSize={'1.12rem'}>{lang.t('enterprise.group2.core2.desc')}</Text>
 							</Box>
-							<Box marginTop={'1rem'}>
-								<img src='images/icon_blockchain.png' width={'40px'} height={'40px'}/>
-								<Text fontSize={'2rem'}>{lang.t('enterprise.group2.core3.title')}</Text>
-								<Text fontSize={'1.2rem'}>{lang.t('enterprise.group2.core3.desc')}</Text>
+							<Box marginTop={'4rem'} maxWidth='420px'>
+								<img src='images/icon_blockchain.png' width={'60px'} height={'60px'}/>
+								<Text fontSize={'2rem'} marginTop='20px'>{lang.t('enterprise.group2.core3.title')}</Text>
+								<Text fontSize={'1.12rem'}>{lang.t('enterprise.group2.core3.desc')}</Text>
 							</Box>
 						</Flex>
-						<Box width={{base: '100%', md: '50%'}} marginTop={{base: '1rem', md: '0'}}>
+						<Box width={{base: '100%', md: '60%'}} marginTop={{base: '1rem', md: '0'}}>
 							<img src="images/core_right.png" alt=""/>
 						</Box>
 					</Flex>
-					<Box
-						position='absolute'
-						left='0'
-						marginTop={{
-							base: '-5rem',
-							md: '-20rem'
-						}}
-						height={{base: '15%', md: '20%'}}
-						width='90%'
-					>
-						<img src='images/bg_enterprise_3.png' width={'100%'}
-						     style={{
-							     height: '100%'
-						     }}
-						/>
-					</Box>
 				</Box>
 				<Box>
 				</Box>
-				<Box marginTop={'20rem'}>
-					<Heading textAlign={'center'} fontSize={'2rem'}
-					         fontWeight={'semibold'}>{lang.t('enterprise.group3.title')}</Heading>
-					<Flex marginTop={'5rem'} flexDirection={{base: 'column', md: 'row'}}>
-						<Flex flexDirection={'column'} alignItems={'center'} padding={'1rem'}>
-							<img src='images/icon_supply_chain.png' width={'120px'} height={'120px'}/>
-							<Text>{lang.t('enterprise.group3.case1.title')}</Text>
-							<Text>{lang.t('enterprise.group3.case1.desc')}</Text>
-						</Flex>
-						<Flex flexDirection={'column'} alignItems={'center'} padding={'1rem'}>
-							<img src='images/icon_trust.png' width={'120px'} height={'120px'}/>
-							<Text>{lang.t('enterprise.group3.case2.title')}</Text>
-							<Text>{lang.t('enterprise.group3.case2.desc')}</Text>
-						</Flex>
-						<Flex flexDirection={'column'} alignItems={'center'} padding={'1rem'}>
-							<img src='images/icon_camera.png' width={'120px'} height={'120px'}/>
-							<Text>{lang.t('enterprise.group3.case3.title')}</Text>
-							<Text>{lang.t('enterprise.group3.case3.desc')}</Text>
-						</Flex>
-					</Flex>
-				</Box>
-				<ContactForm/>
-				<Footer/>
 			</Flex>
+			<Flex
+				marginTop={{base:'0',md:'-20rem'}}
+				background='url(images/bg_enterprise_3.png) no-repeat'
+				paddingTop={{base:'0',md:'30rem'}}
+				minHeight='1500px'
+				justifyContent='center'
+				backgroundSize={{base:'contain',md:'80% 90%'}}
+			>
+				<Flex maxWidth={{base: '90%', md: '80%'}}  flexDirection='column'>
+					<Heading textAlign={'center'} fontSize={{base:'1.75rem',md:'5rem'}}
+					         fontWeight={'semibold'}>{lang.t('enterprise.group3.title')}</Heading>
+					<SimpleGrid columns={[1,3]} spacing='24px' marginTop='5rem'>
+						<Flex alignItems='center' flexDirection='column'>
+							<img src='images/icon_supply_chain.png' width={'120px'} height={'120px'}/>
+							<Text fontSize='1.75rem' fontWeight="semibold">{lang.t('enterprise.group3.case1.title')}</Text>
+							<Text fontSize='1.12rem'>{lang.t('enterprise.group3.case1.desc')}</Text>
+						</Flex>
+						<Flex alignItems='center' flexDirection='column'>
+							<img src='images/icon_trust.png' width={'120px'} height={'120px'}/>
+							<Text fontSize='1.75rem' fontWeight="semibold">{lang.t('enterprise.group3.case2.title')}</Text>
+							<Text fontSize='1.12rem'>{lang.t('enterprise.group3.case2.desc')}</Text>
+						</Flex>
+						<Flex alignItems='center' flexDirection='column'>
+							<img src='images/icon_camera.png' width={'120px'} height={'120px'}/>
+							<Text fontSize='1.75rem' fontWeight="semibold">{lang.t('enterprise.group3.case3.title')}</Text>
+							<Text fontSize='1.12rem'>{lang.t('enterprise.group3.case3.desc')}</Text>
+						</Flex>
+					</SimpleGrid>
+				</Flex>
+			</Flex>
+			<ContactForm/>
+			<Footer/>
 		</BasicLayout>
 	)
 }
