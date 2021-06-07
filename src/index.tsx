@@ -9,6 +9,7 @@ import { customTheme } from './lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
 import Enterprise from "./pages/Enterprise";
 import Faq from "./pages/Faq/Faq";
+import { Research } from './pages/Research/Research'
 
 export const App = observer(() => {
 	const { lang } = useStore();
@@ -24,6 +25,7 @@ export const App = observer(() => {
 	        <Route path='/faq' exact component={Faq}/>
 	        <Route path='/team' exact component={Team}/>
           <Route path="/enterprise" exact component={Enterprise} />
+          <Route path="/research" exact component={Research} />
         </Switch>
       </Router>
     </ChakraProvider>
