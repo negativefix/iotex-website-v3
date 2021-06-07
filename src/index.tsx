@@ -10,6 +10,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Enterprise from "./pages/Enterprise";
 import Faq from "./pages/Faq/Faq";
 import { Research } from './pages/Research'
+import Pebble from "./pages/Pebble";
 
 export const App = observer(() => {
 	const { lang } = useStore();
@@ -26,6 +27,7 @@ export const App = observer(() => {
 	        <Route path='/team' exact component={Team}/>
           <Route path="/enterprise" exact component={Enterprise} />
           <Route path="/research" exact component={Research} />
+          <Route path="/pebble" exact component={Pebble} />
         </Switch>
       </Router>
     </ChakraProvider>
