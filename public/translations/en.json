@@ -409,7 +409,7 @@
   "enterprise.sub.title": "Powerful and Flexible Blockchain-as-a-Service: “Powered by IoTeX”",
   "enterprise.banner.btn1": "Get In Touch With IoTeX",
   "enterprise.banner.btn2": "Blockchain & IoT Architecture",
-  "enterprise.group1.title": "TRUSTED BY GLOBAL INDUSTRY LEADERS",
+  "enterprise.group1.title": "TRUSTED BY \n GLOBAL \n INDUSTRY \n LEADERS",
   "enterprise.group1.subtitle": "IoTeX is a leading voice in the world’s premier IoT organizations and engages with global IoT device and chip manufacturers. Let our experts guide the development and implementation your enterprise blockchain & loT solution.",
   "enterprise.group1.case1": "Industrial Internet Consortium (IIC)",
   "enterprise.group1.desc1": "Driving enterprise blockchain efforts as Co-Chairs of the IIC Blockchain Group alongside Amazon and Huawei.",
@@ -425,7 +425,7 @@
   "enterprise.group2.core2.desc": "Encrypt your IoT data “on the edge” and manage the entire data life cycle using our secure IoT Cloud storage. From data at-rest to in-transit, the IoT Cloud securely manages your business assets and hashes data to the blockchain for data provenance and immutability.",
   "enterprise.group2.core3.title": "Pantheon blockchain",
   "enterprise.group2.core3.desc": "Trusted data from trusted devices is transmitted to the trusted Pantheon Blockchain, designed for consortium-based enterprise IoT use cases. Enforce multi-party service level agreements (SLAs), automated workflows, payments, and more with transparent and trust.",
-  "enterprise.group3.title": "Ongoing IoTeX Use Cases for Enterprise",
+  "enterprise.group3.title": "Ongoing IoTeX Use Cases for \n Enterprise",
   "enterprise.group3.case1.title": "Asset Tracking & Supply Chain",
   "enterprise.group3.case1.desc": "Transparency across the entire supply chain for high-value and perishable goods leveraging Pebble Tracker, IoTeX’s trusted asset tracking device with built-in secure hardware built in collaboration with Nordic Semiconductor.",
   "enterprise.group3.case2.title": "Multi-stakeholder Collaboration",
@@ -480,8 +480,7 @@
   "pebble.banner.caption": "Pebble is a multi-sensor IoT data oracle that uses a tamper-proof secure element to convert real world phenomena into verifiable, blockchain-ready data.",
   "pebble.section1.title": "Track It. Trace It. \n Trust It.",
   "pebble.section1.caption": "Pebble uses a secure element (TEE) to ensure data integrity and confidentiality. All data is transmitted in real-time to the blockchain or database of your choice via cellular-IoT connectivity.",
-  "pebble.section2.title1": "Connecting the Physical and",
-  "pebble.section2.title2": "Digital Worlds",
+  "pebble.section2.title": "Connecting the Physical and \n Digital Worlds",
   "pebble.section2.caption": "Pebble equips Blockchain & IoT builders with verifiable real world data that can bring your DApp to the next level. All data is verifiable and owned exclusively by you — analyze, utilize, and monetize your data in a fully decentralized fashion.",
   "pebble.section3.title": "Tamper-Proof Hardware Meets Tamper-Proof Software.",
   "pebble.section3.caption": "Pebble is the brainchild of IoTeX and Nordic Semiconductor, a global leader in cellular-IoT chips — we are on a journey to combine open-source and tamper-proof hardware/software to establish a higher standard of trust.",
@@ -556,5 +555,6 @@
   "burn.to.certify": "“Burn-to-Certify” Program",
   "burn.to.certify.desc1": "After 1 million “Powered by IoTeX” devices are onboarded, Burn-Drop will be finished and “Burn-to-Certify” tokenomics will be activated. ",
   "burn.to.certify.desc2": "From then on, builders (e.g., device manufacturers) will burn IOTX to obtain access to special services/capabilities for each new device. This will continue in perpetuity and the total supply of IOTX will decrease with every new “Powered by IoTeX” device, as shown in the graph below.",
-  "explore.ioTT.network": "Explore IoTT Network"
+  "explore.ioTT.network": "Explore IoTT Network",
+  "media.read.more": "Read More"
 }
