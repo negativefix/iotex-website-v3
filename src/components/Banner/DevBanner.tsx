@@ -12,7 +12,7 @@ export const DevBanner = observer(() => {
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)")
 
     return (
-        <Box position="relative">
+        <Box position="relative" height={{base: "700px", sm: "470px", md: "700px", lg: "850px", xl: "1156px", "2xl": "1290px"}}>
           <img src={!isMaxThan468 ? "/images/dev/banner_mobile_bg.png" : "/images/banner_bg.png"} style={{opacity: 0}} alt="" />
           <Box  position="absolute" top={{base: "5.5rem", sm: "6.25rem"}} left=" 0" w="100%" h="60%" zIndex="2">
             <Flex  alignItems="left" justifyContent="center" direction="column" w="100%" h="100%" maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">

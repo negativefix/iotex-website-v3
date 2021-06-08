@@ -465,5 +465,13 @@
   "research.auth.title": "Decentralized IoT Data Authorization with Pebble Tracker",
   "research.auth.desc": "Decentralized identifiers (DIDs) and verifiable cre- dentials (VCs) are emerging concepts for creating verifiable self- sovereign digital identities for people, organizations and Internet of things (IoT). ",
   "research.auth.desc2": "In this demo, we share the implementation details and experiences for realizing a decentralized IoT data authorization framework with a Pebble tracker, an in-house built trusted GPS tracking device with 4G connectivity and sensor technologies. ",
-  "research.auth.desc3": "Our implementation demonstrates great flexibility and tremendous advantages towards building decentralized and global-scale IoT applications. To the best of our knowledge, this is the first real-world demo for enabling decentralized IoT data authorization with DIDs and VCs."
+  "research.auth.desc3": "Our implementation demonstrates great flexibility and tremendous advantages towards building decentralized and global-scale IoT applications. To the best of our knowledge, this is the first real-world demo for enabling decentralized IoT data authorization with DIDs and VCs.",
+  "iotx": "IOTX",
+  "press": "Press",
+  "about": "About",
+  "vision": "Vision",
+  "research": "Research",
+  "roadmap": "Roadmap",
+  "blog": "Blog",
+  "faq": "FAQ"
 }

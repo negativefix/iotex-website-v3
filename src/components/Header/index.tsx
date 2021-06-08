@@ -19,11 +19,11 @@ export const Header = observer(() => {
   const { location } = history
 
     const navConfig = [
-      {name: lang.t("get.started"), path: '/getStarted'},
-      {name: lang.t("ecosystem"), path: '/ecosystem'},
-      {name: lang.t("developers"), path: '/developers'},
-      {name: lang.t("resources"),path: '/resources'},
-      {name: lang.t("foundation"),path: '/foundation'},
+      {name: lang.t("get.started"), path: 'https://onboard.iotex.io', blank: true},
+      {name: lang.t("developers"), path: '/developers', blank: false},
+      {name: lang.t("iotx"),path: 'https://iotex.io/token', blank: true},
+      {name: lang.t("ecosystem"), path: 'https://ecosystem.iotex.io', blank: true},
+      {name: lang.t("press"),path: '/media-center', blank: false},
     ]
 
     const store = useLocalStore(() => ({
@@ -45,12 +45,7 @@ export const Header = observer(() => {
                   <Flex>
                     {
                       navConfig.map(item => {
-                        return <Link key={item.name} to={item.path}  style={{
-                          textDecoration: 'none',
-                          '&:hover': {
-                            color: '#000  !important'
-                          }
-                          }} >
+                        return <a key={item.name} href={item.path} target="">
                           <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
                             letterSpacing="0.5px"
                             ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}
@@ -62,7 +57,7 @@ export const Header = observer(() => {
                           }}>
                             {item.name}
                           </Text>
-                        </Link> 
+                        </a> 
                       })
                     }
                   </Flex>

@@ -9,7 +9,7 @@ import { customTheme } from './lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
 import Enterprise from "./pages/Enterprise";
 import Faq from "./pages/Faq/Faq";
-import { Research } from './pages/Research/Research'
+import { Research } from './pages/Research'
 
 export const App = observer(() => {
 	const { lang } = useStore();

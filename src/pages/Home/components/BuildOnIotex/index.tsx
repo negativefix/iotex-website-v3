@@ -1,0 +1,98 @@
+import React from 'react';
+import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
+import {  useHistory } from 'react-router-dom';
+import { useStore } from '../../../../store';
+import { Link } from "@chakra-ui/react"
+import { observer, useLocalStore } from 'mobx-react-lite';
+import { Button } from "../../../../components/Button/index"
+
+export const BuildOnIotex = observer(() => {
+  const { lang } = useStore();
+
+  const configs =   [
+    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "" },
+    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "" },
+    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "" },
+    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
+  ]
+    return (
+      <Box mt={{base: "4rem", lg: "10rem", xl: "21.5rem"}} pb={{base: "2rem", lg: "10rem", xl: "21.375rem"}} css={{
+        backgroundImage: 'url(/images/bulr_ball.png)',
+        backgroundSize: '85%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '100% 0%'
+      }}>
+        <Flex justifyContent="space-between" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
+          <Box w={{base: "100%", lg: "40%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
+            <Box position="relative" pb="36%">
+              <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
+                <img src="/images/code.png" alt="" />
+              </Box>
+              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}} top="24%" left="10%">
+                <img src="/images/code.png" alt="" />
+              </Box>
+            </Box>
+            <Flex flexWrap="wrap"  justifyContent="space-between">
+              {
+                configs.map((item, index) => {
+                  return <Flex key={index} w={{base: "45%", md: "48%", lg: "100%", xl: "48%"}}  h="48%" maxHeight="170px" justifyContent="space-between" direction="column" mb={{base: "3rem", xl: "6.25rem"}}>
+                    <Image
+                      boxSize={{base: "3rem", lg: "2.5rem", "2xl": "3.875rem"}}
+                      objectFit="cover"
+                      src={item.icon}
+                      alt={item.name}
+                    />
+                    <Text fontSize={{base: "1rem", lg: "1.25rem", "2xl": "2rem"}} fontWeight="semibold" lineHeight="3.25rem" mb="0.5rem" mt="1rem">{item.name}</Text>
+                    <a href={item.href} target="_blank">
+                      <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} color="brandColor" lineHeight="1.275rem">{item.desc} &gt;&gt;</Text>
+                    </a>
+                  </Flex>
+                })
+              }
+            </Flex>
+          </Box>
+          <Box  w={{base: "100%", lg: "50%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
+            <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", md: "1.25rem"}}>
+              {lang.t("title4")}
+            </Text>
+            <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
+              {lang.t("subtitle4")}
+            </Text>
+            <Flex mt={{base: "5%", xl: "4.125rem"}}  w="100%" alignItems={{base: "flex-start", lg: "center"}} justifyContent="flex-end" direction={{base: "column", lg: "row"}}>
+              <a href="https://github.com/iotexproject" target="_blank" style={{flex: 'none'}}>
+                <Image
+                  boxSize="3.75rem"
+                  objectFit="fill"
+                  src="/images/github_empty.png"
+                  alt=""
+                  mb={{base: "3rem", lg: 0}}
+                  mr="3rem"
+                />
+              </a>
+              <Button href="https://docs.iotex.io/" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
+            </Flex>
+            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat'
+            }}>
+              <Text fontSize={{base: "1rem", lg: "1.75rem"}} fontWeight="semibold" mb="0.875rem">{lang.t("ready.to.build")}</Text>
+              <Text fontSize={{base: "1rem", lg: "1.25rem"}} mb="0.5rem">
+                {lang.t("ready.to.build.desc")} <a style={{display: 'inline-block'}} href="https://iotex.io/halo" target="_blank">
+                  <Text fontSize={{base: "1rem", lg: "1.25rem"}} color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
+                </a>
+              </Text>
+            </Box>
+            <Image
+              boxSize={{base: "8rem", lg: "14rem"}}
+              objectFit="fill"
+              src="/images/build_small_ball.png"
+              alt=""
+              mt={{base: "4rem", lg: "6.25rem"}}
+              ml={{base: "60%", lg: "13.75rem"}}
+              mb={{base: "4rem", lg: "0"}}
+            />
+          </Box>
+        </Flex>
+      </Box>
+    );
+});
