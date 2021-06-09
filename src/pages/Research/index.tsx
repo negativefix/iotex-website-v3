@@ -34,8 +34,7 @@ export const Research = observer(() => {
       <Image
         css={{
           position: 'absolute',
-          top: '2800px',
-          left: '100px'
+          top: '2800px'
         }}
         src={bgThree}
       />
@@ -81,6 +80,7 @@ export const Research = observer(() => {
               width={{ base: '95%', lg: '80%', xl: '81%', '2xl': '70%' }}
               fontWeight="medium"
               textAlign="center"
+              color="#ccc"
             >
               {lang.t('research.subtitle')}
             </Text>
@@ -100,7 +100,7 @@ export const Research = observer(() => {
           templateRows={{ base: 'repeat(8, 1fr)', xl: 'repeat(5, 1fr)' }}
           templateColumns="repeat(10, 1fr)"
           rowGap={20}
-          columnGap={4}
+          columnGap={8}
         >
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
@@ -134,6 +134,7 @@ export const Research = observer(() => {
           </GridItem>
           <GridItem rowSpan={1} colSpan={{base:10, xl: 4}}>
             <Card
+              cardIndex={2}
               readMoreHref="http://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
               h="436"
               title={lang.t('research.yellow.pager.title')}
@@ -153,6 +154,7 @@ export const Research = observer(() => {
 
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
             <Card
+              cardIndex={1}
               readMoreHref="http://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
               h="500"
               title={lang.t('research.iot.title')}
@@ -161,6 +163,7 @@ export const Research = observer(() => {
           </GridItem>
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              cardIndex={1}
               readMoreHref="http://files.iotex.io/publications/PBFT.pdf"
               h="500"
               title={lang.t('research.signature.title')}
@@ -170,6 +173,7 @@ export const Research = observer(() => {
 
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              cardIndex={1}
               showOneDescOnSmallScrren={true}
               readMoreHref="https://ieeexplore.ieee.org/document/8977822"
               h="470"
@@ -189,6 +193,7 @@ export const Research = observer(() => {
           </GridItem>
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
+              cardIndex={2}
               readMoreHref="https://ieeexplore.ieee.org/document/9221130"
               h="600"
               title={lang.t('research.auth.title')}
