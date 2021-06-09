@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
+import { 
+  Box, Flex, Menu, MenuButton, MenuList, MenuItem, Image, Text, Center,
+} from '@chakra-ui/react';
 import {  Link, useHistory } from 'react-router-dom';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { useStore } from '../../store';
@@ -60,6 +62,21 @@ export const Header = observer(() => {
                         </a> 
                       })
                     }
+                    {/* <Menu size="100px">
+                      <MenuButton as={Text} fontWeight="semibold"  ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }} fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} >
+                        About
+                      </MenuButton>
+                      <MenuList color="black" w="100px">
+                        <MenuItem>Vision</MenuItem>
+                        <MenuItem>
+                          <a href="/team">Team</a>
+                        </MenuItem>
+                        <MenuItem>Research</MenuItem>
+                        <MenuItem>Roadmap</MenuItem>
+                        <MenuItem>Blog</MenuItem>
+                        <MenuItem>FAQ</MenuItem>
+                      </MenuList>
+                    </Menu> */}
                   </Flex>
                   <Menu isLazy>
                     <MenuButton  ml={{ base: "1rem", lg: "4rem", "2xl": "3rem" }} letterSpacing="1px" fontWeight="semibold" bg="transparent" color="white" border="none"  fontSize={{ base: "0.875rem", lg: "1rem", '2xl': "1.25rem" }} >
