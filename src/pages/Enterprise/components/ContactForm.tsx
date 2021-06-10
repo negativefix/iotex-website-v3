@@ -13,6 +13,8 @@ import {
 import {observer} from "mobx-react-lite";
 import {useStore} from "@/store/index";
 
+
+
 const ContactForm = () => {
 	const {lang} = useStore()
 	const [name, setName] = useState("")
@@ -36,17 +38,17 @@ const ContactForm = () => {
 			mx="auto"
 			borderRadius="1.125rem"
 			padding={{
-				base: '20px',
-				md: '40px'
+				base: '88px 159px 111px',
+				md: '88px 100px 111px',
+				lg: '88px 100px 111px',
+				xl: '88px 159px 111px',
 			}}
 			marginTop={{
 				base: '5rem',
-				md: '15rem'
+				md: '8rem'
 			}}
 			css={{
-				background: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-				boxShadow: "inset -1px -1px 0px rgba(172, 208, 254, 0.25)",
-				backdropFilter: "blur(100px)",
+				background: "linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255, 255, 255, 0) 133.06%)",
 			}}
 		>
 			<Heading fontSize={'2.25rem'} textAlign={'center'}>{lang.t('enterprise.form.title')}</Heading>
@@ -60,6 +62,8 @@ const ContactForm = () => {
 							isRequired
 						>
 							<Input
+								minHeight={'72px'}
+								backgroundColor={'rgba(255, 255, 255, 0.1)'}
 								_placeholder={{color: 'white', fontWeight: 'semibold'}}
 								placeholder={lang.t("your.name")}
 								size="lg"
@@ -74,6 +78,8 @@ const ContactForm = () => {
 							isRequired
 						>
 							<Input
+								minHeight={'72px'}
+								backgroundColor={'rgba(255, 255, 255, 0.1)'}
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 								_placeholder={{color: 'white', fontWeight: 'semibold'}}
@@ -89,6 +95,8 @@ const ContactForm = () => {
 						isRequired
 					>
 						<Input
+							minHeight={'72px'}
+							backgroundColor={'rgba(255, 255, 255, 0.1)'}
 							value={company}
 							onChange={(e) => setCompany(e.target.value)}
 							_placeholder={{color: 'white', fontWeight: 'semibold'}}
@@ -103,6 +111,7 @@ const ContactForm = () => {
 						isRequired
 					>
 						<Textarea
+							backgroundColor={'rgba(255, 255, 255, 0.1)'}
 							value={interest}
 							onChange={(e) => setInterest(e.target.value)}
 							rows={10}

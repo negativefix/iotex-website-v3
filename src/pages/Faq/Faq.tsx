@@ -12,7 +12,8 @@ import {Footer} from "@/components/Footer";
 import {FaqArticle, FaqCard, FaqCardHeading} from "./components/FaqCard";
 import SideBar from "./components/SideBar";
 import Sticky from 'react-sticky-el';
-import { useMediaQuery } from "@chakra-ui/react";
+import {useMediaQuery} from "@chakra-ui/react";
+import {Title} from "../Pebble/Title";
 
 const Faq = () => {
 	const {lang} = useStore()
@@ -37,13 +38,7 @@ const Faq = () => {
 			</Container>
 			<Container marginTop={{base: '5rem', md: '15rem'}} maxWidth={{base: '100%', md: '80%'}}>
 				<Box top='0'>
-					<Heading
-						as={'h1'}
-						textAlign="center"
-						fontSize={{base: '1.75rem', sm: '4rem'}}
-					>
-						{lang.t("faq.banner.title")}
-					</Heading>
+					<Title text={lang.t("faq.banner.title")} textAlign={'center'}/>
 				</Box>
 				<Flex
 					flexDirection={{base: "column", md: "row"}}
@@ -80,7 +75,7 @@ const Faq = () => {
 						<Box>
 							<Sticky stickyStyle={{
 								marginTop: '2rem',
-								position: isMaxThan468?'fixed':'relactive'
+								position: isMaxThan468 ? 'fixed' : 'relactive'
 							}}>
 								<SideBar/>
 							</Sticky>

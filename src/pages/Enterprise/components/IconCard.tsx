@@ -1,5 +1,6 @@
 import React from "react";
 import {Box, Text} from "@chakra-ui/react";
+import Caption from "./Caption";
 
 const IconCard = ({item}) => {
 	return (
@@ -19,7 +20,7 @@ const IconCard = ({item}) => {
 				<img src={item.icon}/>
 			</Box>
 			<Text fontSize={{base:'1rem',md:'2rem'}} fontWeight="semibold">{item.title}</Text>
-			<Text fontSize={{base:'0.75rem',md:'1.25rem'}} marginTop={'24px'}>{item.desc}</Text>
+			<Caption text={item.desc} marginTop={'24px'}/>
 			<a href={item.link} style={{color:'rgba(68, 255, 178, 1)', marginTop:'24px', fontSize:'18px'}}>Learn More {">>"}</a>
 
 		</>

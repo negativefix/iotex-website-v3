@@ -6,7 +6,7 @@ import {  Link, useHistory } from 'react-router-dom';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { useStore } from '../../store';
 // import { Link } from "@chakra-ui/react"
-import { observer, useLocalStore } from 'mobx-react-lite';
+import { observer, useLocalObservable } from 'mobx-react-lite';
 import { IoMenu } from "react-icons/io5";
 
 const langGroups = {
@@ -37,7 +37,7 @@ export const Header = observer(() => {
       {name: lang.t("faq"), path: '/faq', blank: false},
     ]
 
-    const store = useLocalStore(() => ({
+    const store = useLocalObservable(() => ({
       get curLang() {
         if (!langGroups[lang.lang]) return langGroups.en;
         return langGroups[lang.lang];
@@ -60,7 +60,7 @@ export const Header = observer(() => {
                           <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
                             letterSpacing="0.5px"
                             ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}
-                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} 
+                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                             textDecoration="none" fontWeight="semibold" css={{
                             '&:hover': {
                               color: '#44FFB2 !important'
@@ -68,7 +68,7 @@ export const Header = observer(() => {
                           }}>
                             {item.name}
                           </Text>
-                        </a> 
+                        </a>
                       })
                     }
                     <Box ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}  className="dropHoverText"  position="relative">
@@ -132,7 +132,7 @@ export const Header = observer(() => {
                 </Menu>
               </Box>
             </Flex>
-           
+
         </Box>
     );
 });

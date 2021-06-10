@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { useStore } from '../../store';
-import { observer, useLocalStore } from 'mobx-react-lite';
+import { observer } from 'mobx-react-lite';
 
 export const Banner = observer(() => {
   const { lang } = useStore();
@@ -17,13 +17,13 @@ export const Banner = observer(() => {
                   <img src="/images/smallball.png"alt="" />
                 </Box>
             </Box>
-            <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0" 
+            <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0"
               left="0" alignItems="center"  direction="column"
               pt={{base: "4rem", sm: "8rem", md: "8rem", lg: "12rem", xl: "16rem", "2xl": "14rem"}}>
-              <Text 
+              <Text
                   fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
                   mb={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.5rem", "2xl": "3.125rem"}}
-                  fontWeight="semibold" color="white" w="90%" 
+                  fontWeight="semibold" color="white" w="90%"
                   textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}
                 >
                   {lang.t("title")}

@@ -10,8 +10,8 @@ export const Caption = ({text,...props}: CaptionProps) => {
 	return (
 		<Text
 			{...props}
-			fontSize={{base: '1rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}
-			fontWeight={'500px'}
+			fontSize={{base: '1rem', sm: '1rem', lg: '1.55rem', xl: '1.75rem', '2xl': '1.75rem'}}
+			fontWeight={'500'}
 		>
 			{text}
 		</Text>

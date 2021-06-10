@@ -10,7 +10,10 @@ import Form from "./Form";
 import {Title} from "./Title";
 import {SectionContainer} from "./SectionContainer";
 import {Caption} from "./Caption";
-
+//@ts-ignore
+import apertureBg from '@/assets/images/pebble/aperture.png?webp'
+// @ts-ignore
+import imgPebble from '@/assets/images/pebble/img_pebble.png?webp'
 const Pebble = () => {
 	const {lang} = useStore()
 	const PART_4_ICON_TEXT = [
@@ -25,11 +28,11 @@ const Pebble = () => {
 		<BasicLayout>
 			{/*part 1*/}
 			<Flex
-				backgroundImage='url(images/pebble/img_pebble.png)'
+				backgroundImage={`url(${imgPebble})`}
 				marginTop='10rem'
 				justifyContent='center'
 				backgroundRepeat='no-repeat'
-				minHeight={{base: '1000px', md: '1300px'}}
+				minHeight={{base: '1000px',md:'1100px', xl: '1300px'}}
 				backgroundPosition={{
 					base: 'bottom 0px right 0px',
 					md: 'bottom -50px right -230px',
@@ -40,22 +43,22 @@ const Pebble = () => {
 			>
 				<SectionContainer>
 					<Flex flexDirection={{base: 'column', md: 'row'}}>
-						<Box paddingTop={{base:'0',md:'4rem'}} maxWidth={'900px'}>
+						<Box paddingTop={{base:'0',md:'4rem'}} maxWidth={'900px'} width={'70%'}>
 							<Text
 								fontSize={{base: '1.75rem', sm: '1.75rem', lg: '1.75rem', xl: '3rem', '2xl': '3rem'}}
 								fontWeight={'semibold'}>{lang.t('pebble')}
 							</Text>
-							<Title text={lang.t('pebble.title')} maxWidth='900px'/>
+							<Title text={lang.t('pebble.title')} maxWidth='900px' fontWeight={'700'}/>
 							<Caption text={lang.t('pebble.caption')} marginTop={'24px'} />
 							<Box marginTop={'64px'}>
 								<Button name={lang.t('buy_on_crowdsupply')}
 								        href='https://www.crowdsupply.com/iotex/pebble-tracker'
-								        size={{base: "100%", xl: "40%", "2xl": "40%"}}
+								        size={{base: "100%", md:'70%', xl: "70%", "2xl": "40%"}}
 								/>
 							</Box>
 						</Box>
-						<Flex justifyContent={{base:'center',md:'end'}} marginTop={{base: '5rem', md: '0rem'}} width={'800px'}>
-							<Image src='images/pebble/pebble_1.png' width={{base: '50%', md: '471px'}} height={{md: '912.74px'}}/>
+						<Flex justifyContent={{base:'center',md:'flex-end'}} marginTop={{base: '5rem', md: '0rem'}} width={'800px'}>
+							<Image src='images/pebble/pebble_1.png' width={{base: '50%',md:'400px', xl: '471px'}} height={{md:'784px',xl: '912.74px'}}/>
 						</Flex>
 					</Flex>
 				</SectionContainer>
@@ -79,10 +82,10 @@ const Pebble = () => {
 									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT'/>
 								</Flex>
 							</SimpleGrid>
-							<Flex maxWidth={'700px'} flexDirection={'column'} justifyContent={'center'}>
+							<Flex maxWidth={{xl:'700px',md:'500px'}} flexDirection={'column'} justifyContent={'center'}>
 								<Text fontSize={{base: '2.5rem', sm: '2.5rem', lg: '2.5rem', xl: '5rem', '2xl': '5rem'}}
-								      fontWeight={'semibold'}
-
+								      fontWeight={'600'}
+											whiteSpace={"pre-line"}
 								>
 									{lang.t('pebble.section1.title')}
 								</Text>
@@ -114,27 +117,42 @@ const Pebble = () => {
 					>
 						{lang.t('pebble.section2.title2')}
 					</Text>
-					<img src={'images/pebble/pebble_section2_bg.png'} style={{marginTop: '80px'}}/>
+					<img src={'images/pebble/pebble_section2_bg.png'} style={{marginTop: '80px'}} alt='pebble_section2_bg'/>
 				</Flex>
 			</SectionContainer>
 
 			{/*	part 4*/}
 			<Box
-				background={'url(images/pebble/part4_bg.png) no-repeat'}
-				minHeight={'700px'}
+				// minHeight={'700px'}
 				padding={'63px 0 132px 0'}
 				marginTop={{base:'5rem',md:'15rem'}}
+				position={'relative'}
 			>
-				<SectionContainer>
+				<video
+					style={{
+						position: "absolute",
+						top: 0,
+						right: 0,
+						left: 0,
+						bottom: 0,
+						width: "100%",
+						objectFit: "cover",
+					}}
+					src="/video/pebble_iot.mp4"
+					loop={true}
+					autoPlay={true}
+					muted
+				/>
+				<SectionContainer position={'relative'}>
 					<Flex
 						direction={{base: 'column', md: 'row'}}
 						justifyContent={'space-between'}
 					>
-						<Box maxWidth={'700px'}>
-							<Title text={lang.t('title')}/>
-							<Caption text={lang.t("dev.subtitle4")} marginTop={'24px'}/>
+						<Box maxWidth={'700px'} width={'60%'}>
+							<Title text={lang.t('title')} fontWeight={'600'}/>
+							<Caption text={lang.t("dev.subtitle4")} marginTop={'24px'} lineHeight={'48px'}/>
 						</Box>
-						<SimpleGrid columns={[1, 2]} spacing={'20px'}>
+						<SimpleGrid columns={[1, 2]} spacingX={'20px'} spacingY={'40px'}>
 							{
 								PART_4_ICON_TEXT.map((item) => {
 									return (
@@ -164,8 +182,8 @@ const Pebble = () => {
 							<Flex
 								background={'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)'}
 								boxShadow={'inset -1px -1px 0px rgba(255, 255, 255, 0.25)'}
-								width={{base: '100%', md: '556px'}}
-								height={'453px'}
+								width={{base: '100%',lg:'450px', xl: '556px'}}
+								height={{lg:'375px', xl:'453px'}}
 								flexDirection={'column'}
 								justifyContent={'space-around'}
 								alignItems={'center'}
@@ -190,7 +208,7 @@ const Pebble = () => {
 
 			{/*part6*/}
 			<Box
-				bgImage={'url(images/pebble/aperture.png)'}
+				bgImage={`url(${apertureBg})`}
 				bgRepeat={'no-repeat'}
 			>
 				<SectionContainer>
@@ -252,8 +270,25 @@ const Pebble = () => {
 				justifyContent={'center'}
 				flexDirection={'column'}
 				marginTop={'74px'}
+				position={'relative'}
+				overflow={"hidden"}
 			>
-				<SectionContainer>
+				<video
+					style={{
+						position: "absolute",
+						top: 0,
+						right: 0,
+						left: 0,
+						bottom: 0,
+						width: "100%",
+						objectFit: "cover",
+					}}
+					src="/video/thingsboard.mp4"
+					loop={true}
+					autoPlay={true}
+					muted
+				/>
+				<SectionContainer position={'relative'}>
 					<Title text={lang.t('pebble.section6.title')}/>
 					<Text
 						marginTop={'24px'}
