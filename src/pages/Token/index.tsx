@@ -113,19 +113,19 @@ export const Token = observer(() => {
   const burndrops = [
     {
       name: lang.t("burn"),
-      icon: "/public/images/token/icon_burnt.png",
+      icon: "/images/token/icon_burnt.png",
       amount: 50,
       desc: lang.t("burn.tip"),
     },
     {
       name: lang.t("drop"),
-      icon: "/public/images/token/icon_dropped.png",
+      icon: "/images/token/icon_dropped.png",
       amount: 25,
       desc: lang.t("drop.tip"),
     },
     {
       name: lang.t("drip"),
-      icon: "/public/images/token/icon_airdrip.png",
+      icon: "/images/token/icon_airdrip.png",
       amount: 25,
       desc: lang.t("drip.tip"),
     },
@@ -872,7 +872,7 @@ export const Token = observer(() => {
         }}
       >
         <Flex alignItems='flex-start' flexDirection={{base: "column", md: "row"}}>
-          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src="/public/images/token/icon_Burn-to-Certify.png" mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}></Image>
+          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src="/images/token/icon_Burn-to-Certify.png" mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}></Image>
           <Box>
             <Text fontSize={{ base: "1rem", sm: "1.6rem", md: "2rem", xl: "3rem" }} fontWeight="bold" letterSpacing="2px" mb={{base: "1rem", md: "0.5rem"}}>{lang.t("burn.to.certify")}</Text>
             <Text fontSize={{base: "0.75rem", sm: "1.25rem", lg: "1rem", xl: "1.25rem"}} flex="1">
@@ -886,7 +886,7 @@ export const Token = observer(() => {
       </Box>
 
       <Box w={{base: "100%", md: "78%"}} mx="auto" mt="5rem" mb="6.5rem">
-        <Img src="/public/images/token/burn_to_certify.png" w="100%"></Img>
+        <Img src="/images/token/burn_to_certify.png" w="100%"></Img>
       </Box>
 
       <Center>
