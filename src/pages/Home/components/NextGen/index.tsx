@@ -1,15 +1,15 @@
 import React from 'react';
 import { Box, Flex, Text, Image } from '@chakra-ui/react';
-import { useStore } from '../../../../store';
-import { observer, useLocalStore } from 'mobx-react-lite';
-import { Button } from "@/components/Button/index"
+import { useStore } from '@/store/index';
+import { observer, useLocalObservable } from 'mobx-react-lite';
+import { Button } from "@/components/Button"
 import { useMediaQuery } from "@chakra-ui/react"
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)")
 
-  const store = useLocalStore(() => ({
+  const store = useLocalObservable(() => ({
     configs: [
       {name: lang.t("digital.identity"), desc: lang.t("advantage1.tips"), icon: '/images/user.png',selectedIcon: '/images/card1.png', show: false },
       {name: lang.t("mining.machines"), desc: lang.t("advantage1.tips"), icon: '/images/mining.png',selectedIcon: '/images/card2.png', show: false },
@@ -62,9 +62,9 @@ export const NextGen = observer(() => {
             <Flex flexWrap="wrap" maxWidth={{base: "100%", xl: "60%"}} justifyContent="space-between"  alignContent="space-between" mt={{base: "3rem", xl: 0}}>
               {
                 store.configs.map((item, index) => {
-                  return <Flex key={item.name} 
-                    w={{base: "100%", sm: "48%"}} maxW="28.125rem" maxH="15.75rem" h={{base: "10rem", sm: "10rem",  lg: "12rem", "2xl": "15.75rem"}}  
-                    mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , md: "1.8rem", "2xl": "2.5rem"}} 
+                  return <Flex key={item.name}
+                    w={{base: "100%", sm: "48%"}} maxW="28.125rem" maxH="15.75rem" h={{base: "10rem", sm: "10rem",  lg: "12rem", "2xl": "15.75rem"}}
+                    mb={{base: "2rem", xl: "2rem"}}  px={{base: "1.25rem" , md: "1.8rem", "2xl": "2.5rem"}}
                     justifyContent="space-between"  alignItems="center"
                     css={{
                         background: isMaxThan468 ?  'url(/images/next_card.png)' : `url(${item.selectedIcon})`,
@@ -84,8 +84,8 @@ export const NextGen = observer(() => {
                       <Text fontSize={{base: "1rem", lg: "1.2rem", "2xl": "1.5rem"}} fontWeight="semibold">{item.desc}</Text>
                       </> : <>
                         <Box w={{base: "100%", sm: "40%", xl:"max-content"}}>
-                          <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}} 
-                            fontWeight="semibold" 
+                          <Text fontSize={{base: "1rem", lg: "1.5rem", "2xl": "2rem"}}
+                            fontWeight="semibold"
                             mb={{base: "1rem", sm: "3rem"}}>
                             {item.name}
                           </Text>
@@ -225,7 +225,7 @@ export const NextGen = observer(() => {
                       return <a href={option.href}  key={option.name} style={{
                         width: "31%",
                         padding: "1rem 0.5rem",
-                        display: 'flex', 
+                        display: 'flex',
                         alignItems: "center",
                         justifyContent: "center",
                         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',

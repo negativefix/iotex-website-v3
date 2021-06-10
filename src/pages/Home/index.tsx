@@ -1,6 +1,6 @@
 import React from 'react';
-import { observer, useLocalStore } from 'mobx-react-lite';
-import { useStore } from '../../store/index';
+import { observer, useLocalObservable } from 'mobx-react-lite';
+import { useStore } from '@/store/index';
 import { Flex, Box, Text, Image, Modal,
   ModalOverlay,
   ModalContent,
@@ -32,7 +32,7 @@ export const Home = observer(() => {
     {title: lang.t("advantage4"), icon: "/images/scalable.png", desc: lang.t("advantage4.tips")},
   ]
 
-  const store = useLocalStore(() => ({
+  const store = useLocalObservable(() => ({
     isOpen: false,
     hoverIndex: 0,
     open() {
@@ -42,7 +42,7 @@ export const Home = observer(() => {
       store.isOpen = false
     },
   }));
-  
+
   return (
     <BasicLayout>
       <Box css={{
@@ -101,12 +101,12 @@ export const Home = observer(() => {
             </Box>
               <Modal isOpen={store.isOpen} onClose={store.onClose} size="6xl">
                 <ModalOverlay />
-                <ModalContent w="80%" h={{base: "50vh", md: "70vh"}}> 
+                <ModalContent w="80%" h={{base: "50vh", md: "70vh"}}>
                   <ModalBody  p="0.5rem" bg="bgColor" border="1px" borderColor="borderColor">
-                    <iframe 
-                      width="100%" height="100%" 
-                      src="https://www.youtube.com/embed/gIVskvgzG9M?rel=0&amp&autoplay=1" 
-                      title="YouTube video player" 
+                    <iframe
+                      width="100%" height="100%"
+                      src="https://www.youtube.com/embed/gIVskvgzG9M?rel=0&amp&autoplay=1"
+                      title="YouTube video player"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                   </ModalBody>
@@ -117,9 +117,9 @@ export const Home = observer(() => {
             {
               advantages.map((item, index) => {
                 return <Box key={item.title}>
-                  <DropCard 
-                    hoverIndex={store.hoverIndex} 
-                    index={index} title={item.title} 
+                  <DropCard
+                    hoverIndex={store.hoverIndex}
+                    index={index} title={item.title}
                     icon={item.icon} desc={item.desc}
                     changeHoverIndex={() => store.hoverIndex = -1}
                   />
@@ -130,7 +130,7 @@ export const Home = observer(() => {
           <AwardWinning />
         </Box>
       </Box>
-      
+
       <NextGen />
       <BuildOnIotex />
       <IotexToken />

@@ -4,7 +4,7 @@ import {  Link, useHistory } from 'react-router-dom';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { useStore } from '../../store';
 // import { Link } from "@chakra-ui/react"
-import { observer, useLocalStore } from 'mobx-react-lite';
+import { observer, useLocalObservable } from 'mobx-react-lite';
 import { IoMenu } from "react-icons/io5";
 
 const langGroups = {
@@ -26,7 +26,7 @@ export const Header = observer(() => {
       {name: lang.t("press"),path: '/media-center', blank: false},
     ]
 
-    const store = useLocalStore(() => ({
+    const store = useLocalObservable(() => ({
       get curLang() {
         if (!langGroups[lang.lang]) return langGroups.en;
         return langGroups[lang.lang];
@@ -46,10 +46,10 @@ export const Header = observer(() => {
                     {
                       navConfig.map(item => {
                         return <a key={item.name} href={item.path} target="">
-                          <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
+                          <Text color={location.pathname === item.path ? 'brandColor2' : 'white'}
                             letterSpacing="0.5px"
                             ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}
-                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} 
+                            fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                             textDecoration="none" fontWeight="semibold" css={{
                             '&:hover': {
                               color: '#44FFB2 !important'
@@ -57,7 +57,7 @@ export const Header = observer(() => {
                           }}>
                             {item.name}
                           </Text>
-                        </a> 
+                        </a>
                       })
                     }
                   </Flex>
@@ -87,7 +87,7 @@ export const Header = observer(() => {
                   <MenuList color="white">
                       {
                         navConfig.map(item => {
-                          return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}> 
+                          return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}>
                               <MenuItem color="black">
                                 <Text css={{userSelect: 'none'}}>{item.name}</ Text>
                               </MenuItem>
@@ -98,7 +98,7 @@ export const Header = observer(() => {
                 </Menu>
               </Box>
             </Flex>
-           
+
         </Box>
     );
 });
