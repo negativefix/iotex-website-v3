@@ -28,6 +28,15 @@ export const Header = observer(() => {
       {name: lang.t("press"),path: '/media-center', blank: false},
     ]
 
+    const aboutConfig = [
+      {name: lang.t("vision"), path: '', blank: true},
+      {name: lang.t("team"), path: '/team', blank: false},
+      {name: lang.t("research"), path: '/research', blank: false},
+      {name: lang.t("roadmap"), path: '', blank: true},
+      {name: lang.t("blog"), path: '', blank: true},
+      {name: lang.t("faq"), path: '/faq', blank: false},
+    ]
+
     const store = useLocalStore(() => ({
       get curLang() {
         if (!langGroups[lang.lang]) return langGroups.en;
@@ -47,7 +56,7 @@ export const Header = observer(() => {
                   <Flex>
                     {
                       navConfig.map(item => {
-                        return <a key={item.name} href={item.path} target="">
+                        return <a key={item.name} href={item.path} target={item.blank ? "_blank" : ''}>
                           <Text color={location.pathname === item.path ? 'brandColor2' : 'white'} 
                             letterSpacing="0.5px"
                             ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}
@@ -62,21 +71,20 @@ export const Header = observer(() => {
                         </a> 
                       })
                     }
-                    {/* <Menu size="100px">
-                      <MenuButton as={Text} fontWeight="semibold"  ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }} fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} >
+                    <Box ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}  className="dropHoverText"  position="relative">
+                      <Text as={Text} fontWeight="semibold"  fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} cursor="pointer">
                         About
-                      </MenuButton>
-                      <MenuList color="black" w="100px">
-                        <MenuItem>Vision</MenuItem>
-                        <MenuItem>
-                          <a href="/team">Team</a>
-                        </MenuItem>
-                        <MenuItem>Research</MenuItem>
-                        <MenuItem>Roadmap</MenuItem>
-                        <MenuItem>Blog</MenuItem>
-                        <MenuItem>FAQ</MenuItem>
-                      </MenuList>
-                    </Menu> */}
+                      </Text>
+                      <ul className="dropMenuUl">
+                        {
+                          aboutConfig.map(item => {
+                            return <li key={item.name}>
+                              <a href={item.path} target={item.blank ? "_blank" : ''}>{item.name}</a>
+                            </li>
+                          })
+                        }
+                      </ul>
+                    </Box>
                   </Flex>
                   <Menu isLazy>
                     <MenuButton  ml={{ base: "1rem", lg: "4rem", "2xl": "3rem" }} letterSpacing="1px" fontWeight="semibold" bg="transparent" color="white" border="none"  fontSize={{ base: "0.875rem", lg: "1rem", '2xl': "1.25rem" }} >
@@ -92,7 +100,7 @@ export const Header = observer(() => {
                 </Menu>
               </Flex>
               <Box display={{base: 'block', md: 'none'}}>
-                <Menu>
+                <Menu size="md">
                     <MenuButton
                       aria-label="Options"
                       variant="ghost"
@@ -104,6 +112,15 @@ export const Header = observer(() => {
                   <MenuList color="white">
                       {
                         navConfig.map(item => {
+                          return<Link to={item.path} key={item.name} style={{textDecoration: 'none', }}> 
+                              <MenuItem color="black">
+                                <Text css={{userSelect: 'none'}}>{item.name}</ Text>
+                              </MenuItem>
+                          </Link>
+                          })
+                      }
+                      {
+                        aboutConfig.map(item => {
                           return<Link to={item.path} key={item.name} style={{textDecoration: 'none'}}> 
                               <MenuItem color="black">
                                 <Text css={{userSelect: 'none'}}>{item.name}</ Text>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Developers } from './pages/Developers';
 import { Team } from './pages/Team';
+import { Token } from './pages/Token';
 import { useStore } from '@/store/index';
 import { customTheme } from './lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -28,6 +29,7 @@ export const App = observer(() => {
           <Route path="/enterprise" exact component={Enterprise} />
           <Route path="/research" exact component={Research} />
           <Route path="/pebble" exact component={Pebble} />
+          <Route path="/token" exact component={Token} />
         </Switch>
       </Router>
     </ChakraProvider>
