@@ -99,7 +99,7 @@ export const Team = observer(() => {
       avatar: "/images/team/Michael.png",
       links: [
         {
-          src: "/public/images/icons/icon_link.svg",
+          src: "/images/icons/icon_link.svg",
           href: "http://www.sparklabs.co.kr/lb/modal/venture/Michael_Cho.php",
         },
       ],
@@ -240,7 +240,7 @@ export const Team = observer(() => {
       avatar: "/images/team/Gong.png",
       links: [
         {
-          src: "/public/images/icons/icon_link.svg",
+          src: "/images/icons/icon_link.svg",
           href: "https://scholar.google.com/citations?user=i2vwkRMAAAAJ&hl=en",
         },
       ],

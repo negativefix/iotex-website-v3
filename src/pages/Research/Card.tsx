@@ -12,6 +12,7 @@ export const Card = observer(
     title,
     desc,
     readMoreHref,
+    cardIndex = 0,
     langArr = [],
     showOneDescOnSmallScrren = false,
     h = 'auto'
@@ -19,56 +20,58 @@ export const Card = observer(
     title: string;
     desc: string[];
     readMoreHref: string;
+    cardIndex?: number;
     langArr?: Array<{ name: string; href: string }>;
     showOneDescOnSmallScrren?: boolean;
     h?: string;
   }) => {
     const { lang } = useStore();
-    const isSmallScreen = useBreakpointValue({ base: true, lg: false })
+    const isSmallScreen = useBreakpointValue({ base: true, lg: false });
 
     const getBg = () => {
-      const cards = [BgOne, BgTwo, BgThree, BgFour];
-      return cards[Math.floor(Math.random() * 4)];
+      const cards = [BgOne, BgTwo, BgThree];
+      return cards[cardIndex];
     };
     return (
-      <Box
-        mx="auto"
-        css={{
-          background:
-            'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
-          backgroundSize: '100% 100%',
-          backgroundRepeat: 'no-repeat',
-          boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
-          backdropFilter: 'blur(100px)',
-          borderRadius: '20px'
-        }}
-        _hover={{
-          boxShadow: 'none',
-          backgroundImage: `url('${getBg()}')`
-        }}
-      >
+      <Box position="relative">
         <Box
-          h={h}
-          p={{base:'1rem', lg: '2rem'}}
-          _hover={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '20px' }}
-        >
+          mx="auto"
+          css={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            opacity: '0.05',
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat',
+            backdropFilter: 'blur(100px)',
+            borderRadius: '20px',
+            backgroundImage: `url('${getBg()}')`,
+            transition: 'opacity .3s'
+          }}
+          _hover={{ opacity: 0.1 }}
+        ></Box>
+        <Box h={h} p={{ base: '1rem', lg: '1.8rem' }} borderRadius="20px">
           <Text
             fontSize={{ base: '22px', lg: '30px' }}
-            lineHeight={{ base: '26px', lg: '39px' }}
+            lineHeight={{ base: '26px', lg: '37px' }}
             fontWeight="600"
           >
             {title}
           </Text>
-          {(showOneDescOnSmallScrren && isSmallScreen ? desc.slice(0, 1) : desc).map((item, index) => (
-            <Text
-              key={index}
-              fontSize={{ base: '14px', lg: '18px' }}
-              lineHeight={{ base: '20px', lg: '24px' }}
-              pt="4"
-            >
-              {item}
-            </Text>
-          ))}
+          {(showOneDescOnSmallScrren && isSmallScreen ? desc.slice(0, 1) : desc).map(
+            (item, index) => (
+              <Text
+                key={index}
+                fontSize={{ base: '14px', lg: '18px' }}
+                lineHeight={{ base: '20px', lg: '23px' }}
+                fontWeight="500"
+                color="#ccc"
+                pt="4"
+              >
+                {item}
+              </Text>
+            )
+          )}
           <Text color="#44FFB2" pt="4">
             <Link
               isExternal

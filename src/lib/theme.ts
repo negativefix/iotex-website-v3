@@ -107,7 +107,80 @@ export const customTheme = extendTheme({
 				fontStyle: 'italic',
         paddingTop: '1rem',
         paddingBottom: '2rem'
-			}
+			},
+      '.dropMenuUl': {
+        listStyleType: 'none',
+        position: 'absolute',
+        display: 'none',
+        marginTop: '10px',
+        paddingTop: '24px',
+        top: 0,
+        li: {
+          listStyleType: 'none',
+          opacity: 0,
+          transformOrigin: 'top center',
+          backgroundColor: '#272730',
+          padding: '8px 10px',
+          fontSize: '14px',
+          fontWeight: 600,
+          '&:hover': {
+            background: '#44FFB2',
+            color: '#272730'
+          },
+          a: {
+            display: 'block',
+            '&:hover': {
+              background: '#44FFB2',
+              color: '#272730'
+            }
+          }
+        }
+      },
+      '.dropHoverText': {
+        height: '24px',
+        '&:hover': {
+          height: 'max-content',
+          '.dropMenuUl': {
+            display: 'block',
+            li: {
+              '&:first-of-type': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '0.1s'
+              },
+              '&:nth-of-type(2)': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '0.2s'
+              },
+              '&:nth-of-type(3)': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '0.4s'
+              },
+              '&:nth-of-type(4)': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '0.6s'
+              },
+              '&:nth-of-type(5)': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '0.8s'
+              },
+              '&:ast-of-type': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '1s'
+              },
+            }
+          }
+        }
+      },
+      '@keyframes dropmenu': {
+        '0%': {
+          opacity: 0,
+          transform: 'translateX(20px)'
+        },
+        '100%': {
+          opacity: 1,
+          transform: 'translateX(0)'
+        }
+		  }
 		}
 	}
 });

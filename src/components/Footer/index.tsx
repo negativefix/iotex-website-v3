@@ -60,7 +60,7 @@ export const Footer = observer(() => {
             })
           }
         </Flex>
-        <Text fontSize={{base: "0.875rem", lg: "1rem"}} lineHeight="1.875rem" mt="8.125rem" textAlign="center">©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{lang.t("footer.tips")}</Text>
+        <Text fontSize={{base: "0.875rem", lg: "1rem"}} lineHeight="1.875rem" mt="8.125rem" textAlign="center" mb="1rem">©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{lang.t("footer.tips")}</Text>
       </Box>
     );
 });

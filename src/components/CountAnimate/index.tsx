@@ -1,26 +1,27 @@
 import React, { useEffect } from "react";
+import { numberWithCommas } from "../../utils/index";
 import { useCountUp } from "react-countup";
 
+interface IComponentProps {
+  value: number;
+  decimals?: number;
+}
 
-export const CountAnimate = (props) => {
-	const { value, decimals = 0 } = props;
-	const { countUp, update } = useCountUp({
-		start: 0,
-		end: value,
-		delay: 0,
-		duration: 5,
-		decimals,
-	});
+export const CountAnimate = (props: IComponentProps) => {
+  const { value, decimals = 0  } = props;
+  const { countUp, update } = useCountUp({
+    start: 0,
+    end: value,
+    delay: 0,
+    duration: 1,
+    decimals,
+  });
 
-	const numberWithCommas = (x) => {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
+  useEffect(() => {
+    update(value);
+  }, [value]);
 
-	useEffect(() => {
-		update(value);
-	}, [value]);
-
-	return (
-		<div>{decimals === 0 ? numberWithCommas(countUp) : countUp || 0}</div>
-	);
+  return (
+    <span>{numberWithCommas(countUp) || 0}</span>
+  );
 };
