@@ -111,23 +111,23 @@ export const Research = observer(() => {
               langArr={[
                 {
                   name: 'RU',
-                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_RU.pdf'
+                  href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_RU.pdf'
                 },
                 {
                   name: 'ZH',
-                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.4_ZH_CN.pdf'
+                  href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.4_ZH_CN.pdf'
                 },
                 {
                   name: 'KO',
-                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_KO.pdf'
+                  href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_KO.pdf'
                 },
                 {
                   name: 'IT',
-                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_IT.pdf'
+                  href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_IT.pdf'
                 },
                 {
                   name: 'PT',
-                  href: 'http://files.iotex.io/publications/IoTeX_Whitepaper_1.5_PT-BR.pdf'
+                  href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_PT-BR.pdf'
                 }
               ]}
             />
@@ -135,7 +135,7 @@ export const Research = observer(() => {
           <GridItem rowSpan={1} colSpan={{base:10, xl: 4}}>
             <Card
               cardIndex={2}
-              readMoreHref="http://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
+              readMoreHref="https://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
               h="436"
               title={lang.t('research.yellow.pager.title')}
               desc={[lang.t('research.yellow.pager.desc'), lang.t('research.yellow.pager.desc2')]}
@@ -155,7 +155,7 @@ export const Research = observer(() => {
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
             <Card
               cardIndex={1}
-              readMoreHref="http://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
+              readMoreHref="https://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
               h="500"
               title={lang.t('research.iot.title')}
               desc={[lang.t('research.iot.desc'), lang.t('research.iot.desc2')]}
@@ -164,7 +164,7 @@ export const Research = observer(() => {
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
             <Card
               cardIndex={1}
-              readMoreHref="http://files.iotex.io/publications/PBFT.pdf"
+              readMoreHref="https://files.iotex.io/publications/PBFT.pdf"
               h="500"
               title={lang.t('research.signature.title')}
               desc={[lang.t('research.signature.desc'), lang.t('research.signature.desc2')]}
@@ -185,7 +185,7 @@ export const Research = observer(() => {
 
           <GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
             <Card
-              readMoreHref="http://files.iotex.io/publications/ucam-whitepaper.pdf"
+              readMoreHref="https://files.iotex.io/publications/ucam-whitepaper.pdf"
               h="600"
               title={lang.t('research.ucam.title')}
               desc={[lang.t('research.ucam.desc'), lang.t('research.ucam.desc2')]}
