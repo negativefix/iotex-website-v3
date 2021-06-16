@@ -5,13 +5,13 @@ import BasicLayout from '../../Layouts/BasicLayout'
 import { Footer } from "@/components/Footer/index";
 import { Flex, Box, Text, SimpleGrid, Image, Avatar, } from '@chakra-ui/react';
 //@ts-ignore
-import Artboard from '@/assets/images/team/Artboard-1.png?webp'
+import Artboard from '@/assets/images/team/Artboard-1.png'
 //@ts-ignore
-import Banner from '@/assets/images/team/banner.png?webp'
+import Banner from '@/assets/images/team/banner.png'
 //@ts-ignore
-import Dorothy from '@/assets/images/team/Dorothy.png?webp'
+import Dorothy from '@/assets/images/team/Dorothy.png'
 //@ts-ignore
-import k from '@/assets/images/team/k.png?webp'
+import k from '@/assets/images/team/k.png'
 export const Team = observer(() => {
   const { lang } = useStore()
 

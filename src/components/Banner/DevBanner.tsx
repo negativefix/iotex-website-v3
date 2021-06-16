@@ -7,7 +7,7 @@ import { Link } from "@chakra-ui/react"
 import { observer, useLocalStore } from 'mobx-react-lite';
 import { useMediaQuery } from "@chakra-ui/react"
 // @ts-ignore
-import bannerMobileBg from '@/assets/images/dev/banner_mobile_bg.png?webp'
+import bannerMobileBg from '@/assets/images/dev/banner_mobile_bg.png'
 
 export const DevBanner = observer(() => {
   const { lang } = useStore();

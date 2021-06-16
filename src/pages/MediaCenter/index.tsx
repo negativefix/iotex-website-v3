@@ -11,7 +11,7 @@ import TabButton from "./TabButton";
 import {useStore} from "@/store/index";
 import ContentTab from "./Content";
 //@ts-ignore
-import bg1 from '@/assets/images/media-center/bg_1.png?webp'
+import bg1 from '@/assets/images/media-center/bg_1.png'
 enum Tab {
 	NEWS = 'NEWS',
 	CONTENT = 'CONTENT'

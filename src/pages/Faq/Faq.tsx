@@ -15,13 +15,13 @@ import Sticky from 'react-sticky-el';
 import {useMediaQuery} from "@chakra-ui/react";
 import {Title} from "../Pebble/Title";
 //@ts-ignore
-import faqBg from '@/assets/images/faq/faq-bg.png?webp'
+import faqBg from '@/assets/images/faq/faq-bg.png'
 //@ts-ignore
-import faqBurnDrop from '@/assets/images/faq/faq-burn-drop.png?webp'
+import faqBurnDrop from '@/assets/images/faq/faq-burn-drop.png'
 //@ts-ignore
-import faqJourney from '@/assets/images/faq/faq-journey.png?webp'
+import faqJourney from '@/assets/images/faq/faq-journey.png'
 //@ts-ignore
-import faqPlatform from '@/assets/images/faq/faq_platform.png?webp'
+import faqPlatform from '@/assets/images/faq/faq_platform.png'
 const Faq = () => {
 	const {lang} = useStore()
 	const [isMaxThan468] = useMediaQuery("(min-width: 468px)");

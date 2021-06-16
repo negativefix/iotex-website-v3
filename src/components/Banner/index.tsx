@@ -3,7 +3,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import { observer } from 'mobx-react-lite';
 // @ts-ignore
-import bigBall from '@/assets/images/banner/bigball.png?webp'
+import bigBall from '@/assets/images/banner/bigball.png'
 export const Banner = observer(() => {
   const { lang } = useStore();
 

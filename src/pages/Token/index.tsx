@@ -10,11 +10,11 @@ import CountTo from "react-count-to";
 // @ts-ignore
 import Banner from '@/assets/images/token/banner.png'
 // @ts-ignore
-import burnDrop from '@/assets/images/token/burn_drop.png?webp'
+import burnDrop from '@/assets/images/token/burn_drop.png'
 // @ts-ignore
-import burnToCertify from '@/assets/images/token/burn_to_certify.png?webp'
+import burnToCertify from '@/assets/images/token/burn_to_certify.png'
 // @ts-ignore
-import delegate from '@/assets/images/token/delegate.png?webp'
+import delegate from '@/assets/images/token/delegate.png'
 // @ts-ignore
 import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png'
 // @ts-ignore

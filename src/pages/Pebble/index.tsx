@@ -19,11 +19,11 @@ import imgPebble from '@/assets/images/pebble/img_pebble.png'
 // @ts-ignore
 import imgPebbleRight from '@/assets/images/pebble/img_pebble_right.png'
 // @ts-ignore
-import pebbleSection4Bg from '@/assets/images/pebble/pebble_section4_bg.png?webp'
+import pebbleSection4Bg from '@/assets/images/pebble/pebble_section4_bg.png'
 // @ts-ignore
-import pebbleOne from '@/assets/images/pebble/pebble_1.png?webp'
+import pebbleOne from '@/assets/images/pebble/pebble_1.png'
 // @ts-ignore
-import pebbleSectionSixBg from '@/assets/images/pebble/pebble_section_6_bg.png?webp'
+import pebbleSectionSixBg from '@/assets/images/pebble/pebble_section_6_bg.png'
 
 const Pebble = () => {
 	const {lang} = useStore()

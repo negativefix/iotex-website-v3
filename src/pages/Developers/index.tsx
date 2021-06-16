@@ -10,7 +10,7 @@ import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
 import bgThree from '@/assets/images/dev/bg_3.png'
 // @ts-ignore
-import superChargeBg from '@/assets/images/dev/supercharge_bg.png?webp'
+import superChargeBg from '@/assets/images/dev/supercharge_bg.png'
 // @ts-ignore
 import screenSixBanner from '@/assets/images/dev/screen6_banner.png'
 export const Developers = observer(() => {
