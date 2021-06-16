@@ -12,6 +12,8 @@ import { useMediaQuery } from "@chakra-ui/react";
 import bgThree from '@/assets/images/dev/bg_3.png?webp'
 // @ts-ignore
 import superChargeBg from '@/assets/images/dev/supercharge_bg.png?webp'
+// @ts-ignore
+import screenSixBanner from '@/assets/images/dev/screen6_banner.png?webp'
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -712,7 +714,7 @@ export const Developers = observer(() => {
             mx="auto"
             mt={{ base: "3rem", md: "7.5rem" }}
           >
-            <img src="/images/screen6_banner.png" alt="" />
+            <Image src={screenSixBanner} alt="screen_6_banner" />
           </Box>
           <Flex
             justifyContent="space-between"

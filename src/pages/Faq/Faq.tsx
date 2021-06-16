@@ -5,7 +5,7 @@ import {useStore} from "@/store/index";
 import {
 	Box,
 	Container,
-	Heading, Flex,
+	Heading, Flex, Image,
 } from "@chakra-ui/react";
 import HighLight from "@/components/HighLight";
 import {Footer} from "@/components/Footer";
@@ -14,7 +14,14 @@ import SideBar from "./components/SideBar";
 import Sticky from 'react-sticky-el';
 import {useMediaQuery} from "@chakra-ui/react";
 import {Title} from "../Pebble/Title";
-
+//@ts-ignore
+import faqBg from '@/assets/images/faq/faq-bg.png?webp'
+//@ts-ignore
+import faqBurnDrop from '@/assets/images/faq/faq-burn-drop.png?webp'
+//@ts-ignore
+import faqJourney from '@/assets/images/faq/faq-journey.png?webp'
+//@ts-ignore
+import faqPlatform from '@/assets/images/faq/faq_platform.png?webp'
 const Faq = () => {
 	const {lang} = useStore()
 	const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -29,7 +36,7 @@ const Faq = () => {
 				css={{
 					maxWidth: '100%',
 					marginTop: '2rem',
-					backgroundImage: 'url(/images/faq-bg.png)',
+					backgroundImage: `url(${faqBg})`,
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'top center',
 					position: 'fixed',
@@ -125,7 +132,7 @@ const Faq = () => {
 								markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
 							/>
 							<Box marginTop='1rem'>
-								<img src="/images/faq_platform.png" alt=""/>
+								<Image src={faqPlatform} alt="faq_platform"/>
 							</Box>
 						</FaqCard>
 
@@ -213,7 +220,7 @@ const Faq = () => {
 								markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
 							/>
 							<Box marginTop='1rem'>
-								<img src="/images/faq-burn-drop.png" alt=""/>
+								<Image src={faqBurnDrop} alt="faq_burn_drop"/>
 							</Box>
 						</FaqCard>
 
@@ -301,7 +308,7 @@ const Faq = () => {
 						<FaqCard id='block8'>
 							<FaqCardHeading text={lang.t("faq.block8.title")}/>
 							<Box paddingBottom='1rem'>
-								<img src="/images/faq-journey.png" alt=""/>
+								<Image src={faqJourney} alt="faq_journey"/>
 							</Box>
 							<FaqArticle text={lang.t("faq.block8.caption1")}/>
 							<FaqArticle text={lang.t("faq.block8.caption2")}/>

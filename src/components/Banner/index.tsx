@@ -2,7 +2,8 @@ import React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import { observer } from 'mobx-react-lite';
-
+// @ts-ignore
+import bigBall from '@/assets/images/banner/bigball.png?webp'
 export const Banner = observer(() => {
   const { lang } = useStore();
 
@@ -11,7 +12,7 @@ export const Banner = observer(() => {
             <img src="/images/animation.svg" alt="" />
             <Box position="absolute" zIndex="2" w="100%" h="100%" top="0" left="0">
                 <Box w={{base: "25vw", md: "25vw", lg: "28vw"}} position="absolute" top="20%" left="10%" css={{animation: 'bigBall 1.8s linear infinite alternate running'}}>
-                  <img src="/images/bigball.png" alt="" />
+                  <img src={bigBall} alt="" />
                 </Box>
                 <Box w={{base: "8vw", md: "8vw", lg: "12vw"}}  position="absolute" left="75%" top="50%">
                   <img src="/images/smallball.png"alt="" />
