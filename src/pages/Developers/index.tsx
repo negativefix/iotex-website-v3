@@ -12,7 +12,7 @@ import bgThree from '@/assets/images/dev/bg_3.png'
 // @ts-ignore
 import superChargeBg from '@/assets/images/dev/supercharge_bg.png?webp'
 // @ts-ignore
-import screenSixBanner from '@/assets/images/dev/screen6_banner.png?webp'
+import screenSixBanner from '@/assets/images/dev/screen6_banner.png'
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
