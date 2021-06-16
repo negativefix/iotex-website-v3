@@ -11,13 +11,13 @@ import {Title} from "./Title";
 import {SectionContainer} from "./SectionContainer";
 import {Caption} from "./Caption";
 //@ts-ignore
-import apertureBg from '@/assets/images/pebble/aperture.png?webp'
+import apertureBg from '@/assets/images/pebble/aperture.png'
 // @ts-ignore
-import apertureBlue from '@/assets/images/pebble/apertureBlue.png?webp'
+import apertureBlue from '@/assets/images/pebble/apertureBlue.png'
 // @ts-ignore
-import imgPebble from '@/assets/images/pebble/img_pebble.png?webp'
+import imgPebble from '@/assets/images/pebble/img_pebble.png'
 // @ts-ignore
-import imgPebbleRight from '@/assets/images/pebble/img_pebble_right.png?webp'
+import imgPebbleRight from '@/assets/images/pebble/img_pebble_right.png'
 // @ts-ignore
 import pebbleSection4Bg from '@/assets/images/pebble/pebble_section4_bg.png?webp'
 // @ts-ignore

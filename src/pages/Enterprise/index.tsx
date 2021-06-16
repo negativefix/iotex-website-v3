@@ -15,7 +15,7 @@ import ContactForm from "./components/ContactForm";
 import Caption from "./components/Caption";
 import SubTitle from "./components/SubTitle";
 // @ts-ignore
-import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png?webp'
+import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png'
 // @ts-ignore
 import coreRight from '@/assets/images/enterprise/core_right.png?webp'
 // @ts-ignore

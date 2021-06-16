@@ -8,7 +8,7 @@ import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import CountTo from "react-count-to";
 // @ts-ignore
-import Banner from '@/assets/images/token/banner.png?webp'
+import Banner from '@/assets/images/token/banner.png'
 // @ts-ignore
 import burnDrop from '@/assets/images/token/burn_drop.png?webp'
 // @ts-ignore
@@ -16,9 +16,9 @@ import burnToCertify from '@/assets/images/token/burn_to_certify.png?webp'
 // @ts-ignore
 import delegate from '@/assets/images/token/delegate.png?webp'
 // @ts-ignore
-import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png?webp'
+import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png'
 // @ts-ignore
-import staking from '@/assets/images/token/staking.png?webp'
+import staking from '@/assets/images/token/staking.png'
 export const Token = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");

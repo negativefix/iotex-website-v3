@@ -11,7 +11,7 @@ import bgOne from '@/assets/images/research/ing_research_1.png?webp';
 //@ts-ignore
 import bgTwo from '@/assets/images/research/ing_research_2.png?webp';
 // @ts-ignore
-import bgThree from '@/assets/images/research/bg.png?webp';
+import bgThree from '@/assets/images/research/bg.png';
 import { Card } from './Card';
 
 export const Research = observer(() => {
