@@ -10,7 +10,8 @@ import NewsTab from "./News";
 import TabButton from "./TabButton";
 import {useStore} from "@/store/index";
 import ContentTab from "./Content";
-
+//@ts-ignore
+import bg1 from '@/assets/images/media-center/bg_1.png'
 enum Tab {
 	NEWS = 'NEWS',
 	CONTENT = 'CONTENT'
@@ -23,7 +24,7 @@ const MediaCenter = () => {
 	// }))
 	return (
 		<BasicLayout>
-			<Image src={'images/media-center/bg_1.png'} position={'absolute'} width={'100%'}/>
+			<Image src={bg1} position={'absolute'} width={'100%'}/>
 			<SectionContainer marginTop={{base:'10rem',md:'11rem',lg:'13rem'}}>
 				<Title text={'Media Center'} textAlign={'center'}/>
 				<Flex marginTop={{base: '3rem', md: '4.8rem'}} justifyContent={'space-evenly'}>

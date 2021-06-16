@@ -6,7 +6,7 @@ import {
 	Box,
 	Heading,
 	Flex,
-	Text, SimpleGrid,
+	Text, SimpleGrid, Image, Img,
 } from "@chakra-ui/react";
 import {Button} from "@/components/Button";
 import IconCard from "./components/IconCard";
@@ -15,7 +15,11 @@ import ContactForm from "./components/ContactForm";
 import Caption from "./components/Caption";
 import SubTitle from "./components/SubTitle";
 // @ts-ignore
-import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png?webp'
+import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png'
+// @ts-ignore
+import coreRight from '@/assets/images/enterprise/core_right.png'
+// @ts-ignore
+import bgOne from '@/assets/images/enterprise/bg_enterprise_1.png'
 import {Title} from "../Pebble/Title";
 const Enterprise = () => {
 	const {lang} = useStore()
@@ -59,7 +63,7 @@ const Enterprise = () => {
 						width='90%'
 						height={{base: '10%', md: 'auto'}}
 					>
-						<img src='images/bg_enterprise_1.png' style={{height: '100%'}} alt={'bg_enterprise_1'}/>
+						<Image src={bgOne} style={{height: '100%'}} alt={'bg_enterprise_1'}/>
 					</Box>
 					<Title text={lang.t("enterprise.lager.title")} textAlign={"center"}/>
 					<Heading
@@ -141,7 +145,7 @@ const Enterprise = () => {
 							</Box>
 						</Flex>
 						<Box width={{base: '100%', md: '60%'}} marginTop={{base: '1rem', md: '0'}}>
-							<img src="images/enterprise/core_right.png" alt=""/>
+							<Image src={coreRight} alt="core_right"/>
 						</Box>
 					</Flex>
 				</Box>

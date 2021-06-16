@@ -1,8 +1,9 @@
 import React from "react";
 import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
-import { useStore } from "../../../../store";
+import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
-import { Footer } from "@/components/Footer/index";
+import { Footer } from "@/components/Footer";
+import joinBg2 from '@/assets/images/home/join_bg2.png'
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
 
@@ -37,7 +38,7 @@ export const JoinRevolution = observer(() => {
     <Box
       pb={{ base: "4rem", lg: "10rem" }}
       css={{
-        backgroundImage: `url(/images/join_bg2.png)`,
+        backgroundImage: `url(${joinBg2})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "20vw 16rem",
