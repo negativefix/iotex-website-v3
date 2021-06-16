@@ -8,8 +8,7 @@ import { LogoCardItem } from "@/components/LogoCardItem/index";
 import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
-// @ts-ignore
-import bgThree from '@/assets/images/dev/bg_3.png?webp'
+import bgThree from '@/assets/images/dev/bg_3.png'
 // @ts-ignore
 import superChargeBg from '@/assets/images/dev/supercharge_bg.png?webp'
 // @ts-ignore

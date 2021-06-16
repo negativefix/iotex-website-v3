@@ -2,11 +2,14 @@ import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../store';
 import BasicLayout from '../../Layouts/BasicLayout';
-import { Footer } from '@/components/Footer/index';
+import { Footer } from '@/components/Footer';
 import { Flex, Box, Text, Image, Grid, GridItem } from '@chakra-ui/react';
-import researchTopImg from '@/assets/images/research/ing_research_top.png';
-import bgOne from '@/assets/images/research/ing_research_1.png';
-import bgTwo from '@/assets/images/research/ing_research_2.png';
+//@ts-ignore
+import researchTopImg from '@/assets/images/research/ing_research_top.png?webp';
+//@ts-ignore
+import bgOne from '@/assets/images/research/ing_research_1.png?webp';
+//@ts-ignore
+import bgTwo from '@/assets/images/research/ing_research_2.png?webp';
 // @ts-ignore
 import bgThree from '@/assets/images/research/bg.png?webp';
 import { Card } from './Card';

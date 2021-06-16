@@ -10,7 +10,8 @@ import NewsTab from "./News";
 import TabButton from "./TabButton";
 import {useStore} from "@/store/index";
 import ContentTab from "./Content";
-import bg1 from '@/assets/images/media-center/bg_1.png'
+//@ts-ignore
+import bg1 from '@/assets/images/media-center/bg_1.png?webp'
 enum Tab {
 	NEWS = 'NEWS',
 	CONTENT = 'CONTENT'

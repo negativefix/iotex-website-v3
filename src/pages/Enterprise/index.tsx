@@ -17,8 +17,9 @@ import SubTitle from "./components/SubTitle";
 // @ts-ignore
 import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png?webp'
 // @ts-ignore
-import coreRight from '@/assets/images/enterprise/core_right.png'
-import bgOne from '@/assets/images/enterprise/bg_enterprise_1.png'
+import coreRight from '@/assets/images/enterprise/core_right.png?webp'
+// @ts-ignore
+import bgOne from '@/assets/images/enterprise/bg_enterprise_1.png?webp'
 import {Title} from "../Pebble/Title";
 const Enterprise = () => {
 	const {lang} = useStore()

@@ -9,7 +9,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 // @ts-ignore
 import bannerMobileBg from '@/assets/images/dev/banner_mobile_bg.png?webp'
 // @ts-ignore
-import bannerBg from '@/assets/images/dev/banner_bg.png?webp'
+import bannerBg from '@/assets/images/dev/banner_bg.png'
 
 export const DevBanner = observer(() => {
   const { lang } = useStore();
