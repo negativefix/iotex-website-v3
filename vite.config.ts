@@ -11,4 +11,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          core: [
+            "react",
+            "react-dom",
+            "react-router-dom",
+            "mobx",
+            "mobx-react-lite",
+          ],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 2000,
+  },
 });
