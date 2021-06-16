@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
-import { useStore } from "../../store/index";
+import { useStore } from "@/store/index";
 import { Flex, Box, Text, Image, SimpleGrid, Img, Center } from "@chakra-ui/react";
 import BasicLayout from "../../Layouts/BasicLayout";
-import { Footer } from "@/components/Footer/index";
-import { Button } from "@/components/Button/index";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import CountTo from "react-count-to";
-
+// @ts-ignore
+import Banner from '@/assets/images/token/banner.png?webp'
+// @ts-ignore
+import burnDrop from '@/assets/images/token/burn_drop.png?webp'
+// @ts-ignore
+import burnToCertify from '@/assets/images/token/burn_to_certify.png?webp'
+// @ts-ignore
+import delegate from '@/assets/images/token/delegate.png?webp'
+// @ts-ignore
+import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png?webp'
+// @ts-ignore
+import staking from '@/assets/images/token/staking.png?webp'
 export const Token = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -165,8 +176,8 @@ export const Token = observer(() => {
         css={{
           backgroundImage: `url(${
             isMaxThan468
-              ? "/images/token/banner.png"
-              : "/images/token/banner.png"
+              ? Banner
+              : Banner
           })`,
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
@@ -250,7 +261,7 @@ export const Token = observer(() => {
         {/* iotex overview */}
         <Box
           css={{
-            backgroundImage: `url("/images/token/iotex_overflow_banner.png")`,
+            backgroundImage: `url(${iotexOverflowBanner})`,
             backgroundSize: isMaxThan768 ? "50%" : "100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition:  isMaxThan768? "0 0" : "0 100%",
@@ -524,13 +535,13 @@ export const Token = observer(() => {
       </Box>
 
       <Box display={{base: "block", md: "none"}}>
-        <img src="/images/token/delegate.png" alt="" />
+        <img src={delegate} alt="delegate" />
       </Box>
 
       <Box
         css={{
           backgroundImage: isMaxThan768 ?
-            "url(/images/token/delegate.png), url(/images/token/staking.png)" : "url(/images/token/staking.png)",
+            `url(${delegate}), url(${staking})` : `url(${staking})`,
           backgroundSize: isMaxThan768 ? "55%, 80%" : "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: isMaxThan768 ? "100% 0, 100% 30%" : "100% 30%",
@@ -698,7 +709,7 @@ export const Token = observer(() => {
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <Box w={{ base: "100%", md: "50%" }}>
-              <Image src="/images/token/burn_drop.png" />
+              <Image src={burnDrop} />
             </Box>
             <Box
               w={{ base: "100%", md: "46%", "2xl": "40%" }}
@@ -872,7 +883,7 @@ export const Token = observer(() => {
         }}
       >
         <Flex alignItems='flex-start' flexDirection={{base: "column", md: "row"}}>
-          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src="/images/token/icon_Burn-to-Certify.png" mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}></Image>
+          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src="/images/token/icon_Burn-to-Certify.png" mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}/>
           <Box>
             <Text fontSize={{ base: "1rem", sm: "1.6rem", md: "2rem", xl: "3rem" }} fontWeight="bold" letterSpacing="2px" mb={{base: "1rem", md: "0.5rem"}}>{lang.t("burn.to.certify")}</Text>
             <Text fontSize={{base: "0.75rem", sm: "1.25rem", lg: "1rem", xl: "1.25rem"}} flex="1">
@@ -886,7 +897,7 @@ export const Token = observer(() => {
       </Box>
 
       <Box w={{base: "100%", md: "78%"}} mx="auto" mt="5rem" mb="6.5rem">
-        <Img src="/images/token/burn_to_certify.png" w="100%"></Img>
+        <Img src={burnToCertify} w="100%" alt={'burn_to_certify'}/>
       </Box>
 
       <Center>

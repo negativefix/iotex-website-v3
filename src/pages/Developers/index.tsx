@@ -8,7 +8,10 @@ import { LogoCardItem } from "@/components/LogoCardItem/index";
 import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
-
+// @ts-ignore
+import bgThree from '@/assets/images/dev/bg_3.png?webp'
+// @ts-ignore
+import superChargeBg from '@/assets/images/dev/supercharge_bg.png?webp'
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -216,7 +219,7 @@ export const Developers = observer(() => {
       <Box
         pb={{ base: "", md: "10rem", lg: "16rem" }}
         css={{
-          backgroundImage: "url(/images/dev/supercharge_bg.png)",
+          backgroundImage: `url(${superChargeBg})`,
           backgroundSize: "60%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0 10%",
@@ -479,7 +482,7 @@ export const Developers = observer(() => {
         pt={{ base: "15rem", md: 0 }}
         css={{
           backgroundImage:
-            "url(/images/dev/connect_bg.png), url(/images/dev/bg_3.png)",
+            `url(/images/dev/connect_bg.png), url(${bgThree})`,
           backgroundSize: "80%, 110%",
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: `-5% 0%, ${

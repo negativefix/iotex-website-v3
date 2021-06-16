@@ -16,6 +16,14 @@ import apertureBg from '@/assets/images/pebble/aperture.png?webp'
 import apertureBlue from '@/assets/images/pebble/apertureBlue.png?webp'
 // @ts-ignore
 import imgPebble from '@/assets/images/pebble/img_pebble.png?webp'
+// @ts-ignore
+import imgPebbleRight from '@/assets/images/pebble/img_pebble_right.png?webp'
+// @ts-ignore
+import pebbleSection4Bg from '@/assets/images/pebble/pebble_section4_bg.png?webp'
+// @ts-ignore
+import pebbleOne from '@/assets/images/pebble/pebble_1.png?webp'
+// @ts-ignore
+import pebbleSectionSixBg from '@/assets/images/pebble/pebble_section_6_bg.png?webp'
 
 const Pebble = () => {
 	const {lang} = useStore()
@@ -61,7 +69,7 @@ const Pebble = () => {
 						</Box>
 						<Flex justifyContent={{base: 'center', md: 'flex-end'}} marginTop={{base: '5rem', md: '0rem'}}
 						      width={'800px'}>
-							<Image src='images/pebble/pebble_1.png' width={{base: '50%', md: '60%', xl: '70%'}}/>
+							<Image src={pebbleOne} width={{base: '50%', md: '60%', xl: '70%'}}/>
 						</Flex>
 					</Flex>
 				</SectionContainer>
@@ -169,7 +177,7 @@ const Pebble = () => {
 			<Box
 				marginTop={'180px'}
 				minHeight={'1150px'}
-				backgroundImage={'url(images/pebble/img_pebble.png)'}
+				backgroundImage={`url(${imgPebbleRight})`}
 				backgroundRepeat={'no-repeat'}
 				backgroundSize={'80%'}
 				backgroundPosition={'bottom 0 left 0px'}
@@ -212,7 +220,7 @@ const Pebble = () => {
 					<Title text={lang.t('pebble.section4.title')} maxWidth={'800px'} textAlign={'center'}/>
 					<Caption text={lang.t('pebble.section4.caption')} maxWidth={'1200px'} textAlign={'center'}
 					         marginTop={'24px'}/>
-					<img src="images/pebble/pebble_section4_bg.png" alt="pebble_section4_bg" style={{marginTop: '109px'}}/>
+					<img src={pebbleSection4Bg} alt="pebble_section4_bg" style={{marginTop: '109px'}}/>
 					<SimpleGrid
 						columns={[1, 2, 2, 4]}
 						spacing={16}
@@ -259,7 +267,7 @@ const Pebble = () => {
 
 			{/*part 8*/}
 			<Flex
-				backgroundImage={'url(images/pebble/pebble_section_6_bg.png)'}
+				backgroundImage={`url(${pebbleSectionSixBg})`}
 				minHeight={'546px'}
 				mx={"auto"}
 				justifyContent={'center'}

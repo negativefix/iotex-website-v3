@@ -29,7 +29,6 @@ const NewsTab = () => {
 	}))
 	const LAST_SLIDER_INDEX = ARTICLES.length
 	const numberOfSlides = useBreakpointValue({base:1,sm:2,md:3})
-	console.log(numberOfSlides)
 	const sliderOnClick = (value) => {
 		if (value+numberOfSlides <= LAST_SLIDER_INDEX) {
 			store.setSliderIndex(value)

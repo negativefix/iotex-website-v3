@@ -4,7 +4,14 @@ import { useStore } from "../../store"
 import BasicLayout from '../../Layouts/BasicLayout'
 import { Footer } from "@/components/Footer/index";
 import { Flex, Box, Text, SimpleGrid, Image, Avatar, } from '@chakra-ui/react';
-
+//@ts-ignore
+import Artboard from '@/assets/images/team/Artboard-1.png?webp'
+//@ts-ignore
+import Banner from '@/assets/images/team/banner.png?webp'
+//@ts-ignore
+import Dorothy from '@/assets/images/team/Dorothy.png?webp'
+//@ts-ignore
+import k from '@/assets/images/team/k.png?webp'
 export const Team = observer(() => {
   const { lang } = useStore()
 
@@ -66,7 +73,7 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("ken.name"),
-      avatar: "/images/team/k.png",
+      avatar: k,
       links: [{ src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seiff/" }],
       job: lang.t("ken.research"),
       intros: lang.t("ken.desc"),
@@ -137,7 +144,7 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("mukul.name"),
-      avatar: "/images/team/Artboard-1.png",
+      avatar: Artboard,
       links: [
         { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/agarwalmukul/" },
       ],
@@ -171,7 +178,7 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("dorothy.name"),
-      avatar: "/images/team/Dorothy.png",
+      avatar: Dorothy,
       links: [
         {
           src: "/images/icons/icon_linkedIn.svg",
@@ -358,13 +365,13 @@ export const Team = observer(() => {
   return (
     <BasicLayout>
       <Box css={{
-        backgroundImage: 'url(/images/team/banner.png)',
+        backgroundImage: `url(${Banner})`,
         backgroundSize: "100%",
         backgroundRepeat: 'no-repeat',
       }}>
 
-        <Box 
-          pt={{base: "8rem", md: "10rem", lg: "12rem", xl: "13rem", "2xl": "22.875rem"}} 
+        <Box
+          pt={{base: "8rem", md: "10rem", lg: "12rem", xl: "13rem", "2xl": "22.875rem"}}
           pb={{base: "5rem", md: "5rem", lg: "6rem", xl: "8rem", "2xl": "13rem"}}>
           <Flex alignItems="center" justifyContent="flex-end" direction="column" w="100%" h="100%" maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">
             <Text  fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
@@ -373,8 +380,8 @@ export const Team = observer(() => {
               fontWeight="semibold" whiteSpace={{base: "inherit", md: "pre-line"}}>
               {lang.t("team.title")}
             </Text>
-            <Text 
-              fontSize={{base: "0.75rem", sm: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.75rem"}}  opacity="0.85" 
+            <Text
+              fontSize={{base: "0.75rem", sm: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.75rem"}}  opacity="0.85"
               width={{base: "90%", lg: "80%", xl: "81%", "2xl": "70%"}}
               fontWeight="medium" textAlign="center">
               {lang.t("team.subtitle")}
@@ -430,7 +437,7 @@ export const Team = observer(() => {
           </SimpleGrid>
         </Box>
       </Box>
-      
+
 
       <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "5rem", lg: "10rem"}} p="2rem 2.5rem" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
@@ -440,7 +447,7 @@ export const Team = observer(() => {
       }}>
         <img src="/images/team/investors.png" alt="" />
       </Box>
-     
+
       <Footer />
     </BasicLayout>
   )
