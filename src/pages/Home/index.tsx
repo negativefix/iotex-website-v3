@@ -122,12 +122,12 @@ export const Home = observer(() => {
           </Flex> */}
         </Box>
       </Box>
-      <Box  backgroundPosition={{base: "30% 12%", xl: "25% 0%"}} pt="7.5rem"  pb={{base: "10rem", lg: "18rem" }} css={{
+      <Box  backgroundPosition={{base: "30% 12%", xl: "25% 0%"}}  pt="7.5rem"  pb={{base: "10rem", lg: "18rem" }} css={{
         backgroundImage: 'url(/images/award_wing_bg.png)',
         backgroundSize: '56%',
         backgroundRepeat: 'no-repeat',
       }}>
-        <Box maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto" mb={{base: "", xl: "12.65rem"}}>
+        <Box maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto" mb={{base: "8rem", xl: "12rem"}}>
           <AwardWinning />
         </Box>
         <img src="/images/mask_group.png" alt="" />
