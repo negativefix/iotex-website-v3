@@ -3,6 +3,8 @@ import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
 import { useStore } from "../../../../store";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer/index";
+import { Button } from "@/components/Button"
+
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
 
@@ -33,16 +35,55 @@ export const JoinRevolution = observer(() => {
     },
   ];
 
+  const roles = [
+    {name: lang.t("investors"), btn: lang.t("explore"), icon: "/images/started1.png", href: "/"},
+    {name: lang.t("developer"), btn: lang.t("build"), icon: "/images/started2.png", href: "/"},
+    {name: lang.t("business"), btn: lang.t("connect"), icon: "/images/started3.png", href: "/"},
+  ]
+
   return (
     <Box
+      mt={{base: "10rem", lg: "15rem"}}
       pb={{ base: "4rem", lg: "10rem" }}
       css={{
-        backgroundImage: `url(/images/join_bg2.png)`,
-        backgroundSize: "contain",
+        backgroundImage: `url(/images/get_started_bg.png), url(/images/join_bg2.png)`,
+        backgroundSize: "100%, 80%",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "20vw 16rem",
+        backgroundPosition: "100% 20%, 100% 100%",
       }}
     >
+      <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }} mx="auto" mb={{base: "10rem", lg: "15rem", "2xl": "22rem"}}>
+        <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb={{base: "3rem", lg: "7.5rem"}} whiteSpace="pre-line" textAlign="center">
+          {lang.t("get.started")}
+        </Text>
+        <Flex flexDirection={{base: "column", lg: "row"}} justifyContent="space-between" alignItems="center">
+          {
+            roles.map(item => {
+              return <Flex flexDirection="column" w={{base: "80%", sm: "26%", lg: "26%", "2xl": "26%"}} h={{base: "350px", lg: "400px", "2xl": "30rem"}}  
+              py="3rem"
+              mb={{base: "4rem", md: 0}}
+              css={{
+                backgroundImage: `url(${item.icon})`,
+                backgroundSize: "100% 100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "100% 0%",
+              }}>
+                <Text fontSize={{base: "1.25rem", lg: "1.5rem", "2xl": "2rem"}} fontWeight="semibold"  mb="7.5rem" whiteSpace="pre-line" textAlign="center" flex="1">
+                  {item.name}
+                </Text>
+
+                <Box className="commonBtnBox"  h={{base: "3rem", md: "3rem"}} w="70%" mx="auto">
+                  <a href={item.href} style={{width: "100%"}}>
+                    <Flex bg="btnBgColor" className="commonBtn" borderRadius="10px"  h="100%" justifyContent="center" alignItems="center" cursor="pointer">
+                      <Text fontSize={{base: "1.25rem", md: "1.5rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{item.btn}</Text>
+                    </Flex>
+                  </a>
+                </Box>
+              </Flex>
+            })
+          }
+        </Flex>
+      </Box>
       <Box
         maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
         mx="auto"

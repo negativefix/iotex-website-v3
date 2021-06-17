@@ -44,17 +44,17 @@ export const NextGen = observer(() => {
   }));
 
     return (
-      <Box mt={{base: "", lg: "16rem" }} css={{
-        backgroundImage: 'url(/images/next-gen-bg.png)',
-        backgroundSize: '30%',
+      <Box css={{
+        backgroundImage: 'url(/images/next_gen_bg2.png), url(/images/next-gen-bg.png)',
+        backgroundSize: '50%, 30%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '0% 80%'
+        backgroundPosition: '10% 0% ,0% 80%'
       }}>
         <Box maxWidth={{base: '90%', md: "80%", "2xl": "1554px"}} mx="auto">
           <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">
             {lang.t("title3")}
           </Text>
-          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "50%"}} >
+          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", lg: "4.25rem"}}  maxWidth={{base: "100%", lg: "42%"}} >
             {lang.t("subtitle3")}
           </Text>
           <Flex justifyContent="space-between" flexDirection={{base: "column", xl: "row"}}>

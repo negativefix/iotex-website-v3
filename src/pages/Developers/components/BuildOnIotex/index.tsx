@@ -16,11 +16,11 @@ export const BuildOnIotex = observer(() => {
     {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
   ]
     return (
-      <Box mt={{base: "4rem", lg: "10rem", xl: "21.5rem"}} pb={{base: "2rem", lg: "10rem", xl: "21.375rem"}} css={{
+      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "2rem", lg: "10rem", xl: "15rem"}} css={{
         backgroundImage: 'url(/images/bulr_ball.png)',
         backgroundSize: '85%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '100% 0%'
+        backgroundPosition: '100% 10%'
       }}>
         <Flex justifyContent="space-between" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
           <Box w={{base: "100%", lg: "40%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>

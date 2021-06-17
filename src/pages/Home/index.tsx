@@ -8,11 +8,8 @@ import { Flex, Box, Text, Image, Modal,
 } from '@chakra-ui/react';
 import BasicLayout from '../../Layouts/BasicLayout'
 import {Banner} from '@/components/Banner/index'
-import {DropCard} from '@/components/DropCardItem/index'
 import {AwardWinning} from './components/AwardWinning/index'
 import {NextGen} from './components/NextGen/index'
-import {BuildOnIotex} from './components/BuildOnIotex/index'
-import {IotexToken} from './components/IotexToken/index'
 import {JoinRevolution} from './components/JoinRevolution/index'
 import CountTo from 'react-count-to';
 
@@ -81,11 +78,7 @@ export const Home = observer(() => {
             {lang.t("subtitle2")}
           </Text>
         </Box>
-        <Box pb="4.5rem" maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto" backgroundPosition={{base: "30% 12%", xl: "30% 90%"}} css={{
-          backgroundImage: 'url(/images/award_wing_bg.png)',
-          backgroundSize: '80%',
-          backgroundRepeat: 'no-repeat',
-        }}>
+        <Box pb="4.5rem" maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto">
           <Box mx="auto" position="relative">
             <Box onClick={store.open}>
               <img src="/images/video.png" alt="" />
@@ -113,7 +106,7 @@ export const Home = observer(() => {
                 </ModalContent>
               </Modal>
           </Box>
-          <Flex h={{base: "280px", md: "399px", xl: "337px"}} mb={{base: "2rem", xl: "8.56rem"}}>
+          {/* <Flex h={{base: "280px", md: "399px", xl: "337px"}} mb={{base: "2rem", xl: "8.56rem"}}>
             {
               advantages.map((item, index) => {
                 return <Box key={item.title}>
@@ -126,14 +119,25 @@ export const Home = observer(() => {
                 </Box>
               })
             }
-          </Flex>
+          </Flex> */}
+        </Box>
+      </Box>
+      <Box  backgroundPosition={{base: "30% 12%", xl: "25% 0%"}} pt="7.5rem"  pb={{base: "10rem", lg: "18rem" }} css={{
+        backgroundImage: 'url(/images/award_wing_bg.png)',
+        backgroundSize: '56%',
+        backgroundRepeat: 'no-repeat',
+      }}>
+        <Box maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto" mb={{base: "", xl: "12.65rem"}}>
           <AwardWinning />
         </Box>
+        <img src="/images/mask_group.png" alt="" />
+
+        <a href="/" target="_blank">
+          <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} mt={{base: "4rem", xl: "5rem"}} cursor="pointer" textAlign="center" color="brandColor" lineHeight="1.275rem">{lang.t("view.more")} &gt;&gt;</Text>
+        </a>
       </Box>
 
       <NextGen />
-      <BuildOnIotex />
-      <IotexToken />
       <JoinRevolution />
     </BasicLayout>
   );

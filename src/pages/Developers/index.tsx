@@ -8,6 +8,7 @@ import { LogoCardItem } from "@/components/LogoCardItem/index";
 import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
+import { BuildOnIotex } from './components/BuildOnIotex/index'
 
 export const Developers = observer(() => {
   const { lang } = useStore();
@@ -211,8 +212,8 @@ export const Developers = observer(() => {
             mb="4rem"
           />
         </Box>
+        <BuildOnIotex />
       </Box>
-
       <Box
         pb={{ base: "", md: "10rem", lg: "16rem" }}
         css={{

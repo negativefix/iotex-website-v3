@@ -556,5 +556,12 @@
   "burn.to.certify": "“Burn-to-Certify” Program",
   "burn.to.certify.desc1": "After 1 million “Powered by IoTeX” devices are onboarded, Burn-Drop will be finished and “Burn-to-Certify” tokenomics will be activated. ",
   "burn.to.certify.desc2": "From then on, builders (e.g., device manufacturers) will burn IOTX to obtain access to special services/capabilities for each new device. This will continue in perpetuity and the total supply of IOTX will decrease with every new “Powered by IoTeX” device, as shown in the graph below.",
-  "explore.ioTT.network": "Explore IoTT Network"
+  "explore.ioTT.network": "Explore IoTT Network",
+  "view.more": "View More",
+  "investors": "INVESTORS",
+  "developer": "DEVELOPERS",
+  "business": "BUSINESS",
+  "explore": "Explore",
+  "build": "Build",
+  "connect": "Connect"
 }
