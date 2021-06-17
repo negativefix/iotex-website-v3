@@ -6,7 +6,7 @@ import {
 	Box,
 	Heading,
 	Flex,
-	Text, SimpleGrid,
+	Text, SimpleGrid, Image, Img,
 } from "@chakra-ui/react";
 import {Button} from "@/components/Button";
 import IconCard from "./components/IconCard";
@@ -15,7 +15,11 @@ import ContactForm from "./components/ContactForm";
 import Caption from "./components/Caption";
 import SubTitle from "./components/SubTitle";
 // @ts-ignore
-import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png?webp'
+import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png'
+// @ts-ignore
+import coreRight from '@/assets/images/enterprise/core_right.png'
+// @ts-ignore
+import bgOne from '@/assets/images/enterprise/bg_enterprise_1.png'
 import {Title} from "../Pebble/Title";
 const Enterprise = () => {
 	const {lang} = useStore()
@@ -24,19 +28,25 @@ const Enterprise = () => {
 			icon: 'images/icon-logo1.png',
 			title: lang.t('enterprise.group1.case1'),
 			desc: lang.t('enterprise.group1.desc1'),
-			link: 'https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f'
+			link: 'https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f',
+			width:'170.67px',
+			height:'67px'
 		},
 		{
 			icon: 'images/icon-logo2.png',
 			title: lang.t('enterprise.group1.case2'),
 			desc: lang.t('enterprise.group1.desc2'),
-			link: 'https://medium.com/iotex/iotex-publishes-ieee-reports-on-blockchain-iot-c6650c26f443'
+			link: 'https://medium.com/iotex/iotex-publishes-ieee-reports-on-blockchain-iot-c6650c26f443',
+			width:'170.67px',
+			height:'67px'
 		},
 		{
 			icon: 'images/icon-logo3.png',
 			title: lang.t('enterprise.group1.case3'),
 			desc: lang.t('enterprise.group1.desc3'),
-			link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium'
+			link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium',
+			width:'170.67px',
+			height:'67px'
 		}
 	]
 
@@ -53,7 +63,7 @@ const Enterprise = () => {
 						width='90%'
 						height={{base: '10%', md: 'auto'}}
 					>
-						<img src='images/bg_enterprise_1.png' style={{height: '100%'}} alt={'bg_enterprise_1'}/>
+						<Image src={bgOne} style={{height: '100%'}} alt={'bg_enterprise_1'}/>
 					</Box>
 					<Title text={lang.t("enterprise.lager.title")} textAlign={"center"}/>
 					<Heading
@@ -65,23 +75,20 @@ const Enterprise = () => {
 						{lang.t("enterprise.sub.title")}
 					</Heading>
 					<Flex
-						flexDirection={{base: 'column', md: 'row'}}
-						justifyContent={'space-around'}
-						marginTop={{base: '1rem', md: '0'}}
+						flexDirection={{base: 'column', md: 'column'}}
+						justifyContent={'center'}
+						alignItems={'center'}
+						marginTop={{base: '1rem', md: '6rem'}}
 						minHeight={'200px'}
 					>
 						<Button
 							href="#form1"
 							name={lang.t("enterprise.banner.btn1")}
-							size={{base: "100%", xl: "40%", "2xl": "40%"}}
+							size={{base: "100%",md:'40%', xl: "40%", "2xl": "40%"}}
 							isBlank={false}
 						/>
 
-						<Button
-							href="https://iotex.io/reference-architecture"
-							name={lang.t("enterprise.banner.btn2")}
-							size={{base: "100%", xl: "40%", "2xl": "40%"}}
-						/>
+						<Text color={'#44FFB2'} fontSize={{base:'1rem',md:'1.75rem'}} marginTop={'4rem'} fontWeight={'bold'} onClick={()=>window.open('https://iotex.io/reference-architecture')}>{lang.t("enterprise.banner.btn2")}</Text>
 					</Flex>
 				</Box>
 
@@ -99,8 +106,7 @@ const Enterprise = () => {
 						</Flex>
 						<Box width={{base: '100%', md: '50%'}} marginTop={{base: '1rem', md: '0'}} maxWidth='760px'>
 							<Box>
-								<Text fontSize={{md: '5rem', base: '2rem'}}
-								      fontWeight={'semibold'}>{lang.t('enterprise.group1.title')}</Text>
+								<Title text={lang.t('enterprise.group1.title')} textAlign={'left'}/>
 								<Caption marginTop={'1rem'} text={lang.t('enterprise.group1.subtitle')}/>
 							</Box>
 							<img src='images/bg_enterprise_2.png' alt='bg_enterprise_2'
@@ -111,9 +117,7 @@ const Enterprise = () => {
 
 				{/*part3*/}
 				<Box marginTop={'15rem'} padding={{base: '0', md: '1rem'}} maxWidth='927px'>
-					<Text fontSize={{md: '5rem', base: '2rem'}} fontWeight={'semibold'}>
-						{lang.t('enterprise.group2.title')}
-					</Text>
+					<Title text={lang.t('enterprise.group2.title')} textAlign={'left'}/>
 					<Caption text={lang.t('enterprise.group2.subtitle')}/>
 					<Box marginTop='5rem'>
 						<Button href="https://docs.iotex.io/" size={{base: "100%", lg: "16rem"}} name={lang.t("learn.more")}/>
@@ -141,7 +145,7 @@ const Enterprise = () => {
 							</Box>
 						</Flex>
 						<Box width={{base: '100%', md: '60%'}} marginTop={{base: '1rem', md: '0'}}>
-							<img src="images/enterprise/core_right.png" alt=""/>
+							<Image src={coreRight} alt="core_right"/>
 						</Box>
 					</Flex>
 				</Box>
@@ -160,8 +164,8 @@ const Enterprise = () => {
 				backgroundRepeat={'no-repeat'}
 			>
 				<Flex maxWidth={{base: '90%', md: '80%'}}  flexDirection='column'>
-					<Heading textAlign={'center'} fontSize={{base:'1.75rem',md:'5rem'}}
-					         fontWeight={'semibold'}>{lang.t('enterprise.group3.title')}</Heading>
+
+					<Title text={lang.t('enterprise.group3.title')} textAlign={'center'}/>
 					<SimpleGrid columns={[1,3]} spacing={{md:'35px',lg:'35px','xl':'40px'}} marginTop='5rem'>
 						<Flex alignItems='center' flexDirection='column'>
 							<img src='images/icon_supply_chain.png' width={'120px'} height={'120px'}/>

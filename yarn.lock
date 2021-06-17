@@ -939,6 +939,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@brainhubeu/react-carousel@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-2.0.4.tgz#9b3d3e9699fca1617530e4cd242d6ef99a671917"
+  integrity sha512-FeN4IL0xg2Ld2YC7zk2asnIbECfsaV9ryiHE3KaDRy3VRPKhAdwAcsrUR4u0lzFMghzGIwtrnIfMnYjczwjAdg==
+
 "@chakra-ui/accordion@1.2.1":
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/@chakra-ui/accordion/download/@chakra-ui/accordion-1.2.1.tgz#2e48ed5e79c58d5915a807fc03a486f54325005a"
@@ -1788,6 +1793,13 @@
   integrity sha1-8E4qhO/Z6pNzZs09+62l08lJRx0=
   dependencies:
     antd "*"
+
+"@types/brainhubeu__react-carousel@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/brainhubeu__react-carousel/-/brainhubeu__react-carousel-2.0.2.tgz#f238255f3fecbab98d8a413303b4fa52aa924624"
+  integrity sha512-qmOfB2AcENaQWGI0SNgte8+4+sHMFtfaBpU0ks+YpbCIkKw0zow0pTLPVoFYvskPI7ieM+bYtO22XpkXUS7oUg==
+  dependencies:
+    "@types/react" "*"
 
 "@types/lodash.mergewith@4.6.6":
   version "4.6.6"

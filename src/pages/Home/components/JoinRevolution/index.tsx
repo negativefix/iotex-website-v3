@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
-import { useStore } from "../../../../store";
+import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button"

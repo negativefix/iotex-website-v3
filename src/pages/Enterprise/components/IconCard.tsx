@@ -6,7 +6,8 @@ const IconCard = ({item}) => {
 	return (
 		<>
 			<Box
-				width={{base: "100%", lg: "100%"}}
+				width={item.width}
+				h={item.height}
 				maxWidth={{base:'100%',lg:'90%'}}
 				marginTop={{
 					base:'3rem',
@@ -17,10 +18,10 @@ const IconCard = ({item}) => {
 					marginTop: '0'
 				}}
 			>
-				<img src={item.icon}/>
+				<img src={item.icon} alt={item.title} />
 			</Box>
 			<Text fontSize={{base:'1rem',md:'2rem'}} fontWeight="semibold">{item.title}</Text>
-			<Caption text={item.desc} marginTop={'24px'}/>
+			<Caption text={item.desc} marginTop={'24px'} fontWeight={'600'}/>
 			<a href={item.link} style={{color:'rgba(68, 255, 178, 1)', marginTop:'24px', fontSize:'18px'}}>Learn More {">>"}</a>
 
 		</>

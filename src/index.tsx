@@ -11,6 +11,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Enterprise from "./pages/Enterprise";
 import Faq from "./pages/Faq/Faq";
 import { Research } from './pages/Research'
+import MediaCenter from "./pages/MediaCenter";
 import Pebble from "./pages/Pebble";
 
 export const App = observer(() => {
@@ -28,6 +29,7 @@ export const App = observer(() => {
 	        <Route path='/team' exact component={Team}/>
           <Route path="/enterprise" exact component={Enterprise} />
           <Route path="/research" exact component={Research} />
+          <Route path="/media-center" exact component={MediaCenter} />
           <Route path="/pebble" exact component={Pebble} />
           <Route path="/token" exact component={Token} />
         </Switch>

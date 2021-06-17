@@ -3,7 +3,7 @@ import {Box, Flex, Text} from "@chakra-ui/react";
 
 export const Card = ({url, text}) => {
 	return (
-		<Flex width={{md:'200px',xl:'292px',base:'292px'}}
+		<Flex width={'100%'}
 		      height={{md:'166px',xl:'240px',base:'240px'}}
 		      borderRadius={'20px'}
 		      background={'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)'}
