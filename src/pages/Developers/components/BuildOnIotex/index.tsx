@@ -1,9 +1,7 @@
 import React from 'react';
-import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
-import {  useHistory } from 'react-router-dom';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { useStore } from '../../../../store';
-import { Link } from "@chakra-ui/react"
-import { observer, useLocalStore } from 'mobx-react-lite';
+import { observer } from 'mobx-react-lite';
 import { Button } from "../../../../components/Button/index"
 import { TypeCode } from '../TypeCode/index';
 
@@ -29,11 +27,11 @@ export const BuildOnIotex = observer(() => {
               <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
                 <img src="/images/code.png" alt="" />
               </Box>
-              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "80%", md: "68%", lg: "73%"}} top="14%" left="10%" p={{base: "1rem", lg: "2rem"}} css={{
+              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "80%", md: "60%", lg: "80%",  xl: "70%", "2xl": "58%"}} top={{base: "14%", lg: "10%", xl: "14%"}} left={{base: "10%", lg: "8%", "2xl": "10%"}} p={{base: "0.1rem", sm: "1rem", md: "1.5rem",  lg: "0", xl: "5%", "2xl": "2rem"}} css={{
                 background: 'linear-gradient(146.72deg, rgba(137, 137, 137, 0.1) 6.79%, rgba(255, 255, 255, 0) 107.21%)',
                 boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
                 backdropFilter: 'blur(50px)',
-                borderRadius: '20px',
+                borderRadius: '15px',
               }}>
                 <TypeCode />
               </Box>

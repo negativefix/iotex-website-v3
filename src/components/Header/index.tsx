@@ -3,11 +3,9 @@ import {
   Box, Flex, Menu, MenuButton, MenuList, MenuItem, Image, Text, Center,
 } from '@chakra-ui/react';
 import {  Link, useHistory } from 'react-router-dom';
-import { MobileNav } from '@/components/Header/MobileNav';
+import { TriangleDownIcon } from '@chakra-ui/icons'
 import { useStore } from '../../store';
-// import { Link } from "@chakra-ui/react"
-import { observer, useLocalObservable } from 'mobx-react-lite';
-import { IoMenu } from "react-icons/io5";
+import { observer, useLocalObservable, useObserver } from 'mobx-react-lite';
 
 const langGroups = {
 	en: { name: 'EN', src: '/images/EN.png', text: 'en' },
@@ -44,6 +42,17 @@ export const Header = observer(() => {
       },
     }));
 
+    const exploreNew = useObserver(() => {
+      return (
+        <Box css={{
+          background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+          backdropFilter: 'blur(100px)'
+        }}>
+
+        </Box>
+      )
+    })
+
     return (
         <Box w="100%" p={{base: "0.5rem", md: "1.125rem"}} boxSizing="border-box" position="absolute" top="0" left="0" zIndex="5">
             <Flex justifyContent="space-between">
@@ -73,7 +82,7 @@ export const Header = observer(() => {
                     }
                     <Box ml={{ base: "1rem", lg: "3.5rem", "2xl": "3rem" }}  className="dropHoverText"  position="relative">
                       <Text as={Text} fontWeight="semibold"  fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }} cursor="pointer">
-                        About
+                        About <TriangleDownIcon w="12px" />
                       </Text>
                       <ul className="dropMenuUl">
                         {
