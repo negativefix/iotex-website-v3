@@ -13,7 +13,9 @@ export const customTheme = extendTheme({
 		btnTextColor: '#1C1F24',
 		brandColor: '#44FEB0',
 		brandColor2: '#44FFB2',
-		textColor: "#43C9BA"
+		textColor: "#43C9BA",
+    codeColor: '#56CCF2',
+    codeColor2: '#44FEB0'
 	},
 	fonts: {
 		body: "Montserrat, sans-serif",

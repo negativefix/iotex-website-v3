@@ -5,6 +5,7 @@ import { useStore } from '../../../../store';
 import { Link } from "@chakra-ui/react"
 import { observer, useLocalStore } from 'mobx-react-lite';
 import { Button } from "../../../../components/Button/index"
+import { TypeCode } from '../TypeCode/index';
 
 export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
@@ -28,8 +29,13 @@ export const BuildOnIotex = observer(() => {
               <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
                 <img src="/images/code.png" alt="" />
               </Box>
-              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}} top="24%" left="10%">
-                <img src="/images/code.png" alt="" />
+              <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "80%", md: "68%", lg: "73%"}} top="14%" left="10%" p={{base: "1rem", lg: "2rem"}} css={{
+                background: 'linear-gradient(146.72deg, rgba(137, 137, 137, 0.1) 6.79%, rgba(255, 255, 255, 0) 107.21%)',
+                boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
+                backdropFilter: 'blur(50px)',
+                borderRadius: '20px',
+              }}>
+                <TypeCode />
               </Box>
             </Box>
             <Flex flexWrap="wrap"  justifyContent="space-between">
