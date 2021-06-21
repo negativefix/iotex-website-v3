@@ -182,7 +182,34 @@ export const customTheme = extendTheme({
           opacity: 1,
           transform: 'translateX(0)'
         }
-		  }
+		  },
+      '.exploreNow': {
+        animation: 'fadeIn 0.3s linear',
+      },
+      '@keyframes fadeIn': {
+        '0%': {
+          opacity: 0,
+        },
+        '100%': {
+          opacity: 1,
+        }
+		  },
+      '@keyframes awardLine1': {
+        '0%': {
+          backgroundPositionX: '200%',
+        },
+        '100%': {
+          backgroundPositionX: '0%'
+        }
+      },
+      '@keyframes awardLine2': {
+        '0%': {
+          backgroundPositionX: '0%',
+        },
+        '100%': {
+          backgroundPositionX: '200%'
+        }
+      }
 		}
 	}
 });

@@ -12,6 +12,7 @@ interface ComponentsProps {
 
 export const DropLinkItem = observer(({icon, title, desc} : ComponentsProps) => {
   const { lang } = useStore();
+  
     return (
       <Box w="100%" h={{base: "100%", lg: "150px", "2xl": "52%"}} py={{base: "0.5rem", lg:"1.25rem"}} pb="0" maxWidth="329px" css={{
         overflow: 'hidden',

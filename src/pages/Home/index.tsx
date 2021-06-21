@@ -130,7 +130,37 @@ export const Home = observer(() => {
         <Box maxWidth={{base: '90%',md: "80%",  "2xl": "1554px"}} mx="auto" mb={{base: "8rem", xl: "12rem"}}>
           <AwardWinning />
         </Box>
-        <img src="/images/mask_group.png" alt="" />
+        <Box w="100%" position="relative">
+          <img src="/images/mask_group.png" style={{opacity: 0}} alt="" />
+          <Flex flexDirection="column" w="100%" height="100%" position="absolute" zIndex="2" top="0">
+            <Box mb="5%" css={{
+              height:"40%",
+              background: 'url(/images/awind_line_1.png) center 0px repeat-x',
+              backgroundSize: '200% 100%',
+              backgroundPositionX: '200%',
+              animation: "awardLine1 100s infinite linear",
+              '-webkit-animation': "awardLine1 40s infinite linear",
+            }}></Box>
+            <Box css={{
+              height:"40%",
+              background: 'url(/images/awind_line_1.png) center 0px repeat-x',
+              backgroundSize: '200% 100%',
+              backgroundPositionX: '200%',
+              animation: "awardLine2 100s infinite linear",
+              '-webkit-animation': "awardLine2 30s infinite linear",
+            }}></Box>
+          </Flex>
+          <Box css={{
+            position:"absolute",
+            top: "-1px",
+            left: "-1px",
+            right: "-1px",
+            bottom: "-1px",
+            zIndex: 2,
+            background: "url(/images/mask.png) center center no-repeat",
+            backgroundSize: "contain"
+          }}></Box>
+        </Box>
 
         <a href="/" target="_blank">
           <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} mt={{base: "4rem", xl: "5rem"}} cursor="pointer" textAlign="center" color="brandColor" lineHeight="1.275rem">{lang.t("view.more")} &gt;&gt;</Text>

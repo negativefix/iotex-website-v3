@@ -59,7 +59,7 @@ export const JoinRevolution = observer(() => {
         <Flex flexDirection={{base: "column", lg: "row"}} justifyContent="space-between" alignItems="center">
           {
             roles.map(item => {
-              return <Flex flexDirection="column" w={{base: "80%", sm: "26%", lg: "26%", "2xl": "26%"}} h={{base: "350px", lg: "400px", "2xl": "30rem"}}  
+              return <Flex key={item.name} flexDirection="column" w={{base: "80%", sm: "26%", lg: "26%", "2xl": "26%"}} h={{base: "350px", lg: "400px", "2xl": "30rem"}}  
               py="3rem"
               mb={{base: "4rem", md: 0}}
               css={{

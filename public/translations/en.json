@@ -564,5 +564,15 @@
   "build": "Build",
   "connect": "Connect",
   "media.read.more": "Read More",
-  "explore.now": "Explore Now"
+  "explore.now": "Explore Now",
+  "for.builders": "For Builders",
+  "dev.docs": "Dev Docs",
+  "halo.grants": "Halo Grants",
+  "codelabs": "Codelabs",
+  "for.investors": "For Investors",
+  "ioPay.wallet": "ioPay Wallet",
+  "staking.portal": "Staking Portal",
+  "burn.drop": "Burn-drop",
+  "for.community": "For Community",
+  "live.ioTT.network": "Live IoTT Network"
 }
