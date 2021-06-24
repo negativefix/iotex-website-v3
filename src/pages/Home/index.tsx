@@ -134,18 +134,18 @@ export const Home = observer(() => {
           <img src="/images/mask_group.png" style={{opacity: 0}} alt="" />
           <Flex flexDirection="column" w="100%" height="100%" position="absolute" zIndex="2" top="0">
             <Box mb="5%" css={{
-              height:"40%",
+              height:"45%",
               background: 'url(/images/awind_line_1.png) center 0px repeat-x',
-              backgroundSize: '200% 100%',
-              backgroundPositionX: '200%',
+              backgroundSize: '250% 100%',
+              backgroundPositionX: '250%',
               animation: "awardLine1 100s infinite linear",
               '-webkit-animation': "awardLine1 40s infinite linear",
             }}></Box>
             <Box css={{
-              height:"40%",
-              background: 'url(/images/awind_line_1.png) center 0px repeat-x',
-              backgroundSize: '200% 100%',
-              backgroundPositionX: '200%',
+              height:"45%",
+              background: 'url(/images/awind_line_2.png) center 0px repeat-x',
+              backgroundSize: '250% 100%',
+              backgroundPositionX: '250%',
               animation: "awardLine2 100s infinite linear",
               '-webkit-animation': "awardLine2 30s infinite linear",
             }}></Box>
