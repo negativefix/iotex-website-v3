@@ -29,11 +29,6 @@ export const Header = observer(() => {
   const { isOpen, onToggle } = useDisclosure();
 
   const navConfig = [
-    {
-      name: lang.t("get.started"),
-      path: "https://onboard.iotex.io",
-      blank: true,
-    },
     { name: lang.t("developers"), path: "/developers", blank: false },
     { name: lang.t("iotx"), path: "https://iotex.io/token", blank: true },
     {
@@ -43,6 +38,12 @@ export const Header = observer(() => {
     },
     { name: lang.t("press"), path: "/media-center", blank: false },
   ];
+
+  const startedConfig = [
+    { name: lang.t("for.developers"), path: "", blank: false },
+    { name: lang.t("for.investors"), path: "", blank: false },
+    { name: lang.t("for.business"), path: "", blank: false },
+  ]
 
   const aboutConfig = [
     { name: lang.t("vision"), path: "", blank: true },
@@ -197,14 +198,15 @@ export const Header = observer(() => {
   return (
     <Box
       w="100%"
-      p={{ base: "0.5rem", md: "1.125rem" }}
+      px={{ base: "0.5rem", md: "1.125rem" }}
+      py={{ base: "0.8rem", md: "0" }}
       boxSizing="border-box"
       position="absolute"
       top="0"
       left="0"
       zIndex="5"
     >
-      <Flex justifyContent="space-between">
+      <Flex justifyContent="space-between" alignItems="center">
         <Link to={"/"}>
           <Box w={{ base: "5rem", md: "6rem", "2xl": "10rem" }}>
             <img src="/images/logo.png" alt="" />
@@ -217,6 +219,33 @@ export const Header = observer(() => {
           display={{ base: "none", md: "flex" }}
         >
           <Flex>
+          <Box
+              className="dropHoverText"
+              position="relative"
+              px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+            >
+              <Text
+                as={Text}
+                fontWeight="semibold"
+                fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
+                cursor="pointer"
+                lineHeight={{ base: "0", md: "4rem" }}
+                className="dropMenuText"
+              >
+                {lang.t("get.started")} <TriangleDownIcon w="12px" />
+              </Text>
+              <Box className="dropMenuUl">
+                {startedConfig.map((item) => {
+                  return (
+                    <Box key={item.name} className="dropMenuItem" px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}>
+                      <a href={item.path} target={item.blank ? "_blank" : ""}>
+                        {item.name}
+                      </a>
+                    </Box>
+                  );
+                })}
+              </Box>
+            </Box>
             {navConfig.map((item) => {
               return (
                 <a
@@ -225,6 +254,7 @@ export const Header = observer(() => {
                   target={item.blank ? "_blank" : ""}
                 >
                   <Text
+                    lineHeight={{ base: "0", md: "4rem" }}
                     color={
                       location.pathname === item.path ? "brandColor2" : "white"
                     }
@@ -254,39 +284,48 @@ export const Header = observer(() => {
               );
             })}
             <Box
-              ml={{ base: "1rem", lg: "2rem", xl: "2.5rem", "2xl": "3rem" }}
               className="dropHoverText"
               position="relative"
+              ml={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+              px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
             >
               <Text
-                as={Text}
                 fontWeight="semibold"
                 fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                 cursor="pointer"
+                lineHeight={{ base: "0", md: "4rem" }}
+                className="dropMenuText"
               >
-                {lang.t("about")} <TriangleDownIcon w="12px" />
+                {lang.t("about")}  &nbsp;&nbsp;<TriangleDownIcon w="12px" />
               </Text>
-              <ul className="dropMenuUl">
+              <Box className="dropMenuUl">
                 {aboutConfig.map((item) => {
                   return (
-                    <li key={item.name}>
+                    <Box key={item.name} className="dropMenuItem" px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}>
                       <a href={item.path} target={item.blank ? "_blank" : ""}>
                         {item.name}
                       </a>
-                    </li>
+                    </Box>
                   );
                 })}
-              </ul>
+              </Box>
             </Box>
             <Box>
               <Text
                 as={Text}
                 fontWeight="semibold"
-                ml={{ base: "1rem", lg: "2rem", xl: "2.5rem", "2xl": "3rem" }}
+                pl={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+                pr={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
                 cursor="pointer"
                 css={{
+                  '&:hover': {
+                    color: '#44FFB2'
+                  },
+                  userSelect: 'none',
                   color: store.isOpen ? "#44FFB2" : "#fff",
+                  background: store.isOpen ? 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)' : 'transparent'
                 }}
+                lineHeight={{ base: "0", md: "4rem" }}
                 onClick={() => (store.isOpen = !store.isOpen)}
                 fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
               >
@@ -398,7 +437,7 @@ export const Header = observer(() => {
           </Flex>
           <Menu isLazy>
             <MenuButton
-              ml={{ base: "1rem", lg: "2rem", xl: "2.5rem", "2xl": "3rem" }}
+              ml={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
               letterSpacing="1px"
               fontWeight="semibold"
               bg="transparent"

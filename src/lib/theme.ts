@@ -111,18 +111,21 @@ export const customTheme = extendTheme({
         paddingBottom: '2rem'
 			},
       '.dropMenuUl': {
+        width: '100%',
         listStyleType: 'none',
         position: 'absolute',
         display: 'none',
-        marginTop: '10px',
-        paddingTop: '24px',
+        paddingTop: '4rem',
         top: 0,
-        li: {
+        left: 0,
+        '.dropMenuItem': {
           listStyleType: 'none',
           opacity: 0,
           transformOrigin: 'top center',
-          backgroundColor: '#272730',
-          padding: '8px 10px',
+          background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+          backdropFilter: 'blur(50px)',
+          paddingTop: '8px',
+          paddingBottom: '8px',
           fontSize: '14px',
           fontWeight: 600,
           '&:hover': {
@@ -139,12 +142,18 @@ export const customTheme = extendTheme({
         }
       },
       '.dropHoverText': {
-        height: '24px',
+        height: '4rem',
         '&:hover': {
           height: 'max-content',
+          background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
+          backdropFilter: 'blur(50px)',
+          cursor: "pointer",
+          '.dropMenuText': {
+            color: '#44FFB2',
+          },
           '.dropMenuUl': {
             display: 'block',
-            li: {
+            '.dropMenuItem': {
               '&:first-of-type': {
                 animation: 'dropmenu 0.2s ease-in-out forwards',
                 animationDelay: '0.1s'
