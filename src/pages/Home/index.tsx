@@ -138,16 +138,16 @@ export const Home = observer(() => {
               background: 'url(/images/awind_line_1.png) center 0px repeat-x',
               backgroundSize: '250% 100%',
               backgroundPositionX: '250%',
-              animation: "awardLine1 100s infinite linear",
-              '-webkit-animation': "awardLine1 40s infinite linear",
+              animation: "awardLine1 90s infinite linear",
+              '-webkit-animation': "awardLine1 90s infinite linear",
             }}></Box>
             <Box css={{
               height:"45%",
               background: 'url(/images/awind_line_2.png) center 0px repeat-x',
               backgroundSize: '250% 100%',
               backgroundPositionX: '250%',
-              animation: "awardLine2 100s infinite linear",
-              '-webkit-animation': "awardLine2 30s infinite linear",
+              animation: "awardLine2 90s infinite linear",
+              '-webkit-animation': "awardLine2 90s infinite linear",
             }}></Box>
           </Flex>
           <Box css={{

@@ -36,9 +36,15 @@ export const JoinRevolution = observer(() => {
   ];
 
   const roles = [
-    {name: lang.t("investors"), btn: lang.t("explore"), icon: "/images/started1.png", href: "/"},
-    {name: lang.t("developer"), btn: lang.t("build"), icon: "/images/started2.png", href: "/"},
-    {name: lang.t("business"), btn: lang.t("connect"), icon: "/images/started3.png", href: "/"},
+    {name: lang.t("investors"), btn: lang.t("explore"), icon: "/images/get_start_card1.png", href: "/", lists: [
+      lang.t("investors.tips1"),lang.t("investors.tips2"),lang.t("investors.tips3")
+    ]},
+    {name: lang.t("developer"), btn: lang.t("build"), icon: "/images/get_start_card2.png", href: "/", lists: [
+      lang.t("developer.tips1"),lang.t("developer.tips2"),lang.t("developer.tips3")
+    ]},
+    {name: lang.t("business"), btn: lang.t("connect"), icon: "/images/get_start_card3.png", href: "/", lists: [
+      lang.t("business.tip1"),lang.t("business.tip2"),lang.t("business.tip3")
+    ]},
   ]
 
   return (
@@ -46,20 +52,25 @@ export const JoinRevolution = observer(() => {
       mt={{base: "10rem", lg: "15rem"}}
       pb={{ base: "4rem", lg: "10rem" }}
       css={{
-        backgroundImage: `url(/images/get_started_bg.png), url(/images/join_bg2.png)`,
-        backgroundSize: "100%, 80%",
+        backgroundImage: `url(/images/join_bg2.png)`,
+        backgroundSize: "60%",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "100% 20%, 100% 100%",
+        backgroundPosition: "100% 90%",
       }}
     >
-      <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }} mx="auto" mb={{base: "10rem", lg: "15rem", "2xl": "22rem"}}>
+      <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }} mb={{base: "10rem", lg: "15rem", "2xl": "15rem"}} mx="auto" css={{
+        // backgroundImage: 'url(/images/get_started_bg.png)',
+        // backgroundSize: '70%',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundPosition: '30% 0'
+      }}>
         <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb={{base: "3rem", lg: "7.5rem"}} whiteSpace="pre-line" textAlign="center">
           {lang.t("get.started")}
         </Text>
         <Flex flexDirection={{base: "column", lg: "row"}} justifyContent="space-between" alignItems="center">
           {
             roles.map(item => {
-              return <Flex key={item.name} flexDirection="column" w={{base: "80%", sm: "26%", lg: "26%", "2xl": "26%"}} h={{base: "350px", lg: "400px", "2xl": "30rem"}}  
+              return <Flex key={item.name} flexDirection="column" w={{base: "80%", sm: "30%", "2xl": "30%"}} h={{base: "350px", lg: "400px", "2xl": "30rem"}}  
               py="3rem"
               mb={{base: "4rem", md: 0}}
               css={{
@@ -68,14 +79,22 @@ export const JoinRevolution = observer(() => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "100% 0%",
               }}>
-                <Text fontSize={{base: "1.25rem", lg: "1.5rem", "2xl": "2rem"}} fontWeight="semibold"  mb="7.5rem" whiteSpace="pre-line" textAlign="center" flex="1">
+                <Text fontSize={{base: "1.25rem", lg: "1.5rem", "2xl": "2rem"}} fontWeight="semibold" mb="3rem"  whiteSpace="pre-line" textAlign="center">
                   {item.name}
                 </Text>
 
-                <Box className="commonBtnBox"  h={{base: "3rem", md: "3rem"}} w="70%" mx="auto">
+                <Box flex="1" mx="auto" w="68%">
+                  {
+                    item.lists.map(option => {
+                      return <Text fontSize={{base: "1.25rem", lg: "1.25rem", "2xl": "1.25rem"}} key={option} fontWeight="semibold" lineHeight="2.5rem" mb="0.8rem">→ {option}</Text>
+                    })
+                  }
+                </Box>
+
+                <Box className="commonBtnBox"  h={{base: "3rem", md: "3rem"}} w="68%" mx="auto">
                   <a href={item.href} style={{width: "100%"}}>
                     <Flex bg="btnBgColor" className="commonBtn" borderRadius="10px"  h="100%" justifyContent="center" alignItems="center" cursor="pointer">
-                      <Text fontSize={{base: "1.25rem", md: "1.5rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{item.btn}</Text>
+                      <Text fontSize={{base: "1.25rem", md: "1.25rem"}} color="btnTextColor" fontWeight="bold" textAlign="center">{item.btn}</Text>
                     </Flex>
                   </a>
                 </Box>
@@ -227,6 +246,7 @@ export const JoinRevolution = observer(() => {
           </Box>
         </Flex>
       </Box>
+      
       <Footer />
     </Box>
   );

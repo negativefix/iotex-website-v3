@@ -22,7 +22,7 @@ export const Banner = observer(() => {
               left="0" alignItems="center"  direction="column"
               pt={{base: "4rem", sm: "8rem", md: "8rem", lg: "12rem", xl: "16rem", "2xl": "14rem"}}>
               <Text
-                  fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
+                  fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5.5rem", "2xl": "7.5rem"}}
                   mb={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.5rem", "2xl": "3.125rem"}}
                   fontWeight="semibold" color="white" w="90%"
                   textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}

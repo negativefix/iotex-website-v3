@@ -610,7 +610,7 @@ export const Developers = observer(() => {
                 base: "0.875rem",
                 md: "1rem",
                 lg: "1.25rem",
-                xl: "1.5rem",
+                xl: "1.25rem",
               }}
               mb={{ base: "4rem", lg: "7.5rem" }}
               opacity="0.85"

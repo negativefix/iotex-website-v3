@@ -9,10 +9,10 @@ export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
 
   const configs =   [
-    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "" },
-    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "" },
-    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "" },
-    {name: lang.t("evm.compatible"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
+    {name: lang.t("advantage1"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "" },
+    {name: lang.t("advantage2"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "" },
+    {name: lang.t("advantage3"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "" },
+    {name: lang.t("advantage4"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
   ]
     return (
       <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "2rem", lg: "10rem", xl: "15rem"}} css={{

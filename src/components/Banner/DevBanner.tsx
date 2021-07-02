@@ -17,7 +17,7 @@ export const DevBanner = observer(() => {
         <Box position="relative" height={{base: "700px", sm: "470px", md: "700px", lg: "850px", xl: "1156px", "2xl": "1290px"}}>
           <Box  position="absolute" top={{base: "5.5rem", sm: "6.25rem"}} left=" 0" w="100%" h="60%" zIndex="2">
             <Flex  alignItems="left" justifyContent="center" direction="column" w="100%" h="100%" maxWidth={{base: '90%', lg: "80%", "2xl": "1554px"}} mx="auto">
-              <Text  fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem", "2xl": "5rem"}}
+              <Text  fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5.5rem", "2xl": "7.5rem"}}
                 mb={{base: "1rem", md: "2rem", xl: "3rem", "2xl": "4rem"}}
                 textAlign={{base: "center", sm: "left"}}
                 fontWeight="semibold" whiteSpace={{base: "inherit", md: "pre-line"}}>
