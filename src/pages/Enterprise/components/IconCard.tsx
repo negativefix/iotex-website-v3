@@ -21,8 +21,8 @@ const IconCard = ({item}) => {
 				<img src={item.icon} alt={item.title} />
 			</Box>
 			<Text fontSize={{base:'1rem',md:'2rem'}} fontWeight="semibold">{item.title}</Text>
-			<Caption text={item.desc} marginTop={'24px'} fontWeight={'600'}/>
-			<a href={item.link} style={{color:'rgba(68, 255, 178, 1)', marginTop:'24px', fontSize:'18px'}}>Learn More {">>"}</a>
+			<Caption text={item.desc} marginTop="1rem" fontWeight={'600'}/>
+			<a href={item.link} style={{color:'rgba(68, 255, 178, 1)', marginTop:'16px', fontSize:'18px'}}>Learn More {">>"}</a>
 
 		</>
 	)

@@ -52,7 +52,7 @@ const Enterprise = () => {
 
 	return (
 		<BasicLayout>
-			<Flex marginTop={{base: '5rem', md: '15rem'}} maxWidth={{base: '90%', md: '80%'}} display={'row'}
+			<Flex marginTop={{base: '5rem', md: '15rem'}} maxWidth={{base: '90%', md: '80%'}} flexDirection="column"
 			      justifyContent={'center'} mx="auto">
 				{/*part1*/}
 				<Box
@@ -65,30 +65,33 @@ const Enterprise = () => {
 					>
 						<Image src={bgOne} style={{height: '100%'}} alt={'bg_enterprise_1'}/>
 					</Box>
-					<Title text={lang.t("enterprise.lager.title")} textAlign={"center"}/>
-					<Heading
-						fontSize={{base: '0.88rem', sm: '1.5rem'}}
+					<Text fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5.5rem", "2xl": "7.5rem"}}
+           fontWeight="semibold" color="white" textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}>
+            {lang.t("enterprise.lager.title")}
+          </Text>
+					<Text
+						fontSize={{base: '0.88rem', sm: '1.5rem', md: "2.5rem"}}
 						textAlign="center"
-						padding={{sm: '64px'}}
+						py={{base: "2rem", "2xl": "1.5rem"}}
+            fontWeight="medium"
 						marginTop={{base: '1rem', sm: '0'}}
 					>
 						{lang.t("enterprise.sub.title")}
-					</Heading>
+					</Text>
 					<Flex
 						flexDirection={{base: 'column', md: 'column'}}
 						justifyContent={'center'}
 						alignItems={'center'}
-						marginTop={{base: '1rem', md: '6rem'}}
 						minHeight={'200px'}
 					>
 						<Button
 							href="#form1"
 							name={lang.t("enterprise.banner.btn1")}
-							size={{base: "100%",md:'40%', xl: "40%", "2xl": "40%"}}
+							size={{base: "100%",md:'40%', xl: "40%", "2xl": "30%"}}
 							isBlank={false}
 						/>
 
-						<Text color={'#44FFB2'} fontSize={{base:'1rem',md:'1.75rem'}} marginTop={'4rem'} fontWeight={'bold'} onClick={()=>window.open('https://iotex.io/reference-architecture')}>{lang.t("enterprise.banner.btn2")}</Text>
+						<Text color={'#44FFB2'} fontSize={{base:'1rem',md:'1.25rem'}} fontWeight="medium" marginTop={'2rem'} onClick={()=>window.open('https://iotex.io/reference-architecture')}>{lang.t("enterprise.banner.btn2")}</Text>
 					</Flex>
 				</Box>
 
@@ -104,28 +107,31 @@ const Enterprise = () => {
 								})
 							}
 						</Flex>
-						<Box width={{base: '100%', md: '50%'}} marginTop={{base: '1rem', md: '0'}} maxWidth='760px'>
+						<Box width={{base: '100%', md: "45", "2xl": '39%'}} marginTop={{base: '1rem', md: '0'}} maxWidth='760px'>
 							<Box>
 								<Title text={lang.t('enterprise.group1.title')} textAlign={'left'}/>
 								<Caption marginTop={'1rem'} text={lang.t('enterprise.group1.subtitle')}/>
 							</Box>
 							<img src='images/bg_enterprise_2.png' alt='bg_enterprise_2'
-							     style={{position: 'absolute', right: '0', zIndex: 0, marginTop: '1rem', width: '55%'}}/>
+							     style={{position: 'absolute', right: '0', zIndex: 0, marginTop: '5rem', width: '46%'}}/>
 						</Box>
 					</Flex>
 				</Box>
+			</Flex>
+      
 
-				{/*part3*/}
-				<Box marginTop={'15rem'} padding={{base: '0', md: '1rem'}} maxWidth='927px'>
+      {/* <Box mt="6.25rem"> */}
+        {/*part3*/}
+				{/* <Box marginTop={'15rem'} padding={{base: '0', md: '1rem'}} maxWidth='927px'>
 					<Title text={lang.t('enterprise.group2.title')} textAlign={'left'}/>
 					<Caption text={lang.t('enterprise.group2.subtitle')}/>
 					<Box marginTop='5rem'>
 						<Button href="https://docs.iotex.io/" size={{base: "100%", lg: "16rem"}} name={lang.t("learn.more")}/>
 					</Box>
-				</Box>
+				</Box> */}
 
 				{/*part4*/}
-				<Box marginTop={'5rem'}>
+				{/* <Box marginTop={'5rem'}>
 					<Flex justifyContent={'space-between'} flexDirection={{base: 'column', md: 'row'}}>
 						<Flex flexDirection={'column'} width={{base: '100%', md: '40%'}}>
 							<Box maxWidth='420px'>
@@ -148,38 +154,39 @@ const Enterprise = () => {
 							<Image src={coreRight} alt="core_right"/>
 						</Box>
 					</Flex>
-				</Box>
-				<Box>
-				</Box>
-			</Flex>
+				</Box> */}
+      {/* </Box> */}
 
 			{/*part5*/}
 			<Flex
-				marginTop={{base:'0',md:'-10rem'}}
-				paddingTop={{base:'0',md:'30rem'}}
 				minHeight='1500px'
 				justifyContent='center'
 				backgroundSize={{base:'contain',md:'80% 90%'}}
 				backgroundImage={`url(${bg3})`}
 				backgroundRepeat={'no-repeat'}
+        flexDirection="column"
+        mt="6.25rem"
 			>
-				<Flex maxWidth={{base: '90%', md: '80%'}}  flexDirection='column'>
+        <Box mb="20rem">
+          <img src="/images/enterprise/logos.png" alt="" />
+        </Box>
+				<Flex maxWidth={{base: '90%', md: '80%'}}  flexDirection='column' mx="auto" mt="2rem">
 
 					<Title text={lang.t('enterprise.group3.title')} textAlign={'center'}/>
 					<SimpleGrid columns={[1,3]} spacing={{md:'35px',lg:'35px','xl':'40px'}} marginTop='5rem'>
 						<Flex alignItems='center' flexDirection='column'>
 							<img src='images/icon_supply_chain.png' width={'120px'} height={'120px'}/>
-							<SubTitle fontSize='28px' text={lang.t('enterprise.group3.case1.title')} textAlign={'center'}/>
+							<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case1.title')} textAlign={'center'}/>
 							<Caption text={lang.t('enterprise.group3.case1.desc')} fontSize={'18px'} textAlign={'center'}/>
 						</Flex>
 						<Flex alignItems='center' flexDirection='column'>
 							<img src='images/icon_trust.png' width={'120px'} height={'120px'}/>
-							<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case2.title')} textAlign={'center'}/>
+							<SubTitle fontSize='1.75rem'  text={lang.t('enterprise.group3.case2.title')} textAlign={'center'}/>
 							<Caption text={lang.t('enterprise.group3.case2.desc')} fontSize={'18px'} textAlign={'center'}/>
 						</Flex>
 						<Flex alignItems='center' flexDirection='column'>
 							<img src='images/icon_camera.png' width={'120px'} height={'120px'}/>
-							<SubTitle  text={lang.t('enterprise.group3.case3.title')} textAlign={'center'}/>
+							<SubTitle fontSize='1.75rem'  text={lang.t('enterprise.group3.case3.title')} textAlign={'center'}/>
 							<Caption text={lang.t('enterprise.group3.case3.desc')} fontSize={'18px'} textAlign={'center'}/>
 						</Flex>
 					</SimpleGrid>

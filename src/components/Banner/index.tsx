@@ -20,7 +20,7 @@ export const Banner = observer(() => {
             </Box>
             <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0"
               left="0" alignItems="center"  direction="column"
-              pt={{base: "4rem", sm: "8rem", md: "8rem", lg: "12rem", xl: "16rem", "2xl": "14rem"}}>
+              pt={{base: "4rem", sm: "8rem", md: "8rem", lg: "12rem", xl: "14rem", "2xl": "14rem"}}>
               <Text
                   fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5.5rem", "2xl": "7.5rem"}}
                   mb={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "3.5rem", "2xl": "3.125rem"}}

@@ -4,6 +4,9 @@ import { useStore } from '@/store/index';
 import { observer, useLocalObservable } from 'mobx-react-lite';
 import { Button } from "@/components/Button"
 import { useMediaQuery } from "@chakra-ui/react"
+// @ts-ignore
+import nextGenBg2 from '@/assets/images/home/next_gen_bg2.png'
+import nextGenBg from '@/assets/images/home/next_gen_bg.png'
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
@@ -45,10 +48,10 @@ export const NextGen = observer(() => {
 
     return (
       <Box css={{
-        backgroundImage: 'url(/images/next_gen_bg2.png), url(/images/next-gen-bg.png)',
-        backgroundSize: '50%, 30%',
+        backgroundImage: `url(${nextGenBg2}), url(${nextGenBg})`,
+        backgroundSize: '60%, 30%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '10% 0% ,0% 80%'
+        backgroundPosition: '0% 0% ,0% 80%'
       }}>
         <Box maxWidth={{base: '90%', md: "80%", "2xl": "1554px"}} mx="auto">
           <Text fontSize={{base: "1.8rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}} fontWeight="semibold"  mb="1.25rem" whiteSpace="pre-line">

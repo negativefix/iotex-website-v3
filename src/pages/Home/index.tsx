@@ -56,7 +56,7 @@ export const Home = observer(() => {
                 <Text fontWeight="medium" fontSize={{base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem"}} mb={{base: "0.5rem", md: "1rem"}}>
                   <CountTo from={0} to={item.amount} speed={5000}  />{item.coin}
                 </Text>
-                <Text fontSize={{base: "1rem",  lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="semibold">{item.name}</Text>
+                <Text fontSize={{base: "1rem",  lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold">{item.name}</Text>
               </Box>
             })
           }
@@ -163,7 +163,7 @@ export const Home = observer(() => {
         </Box>
 
         <a href="/" target="_blank">
-          <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.125rem"}} mt={{base: "4rem", xl: "5rem"}} cursor="pointer" textAlign="center" color="brandColor" lineHeight="1.275rem">{lang.t("view.more")} &gt;&gt;</Text>
+          <Text fontSize={{base: "0.875rem", lg: "0.875rem", "2xl": "1.25rem"}} fontWeight="medium" mt={{base: "4rem", xl: "5rem"}} cursor="pointer" textAlign="center" color="brandColor" lineHeight="1.275rem">{lang.t("view.more")} &gt;&gt;</Text>
         </a>
       </Box>
 

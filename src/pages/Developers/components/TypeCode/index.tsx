@@ -43,7 +43,6 @@ export const TypeCode = observer(() => {
               .start();
           }}
         />
-        
       </Box>
     );
 });

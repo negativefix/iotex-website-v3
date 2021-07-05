@@ -8,13 +8,10 @@ import { LogoCardItem } from "@/components/LogoCardItem/index";
 import { Footer } from "@/components/Footer/index";
 import { Button } from "@/components/Button/index";
 import { useMediaQuery } from "@chakra-ui/react";
-import { BuildOnIotex } from './components/BuildOnIotex/index'
+import { BuildOnIotex } from "./components/BuildOnIotex/index";
 
-import bgThree from '@/assets/images/dev/bg_3.png'
-// @ts-ignore
-import superChargeBg from '@/assets/images/dev/supercharge_bg.png'
-// @ts-ignore
-import screenSixBanner from '@/assets/images/dev/screen6_banner.png'
+import bgThree from "@/assets/images/dev/bg_3.png";
+import develop from "@/assets/images/dev/develop.png";
 
 export const Developers = observer(() => {
   const { lang } = useStore();
@@ -30,21 +27,18 @@ export const Developers = observer(() => {
     { name: lang.t("tool7"), icon: "/images/dev/tool7.png" },
   ];
 
-  const products = [
+  const achieve = [
     {
-      title: lang.t("pebble.tracker"),
-      icon: "/images/dev/icon_peeble_tracker.png",
-      desc: lang.t("pebble.tracker.desc"),
+      icon: "/images/dev/app.png",
+      desc: lang.t("achieve.item1"),
     },
     {
-      title: lang.t("arduino"),
-      icon: "/images/dev/icon_Arduino.png",
-      desc: lang.t("arduino.desc"),
+      icon: "/images/dev/icon_world.png",
+      desc: lang.t("achieve.item2"),
     },
     {
-      title: lang.t("raspberry.pi"),
-      icon: "/images/dev/icon_Raspberry_pi.png",
-      desc: lang.t("raspberry.desc"),
+      icon: "/images/dev/icon_smart_contract.png",
+      desc: lang.t("achieve.item3"),
     },
   ];
 
@@ -168,63 +162,165 @@ export const Developers = observer(() => {
         }}
       >
         <DevBanner />
+
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
           <Flex
-            alignItems="flex-start"
-            flexWrap="wrap"
-            mt={{ base: "-14vh", sm: "2vw", md: "-12vw", xl: "-18vw" }}
-            w="100%"
+            justifyContent="space-between"
+            alignItems="center"
+            mb="9.6rem"
+            flexDirection={{ base: "column", md: "row" }}
           >
-            {tools.map((item) => {
-              return (
-                <Flex
-                  w={{
-                    base: "33%",
-                    sm: "25%",
-                    md: "25%",
-                    lg: "calc(100% / 7)",
-                    xl: "calc(100% / 7)",
-                  }}
-                  key={item.name}
-                  direction="column"
-                  mb={{ base: "3rem", lg: 0 }}
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Box
-                    w={{ base: "2.5rem", sm: "4rem" }}
-                    h={{ base: "2.5rem", sm: "4rem" }}
+            <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
+              <Text
+                fontSize={{
+                  base: "1.8rem",
+                  sm: "1.875rem",
+                  lg: "3.5rem",
+                  "2xl": "4rem",
+                }}
+                fontWeight="semibold"
+                mb="1.8rem"
+                whiteSpace="pre-line"
+              >
+                {lang.t("dev.achieve.title")}
+              </Text>
+              <Image
+                boxSize="9.6rem"
+                objectFit="cover"
+                src="/images/dev_ball.png"
+                alt="img_circular3"
+                ml="10%"
+                mt={{base: "5rem", md: "11.8125rem"}}
+                mb="20%"
+              />
+            </Box>
+            <Box w={{ base: "100%", md: "40%", xl: "43%", "2xl": "40%" }}>
+              {achieve.map((item) => {
+                return (
+                  <Flex
+                    key={item.desc}
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="flex-start"
+                    mb="4.375rem"
                   >
-                    <img src={item.icon} alt={item.name} />
-                  </Box>
-                  <Text
-                    fontSize={{ base: "0.75rem", md: "0.875rem" }}
-                    whiteSpace="pre-line"
-                    textAlign="center"
-                  >
-                    {item.name}
-                  </Text>
-                </Flex>
-              );
-            })}
+                    <Image
+                      boxSize={{base: "4rem", md: "7.5rem"}}
+                      objectFit="cover"
+                      src={item.icon}
+                      alt={item.desc}
+                      mb="1rem"
+                    />
+                    <Flex alignItems="center" mb="1rem">
+                      <Text
+                        fontSize={{
+                          base: "1rem",
+                          lg: "1.5rem",
+                          xl: "1.5rem",
+                          "2xl": "2rem",
+                        }}
+                        fontWeight="semibold"
+                        mr="1rem"
+                      >
+                        {item.desc}
+                      </Text>
+                    </Flex>
+                  </Flex>
+                );
+              })}
+            </Box>
           </Flex>
-          <Image
-            boxSize="9.6rem"
-            objectFit="cover"
-            src="/images/dev_ball.png"
-            alt="img_circular3"
-            ml="10%"
-            mt="3rem"
-            mb="4rem"
-          />
         </Box>
+
         <BuildOnIotex />
+
+        {/* award */}
+        <Box
+          mb={{ base: "15rem", lg: "15rem", "2xl": "25rem" }}
+          maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
+          mx="auto"
+        >
+          <Flex
+            justifyContent="space-between"
+            alignItems="center"
+            flexDirection={{ base: "column", md: "row" }}
+          >
+            <Box
+              w={{ base: "100%", md: "40%", "2xl": "35%" }}
+              mb={{ base: "4rem", md: 0 }}
+            >
+              <Text
+                fontSize={{
+                  base: "1.8rem",
+                  sm: "1.875rem",
+                  lg: "2.5rem",
+                  xl: "3rem",
+                  "2xl": "4rem",
+                }}
+                whiteSpace={{ base: "inherit", md: "pre-line" }}
+                mb="2.8rem"
+                wordBreak="break-word"
+                fontWeight="semibold"
+              >
+                {lang.t("dev.title7")}
+              </Text>
+              <Text
+                fontSize={{
+                  base: "0.875rem",
+                  md: "1rem",
+                  lg: "1.125rem",
+                  xl: "1.25rem",
+                }}
+                opacity="0.85"
+                fontWeight="medium"
+                mb="2.5rem"
+                lineHeight="1.8"
+              >
+                {lang.t("dev.subtitle7")}
+              </Text>
+              <Text
+                fontSize={{
+                  base: "0.875rem",
+                  md: "1rem",
+                  lg: "1.125rem",
+                  xl: "1.25rem",
+                }}
+                opacity="0.85"
+                fontWeight="medium"
+                mb="2.5rem"
+                lineHeight="1.8"
+              >
+                {lang.t("dev.subtitle7.p")}
+              </Text>
+              <Button
+                href="/"
+                size={{ base: "100%", md: "100%" }}
+                name={lang.t("awards.research")}
+              />
+            </Box>
+            <Flex
+              flexWrap="wrap"
+              w={{ base: "100%", md: "53%" }}
+              justifyContent="space-between"
+            >
+              {awards.map((item) => {
+                return (
+                  <Box key={item.iocn_active} w={{base: "100%", md: "47%"}} mt="3rem">
+                    <LogoCardItem item={item} width="100%" height="8.75rem" />
+                  </Box>
+                );
+              })}
+            </Flex>
+          </Flex>
+        </Box>
       </Box>
+
+      {/* Develop on the World’s Most Technologically Advanced Blockchain Platform */}
       <Box
-        pb={{ base: "", md: "10rem", lg: "16rem" }}
+        pb={{ base: "10rem", md: "10rem", lg: "16rem", xl: "25rem" }}
         css={{
-          backgroundImage: `url(${superChargeBg})`,
-          backgroundSize: "60%",
+          backgroundImage: `url(${develop})`,
+          backgroundSize: `${isMaxThan468 ? "50%" : "100%"}`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0 10%",
         }}
@@ -235,61 +331,7 @@ export const Developers = observer(() => {
           justifyContent="space-between"
           flexDirection={{ base: "column-reverse", md: "row" }}
         >
-          <Box
-            w={{ base: "100%", md: "40%", lg: "30%", "2xl": "20vw" }}
-            pt="2rem"
-          >
-            {products.map((item) => {
-              return (
-                <Flex
-                  key={item.title}
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="flex-start"
-                  mb={{ base: "2rem", sm: "4rem" }}
-                >
-                  <Image
-                    boxSize="4rem"
-                    objectFit="cover"
-                    src={item.icon}
-                    alt={item.title}
-                    mb={{ base: "1rem", sm: "2rem" }}
-                  />
-                  <Flex alignItems="center" mb={{ base: "1rem", sm: "2rem" }}>
-                    <Text
-                      fontSize={{
-                        base: "1rem",
-                        lg: "1.25rem",
-                        "2xl": "1.75rem",
-                      }}
-                      mr="0.5rem"
-                      fontWeight="semibold"
-                    >
-                      {item.title}
-                    </Text>
-                    <Image
-                      boxSize="2rem"
-                      objectFit="cover"
-                      src="/images/dev/link2.svg"
-                      alt="arrow"
-                      cursor="pointer"
-                    />
-                  </Flex>
-                  <Text
-                    fontSize={{
-                      base: "0.875rem",
-                      lg: "0.875rem",
-                      "2xl": "1.125rem",
-                    }}
-                    opacity="0.85"
-                    fontWeight="medium"
-                  >
-                    {item.desc}
-                  </Text>
-                </Flex>
-              );
-            })}
-          </Box>
+          <Box w={{ base: "100%", md: "40%", lg: "30%", "2xl": "50%" }}></Box>
           <Box
             w={{ base: "100%", md: "48%", lg: "55%", "2xl": "50%" }}
             mb={{ base: "4rem", md: 0 }}
@@ -308,7 +350,7 @@ export const Developers = observer(() => {
               fontWeight="semibold"
               mb="1.8rem"
             >
-              {lang.t("dev.title2")}
+              {lang.t("dev.title8")}
             </Text>
             <Text
               fontSize={{
@@ -323,14 +365,56 @@ export const Developers = observer(() => {
               fontWeight="medium"
               opacity="0.85"
             >
-              {lang.t("dev.subtitle2")}
+              {lang.t("dev.subtitle8")}
             </Text>
             <Button
               href="/"
               size={{ base: "100%", md: "16rem" }}
-              name={lang.t("learn.more")}
+              name={lang.t("get.started")}
             />
           </Box>
+        </Flex>
+      </Box>
+
+      {/* tools */}
+      <Box
+        maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
+        mx="auto"
+        mb={{ base: "5rem", lg: "15rem", "2xl": "25rem" }}
+      >
+        <Flex alignItems="flex-start" flexWrap="wrap" w="100%">
+          {tools.map((item) => {
+            return (
+              <Flex
+                w={{
+                  base: "33%",
+                  sm: "25%",
+                  md: "25%",
+                  lg: "calc(100% / 7)",
+                  xl: "calc(100% / 7)",
+                }}
+                key={item.name}
+                direction="column"
+                mb={{ base: "3rem", lg: 0 }}
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Box
+                  w={{ base: "2.5rem", sm: "4rem" }}
+                  h={{ base: "2.5rem", sm: "4rem" }}
+                >
+                  <img src={item.icon} alt={item.name} />
+                </Box>
+                <Text
+                  fontSize={{ base: "0.75rem", md: "0.875rem" }}
+                  whiteSpace="pre-line"
+                  textAlign="center"
+                >
+                  {item.name}
+                </Text>
+              </Flex>
+            );
+          })}
         </Flex>
       </Box>
 
@@ -482,16 +566,16 @@ export const Developers = observer(() => {
         </Flex>
       </Box>
 
+      {/*  Web3js, Solidity, and Native SDKs.  */}
       <Box
         pt={{ base: "15rem", md: 0 }}
         css={{
-          backgroundImage:
-            `url(/images/dev/connect_bg.png), url(${bgThree})`,
-          backgroundSize: "80%, 110%",
+          backgroundImage: `url(/images/dev/connect_bg.png), url(${bgThree}), url(/images/dev/secure_bg.svg)`,
+          backgroundSize: `70%, 110%, ${isMaxThan768 ? "60%" : "100%"}`,
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: `-5% 0%, ${
-            isMaxThan768 ? "100% 75%" : "100% 0%"
-          }`,
+            isMaxThan768 ? "100% 15%" : "100% 0%"
+          }, ${isMaxThan768 ? "0 80%" : "0 40%"}`,
         }}
       >
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
@@ -592,7 +676,7 @@ export const Developers = observer(() => {
           <Box>
             <Text
               fontSize={{
-                base: "1.8rem",
+                base: "1.5rem",
                 sm: "1.875rem",
                 lg: "2.5rem",
                 xl: "3rem",
@@ -611,14 +695,33 @@ export const Developers = observer(() => {
                 md: "1rem",
                 lg: "1.25rem",
                 xl: "1.25rem",
+                "2xl": "1.75rem",
               }}
-              mb={{ base: "4rem", lg: "7.5rem" }}
+              mb={{ base: "4rem" }}
               opacity="0.85"
               fontWeight="medium"
               textAlign="center"
               mx="auto"
+              whiteSpace={{ base: "inherit", md: "pre-line" }}
             >
               {lang.t("dev.subtitle5")}
+            </Text>
+            <Text
+              fontSize={{
+                base: "0.875rem",
+                md: "1rem",
+                lg: "1.25rem",
+                xl: "1.25rem",
+                "2xl": "1.75rem",
+              }}
+              mb={{ base: "4rem" }}
+              opacity="0.85"
+              fontWeight="medium"
+              textAlign="center"
+              mx="auto"
+              color="discord"
+            >
+              {lang.t("dev.title5.desc2")}
             </Text>
             <Flex
               flexWrap="wrap"
@@ -664,121 +767,7 @@ export const Developers = observer(() => {
         </Box>
       </Box>
 
-      <Box
-        mt={{ base: "5rem", lg: "15rem" }}
-        css={{
-          backgroundImage: "url(/images/dev/secure_bg.svg)",
-          backgroundSize: `${isMaxThan768 ? "60%" : "100%"}`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: `${isMaxThan768 ? "0 70%" : "0 40%"}`,
-        }}
-      >
-        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
-          <Text
-            fontSize={{
-              base: "1.8rem",
-              sm: "1.875rem",
-              lg: "2.5rem",
-              xl: "3rem",
-              "2xl": "4rem",
-            }}
-            fontWeight="semibold"
-            color="white"
-            textAlign="center"
-            mb="1.75rem"
-          >
-            {lang.t("dev.title6")}
-          </Text>
-          <Text
-            fontSize={{
-              base: "0.875rem",
-              md: "1rem",
-              lg: "1.25rem",
-              xl: "1.5rem",
-            }}
-            opacity="0.85"
-            fontWeight="medium"
-            textAlign="center"
-            mx="auto"
-            mb={{ base: "3rem", lg: "7.5rem" }}
-          >
-            {lang.t("dev.subtitle6")}
-          </Text>
-          <Flex justifyContent="center">
-            <Button
-              href="/"
-              size={{ base: "100%", md: "48%" }}
-              name={lang.t("governance")}
-            />
-          </Flex>
-          <Box
-            w={{ base: "90%", sm: "80%", md: "65%" }}
-            mx="auto"
-            mt={{ base: "3rem", md: "7.5rem" }}
-          >
-            <Image src={screenSixBanner} alt="screen_6_banner" />
-          </Box>
-          <Flex
-            justifyContent="space-between"
-            alignItems="flex-end"
-            mt="15rem"
-            flexDirection={{ base: "column-reverse", md: "row" }}
-          >
-            <Flex
-              flexWrap="wrap"
-              w={{ base: "100%", md: "50%" }}
-              justifyContent="space-between"
-            >
-              {awards.map((item) => {
-                return (
-                  <Box key={item.iocn_active} w="47%" mt="3rem">
-                    <LogoCardItem item={item} width="100%" height="8.75rem" />
-                  </Box>
-                );
-              })}
-            </Flex>
-            <Box
-              w={{ base: "100%", md: "46%", "2xl": "40%" }}
-              mb={{ base: "4rem", md: 0 }}
-            >
-              <Text
-                fontSize={{
-                  base: "1.8rem",
-                  sm: "1.875rem",
-                  lg: "2.5rem",
-                  xl: "3rem",
-                  "2xl": "4rem",
-                }}
-                whiteSpace={{ base: "inherit", md: "pre-line" }}
-                mb="2.8rem"
-                wordBreak="break-word"
-                fontWeight="semibold"
-              >
-                {lang.t("dev.title7")}
-              </Text>
-              <Text
-                fontSize={{
-                  base: "0.875rem",
-                  md: "1rem",
-                  lg: "1.125rem",
-                  xl: "1.25rem",
-                }}
-                opacity="0.85"
-                fontWeight="medium"
-                mb="2.5rem"
-              >
-                {lang.t("dev.subtitle7")}
-              </Text>
-              <Button
-                href="/"
-                size={{ base: "100%", md: "80%" }}
-                name={lang.t("institutions")}
-              />
-            </Box>
-          </Flex>
-        </Box>
-      </Box>
-
+      {/* discord */}
       <Box
         pb={{ base: "10rem", md: "20rem" }}
         mt={{ base: "8rem", md: "15rem" }}
@@ -789,9 +778,13 @@ export const Developers = observer(() => {
           borderRadius="1.125rem"
           css={{
             background:
-            "linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%)",
+              "linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%)",
             boxShadow: "inset -1px -1px 0px rgba(172, 208, 254, 0.25)",
             backdropFilter: "blur(100px)",
+            // "&:hover": {
+            //   background: "rgba(88, 101, 242, 0.5)",
+            //   backdropFilter: "blur(50px)",
+            // },
           }}
         >
           <Flex

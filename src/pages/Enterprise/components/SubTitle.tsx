@@ -6,8 +6,10 @@ const SubTitle = ({text, ...props}: CaptionProps) => {
 	return (
 		<Text
 			{...props}
-			fontWeight={'600px'}
-			fontSize={{base: '1rem', md: '2rem'}}
+      fontWeight="semibold"
+			fontSize={{base: '1rem', md: '1.75rem'}}
+      mb="1rem"
+      mt="1rem"
 		>
 			{text}
 		</Text>

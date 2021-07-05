@@ -56,7 +56,7 @@ const ContactForm = () => {
 			<Flex flexDirection={'column'} marginTop={'4.4rem'}>
 
 				<Flex justifyContent={'space-between'}>
-					<Box width={'45%'}>
+					<Box width={'49%'}>
 						<FormControl
 							isInvalid={errors['name']}
 							isRequired
@@ -68,11 +68,13 @@ const ContactForm = () => {
 								placeholder={lang.t("your.name")}
 								size="lg"
 								value={name}
-								onChange={(e) => setName(e.target.value)}/>
+								onChange={(e) => setName(e.target.value)}
+                borderColor="rgba(255, 255, 255, 0.2)"
+              />
 							<FormErrorMessage>{'required'}</FormErrorMessage>
 						</FormControl>
 					</Box>
-					<Box width={'45%'}>
+					<Box width={'49%'}>
 						<FormControl
 							isInvalid={errors['email']}
 							isRequired
@@ -84,6 +86,7 @@ const ContactForm = () => {
 								onChange={(e) => setEmail(e.target.value)}
 								_placeholder={{color: 'white', fontWeight: 'semibold'}}
 								placeholder={lang.t("email")}
+                borderColor="rgba(255, 255, 255, 0.2)"
 								size="lg"/>
 							<FormErrorMessage>{'required'}</FormErrorMessage>
 						</FormControl>
@@ -101,6 +104,7 @@ const ContactForm = () => {
 							onChange={(e) => setCompany(e.target.value)}
 							_placeholder={{color: 'white', fontWeight: 'semibold'}}
 							placeholder={lang.t("company.name")}
+              borderColor="rgba(255, 255, 255, 0.2)"
 							size="lg"/>
 						<FormErrorMessage>{'required'}</FormErrorMessage>
 					</FormControl>
@@ -116,11 +120,12 @@ const ContactForm = () => {
 							onChange={(e) => setInterest(e.target.value)}
 							rows={10}
 							borderRadius={'5px'}
+              borderColor="rgba(255, 255, 255, 0.2)"
 							padding={'15px'}
 							size={'large'}
 							resize={'none'}
 							_placeholder={{color: 'white', fontWeight: 'semibold'}}
-							placeholder={lang.t("question")}/>
+							placeholder={lang.t("question")}  />
 						<FormErrorMessage>{'required'}</FormErrorMessage>
 					</FormControl>
 				</Box>
@@ -130,7 +135,7 @@ const ContactForm = () => {
 						backgroundColor={'#44FFB2'}
 						color={'black'} size="lg"
 						width={'15rem'}>
-						{lang.t('submit')}
+						{lang.t('form.request')}
 					</CButton>
 				</Box>
 			</Flex>

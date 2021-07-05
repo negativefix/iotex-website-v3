@@ -4,6 +4,7 @@ import { useStore } from '../../../../store';
 import { observer } from 'mobx-react-lite';
 import { Button } from "../../../../components/Button/index"
 import { TypeCode } from '../TypeCode/index';
+import bulrBall from '@/assets/images/dev/bulr_ball.png'
 
 export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
@@ -15,14 +16,14 @@ export const BuildOnIotex = observer(() => {
     {name: lang.t("advantage4"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
   ]
     return (
-      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "2rem", lg: "10rem", xl: "15rem"}} css={{
-        backgroundImage: 'url(/images/bulr_ball.png)',
-        backgroundSize: '85%',
+      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "10rem", xl: "15rem", "2xl": "20rem"}} css={{
+        backgroundImage: `url(${bulrBall})`,
+        backgroundSize: '70%',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '100% 10%'
+        backgroundPosition: '100% 0%'
       }}>
         <Flex justifyContent="space-between" maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto" direction={{base: "column-reverse", lg: "row"}}>
-          <Box w={{base: "100%", lg: "40%", xl: "40%"}} mx={{base: "auto", lg: "initial"}}>
+          <Box w={{base: "100%", lg: "40%", xl: "44%"}} mx={{base: "auto", lg: "initial"}}>
             <Box position="relative" pb="36%">
               <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
                 <img src="/images/code.png" alt="" />
