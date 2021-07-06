@@ -44,7 +44,9 @@ export const Banner = observer(() => {
                       opacity: 1
                     },
                   }}>
-                    <img src="/images/getStarted.png" alt="" />
+                    <a href="#getStarted">
+                      <img src="/images/getStarted.png" alt="" />
+                    </a>
                   </Box>
                 </Box>
             </Flex>

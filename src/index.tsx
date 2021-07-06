@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Developers } from './pages/Developers';
 import { Team } from './pages/Team';
 import { Token } from './pages/Token';
+import { Investors } from './pages/Investors';
 import { useStore } from '@/store/index';
 import { customTheme } from './lib/theme';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -32,6 +33,7 @@ export const App = observer(() => {
           <Route path="/media-center" exact component={MediaCenter} />
           <Route path="/pebble" exact component={Pebble} />
           <Route path="/token" exact component={Token} />
+          <Route path="/investors" exact component={Investors} />
         </Switch>
       </Router>
     </ChakraProvider>

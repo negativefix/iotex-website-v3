@@ -82,6 +82,7 @@ export const JoinRevolution = observer(() => {
         backgroundPosition: "100% 90%",
       }}
     >
+      {/* IoTeX Blockchain Aleady Powers Real Device */}
       <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
         mb={{ base: "2rem", lg: "2rem", "2xl": "6rem" }}
         mx="auto">
@@ -95,10 +96,12 @@ export const JoinRevolution = observer(() => {
             <img src="/images/blockchain_bg.png" alt="" />
           </Box>
       </Box>
+      {/* get started */}
       <Box
         maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
         mb={{ base: "10rem", lg: "15rem", "2xl": "15rem" }}
         mx="auto"
+        id="getStarted"
       >
         <Text
           fontSize={{
@@ -117,7 +120,7 @@ export const JoinRevolution = observer(() => {
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           justifyContent="space-between"
-          alignItems="center"
+          alignItems="stretch"
         >
           {roles.map((item) => {
             return (
