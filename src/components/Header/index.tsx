@@ -30,27 +30,27 @@ export const Header = observer(() => {
 
   const navConfig = [
     { name: lang.t("developers"), path: "/developers", blank: false },
-    { name: lang.t("iotx"), path: "https://iotex.io/token", blank: true },
+    { name: lang.t("iotx"), path: "/investors", blank: false },
     {
       name: lang.t("ecosystem"),
       path: "https://ecosystem.iotex.io",
       blank: true,
     },
-    { name: lang.t("press"), path: "/media-center", blank: false },
+    { name: lang.t("press"), path: "https://iotex.io/press", blank: true },
   ];
 
   const startedConfig = [
-    { name: lang.t("for.developers"), path: "", blank: false },
-    { name: lang.t("for.investors"), path: "", blank: false },
-    { name: lang.t("for.business"), path: "", blank: false },
+    { name: lang.t("for.developers"), path: "/developers", blank: false },
+    { name: lang.t("for.investors"), path: "/investors", blank: false },
+    { name: lang.t("for.business"), path: "/enterprise", blank: false },
   ];
 
   const aboutConfig = [
-    { name: lang.t("vision"), path: "", blank: true },
+    { name: lang.t("vision"), path: "https://iott.network/about", blank: true },
     { name: lang.t("team"), path: "/team", blank: false },
     { name: lang.t("research"), path: "/research", blank: false },
-    { name: lang.t("roadmap"), path: "", blank: true },
-    { name: lang.t("blog"), path: "", blank: true },
+    { name: lang.t("roadmap"), path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03", blank: true },
+    { name: lang.t("blog"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
   ];
 
@@ -60,29 +60,29 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("What.is.IoTeX"),
-          path: "",
-          blank: false,
+          path: "https://onboard.iotex.io/introduction",
+          blank: true,
           icon: "/images/explore/icon_wallet_n.png",
           icon_active: "/images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("vision"),
-          path: "",
-          blank: false,
+          path: "https://iott.network/about",
+          blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("roadmap"),
-          path: "",
+          path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
           blank: true,
           icon: "/images/explore/icon_map_n.png",
           icon_active: "/images/explore/icon_map_s.png",
         },
         {
           name: lang.t("onboarding.Pack"),
-          path: "",
-          blank: false,
+          path: "https://onboard.iotex.io/",
+          blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
@@ -94,35 +94,35 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("ioPay.wallet"),
-          path: "",
+          path: "https://iopay-wallet.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_wallet_n.png",
           icon_active: "/images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("get.iotx"),
-          path: "",
+          path: "https://ecosystem.iotex.io/exchanges-wallets",
           blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("staking.portal"),
-          path: "",
+          path: "https://member.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_stake_n.png",
           icon_active: "/images/explore/icon_stake_s.png",
         },
         {
           name: lang.t("burn.drop"),
-          path: "",
+          path: "https://burndrop.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_brun-drop_n.png",
           icon_active: "/images/explore/icon_brun-drop_n.png",
         },
         {
           name: lang.t("explore"),
-          path: "",
+          path: "https://iotexscan.io/",
           blank: true,
           icon: "/images/explore/icon_explorer_n.png",
           icon_active: "/images/explore/icon_explorer_s.png",
@@ -134,21 +134,21 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("github"),
-          path: "",
+          path: "https://github.com/iotexproject",
           blank: true,
           icon: "/images/explore/icon_gitHub_n.png",
           icon_active: "/images/explore/icon_gitHub_s.png",
         },
         {
           name: lang.t("dev.docs"),
-          path: "",
+          path: "https://docs.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_docs_n.png",
           icon_active: "/images/explore/icon_docs_s.png",
         },
         {
           name: lang.t("halo.grants"),
-          path: "",
+          path: "https://iotex.io/halo",
           blank: true,
           icon: "/images/explore/icon_halo_n.png",
           icon_active: "/images/explore/icon_halo_s.png",
@@ -160,21 +160,21 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("ecosystem"),
-          path: "",
+          path: "https://ecosystem.iotex.io/projects",
           blank: true,
           icon: "/images/explore/icon_ecopage_n.png",
           icon_active: "/images/explore/icon_ecopage_s.png",
         },
         {
           name: lang.t("live.ioTT.network"),
-          path: "",
+          path: "https://iott.network/",
           blank: true,
           icon: "/images/explore/icon_iott_n.png",
           icon_active: "/images/explore/icon_iott_s.png",
         },
         {
           name: lang.t("blog"),
-          path: "",
+          path: "https://iotex.medium.com/",
           blank: true,
           icon: "/images/explore/icon_blog_n.png",
           icon_active: "/images/explore/icon_blog_s.png",
@@ -187,22 +187,32 @@ export const Header = observer(() => {
     {
       icon: "/images/explore/icon_twitter_n.png",
       icon_active: "/images/explore/icon_twitter_s.png",
+      blank: true,
+      href: 'https://twitter.com/iotex_io'
     },
     {
       icon: "/images/explore/icon_discord_n.png",
       icon_active: "/images/explore/icon_discord_s.png",
+      blank: true,
+      href: 'https://iotex.io/devdiscord'
     },
     {
       icon: "/images/explore/icon_youtube_n.png",
       icon_active: "/images/explore/icon_youtube_s.png",
+      blank: true,
+      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw"
     },
     {
       icon: "/images/explore/icon_reddit_n.png",
       icon_active: "/images/explore/icon_reddit_s.png",
+      blank: true,
+      href: "https://www.reddit.com/r/IoTeX/"
     },
     {
       icon: "/images/explore/icon_telegram_n.png",
       icon_active: "/images/explore/icon_telegram_s.png",
+      blank: true,
+      href: "https://t.me/iotexchannel"
     },
   ];
 
@@ -480,10 +490,10 @@ export const Header = observer(() => {
                             <Flex>
                               {links.map((item) => {
                                 return (
-                                  <Image
+                                  <a href={item.href} target={item.blank ? "_blank" : ""}  key={item.icon}>
+                                    <Image
                                     boxSize="1.5rem"
                                     mr="1rem"
-                                    key={item.icon}
                                     src={item.icon}
                                     cursor="pointer"
                                     css={{
@@ -492,6 +502,7 @@ export const Header = observer(() => {
                                       },
                                     }}
                                   ></Image>
+                                  </a>
                                 );
                               })}
                             </Flex>

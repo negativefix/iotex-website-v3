@@ -37,7 +37,7 @@ export const JoinRevolution = observer(() => {
       title: lang.t("youtube"),
       icon: "/images/icon_youtube.png",
       desc: lang.t("youtube.desc"),
-      href: "https://www.youtube.com/c/IoTeXOfficialChannel/",
+      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
   ];
 
@@ -46,7 +46,7 @@ export const JoinRevolution = observer(() => {
       name: lang.t("investors"),
       btn: lang.t("explore"),
       icon: "/images/get_start_card1.png",
-      href: "/",
+      href: "/investors",
       lists: [
         lang.t("investors.tips1"),
         lang.t("investors.tips2"),
@@ -57,7 +57,7 @@ export const JoinRevolution = observer(() => {
       name: lang.t("developer"),
       btn: lang.t("build"),
       icon: "/images/get_start_card2.png",
-      href: "/",
+      href: "/developers",
       lists: [
         lang.t("developer.tips1"),
         lang.t("developer.tips2"),
@@ -68,7 +68,7 @@ export const JoinRevolution = observer(() => {
       name: lang.t("business"),
       btn: lang.t("connect"),
       icon: "/images/get_start_card3.png",
-      href: "/",
+      href: "/enterprise",
       lists: [
         lang.t("business.tip1"),
         lang.t("business.tip2"),
@@ -107,10 +107,14 @@ export const JoinRevolution = observer(() => {
           }}>
             <Flex>
               <Box onMouseOver={() => setUcamSrc(ucamN)} onMouseOut={() => setUcamSrc(ucamS)} cursor="pointer">
-                <img src={pebbleSrc} alt="" />
+                <a href="https://iotex.io/pebble" target="_blank">
+                  <img src={pebbleSrc} alt="" />
+                </a>
               </Box>
               <Box onMouseOver={() => setPebbleSrc(pebbleN)} onMouseOut={() => setPebbleSrc(pebbleS)}  cursor="pointer">
-                <img src={ucamSrc} alt="" />
+                <a href="https://iotex.io/ucam" target="_blank">
+                  <img src={ucamSrc} alt="" />
+                </a>
               </Box>
             </Flex>
           </Box>

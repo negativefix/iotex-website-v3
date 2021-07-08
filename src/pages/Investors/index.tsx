@@ -62,21 +62,25 @@ export const Investors = observer(() => {
       title: lang.t("do1"),
       icon: "/images/investors/buy.png",
       desc: lang.t("do1.tips"),
+      href: "https://ecosystem.iotex.io/exchanges-wallets"
     },
     {
       title: lang.t("do2"),
       icon: "/images/dev/trade.png",
       desc: lang.t("do2.tips"),
+      href: "https://mimo.finance/"
     },
     {
       title: lang.t("do3"),
       icon: "/images/investors/stake.png",
       desc: lang.t("do3.tips"),
+      href: "https://onboard.iotex.io/hardware/staking-voting"
     },
     {
       title: lang.t("do4"),
       icon: "/images/investors/contribute.png",
       desc: lang.t("do4.tips"),
+      href: "https://onboard.iotex.io/hardware/delegates"
     },
   ];
 
@@ -85,21 +89,21 @@ export const Investors = observer(() => {
       name: lang.t("investors"),
       btn: lang.t("explore"),
       icon: "/images/get_start_card1.png",
-      href: "/",
+      href: "https://ecosystem.iotex.io/exchanges-wallets",
       lists: [lang.t("exchanges"), lang.t("wallet"), lang.t("dex")],
     },
     {
       name: lang.t("ecosystem"),
       btn: lang.t("tbd"),
       icon: "/images/get_start_card2.png",
-      href: "/",
+      href: "https://ecosystem.iotex.io/projects",
       lists: [lang.t("projects"), lang.t("partners")],
     },
     {
       name: lang.t("advanced.users"),
       btn: lang.t("tbd"),
       icon: "/images/get_start_card3.png",
-      href: "/",
+      href: "https://iotex.io/advanced",
       lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("ioTT.network")],
     },
   ];
@@ -474,8 +478,8 @@ export const Investors = observer(() => {
             <Box w={{ base: "100%", md: "40%", xl: "28%", "2xl": "20vw" }}>
               {physical.map((item) => {
                 return (
-                  <Flex
-                    key={item.title}
+                  <a href={item.href} key={item.title} target="_blank">
+                    <Flex
                     direction="column"
                     justifyContent="center"
                     alignItems="flex-start"
@@ -520,6 +524,7 @@ export const Investors = observer(() => {
                       {item.desc}
                     </Text>
                   </Flex>
+                  </a>
                 );
               })}
             </Box>
@@ -620,7 +625,7 @@ export const Investors = observer(() => {
                 {lang.t("intro.subtitle4")}
               </Text>
               <Button
-                href="/"
+                href="https://onboard.iotex.io/tokenomics/iotx-utility"
                 size={{ base: "100%", md: "80%" }}
                 name={lang.t("utility.details")}
               />
@@ -702,8 +707,8 @@ export const Investors = observer(() => {
           >
             {roles.map((item) => {
               return (
-                <Flex
-                  key={item.name}
+                <a href={item.href} target="_blank" key={item.name}>
+                  <Flex
                   flexDirection="column"
                   w={{ base: "90%", sm: "50%", md: "28%", "2xl": "25%" }}
                   mx="auto"
@@ -787,6 +792,7 @@ export const Investors = observer(() => {
                     </a>
                   </Box>
                 </Flex>
+                </a>
               );
             })}
           </Flex>

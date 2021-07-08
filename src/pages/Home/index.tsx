@@ -27,28 +27,6 @@ export const Home = observer(() => {
     { name: lang.t("delegates"), amount: 300, coin: "+" },
   ];
 
-  const advantages = [
-    {
-      title: lang.t("advantage1"),
-      icon: "/images/evm-icon.png",
-      desc: lang.t("advantage1.tips"),
-    },
-    {
-      title: lang.t("advantage2"),
-      icon: "/images/cross.png",
-      desc: lang.t("advantage2.tips"),
-    },
-    {
-      title: lang.t("advantage3"),
-      icon: "/images/roll.png",
-      desc: lang.t("advantage3.tips"),
-    },
-    {
-      title: lang.t("advantage4"),
-      icon: "/images/scalable.png",
-      desc: lang.t("advantage4.tips"),
-    },
-  ];
 
   const store = useLocalObservable(() => ({
     isOpen: false,
@@ -300,7 +278,7 @@ export const Home = observer(() => {
           ></Box>
         </Box>
 
-        <a href="/" target="_blank">
+        <a href="https://iotex.io/press" target="_blank">
           <Text
             fontSize={{
               base: "0.875rem",

@@ -10,10 +10,10 @@ export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
 
   const configs =   [
-    {name: lang.t("advantage1"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "" },
-    {name: lang.t("advantage2"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "" },
-    {name: lang.t("advantage3"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "" },
-    {name: lang.t("advantage4"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "" },
+    {name: lang.t("advantage1"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts" },
+    {name: lang.t("advantage2"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "https://tube.iotex.io/" },
+    {name: lang.t("advantage3"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
+    {name: lang.t("advantage4"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
   ]
     return (
       <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "10rem", xl: "15rem", "2xl": "20rem"}} css={{
@@ -66,9 +66,11 @@ export const BuildOnIotex = observer(() => {
             <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
               {lang.t("subtitle4.tip2")}
             </Text>
-            <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85"  color="discord" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
-              {lang.t("subtitle4.tip3")}
-            </Text>
+            <a href="https://github.com/iotexproject/halogrants">
+              <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85"  color="discord" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
+                {lang.t("subtitle4.tip3")}
+              </Text>
+            </a>
             <Flex mt={{base: "5%", xl: "4.125rem"}}  w="100%" alignItems={{base: "flex-start", lg: "center"}} justifyContent="flex-end" direction={{base: "column", lg: "row"}}>
               <a href="https://github.com/iotexproject" target="_blank" style={{flex: 'none'}}>
                 <Image
@@ -80,7 +82,7 @@ export const BuildOnIotex = observer(() => {
                   mr="3rem"
                 />
               </a>
-              <Button href="https://docs.iotex.io/" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
+              <Button href="https://iotex.io/halo" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
             </Flex>
             {/* <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
               backgroundSize: '100% 100%',

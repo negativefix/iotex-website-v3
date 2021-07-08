@@ -27,68 +27,69 @@ export const Footer = observer(() => {
       lists: [
         {
           name: lang.t("What.is.IoTeX"),
-          path: "",
-          blank: false,
+          path: "https://onboard.iotex.io/introduction",
+          blank: true,
           icon: "/images/explore/icon_wallet_n.png",
           icon_active: "/images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("vision"),
-          path: "",
-          blank: false,
+          path: "https://iott.network/about",
+          blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("roadmap"),
-          path: "",
+          path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
           blank: true,
           icon: "/images/explore/icon_map_n.png",
           icon_active: "/images/explore/icon_map_s.png",
         },
         {
           name: lang.t("onboarding.Pack"),
-          path: "",
-          blank: false,
+          path: "https://onboard.iotex.io/",
+          blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
       ],
     },
+
     {
       name: lang.t("for.investors"),
       lists: [
         {
           name: lang.t("ioPay.wallet"),
-          path: "",
+          path: "https://iopay-wallet.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_wallet_n.png",
           icon_active: "/images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("get.iotx"),
-          path: "",
+          path: "https://ecosystem.iotex.io/exchanges-wallets",
           blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("staking.portal"),
-          path: "",
+          path: "https://member.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_stake_n.png",
           icon_active: "/images/explore/icon_stake_s.png",
         },
         {
           name: lang.t("burn.drop"),
-          path: "",
+          path: "https://burndrop.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_brun-drop_n.png",
           icon_active: "/images/explore/icon_brun-drop_n.png",
         },
         {
           name: lang.t("explore"),
-          path: "",
+          path: "https://iotexscan.io/",
           blank: true,
           icon: "/images/explore/icon_explorer_n.png",
           icon_active: "/images/explore/icon_explorer_s.png",
@@ -100,21 +101,21 @@ export const Footer = observer(() => {
       lists: [
         {
           name: lang.t("github"),
-          path: "",
+          path: "https://github.com/iotexproject",
           blank: true,
           icon: "/images/explore/icon_gitHub_n.png",
           icon_active: "/images/explore/icon_gitHub_s.png",
         },
         {
           name: lang.t("dev.docs"),
-          path: "",
+          path: "https://docs.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_docs_n.png",
           icon_active: "/images/explore/icon_docs_s.png",
         },
         {
           name: lang.t("halo.grants"),
-          path: "",
+          path: "https://iotex.io/halo",
           blank: true,
           icon: "/images/explore/icon_halo_n.png",
           icon_active: "/images/explore/icon_halo_s.png",
@@ -126,21 +127,21 @@ export const Footer = observer(() => {
       lists: [
         {
           name: lang.t("ecosystem"),
-          path: "",
+          path: "https://ecosystem.iotex.io/projects",
           blank: true,
           icon: "/images/explore/icon_ecopage_n.png",
           icon_active: "/images/explore/icon_ecopage_s.png",
         },
         {
           name: lang.t("live.ioTT.network"),
-          path: "",
+          path: "https://iott.network/",
           blank: true,
           icon: "/images/explore/icon_iott_n.png",
           icon_active: "/images/explore/icon_iott_s.png",
         },
         {
           name: lang.t("blog"),
-          path: "",
+          path: "https://iotex.medium.com/",
           blank: true,
           icon: "/images/explore/icon_blog_n.png",
           icon_active: "/images/explore/icon_blog_s.png",
@@ -206,23 +207,25 @@ export const Footer = observer(() => {
               <Flex direction="column">
                 {item.lists.map((option) => {
                   return (
-                    <Text
-                      key={option.name}
-                      fontSize={{
-                        base: "1rem",
-                        md: "0.875rem",
-                        lg: "0.75rem",
-                        xl: "1rem",
-                        "2xl": "1.125rem",
-                      }}
-                      color="discord"
-                      cursor="pointer"
-                      mt="1rem"
-                      letterSpacing="1px"
-                      fontWeight="medium"
-                    >
+                    <a href={option.path}  key={option.name}  target={option.blank ? "_blank" : ""}>
+                      <Text
+                        key={option.name}
+                        fontSize={{
+                          base: "1rem",
+                          md: "0.875rem",
+                          lg: "0.75rem",
+                          xl: "1rem",
+                          "2xl": "1.125rem",
+                        }}
+                        color="discord"
+                        cursor="pointer"
+                        mt="1rem"
+                        letterSpacing="1px"
+                        fontWeight="medium"
+                      >
                       {option.name}
-                    </Text>
+                      </Text>
+                    </a>
                   );
                 })}
                 {index === 3 && (

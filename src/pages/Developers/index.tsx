@@ -47,36 +47,43 @@ export const Developers = observer(() => {
       title: lang.t("launch.dapp"),
       icon: "/images/dev/app.png",
       desc: lang.t("launch.dapp.desc"),
+      href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts"
     },
     {
       title: lang.t("launch.token"),
       icon: "/images/dev/token.png",
       desc: lang.t("launch.token.desc"),
+      href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts/introduction"
     },
     {
       title: lang.t("run.node"),
       icon: "/images/dev/node.png",
       desc: lang.t("run.node.desc"),
+      href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263"
     },
     {
       title: lang.t("intergrate.iot.devices"),
       icon: "/images/dev/iot.png",
       desc: lang.t("intergrate.iot.devices.desc"),
+      href: ""
     },
     {
       title: lang.t("go.cross.chain"),
       icon: "/images/dev/chain.png",
       desc: lang.t("go.cross.chain.desc"),
+      href: "https://tube.iotex.io "
     },
     {
       title: lang.t("trad.assets"),
       icon: "/images/dev/trade.png",
       desc: lang.t("trad.assets.desc"),
+      href: "https://ecosystem.iotex.io/exchanges-wallets"
     },
     {
       title: lang.t("mine.tracker"),
       icon: "/images/dev/pebble.png",
       desc: lang.t("mine.tracker.desc"),
+      href: "https://docs.iotex.io/secure-hardware/pebble-tracker"
     },
   ];
 
@@ -84,47 +91,56 @@ export const Developers = observer(() => {
     {
       icon: "/images/dev/logo_ucam_n.png",
       iocn_active: "/images/dev/logo_ucam_h.png",
+      href: "https://iotex.io/ucam"
     },
     {
       icon: "/images/dev/logo_pebble_n.png",
       iocn_active: "/images/dev/logo_pebble_h.png",
+      href: "https://iotex.io/pebble"
     },
     {
       icon: "/images/dev/logo_mimo_n.png",
       iocn_active: "/images/dev/logo_mimo_h.png",
+      href: "https://mimo.finance/"
     },
     {
       icon: "/images/dev/logo_healthblocks_n.png",
       iocn_active: "/images/dev/logo_healthblocks_h.png",
+      href: "https://ecosystem.iotex.io/post/944"
     },
     {
       icon: "/images/dev/logo_pebble_go_n.png",
       iocn_active: "/images/dev/logo_pebble_go_h.png",
+      href: "https://pebblego.io/"
     },
     {
       icon: "/images/dev/logo_scaleout_n.png",
       iocn_active: "/images/dev/logo_scaleout_h.png",
+      href: "https://ecosystem.iotex.io/post/1042"
     },
     {
       icon: "/images/dev/logo_cyclone_n.png",
       iocn_active: "/images/dev/logo_cyclone_h.png",
+      href: "https://cyclone.xyz/"
     },
     {
-      icon: "/images/dev/logo_healthnet_n.png",
-      iocn_active: "/images/dev/logo_healthnet_h.png",
+      icon: "/images/dev/logo_Pantheon_n.png",
+      iocn_active: "/images/dev/logo_Pantheon_h.png",
+      href: "https://ecosystem.iotex.io/post/217"
     },
     {
-      icon: "/images/dev/logo_WeatherDEX_n.png",
-      iocn_active: "/images/dev/logo_WeatherDEX_h.png",
+      icon: "/images/dev/logo_Multisender_n.png",
+      iocn_active: "/images/dev/logo_Multisender_h.png",
+      href: "https://ecosystem.iotex.io/post/1163"
     },
   ];
 
   const awards = [
-    { icon: "/images/icon-logo1.png", iocn_active: "/images/icon-logo1_s.png" },
-    { icon: "/images/icon-logo2.png", iocn_active: "/images/icon-logo2_s.png" },
-    { icon: "/images/icon-logo3.png", iocn_active: "/images/icon-logo3_s.png" },
-    { icon: "/images/icon-logo4.png", iocn_active: "/images/icon-logo4_s.png" },
-  ];
+    {icon: '/images/icon-logo1.png', iocn_active: '/images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
+    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.html"},
+    {icon: '/images/icon-logo3.png', iocn_active: '/images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
+    {icon: '/images/icon-logo4.png', iocn_active: '/images/icon-logo4_s.png', href: "https://medium.com/iotex/iotex-joins-executive-committee-of-china-mobile-iot-alliance-unveils-new-enterprise-iot-solutions-b6a8b6183afd#:~:text=As%20the%20only%20public%20blockchain%20in%20the%20China%20Mobile%20IoT,upon%20innovative%20blockchain%20%2B%20IoT%20solutions"},
+  ]
 
   const apps = [
     {
@@ -132,18 +148,21 @@ export const Developers = observer(() => {
       desc: lang.t("app1.desc"),
       icon: "/images/dev/Solidity.png",
       selectedIcon: "/images/card1.png",
+      href: "https://docs.iotex.io/software-tools/smart-contracts/introduction"
     },
     {
       name: lang.t("app2"),
       desc: lang.t("app2.desc"),
       icon: "/images/dev/web3js.png",
       selectedIcon: "/images/card3.png",
+      href: "https://docs.iotex.io/software-tools/ethereum-tools"
     },
     {
       name: lang.t("app3"),
       desc: lang.t("app3.desc"),
       icon: "/images/dev/sdk.png",
       selectedIcon: "/images/card2.png",
+      href: "https://docs.iotex.io/software-tools/iotex-antenna-sdk"
     },
   ];
 
@@ -288,7 +307,7 @@ export const Developers = observer(() => {
                 {lang.t("dev.subtitle7.p")}
               </Text>
               <Button
-                href="/"
+                href="/research"
                 size={{ base: "100%", md: "100%" }}
                 name={lang.t("awards.research")}
               />
@@ -301,7 +320,9 @@ export const Developers = observer(() => {
               {awards.map((item) => {
                 return (
                   <Box key={item.iocn_active} w={{base: "100%", md: "47%"}} mt="3rem">
-                    <LogoCardItem item={item} width="100%" height="8.75rem" />
+                    <a href={item.href} target="_blank">
+                      <LogoCardItem item={item} width="100%" height="8.75rem" />
+                    </a>
                   </Box>
                 );
               })}
@@ -363,7 +384,7 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle8")}
             </Text>
             <Button
-              href="/"
+              href="/https://docs.iotex.io/"
               size={{ base: "100%", md: "16rem" }}
               name={lang.t("get.started")}
             />
@@ -483,9 +504,9 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle3")}
             </Text>
             <Button
-              href="/"
+              href="https://docs.iotex.io/get-started/iotex-dapp-starter"
               size={{ base: "100%", md: "300px" }}
-              name={lang.t("read.documents")}
+              name={lang.t("dive.deeper")}
             />
           </Box>
           <Flex
@@ -495,7 +516,8 @@ export const Developers = observer(() => {
           >
             {apps.map((item, index) => {
               return (
-                <Flex
+                <a href={item.href} key={item.name} target="_blank">
+                  <Flex
                   key={item.name}
                   w="100%"
                   direction="column"
@@ -556,6 +578,7 @@ export const Developers = observer(() => {
                     {item.desc}
                   </Text>
                 </Flex>
+                </a>
               );
             })}
           </Flex>
@@ -582,8 +605,8 @@ export const Developers = observer(() => {
             <Box w={{ base: "100%", md: "35%", "2xl": "20vw" }}>
               {physical.map((item) => {
                 return (
-                  <Flex
-                    key={item.title}
+                  <a href={item.href} target="_blank" key={item.title}>
+                    <Flex
                     direction="column"
                     justifyContent="center"
                     alignItems="flex-start"
@@ -628,6 +651,7 @@ export const Developers = observer(() => {
                       {item.desc}
                     </Text>
                   </Flex>
+                  </a>
                 );
               })}
             </Box>
@@ -656,7 +680,7 @@ export const Developers = observer(() => {
                 {lang.t("dev.subtitle4")}
               </Text>
               <Button
-                href="/"
+                href="#joinCommunity"
                 size={{ base: "100%", md: "80%" }}
                 name={lang.t("touch.us")}
               />
@@ -689,6 +713,7 @@ export const Developers = observer(() => {
             >
               {lang.t("dev.subtitle5")}
             </Text>
+            <a href="https://ecosystem.iotex.io/projects" target="_blank">
             <Text
               fontSize={{
                 base: "0.875rem",
@@ -706,6 +731,7 @@ export const Developers = observer(() => {
             >
               {lang.t("dev.title5.desc2")}
             </Text>
+            </a>
             <Flex
               flexWrap="wrap"
               justifyContent="space-between"
@@ -754,6 +780,7 @@ export const Developers = observer(() => {
       <Box
         pb={{ base: "10rem", md: "20rem" }}
         mt={{ base: "8rem", md: "15rem" }}
+        id="joinCommunity"
       >
         <Box
           maxWidth={{ base: "90%", "2xl": "1554px" }}
@@ -793,6 +820,7 @@ export const Developers = observer(() => {
             >
               {lang.t("dev.join")}
             </Text>
+            <a href="https://iotex.io/devdiscord" target="_blank">
             <Box textAlign="center" maxWidth="9.5rem">
               <Image
                 boxSize={{ base: "6rem", sm: "8rem", md: "7.5rem" }}
@@ -821,6 +849,7 @@ export const Developers = observer(() => {
                 {lang.t("discord.desc")}
               </Text>
             </Box>
+            </a>
           </Flex>
         </Box>
         <Footer />

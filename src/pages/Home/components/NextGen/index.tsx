@@ -60,7 +60,7 @@ export const NextGen = observer(() => {
         name: lang.t("smart.lock"),
         desc: lang.t("smart.lock.desc"),
         icon: "/images/logo_samrtlock.png",
-        href: "https://ecosystem.iotex.io/post/840",
+        href: "https://ecosystem.iotex.io/post/52",
       },
     ],
     dapps2: [
@@ -68,19 +68,19 @@ export const NextGen = observer(() => {
         name: lang.t("ioTube"),
         desc: lang.t("ioTube.desc"),
         icon: "/images/logo_iotube.png",
-        href: "https://tube.iotex.io/",
+        href: "https://ecosystem.iotex.io/post/240",
       },
       {
         name: lang.t("mimo"),
         desc: lang.t("mimo.desc"),
         icon: "/images/mimo.png",
-        href: "https://mimo.finance/",
+        href: "https://ecosystem.iotex.io/post/232",
       },
       {
         name: lang.t("cyclone"),
         desc: lang.t("cyclone.desc"),
         icon: "/images/cyc.png",
-        href: "https://cyclone.xyz/",
+        href: "https://ecosystem.iotex.io/post/953",
       },
     ],
     dapps3: [
@@ -88,19 +88,19 @@ export const NextGen = observer(() => {
         name: lang.t("IoTT.portal"),
         desc: lang.t("IoTT.portal.desc"),
         icon: "/images/logo_iott.png",
-        href: "https://iott.network/",
+        href: "https://ecosystem.iotex.io/post/1009",
       },
       {
         name: lang.t("hermes"),
         desc: lang.t("hermes.desc"),
         icon: "/images/logo_hermes.png",
-        href: "https://hermes.to/",
+        href: "https://ecosystem.iotex.io/post/200",
       },
       {
         name: lang.t("minttoken"),
         desc: lang.t("minttoken.desc"),
         icon: "/images/logo_minttoken.png",
-        href: "https://minttoken.io/",
+        href: "https://ecosystem.iotex.io/post/959",
       },
     ],
     changeCard(item, index) {
@@ -157,7 +157,7 @@ export const NextGen = observer(() => {
           flexDirection={{ base: "column", xl: "row" }}
         >
           <Button
-            href="https://ecosystem.iotex.io/"
+            href="https://ecosystem.iotex.io/projects"
             size={{ base: "100%", md: "375px" }}
             name={lang.t("explore.ecosystem")}
           />
@@ -550,7 +550,7 @@ export const NextGen = observer(() => {
             },
           }}
         >
-          <a href="#getStarted">
+          <a href="/developers">
             <img src="/images/home/buildIotx.png" alt="" />
           </a>
         </Box>
