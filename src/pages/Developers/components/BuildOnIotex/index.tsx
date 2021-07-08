@@ -56,12 +56,18 @@ export const BuildOnIotex = observer(() => {
               }
             </Flex>
           </Box>
-          <Box  w={{base: "100%", lg: "50%",  xl: "45%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
+          <Box  w={{base: "100%", lg: "45%",  "2xl": "35%"}} pt={{base: "2rem", lg: "5rem", xl: "9.125rem"}}>
             <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" maxWidth="100%" mb={{base: "1rem", md: "1.25rem"}}>
               {lang.t("title4")}
             </Text>
             <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
-              {lang.t("subtitle4")}
+              {lang.t("subtitle4.tip1")}
+            </Text>
+            <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
+              {lang.t("subtitle4.tip2")}
+            </Text>
+            <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.85"  color="discord" fontWeight="medium"  mb={{base: "2rem", xl: "4.25rem"}}  >
+              {lang.t("subtitle4.tip3")}
             </Text>
             <Flex mt={{base: "5%", xl: "4.125rem"}}  w="100%" alignItems={{base: "flex-start", lg: "center"}} justifyContent="flex-end" direction={{base: "column", lg: "row"}}>
               <a href="https://github.com/iotexproject" target="_blank" style={{flex: 'none'}}>
@@ -76,7 +82,7 @@ export const BuildOnIotex = observer(() => {
               </a>
               <Button href="https://docs.iotex.io/" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
             </Flex>
-            <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
+            {/* <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat'
             }}>
@@ -86,7 +92,7 @@ export const BuildOnIotex = observer(() => {
                   <Text fontSize={{base: "1rem", lg: "1.25rem"}} color="brandColor" fontWeight="semibold" lineHeight="1.275rem">{lang.t("halo.href")}</Text>
                 </a>
               </Text>
-            </Box>
+            </Box> */}
             <Image
               boxSize={{base: "8rem", lg: "14rem"}}
               objectFit="fill"

@@ -43,7 +43,7 @@ export const Header = observer(() => {
     { name: lang.t("for.developers"), path: "", blank: false },
     { name: lang.t("for.investors"), path: "", blank: false },
     { name: lang.t("for.business"), path: "", blank: false },
-  ]
+  ];
 
   const aboutConfig = [
     { name: lang.t("vision"), path: "", blank: true },
@@ -55,6 +55,80 @@ export const Header = observer(() => {
   ];
 
   const exploreConfig = [
+    {
+      name: lang.t("GET.STARTED"),
+      lists: [
+        {
+          name: lang.t("What.is.IoTeX"),
+          path: "",
+          blank: false,
+          icon: "/images/explore/icon_wallet_n.png",
+          icon_active: "/images/explore/icon_wallet_s.png",
+        },
+        {
+          name: lang.t("vision"),
+          path: "",
+          blank: false,
+          icon: "/images/explore/icon_getiotx_n.png",
+          icon_active: "/images/explore/icon_getiotx_n.png",
+        },
+        {
+          name: lang.t("roadmap"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_map_n.png",
+          icon_active: "/images/explore/icon_map_s.png",
+        },
+        {
+          name: lang.t("onboarding.Pack"),
+          path: "",
+          blank: false,
+          icon: "/images/explore/icon_getiotx_n.png",
+          icon_active: "/images/explore/icon_getiotx_n.png",
+        },
+      ],
+    },
+
+    {
+      name: lang.t("for.investors"),
+      lists: [
+        {
+          name: lang.t("ioPay.wallet"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_wallet_n.png",
+          icon_active: "/images/explore/icon_wallet_s.png",
+        },
+        {
+          name: lang.t("get.iotx"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_getiotx_n.png",
+          icon_active: "/images/explore/icon_getiotx_n.png",
+        },
+        {
+          name: lang.t("staking.portal"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_stake_n.png",
+          icon_active: "/images/explore/icon_stake_s.png",
+        },
+        {
+          name: lang.t("burn.drop"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_brun-drop_n.png",
+          icon_active: "/images/explore/icon_brun-drop_n.png",
+        },
+        {
+          name: lang.t("explore"),
+          path: "",
+          blank: true,
+          icon: "/images/explore/icon_explorer_n.png",
+          icon_active: "/images/explore/icon_explorer_s.png",
+        },
+      ],
+    },
     {
       name: lang.t("for.builders"),
       lists: [
@@ -78,53 +152,6 @@ export const Header = observer(() => {
           blank: true,
           icon: "/images/explore/icon_halo_n.png",
           icon_active: "/images/explore/icon_halo_s.png",
-        },
-        {
-          name: lang.t("codelabs"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_code_n.png",
-          icon_active: "/images/explore/icon_code_s.png",
-        },
-      ],
-    },
-    {
-      name: lang.t("for.investors"),
-      lists: [
-        {
-          name: lang.t("ioPay.wallet"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_wallet_n.png",
-          icon_active: "/images/explore/icon_wallet_s.png",
-        },
-        {
-          name: lang.t("get.iotx"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_s.png",
-        },
-        {
-          name: lang.t("staking.portal"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_stake_n.png",
-          icon_active: "/images/explore/icon_stake_s.png",
-        },
-        {
-          name: lang.t("burn.drop"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_brun-drop_n.png",
-          icon_active: "/images/explore/icon_brun-drop_n.png",
-        },
-        {
-          name: lang.t("explore"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_explorer_n.png",
-          icon_active: "/images/explore/icon_explorer_s.png",
         },
       ],
     },
@@ -152,13 +179,6 @@ export const Header = observer(() => {
           icon: "/images/explore/icon_blog_n.png",
           icon_active: "/images/explore/icon_blog_s.png",
         },
-        {
-          name: lang.t("roadmap"),
-          path: "",
-          blank: true,
-          icon: "/images/explore/icon_map_n.png",
-          icon_active: "/images/explore/icon_map_s.png",
-        },
       ],
     },
   ];
@@ -181,8 +201,8 @@ export const Header = observer(() => {
       icon_active: "/images/explore/icon_reddit_s.png",
     },
     {
-      icon: "/images/explore/icon_forum_n.png",
-      icon_active: "/images/explore/icon_forum_s.png",
+      icon: "/images/explore/icon_telegram_n.png",
+      icon_active: "/images/explore/icon_telegram_s.png",
     },
   ];
 
@@ -219,10 +239,15 @@ export const Header = observer(() => {
           display={{ base: "none", md: "flex" }}
         >
           <Flex>
-          <Box
+            <Box
               className="dropHoverText"
               position="relative"
-              px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+              px={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
             >
               <Text
                 as={Text}
@@ -237,7 +262,16 @@ export const Header = observer(() => {
               <Box className="dropMenuUl">
                 {startedConfig.map((item) => {
                   return (
-                    <Box key={item.name} className="dropMenuItem" px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}>
+                    <Box
+                      key={item.name}
+                      className="dropMenuItem"
+                      px={{
+                        base: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.25rem",
+                        "2xl": "1.5rem",
+                      }}
+                    >
                       <a href={item.path} target={item.blank ? "_blank" : ""}>
                         {item.name}
                       </a>
@@ -286,8 +320,18 @@ export const Header = observer(() => {
             <Box
               className="dropHoverText"
               position="relative"
-              ml={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
-              px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+              ml={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
+              px={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
             >
               <Text
                 fontWeight="semibold"
@@ -296,12 +340,22 @@ export const Header = observer(() => {
                 lineHeight={{ base: "0", md: "4rem" }}
                 className="dropMenuText"
               >
-                {lang.t("about")}  &nbsp;&nbsp;<TriangleDownIcon w="12px" />
+                {lang.t("about")} &nbsp;&nbsp;
+                <TriangleDownIcon w="12px" />
               </Text>
               <Box className="dropMenuUl">
                 {aboutConfig.map((item) => {
                   return (
-                    <Box key={item.name} className="dropMenuItem" px={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}>
+                    <Box
+                      key={item.name}
+                      className="dropMenuItem"
+                      px={{
+                        base: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.25rem",
+                        "2xl": "1.5rem",
+                      }}
+                    >
                       <a href={item.path} target={item.blank ? "_blank" : ""}>
                         {item.name}
                       </a>
@@ -310,29 +364,43 @@ export const Header = observer(() => {
                 })}
               </Box>
             </Box>
-            <Box>
-              <Text
-                as={Text}
-                fontWeight="semibold"
-                pl={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
-                pr={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
-                cursor="pointer"
-                css={{
-                  '&:hover': {
-                    color: '#44FFB2'
-                  },
-                  userSelect: 'none',
-                  color: store.isOpen ? "#44FFB2" : "#fff",
-                  background: store.isOpen ? 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)' : 'transparent'
-                }}
-                lineHeight={{ base: "0", md: "4rem" }}
-                onClick={() => (store.isOpen = !store.isOpen)}
-                fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
-              >
-                {lang.t("explore.now")}
-              </Text>
-              {store.isOpen && (
+            <Box className="navDropDown">
+              
+            </Box>
+            <Box className="navDropDown">
+                <Text
+                  as={Text}
+                  fontWeight="semibold"
+                  pl={{
+                    base: "0.5rem",
+                    lg: "1rem",
+                    xl: "1.25rem",
+                    "2xl": "1.5rem",
+                  }}
+                  pr={{
+                    base: "0.5rem",
+                    lg: "1rem",
+                    xl: "1.25rem",
+                    "2xl": "1.5rem",
+                  }}
+                  css={{
+                    color: "#fff",
+                    background: "transparent",
+                    "&:hover": {
+                      userSelect: "none",
+                      background:
+                        "linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+                      color: "#44FFB2",
+                    },
+                  }}
+                  cursor="pointer"
+                  lineHeight={{ base: "0", md: "4rem" }}
+                  fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
+                >
+                  {lang.t("discover.ioTeX")}
+                </Text>
                 <Box
+                className="navDropDownUl"
                   position="absolute"
                   top={{ base: "4rem", lg: "4rem" }}
                   left="0"
@@ -363,6 +431,7 @@ export const Header = observer(() => {
                           flexDirection="column"
                           key={item.name}
                           mx={index === 1 ? "10%" : ""}
+                          mr={index === 2 ? "10%" : ""}
                         >
                           <Text
                             fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
@@ -407,7 +476,7 @@ export const Header = observer(() => {
                               </a>
                             );
                           })}
-                          {index === 2 && (
+                          {index === 3 && (
                             <Flex>
                               {links.map((item) => {
                                 return (
@@ -432,12 +501,16 @@ export const Header = observer(() => {
                     })}
                   </Flex>
                 </Box>
-              )}
-            </Box>
+              </Box>
           </Flex>
           <Menu isLazy>
             <MenuButton
-              ml={{ base: "0.5rem", lg: "1rem", xl: "1.25rem", "2xl": "1.5rem" }}
+              ml={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
               letterSpacing="1px"
               fontWeight="semibold"
               bg="transparent"
@@ -578,105 +651,107 @@ export const Header = observer(() => {
             </Box>
           </Box>
         </Box>
-        {store.openExplore && <Flex
-          flexDirection="column"
-          alignItems="flex-start"
-          position="fixed"
-          top="0"
-          left="0"
-          w="100vw"
-          h="100vh"
-          zIndex="22"
-          py="1.5rem"
-          px="2rem"
-          css={{
-            background:
-              "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-            backdropFilter: "blur(50px)",
-            animation: "fadeIn 0.3s linear",
-          }}
-          overflow="auto"
-        >
-          <Image
-            boxSize="1.5rem"
-            src="/images/explore/close.png"
-            position="absolute"
-            right="1.5rem"
-            top="1.5rem"
-            opacity="0.5"
-            cursor="pointer"
-            onClick={() => (store.openExplore = false)}
-          ></Image>
-          {exploreConfig.map((item, index) => {
-            return (
-              <Flex flexDirection="column" key={item.name} mb="10%">
-                <Text
-                  fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
-                  color="grayColor3"
-                  fontWeight="semibold"
-                  mb="1.5rem"
-                >
-                  {item.name}
-                </Text>
-                {item.lists.map((option) => {
-                  return (
-                    <a
-                      href={option.path}
-                      key={option.name}
-                      target={option.blank ? "_blank" : ""}
-                    >
-                      <Flex
-                        mb={{ base: "0.8rem", "2xl": "1rem" }}
-                        alignItems="center"
-                        css={{
-                          "&:hover": {
-                            color: "#44FFB2 !important",
-                            img: {
-                              content: `url(${option.icon_active})`,
-                            },
-                          },
-                        }}
+        {store.openExplore && (
+          <Flex
+            flexDirection="column"
+            alignItems="flex-start"
+            position="fixed"
+            top="0"
+            left="0"
+            w="100vw"
+            h="100vh"
+            zIndex="22"
+            py="1.5rem"
+            px="2rem"
+            css={{
+              background:
+                "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+              backdropFilter: "blur(50px)",
+              animation: "fadeIn 0.3s linear",
+            }}
+            overflow="auto"
+          >
+            <Image
+              boxSize="1.5rem"
+              src="/images/explore/close.png"
+              position="absolute"
+              right="1.5rem"
+              top="1.5rem"
+              opacity="0.5"
+              cursor="pointer"
+              onClick={() => (store.openExplore = false)}
+            ></Image>
+            {exploreConfig.map((item, index) => {
+              return (
+                <Flex flexDirection="column" key={item.name} mb="10%">
+                  <Text
+                    fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
+                    color="grayColor3"
+                    fontWeight="semibold"
+                    mb="1.5rem"
+                  >
+                    {item.name}
+                  </Text>
+                  {item.lists.map((option) => {
+                    return (
+                      <a
+                        href={option.path}
+                        key={option.name}
+                        target={option.blank ? "_blank" : ""}
                       >
-                        <Box w="1.5rem" h="1.5rem" mr="0.5rem">
-                          <img src={option.icon} alt="" />
-                        </Box>
-                        <Text
-                          fontSize={{
-                            base: "0.875rem",
-                            "2xl": "1.125rem",
-                          }}
-                          letterSpacing="1px"
-                        >
-                          {option.name}
-                        </Text>
-                      </Flex>
-                    </a>
-                  );
-                })}
-                {index === 2 && (
-                  <Flex>
-                    {links.map((item) => {
-                      return (
-                        <Image
-                          boxSize="1.5rem"
-                          mr="1rem"
-                          key={item.icon}
-                          src={item.icon}
-                          cursor="pointer"
+                        <Flex
+                          mb={{ base: "0.8rem", "2xl": "1rem" }}
+                          alignItems="center"
                           css={{
                             "&:hover": {
-                              content: `url(${item.icon_active})`,
+                              color: "#44FFB2 !important",
+                              img: {
+                                content: `url(${option.icon_active})`,
+                              },
                             },
                           }}
-                        ></Image>
-                      );
-                    })}
-                  </Flex>
-                )}
-              </Flex>
-            );
-          })}
-        </Flex>}
+                        >
+                          <Box w="1.5rem" h="1.5rem" mr="0.5rem">
+                            <img src={option.icon} alt="" />
+                          </Box>
+                          <Text
+                            fontSize={{
+                              base: "0.875rem",
+                              "2xl": "1.125rem",
+                            }}
+                            letterSpacing="1px"
+                          >
+                            {option.name}
+                          </Text>
+                        </Flex>
+                      </a>
+                    );
+                  })}
+                  {index === 2 && (
+                    <Flex>
+                      {links.map((item) => {
+                        return (
+                          <Image
+                            boxSize="1.5rem"
+                            mr="1rem"
+                            key={item.icon}
+                            src={item.icon}
+                            cursor="pointer"
+                            css={{
+                              "&:hover": {
+                                content: `url(${item.icon_active})`,
+                              },
+                            }}
+                          ></Image>
+                        );
+                      })}
+                    </Flex>
+                  )}
+                </Flex>
+              );
+            })}
+          </Flex>
+        )}
       </Flex>
     </Box>
   );

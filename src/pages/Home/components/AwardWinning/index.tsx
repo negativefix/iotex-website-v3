@@ -20,8 +20,8 @@ export const AwardWinning = observer(() => {
         <Flex justifyContent="space-between" flexDirection={{base: "column", lg: "row"}}>
             <Flex flexWrap="wrap" maxWidth={{base: "100%", lg: "50%"}} justifyContent="space-between">
               {
-                logos.map((item, index) => {
-                  return <Box key={index} width="47%" mb={{base: "1rem", md: "2rem", lg: "2rem", "2xl": "3rem"}} h={{base: "15vw", lg: "48%", xl: "10rem","2xl": "45%"}}>
+                logos.map((item) => {
+                  return <Box key={item.icon} width="47%" mb={{base: "1rem", md: "2rem", lg: "2rem", "2xl": "3rem"}} h={{base: "15vw", lg: "48%", xl: "10rem","2xl": "45%"}}>
                     <LogoCardItem item={item} width="100%" height="100%" />
                   </Box>
                 })

@@ -163,7 +163,7 @@ export const Developers = observer(() => {
       >
         <DevBanner />
 
-        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
+        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto" marginTop="-8rem">
           <Flex
             justifyContent="space-between"
             alignItems="center"
@@ -172,12 +172,7 @@ export const Developers = observer(() => {
           >
             <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
               <Text
-                fontSize={{
-                  base: "1.8rem",
-                  sm: "1.875rem",
-                  lg: "3.5rem",
-                  "2xl": "4rem",
-                }}
+                fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
                 fontWeight="semibold"
                 mb="1.8rem"
                 whiteSpace="pre-line"
@@ -185,13 +180,13 @@ export const Developers = observer(() => {
                 {lang.t("dev.achieve.title")}
               </Text>
               <Image
-                boxSize="9.6rem"
+                boxSize="14rem"
                 objectFit="cover"
                 src="/images/dev_ball.png"
                 alt="img_circular3"
                 ml="10%"
                 mt={{base: "5rem", md: "11.8125rem"}}
-                mb="20%"
+                mb="10%"
               />
             </Box>
             <Box w={{ base: "100%", md: "40%", xl: "43%", "2xl": "40%" }}>
@@ -205,7 +200,7 @@ export const Developers = observer(() => {
                     mb="4.375rem"
                   >
                     <Image
-                      boxSize={{base: "4rem", md: "7.5rem"}}
+                      boxSize={{base: "4rem", md: "6.5rem"}}
                       objectFit="cover"
                       src={item.icon}
                       alt={item.desc}
@@ -317,7 +312,7 @@ export const Developers = observer(() => {
 
       {/* Develop on the World’s Most Technologically Advanced Blockchain Platform */}
       <Box
-        pb={{ base: "10rem", md: "10rem", lg: "16rem", xl: "25rem" }}
+        pb="10rem"
         css={{
           backgroundImage: `url(${develop})`,
           backgroundSize: `${isMaxThan468 ? "50%" : "100%"}`,
@@ -418,6 +413,7 @@ export const Developers = observer(() => {
         </Flex>
       </Box>
 
+      {/*  Web3js, Solidity, and Native SDKs.  */}
       <Box
         pb={{ base: "0", md: "20rem", lg: "30rem" }}
         css={
@@ -566,16 +562,15 @@ export const Developers = observer(() => {
         </Flex>
       </Box>
 
-      {/*  Web3js, Solidity, and Native SDKs.  */}
       <Box
         pt={{ base: "15rem", md: 0 }}
         css={{
-          backgroundImage: `url(/images/dev/connect_bg.png), url(${bgThree}), url(/images/dev/secure_bg.svg)`,
-          backgroundSize: `70%, 110%, ${isMaxThan768 ? "60%" : "100%"}`,
+          backgroundImage: `url(/images/dev/connect_bg.png), url(${bgThree})`,
+          backgroundSize: `70%, 100%`,
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: `-5% 0%, ${
-            isMaxThan768 ? "100% 15%" : "100% 0%"
-          }, ${isMaxThan768 ? "0 80%" : "0 40%"}`,
+            isMaxThan768 ? "100% 30%" : "100% 0%"
+          }`,
         }}
       >
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
@@ -584,7 +579,7 @@ export const Developers = observer(() => {
             mb="9.6rem"
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
-            <Box w={{ base: "100%", md: "45%", "2xl": "20vw" }}>
+            <Box w={{ base: "100%", md: "35%", "2xl": "20vw" }}>
               {physical.map((item) => {
                 return (
                   <Flex
@@ -638,13 +633,7 @@ export const Developers = observer(() => {
             </Box>
             <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
               <Text
-                fontSize={{
-                  base: "1.8rem",
-                  sm: "1.875rem",
-                  lg: "2.5rem",
-                  xl: "3rem",
-                  "2xl": "4rem",
-                }}
+                fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
                 fontWeight="semibold"
                 mb="1.8rem"
                 whiteSpace="pre-line"
@@ -675,13 +664,7 @@ export const Developers = observer(() => {
           </Flex>
           <Box>
             <Text
-              fontSize={{
-                base: "1.5rem",
-                sm: "1.875rem",
-                lg: "2.5rem",
-                xl: "3rem",
-                "2xl": "4rem",
-              }}
+              fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
               whiteSpace="pre-line"
               fontWeight="semibold"
               textAlign="center"
@@ -746,7 +729,7 @@ export const Developers = observer(() => {
                 );
               })}
             </Flex>
-            <Text
+            {/* <Text
               fontSize={{ xl: "1.25rem" }}
               opacity="0.85"
               fontWeight="medium"
@@ -762,7 +745,7 @@ export const Developers = observer(() => {
                 size={{ base: "100%", md: "38%" }}
                 name={lang.t("power.by.iotex")}
               />
-            </Flex>
+            </Flex> */}
           </Box>
         </Box>
       </Box>

@@ -197,6 +197,7 @@ export const Home = observer(() => {
                   src="/images/play-icon.png"
                   alt="img_circular3"
                   mx="10%"
+                  cursor="pointer"
                 />
               </Flex>
             </Box>
@@ -273,7 +274,6 @@ export const Home = observer(() => {
                 backgroundSize: "250% 100%",
                 backgroundPositionX: "250%",
                 animation: "awardLine1 90s infinite linear",
-                "-webkit-animation": "awardLine1 90s infinite linear",
               }}
             ></Box>
             <Box
@@ -283,7 +283,6 @@ export const Home = observer(() => {
                 backgroundSize: "250% 100%",
                 backgroundPositionX: "250%",
                 animation: "awardLine2 90s infinite linear",
-                "-webkit-animation": "awardLine2 90s infinite linear",
               }}
             ></Box>
           </Flex>
@@ -303,7 +302,13 @@ export const Home = observer(() => {
 
         <a href="/" target="_blank">
           <Text
-            fontSize={{ base: "0.875rem", lg: "0.875rem", "2xl": "1.25rem" }}
+            fontSize={{
+              base: "0.875rem",
+              md: "1rem",
+              lg: "1.25rem",
+              xl: "1.25rem",
+              "2xl": "1.75rem",
+            }}
             fontWeight="medium"
             mt={{ base: "4rem", xl: "5rem" }}
             cursor="pointer"

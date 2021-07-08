@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
 import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer/index";
-import { Button } from "@/components/Button";
+
+import  ucamS from '/images/home/img_ucam_s.png'
+import  ucamN from '/images/home/img_ucam_n.png'
+import  pebbleS from '/images/home/img_pebble_s.png'
+import  pebbleN from '/images/home/img_pebble_n.png'
 
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
+  const [ucamSrc, setUcamSrc] = useState(ucamS)
+  const [pebbleSrc, setPebbleSrc] = useState(pebbleS)
 
   const infos = [
     {
@@ -84,16 +90,29 @@ export const JoinRevolution = observer(() => {
     >
       {/* IoTeX Blockchain Aleady Powers Real Device */}
       <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
-        mb={{ base: "2rem", lg: "2rem", "2xl": "6rem" }}
+        mb={{ base: "4rem", lg: "6rem", "2xl": "6rem" }}
         mx="auto">
-          <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" width={{base: "90%", sm: "90%"}} mx="auto" textAlign="center" mb={{base: "1rem", md: "1.75rem"}}>
+          <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" mx="auto" 
+            textAlign="center" mb={{base: "1rem", md: "1.75rem"}}
+            whiteSpace={{base: "inherit", md: "pre-line"}}>
             {lang.t("blockchain.title")}
           </Text>
-          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.8" fontWeight="medium" textAlign="center" mb={{base: "5rem", md: "4.1875rem" }} whiteSpace="pre-line">
+          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.8" fontWeight="medium" textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}>
             {lang.t("blockchain.tips")}
           </Text>
-          <Box w={{base: "100%", md: "95%"}} mx="auto">
-            <img src="/images/blockchain_bg.png" alt="" />
+          <Box w={{base: "100%", md: "90%"}} mx="auto" css={{
+            background: 'url(/images/home/img_device.png)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%'
+          }}>
+            <Flex>
+              <Box onMouseOver={() => setUcamSrc(ucamN)} onMouseOut={() => setUcamSrc(ucamS)} cursor="pointer">
+                <img src={pebbleSrc} alt="" />
+              </Box>
+              <Box onMouseOver={() => setPebbleSrc(pebbleN)} onMouseOut={() => setPebbleSrc(pebbleS)}  cursor="pointer">
+                <img src={ucamSrc} alt="" />
+              </Box>
+            </Flex>
           </Box>
       </Box>
       {/* get started */}
@@ -135,6 +154,10 @@ export const JoinRevolution = observer(() => {
                   backgroundSize: "100% 100%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "100% 0%",
+                  transition: '0.5s transform ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.1)',
+                  }
                 }}
               >
                 <Text
@@ -155,7 +178,7 @@ export const JoinRevolution = observer(() => {
                 >
                   {item.lists.map((option) => {
                     return (
-                      <Flex alignItems="center" mb="1rem">
+                      <Flex alignItems="center" mb="1rem" key={option}>
                         <Image
                           boxSize="0.5rem"
                           src="/images/right-arrow.png"
@@ -172,6 +195,12 @@ export const JoinRevolution = observer(() => {
                           }}
                           key={option}
                           fontWeight="semibold"
+                          cursor="pointer"
+                          css={{
+                            '&:hover': {
+                              color: '#44FFB2'
+                            }
+                          }}
                         >
                           {option}
                         </Text>
