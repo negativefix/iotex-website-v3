@@ -12,9 +12,10 @@ interface CardProps{
 	date:string
 	link:string
 	maxWidth?:string
+	width:object
 }
 
-const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='480px'}:CardProps) => {
+const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem',width}:CardProps) => {
 	const [isHover, setHover] = useState(false);
 	return (
 		<Flex
@@ -23,7 +24,7 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='480px
 				cursor: 'pointer'
 			}}
 			flexDirection={'column'}
-			width={{base:'100%',md:'90%',sm:'90%'}}
+			width={width}
 			height={'100%'}
 			padding={'50px'}
 			borderRadius={'20px'}
