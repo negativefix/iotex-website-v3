@@ -14,6 +14,10 @@ import Faq from "./pages/Faq/Faq";
 import { Research } from './pages/Research'
 import MediaCenter from "./pages/MediaCenter";
 import Pebble from "./pages/Pebble";
+import { EmailPopup } from './components/EmailPopup'
+import { hotjar } from 'react-hotjar';
+
+hotjar.initialize(2494554, 6);
 
 export const App = observer(() => {
 	const { lang } = useStore();
@@ -22,18 +26,19 @@ export const App = observer(() => {
 	}, []);
 	return (
     <ChakraProvider theme={customTheme}>
+      <EmailPopup />
       <Router>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/developers" exact component={Developers} />
-	        <Route path='/faq' exact component={Faq}/>
-	        <Route path='/team' exact component={Team}/>
-          <Route path="/enterprise" exact component={Enterprise} />
-          <Route path="/research" exact component={Research} />
-          <Route path="/media-center" exact component={MediaCenter} />
-          <Route path="/pebble" exact component={Pebble} />
-          <Route path="/advanced" exact component={Advanced} />
-          <Route path="/investors" exact component={Investors} />
+          <Route path="/" onEnter={()=>{document.title='标题'}} exact component={Home} />
+          <Route path="/developers"  component={Developers} />
+	        <Route path='/faq'  component={Faq}/>
+	        <Route path='/team'  component={Team}/>
+          <Route path="/enterprise"  component={Enterprise} />
+          <Route path="/research"  component={Research} />
+          <Route path="/media-center"  component={MediaCenter} />
+          <Route path="/pebble"  component={Pebble} />
+          <Route path="/advanced"  component={Advanced} />
+          <Route path="/investors"  component={Investors} />
         </Switch>
       </Router>
     </ChakraProvider>
