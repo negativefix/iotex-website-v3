@@ -34,7 +34,7 @@ export const AwardWinning = observer(() => {
               <Text fontSize={{base: "1.25rem", md: "1.875rem", lg: "2rem", xl: "3rem", "2xl": "3rem"}} mb={{base: "0.5rem", xl: "0.5rem"}} fontWeight="semibold">{lang.t("award.winning")}</Text>
               <Text fontSize={{base: "0.875rem", md: "1.25rem"}} fontWeight="medium" opacity="0.85" mb={{base: "2rem", xl: "2.875rem"}}>{lang.t("award.winning.content")}</Text>
               <Button 
-                href="https://iotex.io/research" 
+                href="/research" 
                 name={lang.t("award.winning.btn")} 
                 size={{base: "100%", xl: "80%", "2xl": "70%"}}
               />
