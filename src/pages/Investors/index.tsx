@@ -707,8 +707,7 @@ export const Investors = observer(() => {
           >
             {roles.map((item) => {
               return (
-                <a href={item.href} target="_blank" key={item.name}>
-                  <Flex
+                <Flex
                   flexDirection="column"
                   w={{ base: "90%", sm: "50%", md: "28%", "2xl": "25%" }}
                   mx="auto"
@@ -792,7 +791,6 @@ export const Investors = observer(() => {
                     </a>
                   </Box>
                 </Flex>
-                </a>
               );
             })}
           </Flex>

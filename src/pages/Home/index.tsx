@@ -258,8 +258,8 @@ export const Home = observer(() => {
               css={{
                 height: "45%",
                 background: "url(/images/awind_line_2.png) center 0px repeat-x",
-                backgroundSize: "250% 100%",
-                backgroundPositionX: "250%",
+                backgroundSize: "240% 100%",
+                backgroundPositionX: "240%",
                 animation: "awardLine2 90s infinite linear",
               }}
             ></Box>

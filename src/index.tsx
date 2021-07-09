@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Developers } from './pages/Developers';
 import { Team } from './pages/Team';
-import { Token } from './pages/Token';
+import { Advanced } from './pages/Advanced';
 import { Investors } from './pages/Investors';
 import { useStore } from '@/store/index';
 import { customTheme } from './lib/theme';
@@ -32,7 +32,7 @@ export const App = observer(() => {
           <Route path="/research" exact component={Research} />
           <Route path="/media-center" exact component={MediaCenter} />
           <Route path="/pebble" exact component={Pebble} />
-          <Route path="/token" exact component={Token} />
+          <Route path="/advanced" exact component={Advanced} />
           <Route path="/investors" exact component={Investors} />
         </Switch>
       </Router>

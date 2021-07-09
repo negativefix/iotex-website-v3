@@ -137,7 +137,7 @@ export const Developers = observer(() => {
 
   const awards = [
     {icon: '/images/icon-logo1.png', iocn_active: '/images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
-    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.html"},
+    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.htm"},
     {icon: '/images/icon-logo3.png', iocn_active: '/images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
     {icon: '/images/icon-logo4.png', iocn_active: '/images/icon-logo4_s.png', href: "https://medium.com/iotex/iotex-joins-executive-committee-of-china-mobile-iot-alliance-unveils-new-enterprise-iot-solutions-b6a8b6183afd#:~:text=As%20the%20only%20public%20blockchain%20in%20the%20China%20Mobile%20IoT,upon%20innovative%20blockchain%20%2B%20IoT%20solutions"},
   ]

@@ -4,15 +4,15 @@ import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer/index";
 
-import  ucamS from '/images/home/img_ucam_s.png'
-import  ucamN from '/images/home/img_ucam_n.png'
-import  pebbleS from '/images/home/img_pebble_s.png'
-import  pebbleN from '/images/home/img_pebble_n.png'
+import ucamS from "/images/home/img_ucam_s.png";
+import ucamN from "/images/home/img_ucam_n.png";
+import pebbleS from "/images/home/img_pebble_s.png";
+import pebbleN from "/images/home/img_pebble_n.png";
 
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
-  const [ucamSrc, setUcamSrc] = useState(ucamS)
-  const [pebbleSrc, setPebbleSrc] = useState(pebbleS)
+  const [ucamSrc, setUcamSrc] = useState(ucamS);
+  const [pebbleSrc, setPebbleSrc] = useState(pebbleS);
 
   const infos = [
     {
@@ -89,35 +89,65 @@ export const JoinRevolution = observer(() => {
       }}
     >
       {/* IoTeX Blockchain Aleady Powers Real Device */}
-      <Box  maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
+      <Box
+        maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
         mb={{ base: "4rem", lg: "6rem", "2xl": "6rem" }}
-        mx="auto">
-          <Text fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}  fontWeight="semibold" mx="auto" 
-            textAlign="center" mb={{base: "1rem", md: "1.75rem"}}
-            whiteSpace={{base: "inherit", md: "pre-line"}}>
-            {lang.t("blockchain.title")}
-          </Text>
-          <Text fontSize={{base: "0.875rem", md: "1rem", lg: "1.25rem", xl: "1.5rem"}} opacity="0.8" fontWeight="medium" textAlign="center" whiteSpace={{base: "inherit", md: "pre-line"}}>
-            {lang.t("blockchain.tips")}
-          </Text>
-          <Box w={{base: "100%", md: "90%"}} mx="auto" css={{
-            background: 'url(/images/home/img_device.png)',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%'
-          }}>
-            <Flex>
-              <Box onMouseOver={() => setUcamSrc(ucamN)} onMouseOut={() => setUcamSrc(ucamS)} cursor="pointer">
-                <a href="https://iotex.io/pebble" target="_blank">
-                  <img src={pebbleSrc} alt="" />
-                </a>
-              </Box>
-              <Box onMouseOver={() => setPebbleSrc(pebbleN)} onMouseOut={() => setPebbleSrc(pebbleS)}  cursor="pointer">
-                <a href="https://iotex.io/ucam" target="_blank">
-                  <img src={ucamSrc} alt="" />
-                </a>
-              </Box>
-            </Flex>
-          </Box>
+        mx="auto"
+      >
+        <Text
+          fontSize={{ base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem" }}
+          fontWeight="semibold"
+          mx="auto"
+          textAlign="center"
+          mb={{ base: "1rem", md: "1.75rem" }}
+          whiteSpace={{ base: "inherit", md: "pre-line" }}
+        >
+          {lang.t("blockchain.title")}
+        </Text>
+        <Text
+          fontSize={{
+            base: "0.875rem",
+            md: "1rem",
+            lg: "1.25rem",
+            xl: "1.5rem",
+          }}
+          opacity="0.8"
+          fontWeight="medium"
+          textAlign="center"
+          whiteSpace={{ base: "inherit", md: "pre-line" }}
+        >
+          {lang.t("blockchain.tips")}
+        </Text>
+        <Box
+          w={{ base: "100%", md: "90%" }}
+          mx="auto"
+          css={{
+            background: "url(/images/home/img_device.png)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <Flex>
+            <Box
+              onMouseOver={() => setUcamSrc(ucamN)}
+              onMouseOut={() => setUcamSrc(ucamS)}
+              cursor="pointer"
+            >
+              <a href="https://iotex.io/pebble" target="_blank">
+                <img src={pebbleSrc} alt="" />
+              </a>
+            </Box>
+            <Box
+              onMouseOver={() => setPebbleSrc(pebbleN)}
+              onMouseOut={() => setPebbleSrc(pebbleS)}
+              cursor="pointer"
+            >
+              <a href="https://iotex.io/ucam" target="_blank">
+                <img src={ucamSrc} alt="" />
+              </a>
+            </Box>
+          </Flex>
+        </Box>
       </Box>
       {/* get started */}
       <Box
@@ -158,10 +188,10 @@ export const JoinRevolution = observer(() => {
                   backgroundSize: "100% 100%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "100% 0%",
-                  transition: '0.5s transform ease-in-out',
-                  '&:hover': {
-                    transform: 'scale(1.1)',
-                  }
+                  transition: "0.5s transform ease-in-out",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                  },
                 }}
               >
                 <Text
@@ -199,12 +229,6 @@ export const JoinRevolution = observer(() => {
                           }}
                           key={option}
                           fontWeight="semibold"
-                          cursor="pointer"
-                          css={{
-                            '&:hover': {
-                              color: '#44FFB2'
-                            }
-                          }}
                         >
                           {option}
                         </Text>
@@ -349,42 +373,89 @@ export const JoinRevolution = observer(() => {
           >
             {lang.t("stay.updated")}
           </Text>
-          <Text
-            fontSize={{ base: "0.875rem", lg: "1.125rem" }}
-            fontWeight="medium"
-            lineHeight="1.375rem"
-            mb="2.5rem"
-          >
-            {lang.t("stay.updated.desc")}
-          </Text>
-          <Box position="relative" w={{ base: "90%", md: "40vw" }}>
-            <Input
-              h={{ base: "3rem", lg: "4.5rem" }}
-              css={{
-                borderColor: "rgba(255, 255, 255, 0.2)",
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-              }}
-            />
-            <Box
-              bg="brandColor2"
-              position="absolute"
-              right="0"
-              top="0"
-              height={{ base: "3rem", lg: "4.5rem" }}
-              px="1.25rem"
-              borderRadius="10px"
-              cursor="pointer"
-            >
-              <Text
-                fontSize={{ base: "1rem", lg: "1.375rem" }}
-                fontWeight="semibold"
-                color="btnTextColor"
-                lineHeight={{ base: "3rem", lg: "4.5rem" }}
+          <Box w={{ base: "90%", md: "40vw" }}>
+            <div id="mc_embed_signup">
+              <form
+                action="https://Iotex.us6.list-manage.com/subscribe/post?u=76695f0cff963129d31cdaae6&amp;id=a82d76e093"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                className="validate"
+                target="_blank"
               >
-                {" "}
-                {lang.t("submit")}
-              </Text>
-            </Box>
+                <div id="mc_embed_signup_scroll">
+                  <label htmlFor="mce-EMAIL">
+                    <Text
+                      fontSize={{
+                        base: "0.75rem",
+                        sm: "1rem",
+                        lg: "1.25rem",
+                        "2xl": "1.25rem",
+                      }}
+                      fontWeight="normal"
+                      textAlign="center"
+                      mb="2.5rem"
+                      color="#fff"
+                    >
+                      {lang.t("stay.updated.desc")}
+                    </Text>
+                  </label>
+                  <Flex
+                    mt="0.5rem"
+                    h={{ base: "3rem", lg: "4.5rem" }}
+                    css={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: 5,
+                      "&:hover": {
+                        borderColor: "#44FFB2",
+                      },
+                    }}
+                  >
+                    <Box flex="1" fontSize="1.25rem" css={{
+                      '.email': {
+                        fontSize: '1.25rem !important',
+                        width: '100%'
+                      }
+                    }}>
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        className="email"
+                        id="mce-EMAIL"
+                        required
+                      />
+                    </Box>
+                    <div
+                      style={{ position: "absolute", left: " -5000px" }}
+                      aria-hidden="true"
+                    >
+                      <input
+                        type="text"
+                        name="b_76695f0cff963129d31cdaae6_a82d76e093"
+                        tabIndex={-1}
+                      />
+                    </div>
+                    <Box w={{base: "4rem", md: "4rem", lg: "8rem"}} css={{
+                      '.button': {
+                        width: "100% !important",
+                        fontSize: "1.375rem !important",
+                      }
+                    }}>
+                      <div className="clear">
+                        <input
+                          type="submit"
+                          value="Submit"
+                          name="Submit"
+                          id="mc-embedded-subscribe"
+                          className="button"
+                        />
+                      </div>
+                    </Box>
+                  </Flex>
+                </div>
+              </form>
+            </div>
           </Box>
         </Flex>
       </Box>

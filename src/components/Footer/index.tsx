@@ -154,22 +154,32 @@ export const Footer = observer(() => {
     {
       icon: "/images/explore/icon_twitter_n.png",
       icon_active: "/images/explore/icon_twitter_s.png",
+      blank: true,
+      href: 'https://twitter.com/iotex_io'
     },
     {
       icon: "/images/explore/icon_discord_n.png",
       icon_active: "/images/explore/icon_discord_s.png",
+      blank: true,
+      href: 'https://iotex.io/devdiscord'
     },
     {
       icon: "/images/explore/icon_youtube_n.png",
       icon_active: "/images/explore/icon_youtube_s.png",
+      blank: true,
+      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw"
     },
     {
       icon: "/images/explore/icon_reddit_n.png",
       icon_active: "/images/explore/icon_reddit_s.png",
+      blank: true,
+      href: "https://www.reddit.com/r/IoTeX/"
     },
     {
       icon: "/images/explore/icon_telegram_n.png",
       icon_active: "/images/explore/icon_telegram_s.png",
+      blank: true,
+      href: "https://t.me/iotexchannel"
     },
   ];
 
@@ -194,10 +204,10 @@ export const Footer = observer(() => {
               <Text
                 fontSize={{
                   base: "1rem",
-                  md: "1rem",
-                  lg: "0.875rem",
-                  xl: "1.125rem",
-                  "2xl": "1.25rem",
+                  md: "0.75rem",
+                  lg: "0.75rem",
+                  xl: "1rem",
+                  "2xl": "1.125rem",
                 }}
                 fontWeight="semibold"
                 color="grayColor3"
@@ -211,17 +221,20 @@ export const Footer = observer(() => {
                       <Text
                         key={option.name}
                         fontSize={{
-                          base: "1rem",
-                          md: "0.875rem",
+                          base: "0.75rem",
+                          md: "0.75rem",
                           lg: "0.75rem",
-                          xl: "1rem",
-                          "2xl": "1.125rem",
+                          xl: "0.875rem",
+                          "2xl": "1rem",
                         }}
-                        color="discord"
                         cursor="pointer"
                         mt="1rem"
-                        letterSpacing="1px"
                         fontWeight="medium"
+                        css={{
+                          '&:hover': {
+                            color: '#44FFB2'
+                          }
+                        }}
                       >
                       {option.name}
                       </Text>
@@ -232,13 +245,19 @@ export const Footer = observer(() => {
                   <Flex mt="1rem">
                     {links.map((item) => {
                       return (
-                        <Image
-                          boxSize="1.5rem"
-                          mr={{base: "0.5rem", xl: "1rem"}}
-                          key={item.icon}
-                          src={item.icon_active}
-                          cursor="pointer"
-                        ></Image>
+                        <a href={item.href} target={item.blank ? "_blank" : ""}  key={item.icon}>
+                                    <Image
+                                    boxSize="1.5rem"
+                                    mr="1rem"
+                                    src={item.icon}
+                                    cursor="pointer"
+                                    css={{
+                                      "&:hover": {
+                                        content: `url(${item.icon_active})`,
+                                      },
+                                    }}
+                                  ></Image>
+                                  </a>
                       );
                     })}
                   </Flex>
@@ -247,7 +266,7 @@ export const Footer = observer(() => {
             </Box>
           );
         })}
-        <Box maxWidth="464px" w={{base: "max-content", lg: "27%", "2xl": "max-content"}}>
+        <Box mt={{base: "5rem", lg: 0}} w={{base: "max-content", lg: "27%", "2xl": "max-content"}}>
           <div id="mc_embed_signup">
             <form
               action="https://Iotex.us6.list-manage.com/subscribe/post?u=76695f0cff963129d31cdaae6&amp;id=a82d76e093"
@@ -286,7 +305,7 @@ export const Footer = observer(() => {
                     name="EMAIL"
                     className="email"
                     id="mce-EMAIL"
-                    placeholder="email address"
+                    placeholder="Email"
                     required
                   />
                   <div

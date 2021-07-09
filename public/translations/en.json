@@ -5,7 +5,7 @@
   "developers": "Developers",
   "resources": "Resources",
   "foundation": "Foundation",
-  "title": "Connecting the \n Physical and Digital \n Worlds",
+  "title": "Building The \n Connected World",
   "subtitle": "Join us on a journey to power billions of devices and decentralized \n applications across the physical and digital world.",
   "devices": "DEVICES",
   "dapps": "DAPPS",
@@ -27,7 +27,7 @@
   "award.winning.btn": "See Our Awards",
   "title3": "A Launchpad for Blockchain \n Ideas and Projects",
   "subtitle3": "The IoTeX platform hosts an ever-growing amount of projects and products that have been developed by members of the IoTeX community",
-  "explore.ecosystem": "Explore Ecosystem",
+  "explore.ecosystem": "Explore the IoTeX Ecosystem",
   "digital.identity": "Digital Identity",
   "mining.machines": "Mining Machines",
   "real.world.oracles": "Real World Oracles",
@@ -520,7 +520,7 @@
   "overview3": "Current Total Supply",
   "overview4": "Current Circulating Supply",
   "intro.title3": "Get IOTX",
-  "intro.subtitle3": "In addition to representing fractional ownership of the IoTeX Network, IOTX has multiple uses (or “utility”) to enable trusted and transparent interactions between various stakeholders.",
+  "intro.subtitle3": "IoTeX is the premier blockchain network on the market that brings the idealistic power of blockchain to devices, Dapps, and NFTs.",
   "exchanges": "Exchanges",
   "dex": "DEX",
   "view.more.exchanges": "View more exchanges >>",
@@ -634,5 +634,7 @@
   "GET.STARTED": "GET STARTED",
   "onboarding.Pack": "Onboarding Pack",
   "What.is.IoTeX": "What is IoTeX",
-  "dive.deeper": "Dive Deeper"
+  "dive.deeper": "Dive Deeper",
+  "advanced.title": "Unlock IOTX’s  \n Potential",
+  "advanced.subtitle": "Stake, earn and airdrop with IOTX token. This page will highlight some of the ways you can benefit from the various features of IOTX.  Every device that goes live on the IoTeX network rewards you for holding IOTX. A unique token, IOTX is your guide to the expansive and ambitious world of the IoTeX platform."
 }

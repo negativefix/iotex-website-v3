@@ -19,7 +19,8 @@ import delegate from '@/assets/images/token/delegate.png'
 import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png'
 // @ts-ignore
 import staking from '@/assets/images/token/staking.png'
-export const Token = observer(() => {
+
+export const Advanced = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
@@ -66,34 +67,34 @@ export const Token = observer(() => {
     {
       name: lang.t("exchanges"),
       list: [
-        "/images/token/exchange/logo_binance_n.png",
-        "/images/token/exchange/logo_huobi_n.png",
-        "/images/token/exchange/logo_bittrex_n.png",
-        "/images/token/exchange/logo_gate_n.png",
-        "/images/token/exchange/logo_hotbit_n.png",
-        "/images/token/exchange/logo_mxc_n.png",
-        "/images/token/exchange/logo_citex_n.png",
-        "/images/token/exchange/logo_elitex_n.png",
+        {icon: "/images/token/exchange/logo_binance_n.png", href: "https://www.binance.com/it/trade/IOTX_BTC?type=spot"},
+        {icon: "/images/token/exchange/logo_huobi_n.png", href: "https://www.huobi.com/en-us/exchange/iotx_usdt"},
+        {icon: "/images/token/exchange/logo_bittrex_n.png", href: "https://global.bittrex.com/Market/Index?MarketName=BTC-IOTX"},
+        {icon: "/images/token/exchange/logo_gate_n.png", href: "https://www.gate.io/trade/IOTX_ETH"},
+        {icon: "/images/token/exchange/logo_hotbit_n.png", href: "https://www.hotbit.io/exchange?symbol=IOTX_USDT"},
+        {icon: "/images/token/exchange/logo_mxc_n.png", href: "https://www.mexc.com/exchange/IOTX_USDT"},
+        {icon: "/images/token/exchange/logo_citex_n.png", href: "https://citex.zendesk.com/hc/en-us/articles/360029942011-Announcement-on-the-Launch-of-IOTX-in-CITEX-Main-Board-Trade-Zone"},
+        {icon: "/images/token/exchange/logo_elitex_n.png", href: ""},
       ],
     },
     {
       name: lang.t("wallet"),
       list: [
-        "/images/token/wallet/logo_iopay_n.png",
-        "/images/token/wallet/logo_huobi_wallet_n.png",
-        "/images/token/wallet/logo_cobo_wallet_n.png",
-        "/images/token/wallet/logo_trust_wallet_n.png",
+        {icon: "/images/token/wallet/logo_iopay_n.png", href: "https://iopay-wallet.iotex.io/"},
+        {icon: "/images/token/wallet/logo_huobi_wallet_n.png", href: "https://www.huobiwallet.com/en/"},
+        {icon: "/images/token/wallet/logo_cobo_wallet_n.png", href: "https://cobo.com/"},
+        {icon: "/images/token/wallet/logo_trust_wallet_n.png", href: "https://trustwallet.com/"},
       ],
     },
     {
       name: lang.t("dex"),
       list: [
-        "/images/token/dex/logo_mimo_n.png",
-        "/images/token/dex/logo_sifchain_n.png",
-        "/images/token/dex/logo_pancake_swap_n.png",
-        "/images/token/dex/logo_polygon_n.png",
-        "/images/token/dex/logo_uniswap_n.png",
-        "/images/token/dex/logo_unifi_n.png",
+       {icon: "/images/token/dex/logo_mimo_n.png", href: "https://mimo.finance/"},
+       {icon: "/images/token/dex/logo_sifchain_n.png", href: "https://sifchain.finance/"},
+       {icon: "/images/token/dex/logo_pancake_swap_n.png", href: "https://pancakeswap.finance/"},
+       {icon: "/images/token/dex/logo_polygon_n.png", href: "https://polygon.technology/"},
+       {icon: "/images/token/dex/logo_uniswap_n.png", href: "https://uniswap.org/"},
+       {icon: "/images/token/dex/logo_unifi_n.png", href: "https://unifiprotocol.com/"},
       ],
     },
   ];
@@ -142,34 +143,6 @@ export const Token = observer(() => {
     },
   ];
 
-  const awards = [
-    { icon: "/images/icon-logo1.png", iocn_active: "/images/icon-logo1_s.png" },
-    { icon: "/images/icon-logo2.png", iocn_active: "/images/icon-logo2_s.png" },
-    { icon: "/images/icon-logo3.png", iocn_active: "/images/icon-logo3_s.png" },
-    { icon: "/images/icon-logo4.png", iocn_active: "/images/icon-logo4_s.png" },
-  ];
-
-  const apps = [
-    {
-      name: lang.t("app1"),
-      desc: lang.t("app1.desc"),
-      icon: "/images/dev/Solidity.png",
-      selectedIcon: "/images/card1.png",
-    },
-    {
-      name: lang.t("app2"),
-      desc: lang.t("app2.desc"),
-      icon: "/images/dev/web3js.png",
-      selectedIcon: "/images/card3.png",
-    },
-    {
-      name: lang.t("app3"),
-      desc: lang.t("app3.desc"),
-      icon: "/images/dev/sdk.png",
-      selectedIcon: "/images/card2.png",
-    },
-  ];
-
   return (
     <BasicLayout>
       <Box
@@ -205,13 +178,13 @@ export const Token = observer(() => {
           }}
         >
           <Text
-            fontSize={{
-              base: "2.25rem",
-              sm: "2.5rem",
-              lg: "2.5rem",
-              xl: "4rem",
-              "2xl": "5rem",
-            }}
+           fontSize={{
+            base: "2.25rem",
+            sm: "3rem",
+            lg: "3.5rem",
+            xl: "5.5rem",
+            "2xl": "7.5rem",
+          }}
             mb={{
               base: "1rem",
               md: "2rem",
@@ -225,7 +198,7 @@ export const Token = observer(() => {
             textAlign="center"
             whiteSpace={{ base: "inherit", md: "pre-line" }}
           >
-            {lang.t("intro.title")}
+            {lang.t("advanced.title")}
           </Text>
           <Text
             fontSize={{
@@ -249,132 +222,18 @@ export const Token = observer(() => {
             textAlign="center"
             whiteSpace={{ base: "inherit", md: "pre-line" }}
           >
-            {lang.t("intro.subtitle")}
+            {lang.t("advanced.subtitle")}
           </Text>
-          <Button
-            href="/"
-            size={{ base: "90%", md: "20%", "2xl": "20%" }}
-            name={lang.t("get.iotx")}
-          />
         </Flex>
-
-        {/* iotex overview */}
-        <Box
-          css={{
-            backgroundImage: `url(${iotexOverflowBanner})`,
-            backgroundSize: isMaxThan768 ? "50%" : "100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition:  isMaxThan768? "0 0" : "0 100%",
-          }}
-        >
-          <Flex
-            maxWidth={{ base: "90%", lg: "85%", "2xl": "1554px" }}
-            mx="auto"
-            justifyContent="space-between"
-            alignItems="flex-end"
-            flexDirection={{ base: "column", md: "row" }}
-            pb={{ base: "6rem", lg: "12rem", "2xl": "15rem" }}
-          >
-            <Box w={{ base: "100%", md: "40%", lg: "30%", "2xl": "45%" }}  mb={{base: "4rem", md: 0}}>
-              {overviews.map((item, index) => {
-                return (
-                  <Flex
-                    key={item.name}
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="flex-start"
-                    mb={{ base: "2rem", sm: "4rem" }}
-                  >
-                    <Text
-                      fontSize={{
-                        base: "1rem",
-                        lg: "1.25rem",
-                        "2xl": "1.5rem",
-                      }}
-                      letterSpacing="1.5px"
-                      mr="0.5rem"
-                      fontWeight="medium"
-                    >
-                      {item.name}
-                    </Text>
-                    <Text
-                      fontSize={{
-                        base: "1.75rem",
-                        lg: "2.75rem",
-                        "2xl": "3.75rem",
-                      }}
-                      letterSpacing="3.5px"
-                      fontWeight="medium"
-                    >
-                      {item.unit}
-                      {item.isAnimate ? (
-                        item.total
-                      ) : (
-                        <CountTo
-                          from={0}
-                          to={item.amount}
-                          speed={3000}
-                          onComplete={() => changeAnimateStatus(index)}
-                        />
-                      )}
-                    </Text>
-                  </Flex>
-                );
-              })}
-            </Box>
-            <Box
-              w={{ base: "100%", md: "48%", lg: "55%", "2xl": "43%" }}
-              mb={{ base: "2rem", sm: "4.5rem" }}
-            >
-              <Text
-                fontSize={{
-                  base: "1.8rem",
-                  sm: "1.875rem",
-                  lg: "2.5rem",
-                  xl: "3rem",
-                  "2xl": "4rem",
-                }}
-                w={{ base: "100%", md: "70%", lg: "max-content" }}
-                textAlign={{ base: "center", sm: "left" }}
-                whiteSpace={{ base: "inherit", lg: "pre-line" }}
-                fontWeight="semibold"
-                mb="3rem"
-                letterSpacing="4px"
-              >
-                {lang.t("intro.title2")}
-              </Text>
-              <Text
-                fontSize={{
-                  base: "0.875rem",
-                  md: "1rem",
-                  lg: "1.25rem",
-                  xl: "1.5rem",
-                }}
-                textAlign={{ base: "center", sm: "left" }}
-                whiteSpace={{ base: "pre-line", lg: "inherit" }}
-                mb={{ base: "2rem", lg: "4.25rem" }}
-                fontWeight="medium"
-                opacity="0.85"
-              >
-                {lang.t("intro.subtitle2")}
-              </Text>
-              <Button
-                href="/"
-                size={{ base: "100%", md: "25rem" }}
-                name={lang.t("more.token.metrics")}
-              />
-            </Box>
-          </Flex>
-        </Box>
 
         {/* Get Iotx */}
         <Box
           pb={{ base: "5rem", lg: "12rem", "2xl": "15rem" }}
           css={{
-            backgroundImage: `url("/images/token/get_iotx_banner.png")`,
-            backgroundSize: isMaxThan768 ? "50%" : "100%",
+            backgroundImage: `url("/images/token/get.iotx_bg.png")`,
+            backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: isMaxThan768 ? "100%" : "0 0",
+            backgroundPosition: "0 30%",
           }}
         >
           <Box maxWidth={{ base: "90%", lg: "85%", "2xl": "1554px" }} mx="auto">
@@ -426,14 +285,16 @@ export const Token = observer(() => {
                     <SimpleGrid columns={2} spacing={5}>
                       {item.list.map((child) => {
                         return (
-                          <Box key={child}>
-                            <img src={child} alt="" />
+                          <Box key={child.icon}>
+                           <a href={child.href} target="_blank">
+                            <img src={child.icon} alt="" />
+                           </a>
                           </Box>
                         );
                       })}
                     </SimpleGrid>
                     {index === 0 && (
-                      <a href="">
+                      <a href="https://ecosystem.iotex.io/exchanges-wallets" target="_blank">
                         <Text
                           fontWeight="medium"
                           fontSize={{ base: "", xl: "1.125rem" }}
@@ -525,7 +386,7 @@ export const Token = observer(() => {
                 {lang.t("intro.subtitle4")}
               </Text>
               <Button
-                href="/"
+                href="https://onboard.iotex.io/tokenomics/iotx-utility"
                 size={{ base: "100%", md: "80%" }}
                 name={lang.t("utility.details")}
               />
@@ -603,7 +464,7 @@ export const Token = observer(() => {
               {lang.t("intro.subtitle5")}
             </Text>
             <Button
-              href="/"
+              href="https://member.iotex.io/"
               size={{ base: "100%", md: "400px" }}
               name={lang.t("stake.earn.iotx")}
             />
@@ -630,7 +491,7 @@ export const Token = observer(() => {
                 >
                   {lang.t("voters.desc")}
                 </Text>
-                <a href="">
+                <a href="https://community.iotex.io/t/maximizing-returns-on-your-iotx/1634" target="_blank">
                   <Text color="discord" fontSize={{ base: "1rem", sm: "1.125rem", md: "1.125rem" }}>
                     {lang.t("voters.link.tip")}
                   </Text>
@@ -654,7 +515,7 @@ export const Token = observer(() => {
                 <Text fontSize={{ base: "1rem", sm: "1.125rem" }} mb="3rem">
                   {lang.t("delegates.desc")}
                 </Text>
-                <a href="">
+                <a href="https://onboard.iotex.io/hardware/delegates" target="_blank">
                   <Text color="discord" fontSize={{ base: "1rem", sm: "1.125rem" }}>
                     {lang.t("delegates.link.tip")}
                   </Text>
@@ -759,7 +620,7 @@ export const Token = observer(() => {
                 {lang.t("intro.subtitle6")}
               </Text>
               <Button
-                href="/"
+                href="https://burndrop.iotex.io/"
                 size={{ base: "100%", md: "375px" }}
                 name={lang.t("join.burn.drop")}
               />
@@ -806,7 +667,7 @@ export const Token = observer(() => {
             <Text fontSize={{ base: "0.875rem", sm: "1.125rem" }} mb="3rem" flex="1">
               {lang.t("burn.drop.new1.tips")}
             </Text>
-            <a href="">
+            <a href="https://iott.network/" target="_blank">
               <Text color="discord" fontSize={{ base: "0.875rem", sm: "1.125rem" }}>
                 {lang.t("burn.drop.new1.links")}
               </Text>
@@ -830,7 +691,7 @@ export const Token = observer(() => {
             <Text fontSize={{ base: "0.875rem", sm: "1.125rem" }} mb="3rem">
               {lang.t("burn.drop.new2.tips")}
             </Text>
-            <a href="">
+            <a href="https://onboard.iotex.io/tokenomics/burn-drop" target="_blank">
               <Text color="discord" fontSize={{ base: "0.875rem", sm: "1.125rem" }}>
                 {lang.t("burn.drop.new2.link")}
               </Text>
@@ -902,7 +763,7 @@ export const Token = observer(() => {
 
       <Center>
         <Button
-          href="/"
+          href="https://iott.network/"
           size={{ base: "80%", md: "40%", lg: "30%", "2xl": "30%" }}
           name={lang.t("explore.ioTT.network")}
         />
