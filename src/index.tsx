@@ -21,6 +21,18 @@ hotjar.initialize(2494554, 6);
 
 export const App = observer(() => {
 	const { lang } = useStore();
+  let routes = [
+    { path: '/', component: Home},
+    { path:'/developers', component: Developers},
+    { path: '/faq', component: Faq},
+    { path: '/team', component: Team},
+    { path: '/enterprise', component: Enterprise},
+    { path: '/research', component: Research},
+    { path: '/media-center', component: MediaCenter},
+    { path: '/pebble', component: Pebble},
+    { path: '/advanced', component: Advanced},
+    { path: '/investors', component: Investors},
+  ]
 	useEffect(() => {
 		lang.init();
 	}, []);
@@ -29,16 +41,11 @@ export const App = observer(() => {
       <EmailPopup />
       <Router>
         <Switch>
-          <Route path="/" onEnter={()=>{document.title='标题'}} exact component={Home} />
-          <Route path="/developers"  component={Developers} />
-	        <Route path='/faq'  component={Faq}/>
-	        <Route path='/team'  component={Team}/>
-          <Route path="/enterprise"  component={Enterprise} />
-          <Route path="/research"  component={Research} />
-          <Route path="/media-center"  component={MediaCenter} />
-          <Route path="/pebble"  component={Pebble} />
-          <Route path="/advanced"  component={Advanced} />
-          <Route path="/investors"  component={Investors} />
+          {
+            routes.map(item => {
+              return  <Route path={item.path} exact key={item.path} component={item.component} />
+            })
+          }
         </Switch>
       </Router>
     </ChakraProvider>

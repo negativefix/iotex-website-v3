@@ -2,8 +2,52 @@ import React from 'react';
 import { Box } from "@chakra-ui/react"
 import { Header } from '@/components/Header/index';
 import {globalStyle } from '../lib/globalStyle'
+import { Helmet } from "react-helmet";
 
-const BasicLayout = ({children}) => {
+const BasicLayout = ({children, name}) => {
+
+    const config = {
+      'home': {
+        title: 'IoTeX - Building the Connected World',
+        meta: 'IoTeX combines secure blockchain tech with the Internet of Things (IoT). Track and use data from connected devices. Trade on our decentralized exchange.'
+      },
+      'developers': {
+        title: 'IoTeX - The Premier Blockchain IoT Development Platform',
+        meta: 'Develop on IoTeX. Push IoT data to Solidity-based smart contracts, tokenize real-world objects, facts, events. Code dapps with TPS, 5 sec blocks + dev tools.'
+      },
+      'faq': { 
+        title: 'IoTeX FAQ',
+        meta: ''
+      },
+      'team': { 
+        title: '',
+        meta: ''
+      },
+      'enterprise': { 
+        title: 'IoTeX - BlockchainSolution  for IoT Business and Enterprise ',
+        meta: 'IoTeX: a trusted IoT blockchain platform for your business data. Active member: industry standards orgs to define and implement confidential computing '
+      },
+      'research': { 
+        title: '',
+        meta: ''
+      },
+      'media-center': { 
+        title: '',
+        meta: ''
+      },
+      'pebble': { 
+        title: 'IoTeX - Take Control of Your Data with Pebble',
+        meta: 'Pebble is a blockchain based tracking device. Send and track trusted data from the real-world to the Iotex blockchain where the data’s value can be realized.'
+      },
+      'advanced': { 
+        title: '',
+        meta: ''
+      },
+      'investors': { 
+        title: 'IOTX - Cryptocurrency Powering the Future',
+        meta: 'IOTX is the native cryptocurrency of IoTeX. Use IOTX to buy, trade, stake, and contribute to the IoTeX connected world. Learn more...'
+      },
+    }
     globalStyle()
     return (
     <Box bg="bgColor" css={{
@@ -13,6 +57,10 @@ const BasicLayout = ({children}) => {
         height: 1
       }
     }}>
+        <Helmet>
+          <title>{config[name].title}</title>
+          <meta name="description" content={config[name].meta} />
+        </Helmet>
         <Header />
         {children}
     </Box>

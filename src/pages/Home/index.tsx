@@ -40,7 +40,7 @@ export const Home = observer(() => {
   }));
 
   return (
-    <BasicLayout>
+    <BasicLayout name="home">
       <Box
         css={{
           backgroundImage:

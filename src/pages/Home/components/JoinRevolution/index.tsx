@@ -80,7 +80,6 @@ export const JoinRevolution = observer(() => {
   return (
     <Box
       mt={{ base: "10rem", lg: "15rem" }}
-      pb={{ base: "4rem", lg: "10rem" }}
       css={{
         backgroundImage: `url(/images/join_bg2.png)`,
         backgroundSize: "60%",

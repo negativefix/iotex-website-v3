@@ -20,7 +20,7 @@ export const Research = observer(() => {
 	const {lang} = useStore();
 
 	return (
-		<BasicLayout>
+		<BasicLayout name="research">
 			<Image
 				css={{
 					position: 'absolute',

@@ -10,13 +10,13 @@ export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
 
   const configs =   [
-    {name: lang.t("advantage1"), desc: lang.t("deploy.contract"), icon: '/images/build1.png', href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts" },
-    {name: lang.t("advantage2"), desc: lang.t("deploy.contract"), icon: '/images/build2.png', href: "https://tube.iotex.io/" },
-    {name: lang.t("advantage3"), desc: lang.t("deploy.contract"), icon: '/images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
-    {name: lang.t("advantage4"), desc: lang.t("deploy.contract"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
+    {name: lang.t("advantage1"), desc: lang.t("build.item1.tips"), icon: '/images/build1.png', href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts" },
+    {name: lang.t("advantage2"), desc: lang.t("build.item2.tips"), icon: '/images/build2.png', href: "https://tube.iotex.io/" },
+    {name: lang.t("build.item3"), desc: lang.t("build.item3.tips"), icon: '/images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
+    {name: lang.t("build.item4"), desc: lang.t("build.item4.tips"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
   ]
     return (
-      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "10rem", xl: "15rem", "2xl": "20rem"}} css={{
+      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "10rem"}} css={{
         backgroundImage: `url(${bulrBall})`,
         backgroundSize: '70%',
         backgroundRepeat: 'no-repeat',
