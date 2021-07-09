@@ -266,42 +266,42 @@ const Pebble = () => {
 			</SectionContainer>
 
 			{/*part 8*/}
-			<Flex
-				backgroundImage={`url(${pebbleSectionSixBg})`}
-				minHeight={'34.125rem'}
-				mx={"auto"}
-				justifyContent={'center'}
-				flexDirection={'column'}
-				mt={40}
-				position={'relative'}
-				overflow={"hidden"}
-			>
-				<video
-					style={{
-						position: "absolute",
-						top: 0,
-						right: 0,
-						left: 0,
-						bottom: 0,
-						width: "100%",
-						objectFit: "cover",
-					}}
-					src="/video/thingsboard.mp4"
-					loop={true}
-					autoPlay={true}
-					muted
-				/>
-				<SectionContainer position={'relative'}>
-					<Title text={lang.t('pebble.section6.title')}/>
-					<Text
-						mt={10}
-						textAlign={'center'}
-						fontSize={{base: '0.75rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}
-					>
-						{lang.t('pebble.section6.caption')}
-					</Text>
-				</SectionContainer>
-			</Flex>
+			{/*<Flex*/}
+			{/*	backgroundImage={`url(${pebbleSectionSixBg})`}*/}
+			{/*	minHeight={'34.125rem'}*/}
+			{/*	mx={"auto"}*/}
+			{/*	justifyContent={'center'}*/}
+			{/*	flexDirection={'column'}*/}
+			{/*	mt={40}*/}
+			{/*	position={'relative'}*/}
+			{/*	overflow={"hidden"}*/}
+			{/*>*/}
+			{/*	<video*/}
+			{/*		style={{*/}
+			{/*			position: "absolute",*/}
+			{/*			top: 0,*/}
+			{/*			right: 0,*/}
+			{/*			left: 0,*/}
+			{/*			bottom: 0,*/}
+			{/*			width: "100%",*/}
+			{/*			objectFit: "cover",*/}
+			{/*		}}*/}
+			{/*		src="/video/thingsboard.mp4"*/}
+			{/*		loop={true}*/}
+			{/*		autoPlay={true}*/}
+			{/*		muted*/}
+			{/*	/>*/}
+			{/*	<SectionContainer position={'relative'}>*/}
+			{/*		<Title text={lang.t('pebble.section6.title')}/>*/}
+			{/*		<Text*/}
+			{/*			mt={10}*/}
+			{/*			textAlign={'center'}*/}
+			{/*			fontSize={{base: '0.75rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}*/}
+			{/*		>*/}
+			{/*			{lang.t('pebble.section6.caption')}*/}
+			{/*		</Text>*/}
+			{/*	</SectionContainer>*/}
+			{/*</Flex>*/}
 			<Form/>
 			<Footer/>
 		</BasicLayout>
