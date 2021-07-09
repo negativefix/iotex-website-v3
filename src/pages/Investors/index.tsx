@@ -132,7 +132,7 @@ export const Investors = observer(() => {
   ];
 
   return (
-    <BasicLayout>
+    <BasicLayout name="investors">
       <Box
         css={{
           backgroundImage: `url(/images/investors/banner.png)`,
@@ -708,6 +708,7 @@ export const Investors = observer(() => {
             {roles.map((item) => {
               return (
                 <Flex
+                key={item.name}
                   flexDirection="column"
                   w={{ base: "90%", sm: "50%", md: "28%", "2xl": "25%" }}
                   mx="auto"

@@ -128,7 +128,7 @@
   "go.cross.chain": "Go Cross-Chain",
   "go.cross.chain.desc": "Convert crypto-assets two-way between IoTeX, Ethereum, BSC, and more",
   "trad.assets": "Trade your assets",
-  "trad.assets.desc": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "trad.assets.desc": "You can trade on centralized and decentralized exchanges.",
   "mine.tracker": "Mine w/Pebble Tracker",
   "mine.tracker.desc": "Contribute and become a shareholder in the first community-owned datasets and models.",
   "dev.title5": "A Launchpad for Next-Gen \n Decentralized Projects.",
@@ -636,5 +636,13 @@
   "What.is.IoTeX": "What is IoTeX",
   "dive.deeper": "Dive Deeper",
   "advanced.title": "Unlock IOTX’s  \n Potential",
-  "advanced.subtitle": "Stake, earn and airdrop with IOTX token. This page will highlight some of the ways you can benefit from the various features of IOTX.  Every device that goes live on the IoTeX network rewards you for holding IOTX. A unique token, IOTX is your guide to the expansive and ambitious world of the IoTeX platform."
+  "advanced.subtitle": "Stake, earn and airdrop with IOTX token. This page will highlight some of the ways you can benefit from the various features of IOTX.  Every device that goes live on the IoTeX network rewards you for holding IOTX. A unique token, IOTX is your guide to the expansive and ambitious world of the IoTeX platform.",
+  "emailpopup.tips": "Get the latest IoTex updates by joining our mailing list!",
+  "join.mailing.list": "Join Mailing List",
+  "build.item1.tips": "Launch your dApp/token >>",
+  "build.item2.tips": "Build decentralized bridge >>",
+  "build.item3": "Roll-DPoS",
+  "build.item3.tips": "Become a delegate >>",
+  "build.item4": "Robust API",
+  "build.item4.tips": "Integrate with IoTeX >>"
 }

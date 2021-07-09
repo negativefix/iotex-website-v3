@@ -27,7 +27,7 @@ const Faq = () => {
 	const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
 
 	return (
-		<BasicLayout>
+		<BasicLayout name="faq">
 			<Container
 				backgroundSize={{
 					base: '385px 550px',

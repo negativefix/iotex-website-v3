@@ -36,7 +36,7 @@ const Pebble = () => {
 		{icon: 'INDUSTRIAL_PROCESSES.png', text: lang.t('process_automation')},
 	]
 	return (
-		<BasicLayout>
+		<BasicLayout name="pebble">
 			{/*part 1*/}
 			<Flex
 				backgroundImage={`url(${imgPebble})`}

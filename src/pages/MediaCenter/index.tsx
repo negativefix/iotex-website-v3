@@ -23,7 +23,7 @@ const MediaCenter = () => {
 	// 	tabIndex: Tab.NEWS
 	// }))
 	return (
-		<BasicLayout>
+		<BasicLayout name="media-center">
 			<Image src={bg1} position={'absolute'} width={'100%'}/>
 			<SectionContainer marginTop={{base:'10rem',md:'11rem',lg:'13rem'}}>
 				<Title text={'Media Center'} textAlign={'center'}/>

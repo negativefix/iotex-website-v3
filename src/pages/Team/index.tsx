@@ -363,7 +363,7 @@ export const Team = observer(() => {
   ]
 
   return (
-    <BasicLayout>
+    <BasicLayout name="team">
       <Box css={{
         backgroundImage: `url(${Banner})`,
         backgroundSize: "100%",

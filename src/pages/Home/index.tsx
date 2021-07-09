@@ -39,18 +39,18 @@ export const Home = observer(() => {
 		},
 	}));
 
-	return (
-		<BasicLayout>
-			<Box
-				css={{
-					backgroundImage:
-						"url(/images/banner_left_bg.png),url(/images/banner_r_bg.png) ",
-					backgroundSize: "100%, 100%",
-					backgroundRepeat: "no-repeat",
-					backgroundPosition: "0 0, 100% 0",
-				}}
-			>
-				<Banner/>
+  return (
+    <BasicLayout name="home">
+      <Box
+        css={{
+          backgroundImage:
+            "url(/images/banner_left_bg.png),url(/images/banner_r_bg.png) ",
+          backgroundSize: "100%, 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0 0, 100% 0",
+        }}
+      >
+        <Banner />
 
 				{/*  Devices */}
 				<Flex

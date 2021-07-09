@@ -246,7 +246,7 @@ export const Header = observer(() => {
           flex="1"
           alignItems="center"
           justifyContent="flex-end"
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "none", lg: "flex" }}
         >
           <Flex>
             <Box
@@ -552,7 +552,7 @@ export const Header = observer(() => {
           </Menu>
         </Flex>
         <Box
-          display={{ base: "block", md: "none" }}
+          display={{ base: "block", lg: "none" }}
           position="relative"
           css={{
             ".menusMobile": {

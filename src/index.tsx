@@ -14,26 +14,38 @@ import Faq from "./pages/Faq/Faq";
 import { Research } from './pages/Research'
 import MediaCenter from "./pages/MediaCenter";
 import Pebble from "./pages/Pebble";
+import { EmailPopup } from './components/EmailPopup'
+import { hotjar } from 'react-hotjar';
+
+hotjar.initialize(2494554, 6);
 
 export const App = observer(() => {
 	const { lang } = useStore();
+  let routes = [
+    { path: '/', component: Home},
+    { path:'/developers', component: Developers},
+    { path: '/faq', component: Faq},
+    { path: '/team', component: Team},
+    { path: '/enterprise', component: Enterprise},
+    { path: '/research', component: Research},
+    { path: '/media-center', component: MediaCenter},
+    { path: '/pebble', component: Pebble},
+    { path: '/advanced', component: Advanced},
+    { path: '/investors', component: Investors},
+  ]
 	useEffect(() => {
 		lang.init();
 	}, []);
 	return (
     <ChakraProvider theme={customTheme}>
+      <EmailPopup />
       <Router>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/developers" exact component={Developers} />
-	        <Route path='/faq' exact component={Faq}/>
-	        <Route path='/team' exact component={Team}/>
-          <Route path="/enterprise" exact component={Enterprise} />
-          <Route path="/research" exact component={Research} />
-          <Route path="/media-center" exact component={MediaCenter} />
-          <Route path="/pebble" exact component={Pebble} />
-          <Route path="/advanced" exact component={Advanced} />
-          <Route path="/investors" exact component={Investors} />
+          {
+            routes.map(item => {
+              return  <Route path={item.path} exact key={item.path} component={item.component} />
+            })
+          }
         </Switch>
       </Router>
     </ChakraProvider>

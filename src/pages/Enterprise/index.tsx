@@ -48,7 +48,7 @@ const Enterprise = () => {
 	]
 
 	return (
-		<BasicLayout>
+		<BasicLayout name="enterprise">
 			<Box
 				backgroundImage={'url(images/enterprise/form_bg.png)'}
 				backgroundPosition={{base: 'right bottom 80rem', md: 'right 5rem bottom 15rem'}}

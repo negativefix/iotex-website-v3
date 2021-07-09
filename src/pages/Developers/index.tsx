@@ -65,7 +65,7 @@ export const Developers = observer(() => {
       title: lang.t("intergrate.iot.devices"),
       icon: "/images/dev/iot.png",
       desc: lang.t("intergrate.iot.devices.desc"),
-      href: ""
+      href: "https://docs.iotex.io/"
     },
     {
       title: lang.t("go.cross.chain"),
@@ -155,7 +155,7 @@ export const Developers = observer(() => {
       desc: lang.t("app2.desc"),
       icon: "/images/dev/web3js.png",
       selectedIcon: "/images/card3.png",
-      href: "https://docs.iotex.io/software-tools/ethereum-tools"
+      href: "https://docs.iotex.io/get-started/ethereum-tools/ethereum-copmpatibility"
     },
     {
       name: lang.t("app3"),
@@ -167,7 +167,7 @@ export const Developers = observer(() => {
   ];
 
   return (
-    <BasicLayout>
+    <BasicLayout name="developers">
       <Box
         css={{
           backgroundImage: `url(${
@@ -199,7 +199,7 @@ export const Developers = observer(() => {
                 {lang.t("dev.achieve.title")}
               </Text>
               <Image
-                boxSize="14rem"
+                boxSize={{base: "8rem", lg: "14rem"}}
                 objectFit="cover"
                 src="/images/dev_ball.png"
                 alt="img_circular3"
@@ -208,7 +208,7 @@ export const Developers = observer(() => {
                 mb="10%"
               />
             </Box>
-            <Box w={{ base: "100%", md: "40%", xl: "43%", "2xl": "40%" }}>
+            <Box w={{ base: "100%", md: "40%", xl: "42%", "2xl": "40%" }}>
               {achieve.map((item) => {
                 return (
                   <Flex
@@ -219,7 +219,7 @@ export const Developers = observer(() => {
                     mb="4.375rem"
                   >
                     <Image
-                      boxSize={{base: "4rem", md: "6.5rem"}}
+                      boxSize={{base: "3rem", md: "4rem"}}
                       objectFit="cover"
                       src={item.icon}
                       alt={item.desc}
@@ -229,10 +229,11 @@ export const Developers = observer(() => {
                       <Text
                         fontSize={{
                           base: "1rem",
-                          lg: "1.5rem",
+                          lg: "1.25rem",
                           xl: "1.5rem",
                           "2xl": "2rem",
                         }}
+                        w={{base: "90%", md: "80%", lg: "68%", "2xl": "72%"}}
                         fontWeight="semibold"
                         mr="1rem"
                       >
@@ -384,7 +385,7 @@ export const Developers = observer(() => {
               {lang.t("dev.subtitle8")}
             </Text>
             <Button
-              href="/https://docs.iotex.io/"
+              href="https://docs.iotex.io/"
               size={{ base: "100%", md: "16rem" }}
               name={lang.t("get.started")}
             />
@@ -750,7 +751,9 @@ export const Developers = observer(() => {
                       "2xl": "11.625rem",
                     }}
                   >
-                    <LogoCardItem item={item} width="100%" height="100%" />
+                    <a href={item.href} target="_blank">
+                      <LogoCardItem item={item} width="100%" height="100%" />
+                    </a>
                   </Box>
                 );
               })}
@@ -778,7 +781,6 @@ export const Developers = observer(() => {
 
       {/* discord */}
       <Box
-        pb={{ base: "10rem", md: "20rem" }}
         mt={{ base: "8rem", md: "15rem" }}
         id="joinCommunity"
       >

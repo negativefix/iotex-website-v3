@@ -144,7 +144,7 @@ export const Advanced = observer(() => {
   ];
 
   return (
-    <BasicLayout>
+    <BasicLayout name="advanced">
       <Box
         css={{
           backgroundImage: `url(${
