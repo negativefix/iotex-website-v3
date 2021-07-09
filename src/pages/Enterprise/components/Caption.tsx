@@ -10,7 +10,7 @@ const Caption=({text,...props}:CaptionProps)=>{
 		<Text
 			color={'#CCCCCC'}
 			fontWeight={'500'}
-			fontSize={'20px'}
+			fontSize={'1.25rem'}
 			{...props}
 		>
 			{text}

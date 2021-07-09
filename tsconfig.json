@@ -22,7 +22,8 @@
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"],
       "@/lib/*": ["lib/*"],
-      "@/assets/*": ["assets/*"]
+      "@/assets/*": ["assets/*"],
+      "@/pages/*": ["pages/*"]
     }
   },
   "include": ["src", "cypress", "theme.ts"]

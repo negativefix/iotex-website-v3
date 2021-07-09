@@ -21,68 +21,84 @@ const Form=()=>{
 		<Box
 			id='form1'
 			maxWidth={{base: '98%', md: '80%', lg: '90%', '2xl': '1554px'}}
+			position={'relative'}
 			mx="auto"
-			borderRadius="1.125rem"
-			padding={{
-				base: '20px',
-				md: '40px',
-				lg:'80px'
-			}}
+			px={{base:5,md:24}}
+			py={{base:10,md:20}}
 			marginTop={{
 				base: '5rem',
 				md: '10rem'
 			}}
+			borderRadius="1.125rem"
 			css={{
-				background: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+				background:
+					"linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%)",
 				boxShadow: "inset -1px -1px 0px rgba(172, 208, 254, 0.25)",
 				backdropFilter: "blur(100px)",
 			}}
 		>
+			<Box>
+
+			</Box>
 			<Heading fontSize={'2.25rem'} textAlign={'center'}>{lang.t('pebble.section7.title')}</Heading>
-			<Text marginTop={'16px'} fontSize={'1.12rem'} textAlign={'center'}>{lang.t('enterprise.form.subtitle')}</Text>
+			<Text mt={4} fontSize={'1.12rem'} textAlign={'center'}>{lang.t('enterprise.form.subtitle')}</Text>
 			<Flex flexDirection={'column'} marginTop={'4.4rem'}>
 
-				<Flex justifyContent={'space-between'}>
-					<Box width={'45%'}>
+				<Flex justifyContent={'space-between'} flexDirection={{base:'column',md:'column',lg:'row'}}>
+					<Box width={{base:'100%',md:'100%',lg:'49%'}}>
 						<FormControl
 							isInvalid={errors['name']}
 							isRequired
 						>
 							<Input
+								borderRadius={'9.6px'}
+								border={'1px solid'}
+								minHeight={'4.5rem'}
+								background={'rgba(255, 255, 255, 0.1)'}
 								_placeholder={{color: 'white', fontWeight: 'semibold'}}
 								placeholder={lang.t("your.name")}
 								size="lg"
 								value={name}
-								onChange={(e) => setName(e.target.value)}/>
+								onChange={(e) => setName(e.target.value)}
+								borderColor="rgba(255, 255, 255, 0.2)"
+							/>
 							<FormErrorMessage>{'required'}</FormErrorMessage>
 						</FormControl>
 					</Box>
-					<Box width={'45%'}>
+					<Box width={{base:'100%',md:'100%',lg:'49%'}} mt={{base:5,md:5,lg:0}}>
 						<FormControl
 							isInvalid={errors['email']}
 							isRequired
 						>
 							<Input
+								borderColor="rgba(255, 255, 255, 0.2)"
+								borderRadius={'9.6px'}
+								border={'1px solid '}
+								minHeight={'4.5rem'}
+								background={'rgba(255, 255, 255, 0.1)'}
+								_placeholder={{color: 'white', fontWeight: 'semibold'}}
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
-								_placeholder={{color: 'white', fontWeight: 'semibold'}}
 								placeholder={lang.t("email")}
 								size="lg"/>
 							<FormErrorMessage>{'required'}</FormErrorMessage>
 						</FormControl>
 					</Box>
 				</Flex>
-				<Box marginTop={'1rem'}>
+				<Box mt={5}>
 					<FormControl
 						isInvalid={errors['interest']}
 						isRequired
 					>
 						<Textarea
+							background={'rgba(255, 255, 255, 0.1)'}
+							borderColor="rgba(255, 255, 255, 0.2)"
+							borderRadius={'9.6px'}
+							border={'1px solid'}
 							value={interest}
 							onChange={(e) => setInterest(e.target.value)}
 							rows={10}
-							borderRadius={'5px'}
-							padding={'15px'}
+							padding={'1rem'}
 							size={'large'}
 							resize={'none'}
 							_placeholder={{color: 'white', fontWeight: 'semibold'}}

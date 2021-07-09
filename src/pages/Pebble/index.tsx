@@ -40,130 +40,131 @@ const Pebble = () => {
 			{/*part 1*/}
 			<Flex
 				backgroundImage={`url(${imgPebble})`}
-				marginTop='10rem'
+				marginTop='8rem'
 				justifyContent='center'
 				backgroundRepeat='no-repeat'
-				minHeight={{base: '1000px', md: '1100px', xl: '1100px'}}
 				backgroundPosition={{
-					base: 'bottom 0px right 0px',
-					md: 'bottom 0px right -230px',
-					xl: 'bottom -90px right -180px',
+					base:'right top 25rem',
+					md:'right top 40rem',
+					lg:'right top 15rem'
 				}}
-				backgroundSize={'90%'}
+				backgroundSize={{base:'100%',md:'100%',lg:'85%'}}
 			>
 				<SectionContainer>
-					<Flex flexDirection={{base: 'column', md: 'row'}}>
-						<Box paddingTop={{base: '0', md: '4rem'}} maxWidth={'900px'} width={'70%'}>
-							<Text
-								fontSize={{base: '1.75rem', sm: '1.75rem', lg: '1.75rem', xl: '3rem', '2xl': '3rem'}}
-								fontWeight={'semibold'}>{lang.t('pebble')}
-							</Text>
-							<Title text={lang.t('pebble.title')} maxWidth='900px' fontWeight={'700'} textAlign={'left'}/>
-							<Caption text={lang.t('pebble.caption')} marginTop={'24px'}/>
-							<Box marginTop={'64px'}>
-								<Button name={lang.t('buy_on_crowdsupply')}
-								        href='https://www.crowdsupply.com/iotex/pebble-tracker'
-								        size={{base: "100%", md: '70%', xl: "70%", "2xl": "40%"}}
-								/>
-							</Box>
+					<Flex flexDirection={{base: 'column',md:'column' ,lg: 'row'}} justifyContent={"space-between"}>
+						<Box paddingTop={{base: '0', md: '4rem'}} >
+							<Title text={lang.t('pebble.title')}  fontWeight={'600'}  textAlign={'left'} mt={5} fontSize={{base:'2rem',md:'4rem',lg:'5rem'}}/>
+							<Caption w={{base:'auto',lg:'43rem'}} text={lang.t('pebble.caption')} mt={6}/>
 						</Box>
-						<Flex justifyContent={{base: 'center', md: 'flex-end'}} marginTop={{base: '5rem', md: '0rem'}}
-						      width={'800px'}>
-							<Image src={pebbleOne} width={{base: '50%', md: '60%', xl: '70%'}}/>
+						<Flex justifyContent={'flex-end'}>
+							<Image src={pebbleOne} width={{base:'40%',md:'40%',lg:'80%'}}/>
 						</Flex>
 					</Flex>
-				</SectionContainer>
-			</Flex>
-
-			{/*	part 2*/}
-			<Box marginTop={{md: '-15rem'}}>
-				<SectionContainer>
-					<Flex justifyContent={'center'} mx={"auto"}>
-						<Flex direction={{base: 'column-reverse', md: 'row', sm: 'column-reverse'}} minHeight={'900px'}
+					<Flex mx={"auto"} mt={20}>
+						<Flex direction={{base: 'column-reverse',md:'column-reverse' ,lg: 'row'}}
 						      justifyContent={'space-between'}
 						      width={'100%'}>
-							<SimpleGrid columns={[1, 1, 1, 2]} spacing='16px' width={{base:'100%',md:'40%'}}>
-								<Flex flexDirection={'column'} justifyContent={'space-evenly'} mx={'auto'} width={'100%'}>
+							<SimpleGrid columns={[1, 1, 2, 2]} width={{base:'100%',md:'100%',lg:'36%',xl:'40%'}} mt={{md:10}}>
+								<Flex flexDirection={'column'} justifyContent={'center'} mx={'auto'} width={'100%'}>
 									<Card url='images/pebble/icon_location.png' text='LOCATION'/>
-									<Card url='images/pebble/icon_temperature.png' text='CLIMATE'/>
+									<Card url='images/pebble/icon_temperature.png' text='CLIMATE' marginTop={'1rem'}/>
 								</Flex>
-								<Flex flexDirection={'column'} justifyContent={'space-evenly'} mx={'auto'} width={'100%'}>
+								<Flex flexDirection={'column'} justifyContent={'space-around'} mx={'auto'} width={'100%'}>
 									<Card url='images/pebble/icon_vibration.png' text='MOTION'/>
-									<Card url='images/pebble/icon_sunlight.png' text='LIGHT'/>
-									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT'/>
+									<Card url='images/pebble/icon_sunlight.png' text='LIGHT' marginTop={'1rem'}/>
+									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT' marginTop={'1rem'}/>
 								</Flex>
 							</SimpleGrid>
-							<Flex maxWidth={{xl: '700px', md: '500px'}} flexDirection={'column'} justifyContent={'center'}>
+							<Flex width={{base:'100%',md:'100%',lg:'49%'}} flexDirection={'column'} justifyContent={'center'}>
 								<Title text={lang.t('pebble.section1.title')} textAlign={'left'}/>
 								<Caption text={lang.t('pebble.section1.caption')}/>
 							</Flex>
 						</Flex>
 					</Flex>
 				</SectionContainer>
-			</Box>
+			</Flex>
+
 
 			{/*part 3*/}
 
-			<SectionContainer marginTop={'15rem'} position={'relative'}>
-				<Image src={apertureBlue} position={'absolute'} top={'-50px'} width={'80%'} height={'80%'}/>
-				<Flex justifyContent={'center'}
-				      flexDirection={'column'}>
-					<Title text={lang.t("pebble.section2.title")}/>
-					<Flex justifyContent={'center'} alignItems={'flex-start'}>
-						<video
-							style={{
-								width: "75%",
-								objectFit: "cover",
-								marginTop: '80px'
-							}}
-							src="/video/pebble_ani.mp4"
-							loop={true}
-							autoPlay={true}
-							muted
-						/>
-					</Flex>
-				</Flex>
-			</SectionContainer>
+			{/*<SectionContainer marginTop={'15rem'} position={'relative'}>*/}
+			{/*	<Image src={apertureBlue} position={'absolute'} top={'-50px'} width={'80%'} height={'80%'}/>*/}
+			{/*	<Flex justifyContent={'center'}*/}
+			{/*	      flexDirection={'column'}>*/}
+			{/*		<Title text={lang.t("pebble.section2.title")}/>*/}
+			{/*		<Flex justifyContent={'center'} alignItems={'flex-start'}>*/}
+			{/*			<video*/}
+			{/*				style={{*/}
+			{/*					width: "75%",*/}
+			{/*					objectFit: "cover",*/}
+			{/*					marginTop: '80px'*/}
+			{/*				}}*/}
+			{/*				src="/video/pebble_ani.mp4"*/}
+			{/*				loop={true}*/}
+			{/*				autoPlay={true}*/}
+			{/*				muted*/}
+			{/*			/>*/}
+			{/*		</Flex>*/}
+			{/*	</Flex>*/}
+			{/*</SectionContainer>*/}
 
 			{/*	part 4*/}
 			<Box
-				overflow={'hidden'}
-				padding={'63px 0 132px 0'}
-				marginTop={{base: '5rem', md: '15rem'}}
-				position={'relative'}
+				mt={{base:10,md:10,lg:0}}
+				display={{base:'block',md:'block',lg:'none'}}
 			>
 				<video
-					style={{
-						position: "absolute",
-						top: 0,
-						right: 0,
-						left: 0,
-						bottom: 0,
-						width: "100%",
-						objectFit: "cover",
-					}}
 					src="/video/pebble_iot.mp4"
 					loop={true}
 					autoPlay={true}
 					muted
+					style={{
+						width: "100%",
+					}}
 				/>
+			</Box>
+			<Box
+				overflow={'hidden'}
+				py={{base:5,md:5,lg:28}}
+				marginTop={{base: '5rem', md: '5rem',lg:'15rem'}}
+				position={'relative'}
+			>
+				<Box
+					display={{base:'none',md:'none',lg:'block'}}
+				>
+					<video
+						style={{
+							position: "absolute",
+							top: 0,
+							right: 0,
+							left: 0,
+							bottom: 0,
+							width: "100%",
+							objectFit: "cover",
+						}}
+						src="/video/pebble_iot.mp4"
+						loop={true}
+						autoPlay={true}
+						muted
+					/>
+				</Box>
 				<SectionContainer position={'relative'}>
 					<Flex
-						direction={{base: 'column', md: 'row'}}
+						direction={{base: 'column',md:'column', lg: 'row'}}
 						justifyContent={'space-between'}
 					>
-						<Box maxWidth={'700px'} width={'60%'}>
-							<Title text={lang.t('title')} fontWeight={'600'}/>
-							<Caption text={lang.t("dev.subtitle4")} marginTop={'24px'} lineHeight={'48px'}/>
+						<Box  width={{base:'100%',md:'100%',lg:'55%'}}>
+							<Title text={lang.t('title')} fontWeight={'600'} textAlign={'left'}/>
+							<Caption text={lang.t("dev.subtitle4")} mt={10} lineHeight={'3rem'}/>
 						</Box>
-						<SimpleGrid columns={[1, 2]} spacingX={'20px'} spacingY={'40px'}>
+						<SimpleGrid columns={[1, 2]} spacingX={'1.25rem'} spacingY={'2.5rem'} mt={{base:10}}>
 							{
 								PART_4_ICON_TEXT.map((item) => {
 									return (
 										<Flex flexDirection={'column'} justifyContent={'center'} alignItems={'center'} key={item.icon}>
-											<img src={`images/pebble/${item.icon}`} alt={item.text} width={'48px'}
-											     height={'48px'}/>
-											<Text marginTop={'1rem'}>{item.text}</Text>
+											<Image src={`images/pebble/${item.icon}`} alt={item.text} width={'3rem'}
+											     height={'3rem'}/>
+											<Text marginTop={'1rem'} fontWeight={"semibold"}>{item.text}</Text>
 										</Flex>
 									)
 								})
@@ -175,35 +176,34 @@ const Pebble = () => {
 
 			{/*part5*/}
 			<Box
-				marginTop={'180px'}
-				minHeight={'1150px'}
+				marginTop={'11.25rem'}
+				pb={{base:'15rem',lg:'22rem'}}
 				backgroundImage={`url(${imgPebbleRight})`}
 				backgroundRepeat={'no-repeat'}
 				backgroundSize={'80%'}
 				backgroundPosition={'bottom 0 left 0px'}
 			>
 				<SectionContainer>
-					<SimpleGrid columns={[1, 2]}>
-						<Box>
+					<SimpleGrid columns={[1,1,1,2]}>
+						<Box mx={{md:"auto",xl:'unset'}}>
 							<Flex
 								background={'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)'}
 								boxShadow={'inset -1px -1px 0px rgba(255, 255, 255, 0.25)'}
-								width={{base: '100%', lg: '450px', xl: '556px'}}
-								height={{lg: '375px', xl: '453px'}}
+								width={{base: '100%',md:'30rem' ,lg: '23rem', xl: '30.75rem'}}
+								height={{base:'20rem',md:'20rem',lg: '20rem', xl: '28.3rem'}}
 								flexDirection={'column'}
 								justifyContent={'space-around'}
 								alignItems={'center'}
-								borderRadius={'20px'}
+								borderRadius={'1.25rem'}
 							>
-								<Image src="images/pebble/Nordic_Semiconductor.png" alt="Nordic_Semiconductor" width={'310px'}
-								       height={'90.73px'}/>
-								<Image src="images/pebble/IoTeX_logo.png" alt="IoTeX_logo" width={'310px'} height={'90.73px'}/>
+								<Image src="images/pebble/Nordic_Semiconductor.png" alt="Nordic_Semiconductor" />
+								<Image src="images/pebble/IoTeX_logo.png" alt="IoTeX_logo"  />
 							</Flex>
 						</Box>
-						<Box marginTop={{base: '5rem', sm: '0', md: '0'}}>
-							<Title text={lang.t('pebble.section3.title')}/>
-							<Caption text={lang.t('pebble.section3.caption')} marginTop={'24px'}/>
-							<Box marginTop={'64px'}>
+						<Box marginTop={{base: '5rem', md: '5rem',lg:'0'}}>
+							<Title text={lang.t('pebble.section3.title')} textAlign={'left'}/>
+							<Caption text={lang.t('pebble.section3.caption')} mt={10}/>
+							<Box mt={20}>
 								<Button name={lang.t('buy_on_crowdsupply')} href={'https://www.crowdsupply.com/iotex/pebble-tracker'}
 								        size={{base: "100%", xl: "60%", "2xl": "60%"}}/>
 							</Box>
@@ -215,16 +215,16 @@ const Pebble = () => {
 			{/*part6*/}
 
 			<SectionContainer position={'relative'}>
-				<Image src={apertureBg} position={'absolute'} bottom={'-15rem'} right={'0px'} width={'90%'} height={'60%'}/>
+				<Image src={apertureBg} position={'absolute'} bottom={'-15rem'} right={'0'} width={'90%'} height={'60%'}/>
 				<Flex flexDirection={'column'} alignItems={'center'}>
-					<Title text={lang.t('pebble.section4.title')} maxWidth={'800px'} textAlign={'center'}/>
-					<Caption text={lang.t('pebble.section4.caption')} maxWidth={'1200px'} textAlign={'center'}
-					         marginTop={'24px'}/>
-					<img src={pebbleSection4Bg} alt="pebble_section4_bg" style={{marginTop: '109px'}}/>
+					<Title text={lang.t('pebble.section4.title')}  textAlign={'center'}/>
+					<Caption text={lang.t('pebble.section4.caption')}  textAlign={'center'}
+					         mt={5}/>
+					<Image src={pebbleSection4Bg} alt="pebble_section4_bg" mt={12}/>
 					<SimpleGrid
 						columns={[1, 2, 2, 4]}
 						spacing={16}
-						marginTop={'88px'}
+						mt={24}
 						padding={'0 5rem'}
 					>
 						<Box>
@@ -252,12 +252,12 @@ const Pebble = () => {
 						<img src="images/pebble/pebble_section5_bg.png" alt="pebble_section5_bg"
 						/>
 					</Box>
-					<Flex maxWidth={'766px'} flexDirection={'column'} justifyContent={"center"}>
+					<Flex  flexDirection={'column'} justifyContent={"center"}>
 						<Title text={lang.t('pebble.section5.title')} textAlign={'left'}/>
-						<Text marginTop={'24px'}>{lang.t('pebble.section5.caption')}</Text>
-						<Box marginTop={'64px'}>
+						<Text mt={10}>{lang.t('pebble.section5.caption')}</Text>
+						<Box mt={20}>
 							<Button name={lang.t("get_started_with_iotex")}
-							        href={'https://docs.iotex.io/developer/hardware/pebble.html'}
+							        href={'https://docs.iotex.io/get-started/iotex-dapp-starter'}
 							        size={{base: "100%", xl: "60%", "2xl": "60%"}}
 							/>
 						</Box>
@@ -268,11 +268,11 @@ const Pebble = () => {
 			{/*part 8*/}
 			<Flex
 				backgroundImage={`url(${pebbleSectionSixBg})`}
-				minHeight={'546px'}
+				minHeight={'34.125rem'}
 				mx={"auto"}
 				justifyContent={'center'}
 				flexDirection={'column'}
-				marginTop={'74px'}
+				mt={40}
 				position={'relative'}
 				overflow={"hidden"}
 			>
@@ -294,7 +294,7 @@ const Pebble = () => {
 				<SectionContainer position={'relative'}>
 					<Title text={lang.t('pebble.section6.title')}/>
 					<Text
-						marginTop={'24px'}
+						mt={10}
 						textAlign={'center'}
 						fontSize={{base: '0.75rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}
 					>

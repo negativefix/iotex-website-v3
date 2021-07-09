@@ -12,11 +12,11 @@ interface TitlePropsInterface extends TextProps {
 export const Title = ({text, textAlign = 'center', ...props}: TitlePropsInterface) => {
 	return (
 		<Text
-			{...props}
 			textAlign={textAlign}
 			fontSize={{base: "2.25rem", sm: "2.5rem", lg: "2.5rem", xl: "4rem"}}
 			fontWeight={'semibold'}
 			whiteSpace="pre-line"
+			{...props}
 		>
 			{text}
 		</Text>

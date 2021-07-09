@@ -71,6 +71,7 @@ const NewsTab = () => {
 							ARTICLES.map((article, index) => {
 								return (
 									<Card
+										width={{base:'90%',md:'90%',sm:'90%'}}
 										link={article.link}
 										icon={article.icon}
 										iconActive={article.iconActive}
@@ -94,6 +95,7 @@ const NewsTab = () => {
 						store.newsList.map((news, index) => {
 							return (
 								<Card
+									width={{base:'100%',md:'90%',sm:'90%'}}
 									icon={news.icon}
 									link={news.link}
 									maxWidth={'750px'}
