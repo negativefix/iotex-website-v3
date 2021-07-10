@@ -514,7 +514,7 @@ export const Header = observer(() => {
                 </Box>
               </Box>
           </Flex>
-          <Menu isLazy>
+          {/* <Menu isLazy>
             <MenuButton
               ml={{
                 base: "0.5rem",
@@ -549,7 +549,7 @@ export const Header = observer(() => {
                 );
               })}
             </MenuList>
-          </Menu>
+          </Menu> */}
         </Flex>
         <Box
           display={{ base: "block", lg: "none" }}

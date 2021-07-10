@@ -278,7 +278,7 @@ export const Home = observer(() => {
 					/>
 				</Box>
 
-				<a href="https://iotex.io/press" target="_blank">
+				<a href="/press" target="_blank">
 					<Text
 						fontSize={{
 							base: "0.875rem",

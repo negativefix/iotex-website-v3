@@ -31,7 +31,7 @@ export const App = observer(() => {
     { path: '/media-center', component: MediaCenter},
     { path: '/pebble', component: Pebble},
     { path: '/advanced', component: Advanced},
-    { path: '/investors', component: Investors},
+    { path: '/for-investors', component: Investors},
   ]
 	useEffect(() => {
 		lang.init();
