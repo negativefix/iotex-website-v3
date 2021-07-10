@@ -46,7 +46,7 @@ export const JoinRevolution = observer(() => {
       name: lang.t("investors"),
       btn: lang.t("explore"),
       icon: "/images/get_start_card1.png",
-      href: "/investors",
+      href: "/for-investors",
       lists: [
         lang.t("investors.tips1"),
         lang.t("investors.tips2"),
@@ -132,7 +132,7 @@ export const JoinRevolution = observer(() => {
               onMouseOut={() => setUcamSrc(ucamS)}
               cursor="pointer"
             >
-              <a href="https://iotex.io/pebble" target="_blank">
+              <a href="/pebble" target="_blank">
                 <img src={pebbleSrc} alt="" />
               </a>
             </Box>
@@ -141,7 +141,7 @@ export const JoinRevolution = observer(() => {
               onMouseOut={() => setPebbleSrc(pebbleS)}
               cursor="pointer"
             >
-              <a href="https://iotex.io/ucam" target="_blank">
+              <a href="/ucam" target="_blank">
                 <img src={ucamSrc} alt="" />
               </a>
             </Box>

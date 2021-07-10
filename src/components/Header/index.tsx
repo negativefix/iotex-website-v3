@@ -30,7 +30,7 @@ export const Header = observer(() => {
 
   const navConfig = [
     { name: lang.t("developers"), path: "/developers", blank: false },
-    { name: lang.t("iotx"), path: "/investors", blank: false },
+    { name: lang.t("iotx"), path: "/for-investors", blank: false },
     {
       name: lang.t("ecosystem"),
       path: "https://ecosystem.iotex.io",
@@ -41,7 +41,7 @@ export const Header = observer(() => {
 
   const startedConfig = [
     { name: lang.t("for.developers"), path: "/developers", blank: false },
-    { name: lang.t("for.investors"), path: "/investors", blank: false },
+    { name: lang.t("for.investors"), path: "/for-investors", blank: false },
     { name: lang.t("for.business"), path: "/enterprise", blank: false },
   ];
 

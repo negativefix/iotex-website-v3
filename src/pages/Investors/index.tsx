@@ -97,14 +97,14 @@ export const Investors = observer(() => {
       btn: lang.t("tbd"),
       icon: "/images/get_start_card2.png",
       href: "https://ecosystem.iotex.io/projects",
-      lists: [lang.t("projects"), lang.t("partners")],
+      lists: [lang.t("projects"), lang.t("partners"), lang.t("awards")],
     },
     {
       name: lang.t("advanced.users"),
       btn: lang.t("tbd"),
       icon: "/images/get_start_card3.png",
       href: "https://iotex.io/advanced",
-      lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("ioTT.network")],
+      lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("governance")],
     },
   ];
 
@@ -305,7 +305,7 @@ export const Investors = observer(() => {
 
           {/* What is IOTX? */}
           <Box
-            mb={{ base: "10rem", md: "12rem", xl: "19rem" }}
+            mb={{ base: "10rem", md: "12rem", xl: "12rem" }}
             css={{
               backgroundImage: `url(/images/investors/what_is_iotx.png)`,
               backgroundSize: "100%",
@@ -436,7 +436,7 @@ export const Investors = observer(() => {
                   fontWeight="semibold"
                   letterSpacing="4px"
                 >
-                  {lang.t("investors.title4")}
+                  {/* {lang.t("investors.title4")} */}
                 </Text>
                 <Text
                   fontSize={{
@@ -452,7 +452,7 @@ export const Investors = observer(() => {
                   opacity="0.85"
                   lineHeight="1.8"
                 >
-                  {lang.t("investors.subtitle4")}
+                  {/* {lang.t("investors.subtitle4")} */}
                 </Text>
               </Box>
             </Box>
@@ -719,6 +719,10 @@ export const Investors = observer(() => {
                     backgroundSize: "100% 100%",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "100% 0%",
+                    transition: "0.5s transform ease-in-out",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                    },
                   }}
                 >
                   <Text

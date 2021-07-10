@@ -15,28 +15,28 @@ export const NextGen = observer(() => {
   const store = useLocalObservable(() => ({
     configs: [
       {
-        name: lang.t("digital.identity"),
+        name: lang.t("decentralized"),
         desc: lang.t("advantage1.tips"),
         icon: "/images/user.png",
         selectedIcon: "/images/card1.png",
         show: false,
       },
       {
-        name: lang.t("mining.machines"),
+        name: lang.t("mega.scalable"),
         desc: lang.t("advantage1.tips"),
         icon: "/images/mining.png",
         selectedIcon: "/images/card2.png",
         show: false,
       },
       {
-        name: lang.t("real.world.oracles"),
+        name: lang.t("ultra.fast"),
         desc: lang.t("advantage1.tips"),
         icon: "/images/real.png",
         selectedIcon: "/images/card3.png",
         show: false,
       },
       {
-        name: lang.t("dEFIoT"),
+        name: lang.t("secure.cryptographic"),
         desc: lang.t("advantage1.tips"),
         icon: "/images/deflot.png",
         selectedIcon: "/images/card4.png",
@@ -157,7 +157,7 @@ export const NextGen = observer(() => {
           flexDirection={{ base: "column", xl: "row" }}
         >
           <Button
-            href="https://ecosystem.iotex.io/projects"
+            href="https://iotex-ecosystem-pr-53.onrender.com/projects"
             size={{ base: "100%", md: "375px" }}
             name={lang.t("explore.ecosystem")}
           />
@@ -198,12 +198,12 @@ export const NextGen = observer(() => {
                       backgroundSize: "100% 100%",
                     },
                   }}
-                  onClick={() =>
-                    isMaxThan468 ? store.changeCard(item, index) : ""
-                  }
-                  onMouseOut={() =>
-                    isMaxThan468 ? store.resetCard(item, index) : ""
-                  }
+                  // onClick={() =>
+                  //   isMaxThan468 ? store.changeCard(item, index) : ""
+                  // }
+                  // onMouseOut={() =>
+                  //   isMaxThan468 ? store.resetCard(item, index) : ""
+                  // }
                 >
                   {item.show ? (
                     <>

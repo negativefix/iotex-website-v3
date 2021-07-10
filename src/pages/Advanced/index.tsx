@@ -164,9 +164,9 @@ export const Advanced = observer(() => {
             base: "4rem",
             sm: "8rem",
             md: "8rem",
-            lg: "14rem",
-            xl: "16rem",
-            "2xl": "22rem",
+            lg: "10rem",
+            xl: "12rem",
+            "2xl": "18rem",
           }}
           pb={{
             base: "4rem",

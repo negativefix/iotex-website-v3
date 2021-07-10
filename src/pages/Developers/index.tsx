@@ -155,7 +155,7 @@ export const Developers = observer(() => {
       desc: lang.t("app2.desc"),
       icon: "/images/dev/web3js.png",
       selectedIcon: "/images/card3.png",
-      href: "https://docs.iotex.io/get-started/ethereum-tools/ethereum-copmpatibility"
+      href: "https://docs.iotex.io/ethereum-copmpatibility"
     },
     {
       name: lang.t("app3"),
@@ -714,7 +714,7 @@ export const Developers = observer(() => {
             >
               {lang.t("dev.subtitle5")}
             </Text>
-            <a href="https://ecosystem.iotex.io/projects" target="_blank">
+            <a href="https://iotex-ecosystem-pr-53.onrender.com/projects" target="_blank">
             <Text
               fontSize={{
                 base: "0.875rem",

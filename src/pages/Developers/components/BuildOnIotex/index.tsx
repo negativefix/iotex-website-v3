@@ -16,7 +16,7 @@ export const BuildOnIotex = observer(() => {
     {name: lang.t("build.item4"), desc: lang.t("build.item4.tips"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
   ]
     return (
-      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "10rem"}} css={{
+      <Box mt={{base: "4rem", lg: "10rem"}} pb={{base: "10rem", lg: "6rem"}} css={{
         backgroundImage: `url(${bulrBall})`,
         backgroundSize: '70%',
         backgroundRepeat: 'no-repeat',
