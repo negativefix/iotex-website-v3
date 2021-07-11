@@ -144,7 +144,7 @@ const Enterprise = () => {
 							css={{
 								height: "45%",
 								background: "url(/images/enterprise/img_logo1.png) center 0px repeat-x",
-								backgroundSize: "250% 100%",
+								backgroundSize: "350% 100%",
 								backgroundPositionX: "250%",
 								animation: "awardLine1 90s infinite linear",
 							}}
@@ -153,7 +153,7 @@ const Enterprise = () => {
 							css={{
 								height: "45%",
 								background: "url(/images/enterprise/img_logo2.png) center 0px repeat-x",
-								backgroundSize: "240% 100%",
+								backgroundSize: "350% 100%",
 								backgroundPositionX: "240%",
 								animation: "awardLine2 90s infinite linear",
 							}}
@@ -237,9 +237,6 @@ const Enterprise = () => {
 					flexDirection="column"
 					mt="6.25rem"
 				>
-					<Box mb="10rem">
-						<img src="/images/enterprise/logos.png" alt=""/>
-					</Box>
 					<Flex maxWidth={{base: '90%', md: '80%'}} flexDirection='column' mx="auto" mt="2rem">
 
 						<Title text={lang.t('enterprise.group3.title')} textAlign={'center'}/>

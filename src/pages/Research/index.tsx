@@ -21,36 +21,15 @@ export const Research = observer(() => {
 
 	return (
 		<BasicLayout name="research">
-			<Image
-				css={{
-					position: 'absolute',
-					top: '710px',
-					left: '-50px'
-				}}
-				src={bgOne}
-			/>
-			<Image
-				css={{
-					position: 'absolute',
-					top: '1950px',
-					right: '0'
-				}}
-				src={bgTwo}
-			/>
-			<Image
-				css={{
-					position: 'absolute',
-					top: '2800px'
-				}}
-				src={bgThree}
-			/>
 
 			<Box
 				css={{
-					backgroundImage: `url('${researchTopImg}')`,
-					backgroundSize: '100%',
+					backgroundSize: '100%,100%',
 					backgroundRepeat: 'no-repeat'
 				}}
+				bgImg={`url('${researchTopImg}'),url(${bgThree})`}
+				bgPosition={'top,bottom right'}
+				pb={{md:'20rem',lg:'30rem',xl:'9rem'}}
 			>
 				<Box
 					pt={{base: '8rem', md: '10rem', lg: '12rem', xl: '13rem', '2xl': '22.875rem'}}
@@ -66,7 +45,7 @@ export const Research = observer(() => {
 						mx="auto"
 					>
 						<Text
-							fontSize={{base: '2.25rem', sm: '2.5rem', lg: '2.5rem', xl: '4rem', '2xl': '5rem'}}
+							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5.5rem", "2xl": "7.5rem"}}
 							mb={{base: '1rem', md: '1.875rem', '2xl': '2.875rem'}}
 							textAlign={{base: 'center', sm: 'left'}}
 							fontWeight="semibold"
@@ -92,153 +71,163 @@ export const Research = observer(() => {
 						</Text>
 					</Flex>
 				</Box>
-			</Box>
-			{/*<Box*/}
-			{/*	maxWidth={{base: '98%', lg: '90%', '2xl': '1554px'}}*/}
-			{/*	mx="auto"*/}
-			{/*	mb="35rem"*/}
-			{/*	p={{base: '1rem', lg: '2rem'}}*/}
-			{/*>*/}
-			{/*	<Text fontSize={{md: '2rem'}} fontWeight={'600'}>Industry Awards</Text>*/}
-			{/*	<SimpleGrid columns={[1, 2, 2]} spacing={{md: '1.75rem', lg: '4rem'}} mt={10}>*/}
-			{/*		{*/}
-			{/*			AWARDS.map((award, index) => {*/}
-			{/*				return (*/}
-			{/*					<AwardCard*/}
-      {/*            width={{base:'90%',md:'90%',sm:'90%'}}*/}
-      {/*            link={award.link}*/}
-      {/*            icon={award.icon}*/}
-      {/*            iconActive={award.iconActive}*/}
-      {/*            text={award.content}*/}
-      {/*            date={award.date}*/}
-      {/*            key={index}*/}
-      {/*            bgColorActive={award.bgColorActive}*/}
-			{/*					/>*/}
-			{/*				)*/}
-			{/*			})*/}
-			{/*		}*/}
-			{/*	</SimpleGrid>*/}
-			{/*</Box>*/}
-			<Box
-				maxWidth={{base: '98%', lg: '90%', '2xl': '1554px'}}
-				mx="auto"
-				mt={{base: '0rem', lg: '-4rem'}}
-				mb="35rem"
-				p={{base: '1rem', lg: '2rem'}}
-			>
-				<Grid
-					height={{base: 4300, xl: 2400}}
-					templateRows={{base: 'repeat(8, 1fr)', xl: 'repeat(5, 1fr)'}}
-					templateColumns="repeat(10, 1fr)"
-					rowGap={20}
-					columnGap={8}
+				<Box
+					maxWidth={{base: '98%', lg: '90%', '2xl': '1554px'}}
+					mx="auto"
+					p={{base: '1rem', lg: '2rem'}}
+					mb={20}
 				>
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
-						<Card
-							readMoreHref="https://iotex.io/white-paper"
-							h="436"
-							title={lang.t('research.white.pager.title')}
-							desc={[lang.t('research.white.pager.desc'), lang.t('research.white.pager.desc2')]}
-							langArr={[
-								{
-									name: 'RU',
-									href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_RU.pdf'
-								},
-								{
-									name: 'ZH',
-									href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.4_ZH_CN.pdf'
-								},
-								{
-									name: 'KO',
-									href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_KO.pdf'
-								},
-								{
-									name: 'IT',
-									href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_IT.pdf'
-								},
-								{
-									name: 'PT',
-									href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_PT-BR.pdf'
-								}
-							]}
-						/>
-					</GridItem>
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
-						<Card
-							cardIndex={2}
-							readMoreHref="https://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
-							h="436"
-							title={lang.t('research.yellow.pager.title')}
-							desc={[lang.t('research.yellow.pager.desc'), lang.t('research.yellow.pager.desc2')]}
-						/>
-					</GridItem>
+					<Text fontSize={{md: '2rem'}} fontWeight={'600'}>Industry Awards</Text>
+					<SimpleGrid columns={[1, 2, 2]} spacing={{base:'1rem',md: '1.75rem', lg: '4rem'}} mt={10}>
+						{
+							AWARDS.map((award, index) => {
+								return (
+									<AwardCard
+				            width={{base:'100%',md:'100%',xl:'100%'}}
+				            link={award.link}
+				            icon={award.icon}
+				            iconActive={award.iconActive}
+				            text={award.content}
+				            key={index}
+				            bgColorActive={award.bgColorActive}
+				            maxWidth={'35rem'}
+									/>
+								)
+							})
+						}
+					</SimpleGrid>
+				</Box>
+				<Box
+					bgImg={`url(${bgOne}),url(${bgTwo})`}
+					bgPosition={{xl:'left top 20rem,right  bottom 20rem','2xl':'left top 10rem,right  bottom 15rem'}}
+					bgRepeat={'no-repeat'}
+					bgSize={'80%,50%'}
+				>
+					<Box
+						maxWidth={{base: '98%', lg: '90%', '2xl': '1554px'}}
+						mx="auto"
+						mt={10}
+						mb={{lg:'2rem',xl:'35rem'}}
+						p={{base: '1rem', lg: '2rem'}}
+					>
+						<Text fontSize={{md: '2rem'}} fontWeight={'600'}>Research Paper</Text>
 
-					<GridItem display={{base: 'none', xl: 'block'}} h="410" rowSpan={1} colSpan={{base: 10, xl: 4}}></GridItem>
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
-						<Card
-							readMoreHref="https://ieeexplore.ieee.org/document/8977444"
-							h="410"
-							title={lang.t('research.framework.title')}
-							desc={[lang.t('research.framework.desc'), lang.t('research.framework.desc2')]}
-						/>
-					</GridItem>
+						<Grid
+							mt={10}
+							height={{base: 4300, xl: 2400}}
+							templateRows={{base: 'repeat(8, 1fr)', xl: 'repeat(5, 1fr)'}}
+							templateColumns="repeat(10, 1fr)"
+							rowGap={20}
+							columnGap={8}
+						>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
+								<Card
+									readMoreHref="https://iotex.io/white-paper"
+									h="436"
+									title={lang.t('research.white.pager.title')}
+									desc={[lang.t('research.white.pager.desc'), lang.t('research.white.pager.desc2')]}
+									langArr={[
+										{
+											name: 'RU',
+											href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_RU.pdf'
+										},
+										{
+											name: 'ZH',
+											href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.4_ZH_CN.pdf'
+										},
+										{
+											name: 'KO',
+											href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_KO.pdf'
+										},
+										{
+											name: 'IT',
+											href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_IT.pdf'
+										},
+										{
+											name: 'PT',
+											href: 'https://files.iotex.io/publications/IoTeX_Whitepaper_1.5_PT-BR.pdf'
+										}
+									]}
+								/>
+							</GridItem>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
+								<Card
+									cardIndex={2}
+									readMoreHref="https://files.iotex.io/publications/Academic_Paper_Yellow_Paper.pdf"
+									h="436"
+									title={lang.t('research.yellow.pager.title')}
+									desc={[lang.t('research.yellow.pager.desc'), lang.t('research.yellow.pager.desc2')]}
+								/>
+							</GridItem>
 
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
-						<Card
-							cardIndex={1}
-							readMoreHref="https://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
-							h="500"
-							title={lang.t('research.iot.title')}
-							desc={[lang.t('research.iot.desc'), lang.t('research.iot.desc2')]}
-						/>
-					</GridItem>
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
-						<Card
-							cardIndex={1}
-							readMoreHref="https://files.iotex.io/publications/PBFT.pdf"
-							h="500"
-							title={lang.t('research.signature.title')}
-							desc={[lang.t('research.signature.desc'), lang.t('research.signature.desc2')]}
-						/>
-					</GridItem>
+							<GridItem display={{base: 'none', xl: 'block'}} h="410" rowSpan={1} colSpan={{base: 10, xl: 4}}></GridItem>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
+								<Card
+									readMoreHref="https://ieeexplore.ieee.org/document/8977444"
+									h="410"
+									title={lang.t('research.framework.title')}
+									desc={[lang.t('research.framework.desc'), lang.t('research.framework.desc2')]}
+								/>
+							</GridItem>
 
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
-						<Card
-							cardIndex={1}
-							showOneDescOnSmallScrren={true}
-							readMoreHref="https://ieeexplore.ieee.org/document/8977822"
-							h="470"
-							title={lang.t('research.support.title')}
-							desc={[lang.t('research.support.desc'), lang.t('research.support.desc2')]}
-						/>
-					</GridItem>
-					<GridItem display={{base: 'none', xl: 'block'}} h="470" rowSpan={1} colSpan={{base: 10, xl: 4}}></GridItem>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
+								<Card
+									cardIndex={1}
+									readMoreHref="https://files.iotex.io/publications/IoTeX_DKSAP_IOT_EN.pdf"
+									h="500"
+									title={lang.t('research.iot.title')}
+									desc={[lang.t('research.iot.desc'), lang.t('research.iot.desc2')]}
+								/>
+							</GridItem>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
+								<Card
+									cardIndex={1}
+									readMoreHref="https://files.iotex.io/publications/PBFT.pdf"
+									h="500"
+									title={lang.t('research.signature.title')}
+									desc={[lang.t('research.signature.desc'), lang.t('research.signature.desc2')]}
+								/>
+							</GridItem>
 
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
-						<Card
-							readMoreHref="https://files.iotex.io/publications/ucam-whitepaper.pdf"
-							h="600"
-							title={lang.t('research.ucam.title')}
-							desc={[lang.t('research.ucam.desc'), lang.t('research.ucam.desc2')]}
-						/>
-					</GridItem>
-					<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
-						<Card
-							cardIndex={2}
-							readMoreHref="https://ieeexplore.ieee.org/document/9221130"
-							h="600"
-							title={lang.t('research.auth.title')}
-							desc={[
-								lang.t('research.auth.desc'),
-								lang.t('research.auth.desc2'),
-								lang.t('research.auth.desc3')
-							]}
-						/>
-					</GridItem>
-				</Grid>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
+								<Card
+									cardIndex={1}
+									showOneDescOnSmallScrren={true}
+									readMoreHref="https://ieeexplore.ieee.org/document/8977822"
+									h="470"
+									title={lang.t('research.support.title')}
+									desc={[lang.t('research.support.desc'), lang.t('research.support.desc2')]}
+								/>
+							</GridItem>
+							<GridItem display={{base: 'none', xl: 'block'}} h="470" rowSpan={1} colSpan={{base: 10, xl: 4}}></GridItem>
+
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 4}}>
+								<Card
+									readMoreHref="https://files.iotex.io/publications/ucam-whitepaper.pdf"
+									h={{lg:'25rem',xl:'40rem','2xl':'35rem'}}
+									title={lang.t('research.ucam.title')}
+									desc={[lang.t('research.ucam.desc'), lang.t('research.ucam.desc2')]}
+								/>
+							</GridItem>
+							<GridItem rowSpan={1} colSpan={{base: 10, xl: 6}}>
+								<Card
+									cardIndex={2}
+									readMoreHref="https://ieeexplore.ieee.org/document/9221130"
+									h={{lg:'30rem',xl:'40rem','2xl':'35rem'}}
+									title={lang.t('research.auth.title')}
+									desc={[
+										lang.t('research.auth.desc'),
+										lang.t('research.auth.desc2'),
+										lang.t('research.auth.desc3')
+									]}
+								/>
+							</GridItem>
+						</Grid>
+					</Box>
+				</Box>
+
+				<Footer/>
 			</Box>
-
-			<Footer/>
 		</BasicLayout>
 	);
 });

@@ -28,7 +28,7 @@ export const App = observer(() => {
     { path: '/team', component: Team},
     { path: '/enterprise', component: Enterprise},
     { path: '/research', component: Research},
-    { path: '/media-center', component: MediaCenter},
+    { path: '/press', component: MediaCenter},
     { path: '/pebble', component: Pebble},
     { path: '/advanced', component: Advanced},
     { path: '/for-investors', component: Investors},

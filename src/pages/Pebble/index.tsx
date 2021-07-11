@@ -1,7 +1,7 @@
 import React from "react";
 import {observer} from "mobx-react-lite";
 import BasicLayout from "../../Layouts/BasicLayout";
-import {Box, Flex, Image, SimpleGrid, Text} from "@chakra-ui/react";
+import {Box, Flex, Image, keyframes, SimpleGrid, Text} from "@chakra-ui/react";
 import {useStore} from "@/store/index";
 import {Button} from "@/components/Button";
 import {Card} from "./Card";
@@ -35,17 +35,18 @@ const Pebble = () => {
 		{icon: 'Fixed_Assets.png', text: lang.t('mobile_asset_tracking')},
 		{icon: 'INDUSTRIAL_PROCESSES.png', text: lang.t('process_automation')},
 	]
+
 	return (
 		<BasicLayout name="pebble">
 			{/*part 1*/}
 			<Flex
 				backgroundImage={`url(${imgPebble})`}
-				marginTop='8rem'
+				marginTop='6rem'
 				justifyContent='center'
 				backgroundRepeat='no-repeat'
 				backgroundPosition={{
-					base:'right top 25rem',
-					md:'right top 40rem',
+					base:'right top 20rem',
+					md:'right top 35rem',
 					lg:'right top 15rem'
 				}}
 				backgroundSize={{base:'100%',md:'100%',lg:'85%'}}
@@ -53,11 +54,11 @@ const Pebble = () => {
 				<SectionContainer>
 					<Flex flexDirection={{base: 'column',md:'column' ,lg: 'row'}} justifyContent={"space-between"}>
 						<Box paddingTop={{base: '0', md: '4rem'}} >
-							<Title text={lang.t('pebble.title')}  fontWeight={'600'}  textAlign={'left'} mt={5} fontSize={{base:'2rem',md:'4rem',lg:'5rem'}}/>
-							<Caption w={{base:'auto',lg:'43rem'}} text={lang.t('pebble.caption')} mt={6}/>
+							<Title text={lang.t('pebble.title')}  fontWeight={'600'}  textAlign={'left'} mt={5} fontSize={{base:'2rem',md:'3rem',lg:'3.5rem',xl:'5rem'}}/>
+							<Caption w={{base:'auto',lg:'33rem',xl:'43rem'}} text={lang.t('pebble.caption')} mt={6}/>
 						</Box>
 						<Flex justifyContent={'flex-end'}>
-							<Image src={pebbleOne} width={{base:'40%',md:'40%',lg:'80%'}}/>
+							<Image src={pebbleOne} width={{base:'30%',md:'40%',lg:'80%',xl:'80%'}} h={{base:'30%',md:'40%',lg:'80%',xl:'auto'}}/>
 						</Flex>
 					</Flex>
 					<Flex mx={"auto"} mt={20}>
@@ -75,7 +76,7 @@ const Pebble = () => {
 									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT' marginTop={'1rem'}/>
 								</Flex>
 							</SimpleGrid>
-							<Flex width={{base:'100%',md:'100%',lg:'49%'}} flexDirection={'column'} justifyContent={'center'}>
+							<Flex width={{base:'100%',md:'100%',lg:'50%'}} flexDirection={'column'} justifyContent={'center'}>
 								<Title text={lang.t('pebble.section1.title')} textAlign={'left'}/>
 								<Caption text={lang.t('pebble.section1.caption')}/>
 							</Flex>
@@ -164,7 +165,7 @@ const Pebble = () => {
 										<Flex flexDirection={'column'} justifyContent={'center'} alignItems={'center'} key={item.icon}>
 											<Image src={`images/pebble/${item.icon}`} alt={item.text} width={'3rem'}
 											     height={'3rem'}/>
-											<Text marginTop={'1rem'} fontWeight={"semibold"}>{item.text}</Text>
+											<Text fontSize={{xl:'0.9rem','2xl':'1.25rem'}} marginTop={'1rem'} fontWeight={"semibold"}>{item.text}</Text>
 										</Flex>
 									)
 								})
@@ -215,7 +216,7 @@ const Pebble = () => {
 			{/*part6*/}
 
 			<SectionContainer position={'relative'}>
-				<Image src={apertureBg} position={'absolute'} bottom={'-15rem'} right={'0'} width={'90%'} height={'60%'}/>
+				<Image display={{base:'none',lg:'block'}} src={apertureBg} position={'absolute'} bottom={'-15rem'} right={'0'} width={'90%'} height={'60%'}/>
 				<Flex flexDirection={'column'} alignItems={'center'}>
 					<Title text={lang.t('pebble.section4.title')}  textAlign={'center'}/>
 					<Caption text={lang.t('pebble.section4.caption')}  textAlign={'center'}
@@ -247,11 +248,18 @@ const Pebble = () => {
 			{/*part7*/}
 			<SectionContainer marginTop={'15rem'}>
 				<SimpleGrid columns={[1, 2]} spacing={{sm: '3rem', md: '3rem', lg: '5rem'}}>
-					<Box
+					<Flex
+						bgImg={'url(images/pebble/powered_by_IoTeX_bg.png)'}
+						justifyContent={'center'}
+						alignItems={'center'}
 					>
 						<img src="images/pebble/pebble_section5_bg.png" alt="pebble_section5_bg"
 						/>
-					</Box>
+						{/*<Image*/}
+						{/*	animation='btnHover infinite 1s linear'*/}
+						{/*	src='images/pebble/powered_by_IoTeX_icon_center.png' width={'12rem'}*/}
+						{/*/>*/}
+					</Flex>
 					<Flex  flexDirection={'column'} justifyContent={"center"}>
 						<Title text={lang.t('pebble.section5.title')} textAlign={'left'}/>
 						<Text mt={10}>{lang.t('pebble.section5.caption')}</Text>

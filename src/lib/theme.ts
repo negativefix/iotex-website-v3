@@ -43,7 +43,7 @@ export const customTheme = extendTheme({
         overflowY: 'scroll',
         margin: 0,
         color: "white",
-        background: "#110F1C"
+        background: "rgba(0,0,0,0)"
       },
       html: {
         scrollBehavior: 'smooth'

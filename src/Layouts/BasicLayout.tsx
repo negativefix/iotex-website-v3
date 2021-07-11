@@ -15,42 +15,42 @@ const BasicLayout = ({children, name}) => {
         title: 'IoTeX - The Premier Blockchain IoT Development Platform',
         meta: 'Develop on IoTeX. Push IoT data to Solidity-based smart contracts, tokenize real-world objects, facts, events. Code dapps with TPS, 5 sec blocks + dev tools.'
       },
-      'faq': { 
+      'faq': {
         title: 'IoTeX FAQ',
         meta: ''
       },
-      'team': { 
+      'team': {
         title: '',
         meta: ''
       },
-      'enterprise': { 
+      'enterprise': {
         title: 'IoTeX - BlockchainSolution  for IoT Business and Enterprise ',
         meta: 'IoTeX: a trusted IoT blockchain platform for your business data. Active member: industry standards orgs to define and implement confidential computing '
       },
-      'research': { 
+      'research': {
         title: '',
         meta: ''
       },
-      'media-center': { 
+      'media-center': {
         title: '',
         meta: ''
       },
-      'pebble': { 
+      'pebble': {
         title: 'IoTeX - Take Control of Your Data with Pebble',
         meta: 'Pebble is a blockchain based tracking device. Send and track trusted data from the real-world to the Iotex blockchain where the data’s value can be realized.'
       },
-      'advanced': { 
+      'advanced': {
         title: '',
         meta: ''
       },
-      'investors': { 
+      'investors': {
         title: 'IOTX - Cryptocurrency Powering the Future',
         meta: 'IOTX is the native cryptocurrency of IoTeX. Use IOTX to buy, trade, stake, and contribute to the IoTeX connected world. Learn more...'
       },
     }
     globalStyle()
     return (
-    <Box bg="bgColor" css={{
+    <Box  css={{
       overflowX: 'hidden',
       '&::-webkit-scrollbar': {
         width: 5,
