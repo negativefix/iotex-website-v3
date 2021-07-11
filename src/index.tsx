@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Developers } from './pages/Developers';
 import { Team } from './pages/Team';
@@ -48,6 +48,7 @@ export const App = observer(() => {
               return  <Route path={item.path} exact key={item.path} component={item.component} />
             })
           }
+	        <Redirect from="*" to="/" />
         </Switch>
       </Router>
     </ChakraProvider>
