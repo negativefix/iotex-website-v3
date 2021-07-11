@@ -198,6 +198,7 @@ export const Footer = observer(() => {
           return (
             <Box
               key={item.name}
+              display={{base: "none", md: "block"}}
               w={{ base: "100%", md: "auto" }}
               mb={{ base: "2rem", md: "0" }}
             >

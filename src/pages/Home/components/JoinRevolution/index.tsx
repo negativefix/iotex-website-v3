@@ -180,6 +180,7 @@ export const JoinRevolution = observer(() => {
                 key={item.name}
                 flexDirection="column"
                 w={{ base: "90%", sm: "50%", md: "30%", "2xl": "30%" }}
+                mx="auto"
                 py="3rem"
                 mb={{ base: "4rem", lg: 0 }}
                 css={{
@@ -435,7 +436,7 @@ export const JoinRevolution = observer(() => {
                         tabIndex={-1}
                       />
                     </div>
-                    <Box w={{base: "4rem", md: "4rem", lg: "8rem"}} css={{
+                    <Box w={{base: "max-content", md: "4rem", lg: "8rem"}} css={{
                       '.button': {
                         width: "100% !important",
                         fontSize: "1.375rem !important",
