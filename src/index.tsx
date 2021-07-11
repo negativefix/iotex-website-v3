@@ -16,6 +16,7 @@ import MediaCenter from "./pages/MediaCenter";
 import Pebble from "./pages/Pebble";
 import { EmailPopup } from './components/EmailPopup'
 import { hotjar } from 'react-hotjar';
+import {Ucam} from "@/pages/Ucam";
 
 hotjar.initialize(2494554, 6);
 
@@ -32,6 +33,7 @@ export const App = observer(() => {
     { path: '/pebble', component: Pebble},
     { path: '/advanced', component: Advanced},
     { path: '/for-investors', component: Investors},
+    { path: '/ucam', component: Ucam},
   ]
 	useEffect(() => {
 		lang.init();

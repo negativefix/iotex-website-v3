@@ -47,6 +47,10 @@ const BasicLayout = ({children, name}) => {
         title: 'IOTX - Cryptocurrency Powering the Future',
         meta: 'IOTX is the native cryptocurrency of IoTeX. Use IOTX to buy, trade, stake, and contribute to the IoTeX connected world. Learn more...'
       },
+      'ucam':{
+        title:'',
+        meat:''
+      }
     }
     globalStyle()
     return (
