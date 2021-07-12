@@ -29,7 +29,7 @@ export const Research = observer(() => {
 				}}
 				bgImg={`url('${researchTopImg}'),url(${bgThree})`}
 				bgPosition={'top,bottom right'}
-				pb={{md:'20rem',lg:'30rem',xl:'9rem'}}
+				pb={{md:'20rem',lg:'28rem',xl:'7rem'}}
 			>
 				<Box
 					pt={{base: '8rem', md: '10rem', lg: '12rem', xl: '13rem', '2xl': '22.875rem'}}
