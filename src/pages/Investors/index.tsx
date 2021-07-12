@@ -205,7 +205,7 @@ export const Investors = observer(() => {
         >
           {/* iotex overview */}
           <Flex
-            maxWidth={{ base: "90%", lg: "85%", "2xl": "1554px" }}
+            maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
             mx="auto"
             justifyContent="space-between"
             alignItems="flex-end"
@@ -313,7 +313,7 @@ export const Investors = observer(() => {
             }}
           >
             <Box
-              maxWidth={{ base: "90%", lg: "85%", "2xl": "1554px" }}
+              maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
               mx="auto"
             >
               {/* What is IOTX? */}
@@ -703,7 +703,7 @@ export const Investors = observer(() => {
           <Flex
             flexDirection={{ base: "column", md: "row" }}
             justifyContent="space-between"
-            alignItems="stretch"
+            alignItems={{base: "center", md: "stretch"}}
           >
             {roles.map((item) => {
               return (
@@ -711,7 +711,6 @@ export const Investors = observer(() => {
                 key={item.name}
                   flexDirection="column"
                   w={{ base: "90%", sm: "50%", md: "28%", "2xl": "25%" }}
-                  mx="auto"
                   py="3rem"
                   mb={{ base: "4rem", lg: 0 }}
                   css={{

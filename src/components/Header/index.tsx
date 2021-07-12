@@ -36,7 +36,7 @@ export const Header = observer(() => {
       path: "https://ecosystem.iotex.io",
       blank: true,
     },
-    { name: lang.t("press"), path: "https://iotex.io/press", blank: true },
+    { name: lang.t("press"), path: "/press", blank: false },
   ];
 
   const startedConfig = [
