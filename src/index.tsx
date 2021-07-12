@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Developers } from './pages/Developers';
 import { Team } from './pages/Team';
@@ -16,6 +16,7 @@ import MediaCenter from "./pages/MediaCenter";
 import Pebble from "./pages/Pebble";
 import { EmailPopup } from './components/EmailPopup'
 import { hotjar } from 'react-hotjar';
+import {Ucam} from "@/pages/Ucam";
 
 hotjar.initialize(2494554, 6);
 
@@ -28,10 +29,11 @@ export const App = observer(() => {
     { path: '/team', component: Team},
     { path: '/enterprise', component: Enterprise},
     { path: '/research', component: Research},
-    { path: '/media-center', component: MediaCenter},
+    { path: '/press', component: MediaCenter},
     { path: '/pebble', component: Pebble},
     { path: '/advanced', component: Advanced},
     { path: '/for-investors', component: Investors},
+    { path: '/ucam', component: Ucam},
   ]
 	useEffect(() => {
 		lang.init();
@@ -46,6 +48,7 @@ export const App = observer(() => {
               return  <Route path={item.path} exact key={item.path} component={item.component} />
             })
           }
+	        <Redirect from="*" to="/" />
         </Switch>
       </Router>
     </ChakraProvider>

@@ -6,10 +6,12 @@ import { observer } from 'mobx-react-lite';
 interface ComponentsProps {
   item: any;
   width: string;
-  height: string
+  height: string;
+  imgWidth?:string;
+  isAnimation?:boolean
 }
 
-export const LogoCardItem = observer(({item, width, height} : ComponentsProps) => {
+export const LogoCardItem = observer(({item, width, height,imgWidth='60%',isAnimation=true} : ComponentsProps) => {
     return (
       <Flex key={item.icon} w={width} h={height} justifyContent="center" alignItems="center" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
@@ -19,13 +21,13 @@ export const LogoCardItem = observer(({item, width, height} : ComponentsProps) =
         borderRadius: '20px',
         transition: 'all 0.6s linear',
         img: {
-          width: '60%'
+          width: imgWidth
         },
         '&:hover': {
-          background: '#fff',
+          background: isAnimation?'#fff':'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
           img: {
             content: `url(${item.iocn_active})`,
-            width: '60%'
+            width: imgWidth
           }
         }
     }}>

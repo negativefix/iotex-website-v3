@@ -5,7 +5,7 @@ export const SectionContainer=({children,...props})=>{
 	return(
 		<Box
 			{...props}
-			maxWidth={{base: '90%', md: '80%', lg: '90%', '2xl': '1554px'}}
+			maxWidth={{base: '90%', md: '80%', lg: '80%', '2xl': '1554px'}}
 			mx={'auto'}
 		>
 			{children}

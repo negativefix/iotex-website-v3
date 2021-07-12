@@ -1,15 +1,14 @@
 import {Box, Divider, Flex, Image, Text} from "@chakra-ui/react";
 import React, {useState} from "react";
 import {observer} from "mobx-react-lite";
-import {useStore} from "@/store/index";
-import {ChevronDownIcon} from "@chakra-ui/icons";
+
 
 interface CardProps{
 	icon:string,
 	iconActive:string
 	bgColorActive:string
-	text:string
-	date:string
+	text:string|JSX.Element
+	date?:string
 	link:string
 	maxWidth?:string
 	width:object
@@ -17,6 +16,7 @@ interface CardProps{
 
 const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem',width}:CardProps) => {
 	const [isHover, setHover] = useState(false);
+	const isTextString = typeof text === 'string'
 	return (
 		<Flex
 			css={{
@@ -48,16 +48,21 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 			<Flex flexDirection={'column'} justifyContent={'space-between'} h={'100%'}>
 				<Box>
 					<Flex minH={{md: '85px', lg: '99px'}} alignItems={'center'} justifyContent={'center'}>
-						<Image src={isHover ? iconActive : icon}/>
+						<Image src={icon} display={isHover?'none':'block'}/>
+						<Image src={iconActive} display={isHover?'block':'none'}/>
 					</Flex>
 					<Divider marginTop={'20px'} opacity={'0.2'}/>
-					<Text
-						marginTop={'22px'}
-						fontSize={{base: '1rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}
-						fontWeight={'600px'}
-					>
-						{text}
-					</Text>
+					{
+						isTextString?(
+							<Text
+								marginTop={'22px'}
+								fontSize={{base: '1rem', sm: '1rem', lg: '1.25rem', xl: '1.5rem', '2xl': '1.75rem'}}
+								fontWeight={'600px'}
+							>
+								{text}
+							</Text>
+						):text
+					}
 				</Box>
 				<Box>
 					<Text color={'rgba(255,255,255,0.8)'} marginTop={'16px'} fontSize={'1rem'}>{date}</Text>

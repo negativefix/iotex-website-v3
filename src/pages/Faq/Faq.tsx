@@ -80,7 +80,8 @@ const Faq = () => {
 						}}
 					>
 						<Box>
-							<Sticky stickyStyle={{
+							<Sticky
+								stickyStyle={{
 								marginTop: '2rem',
 								position: isMaxThan468 ? 'fixed' : 'relactive'
 							}}>
