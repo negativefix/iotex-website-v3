@@ -89,7 +89,7 @@ export const Research = observer(() => {
 				            text={award.content}
 				            key={index}
 				            bgColorActive={award.bgColorActive}
-				            maxWidth={'35rem'}
+				            maxWidth={'unset'}
 										imgWidth={award.imgWidth}
 									/>
 								)

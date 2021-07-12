@@ -4,11 +4,11 @@ import React from "react";
 export const AWARDS = [
 	{
 		icon: 'images/research/logo_iic.png',
-		iconActive: 'images/research/logo_iic_active.png',
+		iconActive: 'images/media-center/logo_iic_active.png',
 		bgColorActive: '#EA332A',
 		imgWidth:'40%',
 		content: (
-			<Flex flexDirection={'column'}>
+			<Flex flexDirection={'column'} mt={2}>
 				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Co-chair</Text>
 				<Text textAlign={'center'} fontSize={'1.25rem'}>IIC Blockchain Working Group</Text>
 			</Flex>
@@ -21,7 +21,7 @@ export const AWARDS = [
 		bgColorActive: '#366DB4',
 		imgWidth:'40%',
 		content: (
-			<Flex flexDirection={'column'}>
+			<Flex flexDirection={'column'} mt={2}>
 				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Vice Chair</Text>
 				<Text textAlign={'center'} fontSize={'1.25rem'}>IEEE P2418.1 Standard</Text>
 			</Flex>
@@ -34,9 +34,9 @@ export const AWARDS = [
 		bgColorActive: '#ED1846',
 		imgWidth:'40%',
 		content: (
-			<Flex flexDirection={'column'}>
-				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Executive Committee</Text>
-				<Text textAlign={'center'} fontSize={'1.25rem'}>China Mobile IoT Alliance</Text>
+			<Flex flexDirection={'column'} mt={2}>
+				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Member</Text>
+				<Text textAlign={'center'} fontSize={'1.25rem'}>Confidential Computing Consortium</Text>
 			</Flex>
 		),
 		link: 'https://medium.com/iotex/iotex-joins-executive-committee-of-china-mobile-iot-alliance-unveils-new-enterprise-iot-solutions-b6a8b6183afd'
@@ -47,9 +47,9 @@ export const AWARDS = [
 		bgColorActive: '#009DF2',
 		imgWidth:'40%',
 		content: (
-			<Flex flexDirection={'column'}>
-				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Member</Text>
-				<Text textAlign={'center'} fontSize={'1.25rem'}>Confidential Computing Consortium</Text>
+			<Flex flexDirection={'column'} mt={2}>
+				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>Executive Committee</Text>
+				<Text textAlign={'center'} fontSize={'1.25rem'}>China Mobile IoT Alliance</Text>
 			</Flex>
 		),
 		link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium'
@@ -60,7 +60,7 @@ export const AWARDS = [
 		bgColorActive: '#5BC4F1',
 		imgWidth:'40%',
 		content: (
-			<Flex flexDirection={'column'}>
+			<Flex flexDirection={'column'} mt={2}>
 				<Text fontWeight={"semibold"} fontSize={'1.75rem'} textAlign={'center'}>CES Innovation Award</Text>
 				<Text textAlign={'center'} fontSize={'1.25rem'}>for Ucam</Text>
 			</Flex>

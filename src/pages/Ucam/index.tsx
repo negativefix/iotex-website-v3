@@ -25,15 +25,15 @@ export const Ucam = observer(() => {
 			href: "https://www.newsweek.com/new-iotex-ucam-looks-provide-unrivaled-privacy-security-1517040"
 		},
 		{
-			icon: "/images/media-center/logo_CoinDesk.png",
-			iocn_active: "/images/media-center/logo_CoinDesk_active.png",
-			href: "https://www.zdnet.com/article/new-ucam-security-camera-is-powered-by-the-blockchain/"
-		},
-		{
 			icon: "/images/ucam/logo_zdnet.png",
 			iocn_active: "/images/ucam/logo_zdnet_active.png",
-			href: "https://www.coindesk.com/hardware-is-hard-two-blockchain-devices-win-plaudits-at-ces-2020",
+			href: "https://www.zdnet.com/article/new-ucam-security-camera-is-powered-by-the-blockchain/",
 			imgWidth:'auto'
+		},
+		{
+			icon: "/images/media-center/logo_CoinDesk.png",
+			iocn_active: "/images/media-center/logo_CoinDesk_active.png",
+			href: "https://www.coindesk.com/hardware-is-hard-two-blockchain-devices-win-plaudits-at-ces-2020",
 
 		},
 		{
@@ -77,45 +77,49 @@ export const Ucam = observer(() => {
 					<Box w={{lg: '100%', xl: '70%'}}>
 						<Text
 							fontWeight={'600'}
-							fontSize={{base: '1rem', sm: '1rem', lg: '1.55rem', xl: '3.75rem', '2xl': '4.75rem'}}
+							fontSize={{base: '1rem', sm: '1rem', lg: '1.25rem', xl: '3.55rem', '2xl': '4.75rem'}}
 						>Ucam -</Text>
 						<Text
 							mt={5}
-							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "5rem", "2xl": "7rem"}}
+							lineHeight={{xl:'5.5rem','2xl':'7.5rem'}}
+							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "4.5rem", "2xl": "7rem"}}
 							fontWeight="semibold" color="white" textAlign="left" whiteSpace={{base: "inherit", md: "pre-line"}}>
 							{lang.t("ucam.title")}
 						</Text>
 						<Text
 							mt={10}
-							fontSize={{base: '1rem', sm: '1rem', lg: '1.55rem', xl: '1.7rem', '2xl': '1.75rem'}}
+							fontSize={{base: '1rem', sm: '1rem', lg: '1.55rem', xl: '1.25rem', '2xl': '1.75rem'}}
 							fontWeight={'500'}
+							lineHeight={'2.5rem'}
 							whiteSpace={{base: 'unset', md: 'pre-line'}}
 						>
 							{lang.t('ucam.caption')}
 						</Text>
 					</Box>
-					<Box mt={40} width={'28%'} mx={'auto'}>
+					<Box  width={'40%'} mx={'auto'}>
 						<Image src={imgOne}/>
 					</Box>
 				</Flex>
 			</SectionContainer>
 			<SectionContainer mt={40}>
-				<Flex justifyContent={'space-between'} flexDirection={{lg: 'column-reverse', xl: 'row'}}>
-					<Box w={'28%'} mx={'auto'}>
-						<Image src={imgTwo} mt={28}/>
+				<Flex justifyContent={'space-between'} flexDirection={{base:'column-reverse',lg: 'column-reverse', xl: 'row'}}>
+					<Box w={'40%'} mx={{base:'auto',md:'unset'}}>
+						<Image src={imgTwo} mt={20}/>
 					</Box>
-					<Box w={{lg: '100%', xl: '70%'}}>
+					<Box w={{lg: '100%', xl: '56%'}} mt={{base:5}}>
 						<Text
 							fontWeight="semibold"
-							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "4rem", "2xl": "6rem"}}
+							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "3.2rem", "2xl": "4.5rem"}}
+							lineHeight={{xl:'4rem','2xl':'6rem'}}
 							whiteSpace={{base: "inherit", md: "pre-line"}}
 						>{lang.t('ucam.title2')}</Text>
 						<Text
 							mt={10}
 							maxWidth={{xl: '47rem'}}
-							fontSize={{base: '1rem', sm: '1rem', lg: '1.55rem', xl: '1.7rem', '2xl': '1.75rem'}}
+							fontSize={{base: '1rem', sm: '1rem', lg: '1.25rem', xl: '1.25rem', '2xl': '1.75rem'}}
 							fontWeight={'500'}
 							opacity={'0.85'}
+							lineHeight={'2.5rem'}
 						>
 							{lang.t('ucam.caption2')}
 						</Text>
@@ -151,20 +155,22 @@ export const Ucam = observer(() => {
 						whiteSpace={{base: "inherit", md: 'inherit', lg: 'inherit', xl: "inherit", '2xl': 'pre-line'}}
 					>{lang.t('ucam.title3')}</Text>
 					<Button
-						name={'Connect with the IoTeX team'} href={'https://iotex.io/enterprise'}
+						name={'Connect with the IoTeX team'} href={'https://iotex-new-website.onrender.com/enterprise'}
 						size={{base: "80%", md: "50%", lg: "60%", xl: '50%', "2xl": "50%"}}/>
 				</Box>
 			</SectionContainer>
 			<SectionContainer mt={40}>
 				<Flex flexDirection={{base:'column',md:'row'}}>
-					<Box width={{base:'100%',md:'85%'}}>
+					<Box width={{base:'100%',md:'65%'}}>
 						<Text
 							fontWeight="semibold"
-							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "4rem", "2xl": "6rem"}}
+							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "3.2rem", "2xl": "4.5rem"}}
+							lineHeight={{xl:'4rem','2xl':'6rem'}}
+
 						>
 							{lang.t('ucam.title4')}
 						</Text>
-						<Box fontSize={'1.25rem'} mt={5}>
+						<Box fontSize={'1.25rem'} mt={5} lineHeight={'2.5rem'}>
 							<Text>
 								{lang.t('ucam.caption4')}
 								<span style={{color: '#44FFB2FF'}}>{lang.t("ucam.caption4.keyword")}</span>
@@ -172,7 +178,7 @@ export const Ucam = observer(() => {
 							<Text mt={10}>{lang.t("ucam.caption42")}</Text>
 						</Box>
 					</Box>
-					<Box w={'50%'} mt={20} mx={'auto'}>
+					<Box w={'52%'} mt={20} mx={'auto'}>
 						<Image src={imgThree}/>
 					</Box>
 				</Flex>
@@ -180,41 +186,40 @@ export const Ucam = observer(() => {
 			<SectionContainer mt={40}>
 				<Flex
 					bgImg={`url(${imgFour})`}
-					bgSize={'55%'}
+					bgSize={'60%'}
 					bgRepeat={'no-repeat'}
 					bgPosition={'bottom right'}
 					justifyContent={'space-between'}
 					flexDirection={{base:'column-reverse',md:'row',lg:'row',xl:'row'}}
 				>
-					<Flex flexDirection={'column'} width={{base:'100%',md:'40%'}} mt={{base:10,md:0}}>
+					<Flex flexDirection={'column'} width={{base:'100%',md:'32%'}} mt={{base:10,md:0}}>
 						<Box>
-							<Image src={iconLogin}/>
+							<Image src={iconLogin} w={'10%'}/>
 							<Text mt={5}
-							      fontSize={{base: '1.75rem', md: '2rem',xl:'2.5rem'}} fontWeight="semibold"
+							      fontSize={{base: '1.75rem', md: '2rem',xl:'1.75rem'}} fontWeight="semibold"
 							>
 								{lang.t('ucam.sub.title1')}
 							</Text>
 							<Text mt={5}
 							      fontWeight={'500'}
-							      fontSize={{base:'1.25rem',xl:'1.75rem'}}
+							      fontSize={'1rem'}
 							      opacity={'0.85'}
 							>
 								{lang.t('ucam.sub.desc1')}
 							</Text>
 						</Box>
 						<Box mt={16}>
-							<Image src={iconEndToEnd}/>
+							<Image src={iconEndToEnd} w={'10%'}/>
 							<Text
 								mt={5}
-								fontSize={{base: '1.75rem', md: '2rem',xl:'2.5rem'}}
-								fontWeight="semibold"
+								fontSize={{base: '1.75rem', md: '2rem',xl:'1.75rem'}} fontWeight="semibold"
 							>
 								{lang.t('ucam.sub.title2')}
 							</Text>
 							<Text
 								mt={5}
 								fontWeight={'500'}
-								fontSize={{base:'1.25rem',xl:'1.75rem'}}
+								fontSize={'1rem'}
 								opacity={'0.85'}
 
 							>
@@ -222,31 +227,33 @@ export const Ucam = observer(() => {
 							</Text>
 						</Box>
 						<Box mt={16}>
-							<Image src={iconEdge}/>
+							<Image src={iconEdge} w={'10%'}/>
 							<Text
 								mt={5}
-								fontSize={{base: '1.75rem', md: '2rem',xl:'2.5rem'}}
-								fontWeight="semibold"
+								fontSize={{base: '1.75rem', md: '1.75rem',xl:'1.75rem'}} fontWeight="semibold"
 							>{lang.t('ucam.sub.title3')}</Text>
 							<Text
 								mt={5}
 								fontWeight={'500'}
-								fontSize={{base:'1.25rem',xl:'1.75rem'}}
+								fontSize={'1rem'}
 								opacity={'0.85'}
 							>{lang.t('ucam.sub.desc3')}</Text>
 						</Box>
 					</Flex>
-					<Box w={{base:'100%',md:'50%'}}>
+					<Box w={{base:'100%',md:'60%'}}>
 						<Text
 							fontWeight="semibold"
-							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "4rem", "2xl": "6rem"}}
+							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "3.2rem", "2xl": "4.5rem"}}
+							lineHeight={{xl:'4rem','2xl':'6rem'}}
+							whiteSpace={{ base: "inherit", md: "pre-line" }}
 						>{lang.t('ucam.title5')}
 						</Text>
 						<Text
 							mt={20}
 							color={'#FFFFFF'}
 							fontWeight={'500'}
-							fontSize={{base:'1.25rem',xl:'1.75rem'}}
+							lineHeight={'2.5rem'}
+							fontSize={{base:'1.25rem',xl:'1.25rem'}}
 							opacity={'0.85'}
 						>{lang.t("ucam.caption5")}</Text>
 					</Box>
