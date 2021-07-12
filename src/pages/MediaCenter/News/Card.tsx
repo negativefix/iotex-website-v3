@@ -12,9 +12,10 @@ interface CardProps{
 	link:string
 	maxWidth?:string
 	width:object
+	imgWidth?:string
 }
 
-const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem',width}:CardProps) => {
+const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem',width,imgWidth='auto'}:CardProps) => {
 	const [isHover, setHover] = useState(false);
 	const isTextString = typeof text === 'string'
 	return (
@@ -26,7 +27,7 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 			flexDirection={'column'}
 			width={width}
 			height={'100%'}
-			padding={'50px'}
+			padding={{xl:'2rem','2xl':'3.125rem'}}
 			borderRadius={'20px'}
 			maxWidth={maxWidth}
 			onMouseEnter={() => setHover(true)}
@@ -48,10 +49,10 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 			<Flex flexDirection={'column'} justifyContent={'space-between'} h={'100%'}>
 				<Box>
 					<Flex minH={{md: '85px', lg: '99px'}} alignItems={'center'} justifyContent={'center'}>
-						<Image src={icon} display={isHover?'none':'block'}/>
-						<Image src={iconActive} display={isHover?'block':'none'}/>
+						<Image src={icon} display={isHover?'none':'block'} w={imgWidth}/>
+						<Image src={iconActive} display={isHover?'block':'none'} w={imgWidth}/>
 					</Flex>
-					<Divider marginTop={'20px'} opacity={'0.2'}/>
+					<Divider mt={3} opacity={'0.2'}/>
 					{
 						isTextString?(
 							<Text

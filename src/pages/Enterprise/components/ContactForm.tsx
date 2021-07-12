@@ -44,11 +44,11 @@ const ContactForm = () => {
 
 			<Box
 				id='form1'
-				maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
+				maxWidth={{base: "90%", md: "80%",lg:'80%',xl:'80%' ,"2xl": "1554px"}}
 				mx="auto"
 				borderRadius="1.125rem"
 				px={{base:5,md:24}}
-				py={{base:10,md:20}}
+				py={{base:10,md:14}}
 				marginTop={{
 					base: '5rem',
 					md: '8rem'
@@ -68,9 +68,9 @@ const ContactForm = () => {
 					borderRadius:"1.125rem"
 				}}
 			>
-				<Heading fontSize={'2.25rem'} textAlign={'center'} lineHeight={'2rem'}>{lang.t('enterprise.form.title')}</Heading>
+				<Heading fontSize={{xl:'2.1rem'}} textAlign={'center'} lineHeight={'2rem'}>{lang.t('enterprise.form.title')}</Heading>
 				<Text mt={4} fontSize={'1.12rem'} textAlign={'center'}>{lang.t('enterprise.form.subtitle')}</Text>
-				<Flex flexDirection={'column'} marginTop={'4.4rem'}>
+				<Flex flexDirection={'column'} mt={10}>
 
 					<Flex justifyContent={'space-between'} flexDirection={{base:'column',md:'row'}}>
 						<Box width={{base:'100%',md:'49%'}}>
@@ -81,9 +81,9 @@ const ContactForm = () => {
 								<Input
 									borderRadius={'9.6px'}
 									border={'1px solid rgba(255, 255, 255, 0.2)'}
-									minHeight={'4.5rem'}
+									minHeight={{lg:'3.5rem',xl:'3.5rem'}}
 									background={'rgba(255, 255, 255, 0.1)'}
-									_placeholder={{color: 'white', fontWeight: 'semibold'}}
+									_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 									placeholder={lang.t("your.name")}
 									size="lg"
 									value={name}
@@ -101,11 +101,11 @@ const ContactForm = () => {
 								<Input
 									borderRadius={'9.6px'}
 									border={'1px solid rgba(255, 255, 255, 0.2)'}
-									minHeight={'4.5rem'}
+									minHeight={{lg:'3.5rem',xl:'3.5rem'}}
 									backgroundColor={'rgba(255, 255, 255, 0.1)'}
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
-									_placeholder={{color: 'white', fontWeight: 'semibold'}}
+									_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 									placeholder={lang.t("email")}
 									borderColor="rgba(255, 255, 255, 0.2)"
 									size="lg"/>
@@ -121,11 +121,11 @@ const ContactForm = () => {
 							<Input
 								borderRadius={'9.6px'}
 								border={'1px solid rgba(255, 255, 255, 0.2)'}
-								minHeight={'4.5rem'}
+								minHeight={{lg:'3.5rem',xl:'3.5rem'}}
 								backgroundColor={'rgba(255, 255, 255, 0.1)'}
 								value={company}
 								onChange={(e) => setCompany(e.target.value)}
-								_placeholder={{color: 'white', fontWeight: 'semibold'}}
+								_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 								placeholder={lang.t("company.name")}
 								borderColor="rgba(255, 255, 255, 0.2)"
 								size="lg"/>
@@ -143,7 +143,7 @@ const ContactForm = () => {
 								backgroundColor={'rgba(255, 255, 255, 0.1)'}
 								value={interest}
 								onChange={(e) => setInterest(e.target.value)}
-								rows={10}
+								rows={5}
 								borderColor="rgba(255, 255, 255, 0.2)"
 								padding={'1rem'}
 								size={'large'}
@@ -153,14 +153,13 @@ const ContactForm = () => {
 							<FormErrorMessage>{'required'}</FormErrorMessage>
 						</FormControl>
 					</Box>
-					<Box textAlign={'center'} marginTop={'4.4rem'}>
+					<Box textAlign={'center'} marginTop={'10'}>
 						<CButton
 							onClick={handleSubmit}
 							backgroundColor={'#44FFB2'}
 							color={'black'} size="lg"
-							width={'15rem'}
-							h={'4.5rem'}
-							w={{base:'15rem',md:'20rem'}}
+							h={'4rem'}
+							w={{base:'15rem',md:'15rem'}}
 						>
 							{lang.t('request')}
 						</CButton>

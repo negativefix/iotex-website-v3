@@ -172,7 +172,7 @@ const Enterprise = () => {
 						}}
 					/>
 				</Box>
-				<Link href="https://iotex.io/press" target="_blank" >
+				<Link href="https://iotex-ecosystem.onrender.com/partners" target="_blank" >
 					<Text
 						fontSize={{
 							base: "0.875rem",

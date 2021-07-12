@@ -54,31 +54,37 @@ const Pebble = () => {
 				<SectionContainer>
 					<Flex flexDirection={{base: 'column',md:'column' ,lg: 'row'}} justifyContent={"space-between"}>
 						<Box paddingTop={{base: '0', md: '4rem'}} >
-							<Title text={lang.t('pebble.title')}  fontWeight={'600'}  textAlign={'left'} mt={5} fontSize={{base:'2rem',md:'3rem',lg:'3.5rem',xl:'5rem'}}/>
-							<Caption w={{base:'auto',lg:'33rem',xl:'43rem'}} text={lang.t('pebble.caption')} mt={6}/>
+							<Title
+								text={lang.t('pebble.title')}
+								fontWeight={'600'}
+								textAlign={'left'} mt={5} fontSize={{base:'2rem',md:'3rem',lg:'3.5rem',xl:'4.5rem'}}
+								lineHeight={{xl:'5rem','2xl':'7.5rem'}}/>
+							<Caption w={{base:'auto',lg:'33rem',xl:'43rem'}} text={lang.t('pebble.caption')} mt={6} fontSize={{xl:'1.35rem'}}/>
 						</Box>
 						<Flex justifyContent={'flex-end'}>
 							<Image src={pebbleOne} width={{base:'30%',md:'40%',lg:'80%',xl:'80%'}} h={{base:'30%',md:'40%',lg:'80%',xl:'auto'}}/>
 						</Flex>
 					</Flex>
-					<Flex mx={"auto"} mt={20}>
+					<Flex mx={"auto"} mt={36}>
 						<Flex direction={{base: 'column-reverse',md:'column-reverse' ,lg: 'row'}}
 						      justifyContent={'space-between'}
 						      width={'100%'}>
 							<SimpleGrid columns={[1, 1, 2, 2]} width={{base:'100%',md:'100%',lg:'36%',xl:'40%'}} mt={{md:10}}>
 								<Flex flexDirection={'column'} justifyContent={'center'} mx={'auto'} width={'100%'}>
 									<Card url='images/pebble/icon_location.png' text='LOCATION'/>
-									<Card url='images/pebble/icon_temperature.png' text='CLIMATE' marginTop={'1rem'}/>
+									<Card url='images/pebble/icon_temperature.png' text='CLIMATE' marginTop={'1.5rem'}/>
 								</Flex>
 								<Flex flexDirection={'column'} justifyContent={'space-around'} mx={'auto'} width={'100%'}>
 									<Card url='images/pebble/icon_vibration.png' text='MOTION'/>
-									<Card url='images/pebble/icon_sunlight.png' text='LIGHT' marginTop={'1rem'}/>
-									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT' marginTop={'1rem'}/>
+									<Card url='images/pebble/icon_sunlight.png' text='LIGHT' marginTop={'1.5rem'}/>
+									<Card url='images/pebble/icon_connectivity.png' text='CELLULAR-IOT' marginTop={'1.5rem'}/>
 								</Flex>
 							</SimpleGrid>
 							<Flex width={{base:'100%',md:'100%',lg:'50%'}} flexDirection={'column'} justifyContent={'center'}>
-								<Title text={lang.t('pebble.section1.title')} textAlign={'left'}/>
-								<Caption text={lang.t('pebble.section1.caption')}/>
+								<Title text={lang.t('pebble.section1.title')} textAlign={'left'}
+								       lineHeight={{xl:'5rem','2xl':'7.5rem'}}
+								/>
+								<Caption text={lang.t('pebble.section1.caption')} mt={5} fontSize={{xl:'1.35rem'}}/>
 							</Flex>
 						</Flex>
 					</Flex>
@@ -190,20 +196,20 @@ const Pebble = () => {
 							<Flex
 								background={'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)'}
 								boxShadow={'inset -1px -1px 0px rgba(255, 255, 255, 0.25)'}
-								width={{base: '100%',md:'30rem' ,lg: '23rem', xl: '30.75rem'}}
-								height={{base:'20rem',md:'20rem',lg: '20rem', xl: '28.3rem'}}
+								width={{base: '100%',md:'30rem' ,lg: '23rem', xl: '28rem'}}
+								height={{base:'20rem',md:'20rem',lg: '20rem', xl: '24.3rem'}}
 								flexDirection={'column'}
 								justifyContent={'space-around'}
 								alignItems={'center'}
 								borderRadius={'1.25rem'}
 							>
-								<Image src="images/pebble/Nordic_Semiconductor.png" alt="Nordic_Semiconductor" />
-								<Image src="images/pebble/IoTeX_logo.png" alt="IoTeX_logo"  />
+								<Image src="images/pebble/Nordic_Semiconductor.png" alt="Nordic_Semiconductor" w={'55%'}/>
+								<Image src="images/pebble/IoTeX_logo.png" alt="IoTeX_logo" w={'55%'} />
 							</Flex>
 						</Box>
 						<Box marginTop={{base: '5rem', md: '5rem',lg:'0'}}>
-							<Title text={lang.t('pebble.section3.title')} textAlign={'left'}/>
-							<Caption text={lang.t('pebble.section3.caption')} mt={10}/>
+							<Title text={lang.t('pebble.section3.title')} textAlign={'left'} lineHeight={{lg:'4rem',xl:'5rem'}}/>
+							<Caption text={lang.t('pebble.section3.caption')} mt={10} fontSize={'1.25rem'}/>
 							<Box mt={20}>
 								<Button name={lang.t('buy_on_crowdsupply')} href={'https://www.crowdsupply.com/iotex/pebble-tracker'}
 								        size={{base: "100%", xl: "60%", "2xl": "60%"}}/>
@@ -247,7 +253,7 @@ const Pebble = () => {
 
 			{/*part7*/}
 			<SectionContainer marginTop={'15rem'}>
-				<SimpleGrid columns={[1, 2]} spacing={{sm: '3rem', md: '3rem', lg: '5rem'}}>
+				<SimpleGrid columns={[1, 2]} spacing={{sm: '3rem', md: '3rem', lg: '4rem',xl:'4rem'}}>
 					<Flex
 						bgImg={'url(images/pebble/powered_by_IoTeX_bg.png)'}
 						justifyContent={'center'}
@@ -261,8 +267,8 @@ const Pebble = () => {
 						{/*/>*/}
 					</Flex>
 					<Flex  flexDirection={'column'} justifyContent={"center"}>
-						<Title text={lang.t('pebble.section5.title')} textAlign={'left'}/>
-						<Text mt={10}>{lang.t('pebble.section5.caption')}</Text>
+						<Title text={lang.t('pebble.section5.title')} textAlign={'left'} fontSize={{base:'2rem',xl:'3.3rem'}}/>
+						<Text mt={10} fontSize={'1.25rem'}>{lang.t('pebble.section5.caption')}</Text>
 						<Box mt={20}>
 							<Button name={lang.t("get_started_with_iotex")}
 							        href={'https://docs.iotex.io/get-started/iotex-dapp-starter'}
