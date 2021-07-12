@@ -28,14 +28,24 @@ export const Team = observer(() => {
       intros: lang.t("raullen.desc"),
     },
     {
-      name: lang.t("alina.name"),
-      avatar: "/images/team/alina.png",
+      name: lang.t("jin.name"),
+      avatar: "/images/team/Jing_c.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/alinaburya/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/alinchikbu" },
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/cbetasun/" },
+        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/cbetass" },
       ],
-      job: lang.t("alina.research"),
-      intros: lang.t("alina.desc"),
+      job: lang.t("jin.research"),
+      intros: lang.t("jin.desc"),
+    },
+    {
+      name: lang.t("simone.name"),
+      avatar: "/images/team/simone-dark-bg-2-impr.jpg",
+      links: [
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zimne/" },
+        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/zimne1" },
+      ],
+      job: lang.t("simone.research"),
+      intros: lang.t("simone.desc"),
     },
     {
       name: lang.t("qevan.name"),
@@ -48,16 +58,7 @@ export const Team = observer(() => {
       job: lang.t("qevan.research"),
       intros: lang.t("qevan.desc"),
     },
-    {
-      name: lang.t("simone.name"),
-      avatar: "/images/team/simone-dark-bg-2-impr.jpg",
-      links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zimne/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/zimne1" },
-      ],
-      job: lang.t("simone.research"),
-      intros: lang.t("simone.desc"),
-    },
+    
     {
       name: lang.t("dean.name"),
       avatar: "/images/team/0.jpg",
@@ -79,14 +80,13 @@ export const Team = observer(() => {
       intros: lang.t("ken.desc"),
     },
     {
-      name: lang.t("jin.name"),
-      avatar: "/images/team/Jing_c.png",
+      name: lang.t("Art.Malkov"),
+      avatar: '/images/team/alina.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/cbetasun/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/cbetass" },
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/digitalbrand/"},
       ],
-      job: lang.t("jin.research"),
-      intros: lang.t("jin.desc"),
+      job: lang.t("Art.Malkov.research"),
+      intros: lang.t("Art.Malkov.desc"),
     },
     {
       name: lang.t("robert.name"),
@@ -102,18 +102,6 @@ export const Team = observer(() => {
       intros: lang.t("robert.desc"),
     },
     {
-      name: lang.t("michael.name"),
-      avatar: "/images/team/Michael.png",
-      links: [
-        {
-          src: "/images/icons/icon_link.svg",
-          href: "http://www.sparklabs.co.kr/lb/modal/venture/Michael_Cho.php",
-        },
-      ],
-      job: lang.t("michael.research"),
-      intros: lang.t("michael.desc"),
-    },
-    {
       name: lang.t("larry.name"),
       avatar: "/images/team/larry.png",
       links: [
@@ -122,6 +110,16 @@ export const Team = observer(() => {
       ],
       job: lang.t("larry.research"),
       intros: lang.t("larry.desc"),
+    },
+    {
+      name: lang.t("Marcos.Dinnerstein"),
+      avatar: '/images/team/marcos_dinnerstein.png',
+      links: [
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/marcosdinnerstein/"},
+        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/marcosd "},
+      ],
+      job: lang.t("Marcos.Dinnerstein.research"),
+      intros: lang.t("Marcos.Dinnerstein.desc"),
     },
     {
       name: lang.t("xin.name"),
@@ -143,25 +141,16 @@ export const Team = observer(() => {
       intros: lang.t("dariya.desc"),
     },
     {
-      name: lang.t("mukul.name"),
-      avatar: Artboard,
-      links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/agarwalmukul/" },
-      ],
-      job: lang.t("mukul.research"),
-      intros: lang.t("mukul.desc"),
-    },
-    {
-      name: lang.t("saul.name"),
-      avatar: "/images/team/0-1.jpg",
+      name: lang.t("michael.name"),
+      avatar: "/images/team/Michael.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/saul-hudson-2ab9228/",
+          src: "/images/icons/icon_link.svg",
+          href: "http://www.sparklabs.co.kr/lb/modal/venture/Michael_Cho.php",
         },
       ],
-      job: lang.t("saul.research"),
-      intros: lang.t("saul.desc"),
+      job: lang.t("michael.research"),
+      intros: lang.t("michael.desc"),
     },
     {
       name: lang.t("seedlet.name"),
@@ -176,6 +165,20 @@ export const Team = observer(() => {
       job: lang.t("seedlet.research"),
       intros: lang.t("seedlet.desc"),
     },
+    
+    {
+      name: lang.t("saul.name"),
+      avatar: "/images/team/0-1.jpg",
+      links: [
+        {
+          src: "/images/icons/icon_linkedIn.svg",
+          href: "https://www.linkedin.com/in/saul-hudson-2ab9228/",
+        },
+      ],
+      job: lang.t("saul.research"),
+      intros: lang.t("saul.desc"),
+    },
+    
     {
       name: lang.t("dorothy.name"),
       avatar: Dorothy,
@@ -217,6 +220,22 @@ export const Team = observer(() => {
       intros: lang.t("sean.desc"),
     },
     {
+      name: lang.t("mukul.name"),
+      avatar: Artboard,
+      links: [
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/agarwalmukul/" },
+      ],
+      job: lang.t("mukul.research"),
+      intros: lang.t("mukul.desc"),
+    },
+    {
+      name: lang.t("leonid.name"),
+      avatar: "/images/team/Leo.png",
+      links: null,
+      job: lang.t("leonid.research"),
+      intros: lang.t("leonid.desc"),
+    },
+    {
       name: lang.t("jake.name"),
       avatar: "/images/team/Jack.png",
       links: [
@@ -229,18 +248,13 @@ export const Team = observer(() => {
       intros: lang.t("jake.desc"),
     },
     {
-      name: lang.t("leonid.name"),
-      avatar: "/images/team/Leo.png",
-      links: null,
-      job: lang.t("leonid.research"),
-      intros: lang.t("leonid.desc"),
-    },
-    {
-      name: lang.t("adejumo.name"),
-      avatar: "/images/team/A.jpg",
-      links: null,
-      job: lang.t("adejumo.research"),
-      intros: lang.t("adejumo.desc"),
+      name: lang.t("Alexis.Baydoun"),
+      avatar: '/images/team/alexis_baydoun.png',
+      links: [
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/alexis-baydoun-7a1b8784/"},
+      ],
+      job: lang.t("Alexis.Baydoun.research"),
+      intros: lang.t("Alexis.Baydoun.desc"),
     },
     {
       name: lang.t("guang.name"),
@@ -255,19 +269,6 @@ export const Team = observer(() => {
       intros: lang.t("guang.desc"),
     },
     {
-      name: lang.t("yutong.name"),
-      avatar: "/images/team/yutong.png",
-      links: [
-        {
-          src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/yutong-pei-81006842/",
-        },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/yutongp" },
-      ],
-      job: lang.t("yutong.research"),
-      intros: lang.t("yutong.desc"),
-    },
-    {
       name: lang.t("sergey.name"),
       avatar: "/images/team/Sergey.png",
       links: [
@@ -280,25 +281,22 @@ export const Team = observer(() => {
       intros: lang.t("sergey.desc"),
     },
     {
-      name: lang.t("le.name"),
-      avatar: "/images/team/Hungl.jpeg",
+      name: lang.t("Harrison.Wright"),
+      avatar: '/images/team/harrison_wright.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/hunglmtb/" },
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/the-blockchain-recruiter/"},
       ],
-      job: lang.t("le.research"),
-      intros: lang.t("le.desc"),
+      job: lang.t("Harrison.Wright.research"),
+      intros: lang.t("Harrison.Wright.desc"),
     },
     {
-      name: lang.t("heslei.name"),
-      avatar: "/images/team/Heslei.png",
+      name: lang.t("Ben.Clossey"),
+      avatar: '/images/team/ben_clossey.png',
       links: [
-        {
-          src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/heslei-oliveira-36b5aaa0/",
-        },
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/benjamin-clossey-3b17aa1a3/"},
       ],
-      job: lang.t("heslei.research"),
-      intros: lang.t("heslei.desc"),
+      job: lang.t("Ben.Clossey.research"),
+      intros: lang.t("Ben.Clossey.desc"),
     },
     {
       name: lang.t("winter.name"),
@@ -315,17 +313,18 @@ export const Team = observer(() => {
       intros: lang.t("nguyen.desc"),
     },
     {
-      name: lang.t("jikun.name"),
-      avatar: "/images/team/0-3-1.jpg",
+      name: lang.t("heslei.name"),
+      avatar: "/images/team/Heslei.png",
       links: [
         {
           src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/jikun-liao-794b61162/",
+          href: "https://www.linkedin.com/in/heslei-oliveira-36b5aaa0/",
         },
       ],
-      job: lang.t("jikun.research"),
-      intros: lang.t("jikun.desc"),
+      job: lang.t("heslei.research"),
+      intros: lang.t("heslei.desc"),
     },
+   
     {
       name: lang.t("frank.name"),
       avatar: "/images/team/Frank-Sun.png",
@@ -339,6 +338,13 @@ export const Team = observer(() => {
       intros: lang.t("frank.desc"),
     },
     {
+      name: lang.t("adejumo.name"),
+      avatar: "/images/team/A.jpg",
+      links: null,
+      job: lang.t("adejumo.research"),
+      intros: lang.t("adejumo.desc"),
+    },
+    {
       name: lang.t("zhefeng.name"),
       avatar: "/images/team/zhefeng.png",
       links: [
@@ -349,16 +355,25 @@ export const Team = observer(() => {
       intros: lang.t("zhefeng.desc"),
     },
     {
-      name: lang.t("alvaro.name"),
-      avatar: "/images/team/Alvaro-.png",
+      name: lang.t("jikun.name"),
+      avatar: "/images/team/0-3-1.jpg",
       links: [
         {
           src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/%C3%A1lvaro-manzano-sevillano-90a735168/",
+          href: "https://www.linkedin.com/in/jikun-liao-794b61162/",
         },
       ],
-      job: lang.t("alvaro.research"),
-      intros: lang.t("alvaro.desc"),
+      job: lang.t("jikun.research"),
+      intros: lang.t("jikun.desc"),
+    },
+    {
+      name: lang.t("le.name"),
+      avatar: "/images/team/Hungl.jpeg",
+      links: [
+        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/hunglmtb/" },
+      ],
+      job: lang.t("le.research"),
+      intros: lang.t("le.desc"),
     },
   ]
 
@@ -439,7 +454,7 @@ export const Team = observer(() => {
       </Box>
 
 
-      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "5rem", lg: "10rem"}} p="2rem 2.5rem" css={{
+      <Box maxWidth={{base: '90%', lg: "90%", "2xl": "1554px"}} mx="auto" mt={{base: "5rem", lg: "10rem", xl: "15rem"}} p="2rem 2.5rem" css={{
         background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
         boxShadow: 'inset -1px -1px 0px rgba(255, 255, 255, 0.25)',
         backdropFilter: 'blur(100px)',

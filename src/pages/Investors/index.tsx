@@ -86,22 +86,22 @@ export const Investors = observer(() => {
 
   const roles = [
     {
-      name: lang.t("investors"),
+      name: lang.t("get.iotx.card1"),
       btn: lang.t("explore"),
       icon: "/images/get_start_card1.png",
       href: "https://ecosystem.iotex.io/exchanges-wallets",
       lists: [lang.t("exchanges"), lang.t("wallet"), lang.t("dex")],
     },
     {
-      name: lang.t("ecosystem"),
-      btn: lang.t("tbd"),
+      name: lang.t("get.iotx.card2"),
+      btn: lang.t("discover"),
       icon: "/images/get_start_card2.png",
       href: "https://ecosystem.iotex.io/projects",
       lists: [lang.t("projects"), lang.t("partners"), lang.t("awards")],
     },
     {
-      name: lang.t("advanced.users"),
-      btn: lang.t("tbd"),
+      name: lang.t("get.iotx.card3"),
+      btn: lang.t("go.deep"),
       icon: "/images/get_start_card3.png",
       href: "https://iotex.io/advanced",
       lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("governance")],
@@ -116,17 +116,17 @@ export const Investors = observer(() => {
     },
     {
       title: lang.t("iotx.utility.card2"),
-      bg: "/images/card3.png",
+      bg: "/images/card2.png",
       desc: lang.t("iotx.utility.card2.desc"),
     },
     {
       title: lang.t("iotx.utility.card3"),
-      bg: "/images/card2.png",
+      bg: "/images/card4.png",
       desc: lang.t("iotx.utility.card3.desc"),
     },
     {
       title: lang.t("iotx.utility.card4"),
-      bg: "/images/card4.png",
+      bg: "/images/card3.png",
       desc: lang.t("iotx.utility.card4.desc"),
     },
   ];
@@ -210,7 +210,6 @@ export const Investors = observer(() => {
             justifyContent="space-between"
             alignItems="flex-end"
             flexDirection={{ base: "column", md: "row" }}
-            pb={{ base: "6rem", lg: "10rem", "2xl": "15rem" }}
           >
             <Box
               w={{ base: "100%", md: "48%", lg: "48%", "2xl": "50%" }}
@@ -305,7 +304,6 @@ export const Investors = observer(() => {
 
           {/* What is IOTX? */}
           <Box
-            mb={{ base: "10rem", md: "12rem", xl: "12rem" }}
             css={{
               backgroundImage: `url(/images/investors/what_is_iotx.png)`,
               backgroundSize: "100%",
@@ -318,14 +316,14 @@ export const Investors = observer(() => {
             >
               {/* What is IOTX? */}
               <Flex
-                pt={{ base: "", md: "7.5rem", xl: "12.5rem" }}
+                pt={{ base: "", md: "7.5rem", lg: "13rem", xl: "18rem", "2xl": "24rem" }}
                 mb={{
                   base: "3rem",
                   sm: "4rem",
                   md: "7rem",
-                  lg: "12rem",
-                  xl: "16rem",
-                  "2xl": "32.75rem",
+                  lg: "6rem",
+                  xl: "7rem",
+                  "2xl": "18rem",
                 }}
               >
                 <Box w={{ base: "0", md: "50%" }} />
@@ -341,7 +339,6 @@ export const Investors = observer(() => {
                     textAlign={{ base: "center", sm: "left" }}
                     whiteSpace={{ base: "inherit", lg: "pre-line" }}
                     fontWeight="semibold"
-                    mb={{ base: "1.5rem", md: "3rem" }}
                     letterSpacing="4px"
                   >
                     {lang.t("investors.title2")}
@@ -367,7 +364,7 @@ export const Investors = observer(() => {
 
               {/* why iotx */}
               <Box
-                w={{ base: "100%", md: "38%" }}
+                w={{ base: "100%", md: "40%", xl: "38%" }}
                 mb={{
                   base: "3rem",
                   sm: "4rem",
@@ -468,11 +465,11 @@ export const Investors = observer(() => {
           backgroundPosition: isMaxThan768 ? "100% 50%" : "100% 55%",
         }}
       >
-        <Box maxWidth={{ base: "90%", lg: "85%", "2xl": "1554px" }} mx="auto">
+        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
           {/* What You Can Do with IOTX? */}
           <Flex
             justifyContent="space-between"
-            mb={{ base: "25rem", md: "15rem", xl: "32rem" }}
+            mb={{ base: "23rem", md: "15rem", xl: "32rem" }}
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <Box w={{ base: "100%", md: "40%", xl: "28%", "2xl": "20vw" }}>
@@ -584,12 +581,13 @@ export const Investors = observer(() => {
           {/* iotx utility */}
           <Flex
             justifyContent="space-between"
+            alignItems={{base: "center", lg: "flex-end"}}
             mb={{ base: "10rem", md: "15rem" }}
-            flexDirection="column"
+            flexDirection={{base: "column", lg: "row"}}
           >
             <Box
-              w={{ base: "100%", md: "45%", xl: "37%" }}
-              mb={{ base: "4rem", md: "7.185rem" }}
+              w={{ base: "100%",  lg: "45%", xl: "41%", "2xl": "37%" }}
+              mb={{ base: "4rem", md: "12rem" }}
             >
               <Text
                 fontSize={{
@@ -630,8 +628,8 @@ export const Investors = observer(() => {
                 name={lang.t("utility.details")}
               />
             </Box>
-            <Box h="100%">
-              <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
+            <Box w={{base: "100%", lg: "55%"}} h="100%">
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={10}>
                 {utility.map((item) => {
                   return (
                     <Flex
@@ -656,10 +654,11 @@ export const Investors = observer(() => {
                         }}
                         fontWeight="semibold"
                         mb={{ base: "1rem", sm: "1rem", md: "0.5rem" }}
+                        whiteSpace={{base: "inherit", lg: "pre-line"}}
                       >
                         {item.title}
                       </Text>
-                      <Text fontSize={{ base: "1.125rem", "2xl": "1.125rem" }}>
+                      <Text fontSize={{ base: "1.125rem", "2xl": "1.125rem" }} w="90%" fontWeight="medium">
                         {item.desc}
                       </Text>
                     </Flex>
@@ -698,7 +697,7 @@ export const Investors = observer(() => {
             whiteSpace="pre-line"
             textAlign="center"
           >
-            {lang.t("start.using.iotx")}
+            {lang.t("get.iotx.title")}
           </Text>
           <Flex
             flexDirection={{ base: "column", md: "row" }}
@@ -710,7 +709,7 @@ export const Investors = observer(() => {
                 <Flex
                 key={item.name}
                   flexDirection="column"
-                  w={{ base: "90%", sm: "50%", md: "28%", "2xl": "25%" }}
+                  w={{ base: "90%", sm: "50%", md: "28%", "2xl": "22%" }}
                   py="3rem"
                   mb={{ base: "4rem", lg: 0 }}
                   css={{
@@ -737,7 +736,7 @@ export const Investors = observer(() => {
                   <Box
                     flex="1"
                     mx="auto"
-                    w={{ base: "90%", md: "90%", xl: "75%", "2xl": "68%" }}
+                    w={{ base: "90%", md: "79%", xl: "74%" }}
                     mb="2rem"
                   >
                     {item.lists.map((option) => {

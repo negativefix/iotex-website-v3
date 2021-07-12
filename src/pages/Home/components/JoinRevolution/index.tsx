@@ -3,7 +3,7 @@ import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
 import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer/index";
-
+import { useMediaQuery } from "@chakra-ui/react";
 import ucamS from "/images/home/img_ucam_s.png";
 import ucamN from "/images/home/img_ucam_n.png";
 import pebbleS from "/images/home/img_pebble_s.png";
@@ -13,6 +13,7 @@ export const JoinRevolution = observer(() => {
   const { lang } = useStore();
   const [ucamSrc, setUcamSrc] = useState(ucamS);
   const [pebbleSrc, setPebbleSrc] = useState(pebbleS);
+  const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
 
   const infos = [
     {
@@ -356,7 +357,6 @@ export const JoinRevolution = observer(() => {
                       color="grayColor2"
                       fontWeight="medium"
                       lineHeight="1.375rem"
-                      w="90%"
                     >
                       {item.desc}
                     </Text>
@@ -436,10 +436,11 @@ export const JoinRevolution = observer(() => {
                         tabIndex={-1}
                       />
                     </div>
-                    <Box w={{base: "max-content", md: "4rem", lg: "8rem"}} css={{
+                    <Box css={{
                       '.button': {
                         width: "100% !important",
-                        fontSize: "1.375rem !important",
+                        fontSize: isMaxThan768 ? "1.375rem !important" : "15px !important",
+                        padding: '0 10px !important'
                       }
                     }}>
                       <div className="clear">

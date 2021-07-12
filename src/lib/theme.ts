@@ -119,7 +119,7 @@ export const customTheme = extendTheme({
         listStyleType: 'none',
         position: 'absolute',
         display: 'none',
-        paddingTop: '4rem',
+        paddingTop: '4.5rem',
         top: 0,
         left: 0,
         '.dropMenuItem': {
@@ -233,7 +233,7 @@ export const customTheme = extendTheme({
         }
       },
       '.navDropDownUl': {
-        zIndex: 1,
+        zIndex: 1000,
         visibility: 'hidden',
         opacity: 0,
         filter: 'alpha(opacity=0)',

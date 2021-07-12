@@ -464,20 +464,6 @@ export const Developers = observer(() => {
           >
             <Text
               fontSize={{
-                base: "1rem",
-                sm: "1.125rem",
-                md: "1.25rem",
-                xl: "2rem",
-                "2xl": "2.5rem",
-              }}
-              fontWeight="semibold"
-              mb="0.5rem"
-              whiteSpace="pre-line"
-            >
-              {lang.t("dev.mini.title")}
-            </Text>
-            <Text
-              fontSize={{
                 base: "1.8rem",
                 sm: "1.875rem",
                 lg: "2.5rem",
@@ -485,6 +471,7 @@ export const Developers = observer(() => {
                 "2xl": "4rem",
               }}
               fontWeight="semibold"
+              mt="2rem"
               mb="1.8rem"
               whiteSpace="pre-line"
             >

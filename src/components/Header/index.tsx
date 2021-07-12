@@ -2,14 +2,8 @@ import React from "react";
 import {
   Box,
   Flex,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
   Image,
   Text,
-  Center,
-  Button,
   useDisclosure,
 } from "@chakra-ui/react";
 import { Link, useHistory } from "react-router-dom";
@@ -29,14 +23,14 @@ export const Header = observer(() => {
   const { isOpen, onToggle } = useDisclosure();
 
   const navConfig = [
-    { name: lang.t("developers"), path: "/developers", blank: false },
     { name: lang.t("iotx"), path: "/for-investors", blank: false },
+    { name: lang.t("team"), path: "/team", blank: false },
     {
       name: lang.t("ecosystem"),
       path: "https://ecosystem.iotex.io",
       blank: true,
     },
-    { name: lang.t("press"), path: "/press", blank: false },
+    { name: lang.t("developers"), path: "/developers", blank: false },
   ];
 
   const startedConfig = [
@@ -47,7 +41,7 @@ export const Header = observer(() => {
 
   const aboutConfig = [
     { name: lang.t("vision"), path: "https://iott.network/about", blank: true },
-    { name: lang.t("team"), path: "/team", blank: false },
+    { name: lang.t("press"), path: "/press", blank: false },
     { name: lang.t("research"), path: "/research", blank: false },
     { name: lang.t("roadmap"), path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03", blank: true },
     { name: lang.t("blog"), path: "https://iotex.medium.com/", blank: true },
@@ -228,7 +222,8 @@ export const Header = observer(() => {
   return (
     <Box
       w="100%"
-      px={{ base: "0.5rem", md: "1.125rem" }}
+      pl={{ base: "0.5rem", md: "1.125rem" }}
+      pr={{base: "0.5rem", md: 0}}
       py={{ base: "0.8rem", md: "0" }}
       boxSizing="border-box"
       position="absolute"
@@ -238,7 +233,7 @@ export const Header = observer(() => {
     >
       <Flex justifyContent="space-between" alignItems="center">
         <Link to={"/"}>
-          <Box w={{ base: "5rem", md: "6rem", "2xl": "10rem" }}>
+          <Box w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}>
             <img src="/images/logo.png" alt="" />
           </Box>
         </Link>
@@ -264,7 +259,7 @@ export const Header = observer(() => {
                 fontWeight="semibold"
                 fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                 cursor="pointer"
-                lineHeight={{ base: "0", md: "4rem" }}
+                lineHeight={{ base: "0", md: "4.5rem" }}
                 className="dropMenuText"
               >
                 {lang.t("get.started")} <TriangleDownIcon w="12px" />
@@ -298,7 +293,7 @@ export const Header = observer(() => {
                   target={item.blank ? "_blank" : ""}
                 >
                   <Text
-                    lineHeight={{ base: "0", md: "4rem" }}
+                    lineHeight={{ base: "0", md: "4.5rem" }}
                     color={
                       location.pathname === item.path ? "brandColor2" : "white"
                     }
@@ -347,7 +342,7 @@ export const Header = observer(() => {
                 fontWeight="semibold"
                 fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                 cursor="pointer"
-                lineHeight={{ base: "0", md: "4rem" }}
+                lineHeight={{ base: "0", md: "4.5rem" }}
                 className="dropMenuText"
               >
                 {lang.t("about")} &nbsp;&nbsp;
@@ -373,9 +368,6 @@ export const Header = observer(() => {
                   );
                 })}
               </Box>
-            </Box>
-            <Box className="navDropDown">
-              
             </Box>
             <Box className="navDropDown">
                 <Text
@@ -404,7 +396,7 @@ export const Header = observer(() => {
                     },
                   }}
                   cursor="pointer"
-                  lineHeight={{ base: "0", md: "4rem" }}
+                  lineHeight={{ base: "0", md: "4.5rem" }}
                   fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
                 >
                   {lang.t("discover.ioTeX")}
@@ -412,7 +404,7 @@ export const Header = observer(() => {
                 <Box
                 className="navDropDownUl"
                   position="absolute"
-                  top={{ base: "4rem", lg: "4rem" }}
+                  top={{ base: "4rem", lg: "4.5rem" }}
                   left="0"
                   w="100%"
                   pt="1.5rem"
@@ -424,7 +416,7 @@ export const Header = observer(() => {
                     animation: "fadeIn 0.3s linear",
                   }}
                 >
-                  <Image
+                  {/* <Image
                     boxSize="1.5rem"
                     src="/images/explore/close.png"
                     position="absolute"
@@ -433,7 +425,7 @@ export const Header = observer(() => {
                     opacity="0.5"
                     cursor="pointer"
                     onClick={() => (store.isOpen = false)}
-                  ></Image>
+                  ></Image> */}
                   <Flex justifyContent="center">
                     {exploreConfig.map((item, index) => {
                       return (
