@@ -37,6 +37,7 @@ const Faq = () => {
 					maxWidth: '100%',
 					marginTop: '2rem',
 					backgroundImage: `url(${faqBg})`,
+					zIndex:-1,
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'top center',
 					position: 'fixed',
