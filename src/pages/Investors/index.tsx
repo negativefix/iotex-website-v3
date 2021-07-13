@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { observer } from "mobx-react-lite";
+import React, { useState, useEffect } from "react";
+import { observer, useLocalStore } from "mobx-react-lite";
 import { useStore } from "@/store/index";
 import {
   Flex,
@@ -7,14 +7,13 @@ import {
   Text,
   Image,
   SimpleGrid,
-  Img,
-  Center,
 } from "@chakra-ui/react";
 import BasicLayout from "../../Layouts/BasicLayout";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import CountTo from "react-count-to";
+import axios from 'axios';
 // @ts-ignore
 import delegate from "@/assets/images/token/delegate.png";
 // @ts-ignore
@@ -22,40 +21,23 @@ import iotexOverflowBanner from "@/assets/images/token/iotex_overflow_banner.png
 // @ts-ignore
 import staking from "@/assets/images/token/staking.png";
 
+
+
 export const Investors = observer(() => {
-  const { lang } = useStore();
+  const { base, lang } = useStore();
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
-
-  const iotexOverview = [
-    {
-      name: lang.t("overview1"),
-      amount: 252359332,
-      unit: "$",
-      isAnimate: false,
-      total: "252,359,332",
+ 
+  const store = useLocalStore(() => ({
+    get marketCap() {
+      return base.marketCap
     },
-    {
-      name: lang.t("overview3"),
-      amount: 9626124332,
-      unit: "",
-      isAnimate: false,
-      total: "9,626,124,332",
+    get tokenPrice() {
+      return base.tokenPrice
     },
-    {
-      name: lang.t("token.price"),
-      amount: 0.02025,
-      unit: "$",
-      isAnimate: false,
-      total: "0.02025",
-    },
-  ];
-  const [overviews, setOverviews] = useState(iotexOverview);
-
-  const changeAnimateStatus = (index) => {
-    const old = [...overviews];
-    old[index].isAnimate = true;
-    setOverviews(old);
-  };
+    get totalSupply() {
+      return Number(base.totalSupply.getFormat())
+    }
+  }))
 
   const physical = [
     {
@@ -130,6 +112,10 @@ export const Investors = observer(() => {
       desc: lang.t("iotx.utility.card4.desc"),
     },
   ];
+
+  useEffect(() => {
+    base.init()
+  }, [])
 
   return (
     <BasicLayout name="investors">
@@ -252,53 +238,48 @@ export const Investors = observer(() => {
               w={{ base: "100%", md: "40%", lg: "40%", "2xl": "40%" }}
               mb={{ base: "4rem", md: 0 }}
             >
-              {overviews.map((item, index) => {
-                return (
-                  <Flex
-                    key={item.name}
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="flex-start"
-                    mb={{ base: "2rem", sm: "4rem" }}
-                  >
-                    <Text
-                      fontSize={{
-                        base: "1rem",
-                        lg: "1.25rem",
-                        "2xl": "1.5rem",
-                      }}
-                      color="discord"
-                      letterSpacing="1.5px"
-                      mr="0.5rem"
-                      fontWeight="medium"
-                    >
-                      {item.name}
-                    </Text>
-                    <Text
-                      fontSize={{
-                        base: "1.75rem",
-                        lg: "2.75rem",
-                        "2xl": "3.75rem",
-                      }}
-                      letterSpacing="3.5px"
-                      fontWeight="medium"
-                    >
-                      {item.unit}
-                      {item.isAnimate ? (
-                        item.total
-                      ) : (
-                        <CountTo
-                          from={0}
-                          to={item.amount}
-                          speed={3000}
-                          digits={index === 2 ? 6 : 0}
-                          onComplete={() => changeAnimateStatus(index)}
-                        />
-                      )}
-                    </Text>
-                  </Flex>
-                );
-              })}
+              <Flex direction="column" justifyContent="center" alignItems="flex-start" mb={{ base: "2rem", sm: "4rem" }}>
+                <Text
+                  fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.5rem" }} color="discord"
+                  letterSpacing="1.5px" mr="0.5rem" fontWeight="medium"
+                >
+                  { lang.t("overview1")}
+                </Text>
+                <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
+                  $  <CountTo 
+                    from={0} to={store.marketCap} speed={3000} 
+                    digits={0}  
+                  />
+                </Text>
+              </Flex>
+              <Flex direction="column" justifyContent="center" alignItems="flex-start" mb={{ base: "2rem", sm: "4rem" }}>
+                <Text
+                  fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.5rem" }} color="discord"
+                  letterSpacing="1.5px" mr="0.5rem" fontWeight="medium"
+                >
+                  { lang.t("overview3")}
+                </Text>
+                <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
+                  <CountTo 
+                    from={0} to={store.totalSupply} speed={3000} 
+                    digits={0}  // onComplete={() => changeAnimateStatus(index)}
+                  />
+                </Text>
+              </Flex>
+              <Flex direction="column" justifyContent="center" alignItems="flex-start" mb={{ base: "2rem", sm: "4rem" }}>
+                <Text
+                  fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.5rem" }} color="discord"
+                  letterSpacing="1.5px" mr="0.5rem" fontWeight="medium"
+                >
+                  { lang.t("token.price")}
+                </Text>
+                <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
+                  $  <CountTo 
+                    from={0} to={store.tokenPrice} speed={3000} 
+                    digits={6}  // onComplete={() => changeAnimateStatus(index)}
+                  />
+                </Text>
+              </Flex>
             </Box>
           </Flex>
 
