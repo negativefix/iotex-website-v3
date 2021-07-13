@@ -294,7 +294,7 @@ const Pebble = () => {
 							color="brandColor"
 							lineHeight="1.275rem"
 						>
-							{lang.t('research.readmore')}
+							{lang.t('pebble.get.pebble')} {'>>'}
 						</Link>
 					</Flex>
 				</SimpleGrid>
