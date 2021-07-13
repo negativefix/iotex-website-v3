@@ -24,7 +24,7 @@ const Form=()=>{
 			position={'relative'}
 			mx="auto"
 			px={{base:5,md:24}}
-			py={{base:10,md:20}}
+			py={{base:10,md:14}}
 			marginTop={{
 				base: '5rem',
 				md: '10rem'
@@ -53,9 +53,9 @@ const Form=()=>{
 							<Input
 								borderRadius={'9.6px'}
 								border={'1px solid'}
-								minHeight={'4.5rem'}
+								minHeight={{lg:'3.5rem',xl:'3.5rem'}}
 								background={'rgba(255, 255, 255, 0.1)'}
-								_placeholder={{color: 'white', fontWeight: 'semibold'}}
+								_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 								placeholder={lang.t("your.name")}
 								size="lg"
 								value={name}
@@ -74,9 +74,9 @@ const Form=()=>{
 								borderColor="rgba(255, 255, 255, 0.2)"
 								borderRadius={'9.6px'}
 								border={'1px solid '}
-								minHeight={'4.5rem'}
+								minHeight={{lg:'3.5rem',xl:'3.5rem'}}
 								background={'rgba(255, 255, 255, 0.1)'}
-								_placeholder={{color: 'white', fontWeight: 'semibold'}}
+								_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 								placeholder={lang.t("email")}
@@ -97,11 +97,11 @@ const Form=()=>{
 							border={'1px solid'}
 							value={interest}
 							onChange={(e) => setInterest(e.target.value)}
-							rows={10}
+							rows={6}
 							padding={'1rem'}
 							size={'large'}
 							resize={'none'}
-							_placeholder={{color: 'white', fontWeight: 'semibold'}}
+							_placeholder={{color: 'white', fontWeight: 'semibold',fontSize:'1rem'}}
 							placeholder={lang.t("question")}/>
 						<FormErrorMessage>{'required'}</FormErrorMessage>
 					</FormControl>
