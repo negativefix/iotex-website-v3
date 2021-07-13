@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Image,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
 import { Link, useHistory } from "react-router-dom";
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { useStore } from "../../store";
@@ -27,7 +21,7 @@ export const Header = observer(() => {
     { name: lang.t("team"), path: "/team", blank: false },
     {
       name: lang.t("ecosystem"),
-      path: "https://ecosystem.iotex.io",
+      path: "https://iotex-ecosystem-pr-53.onrender.com",
       blank: true,
     },
     { name: lang.t("developers"), path: "/developers", blank: false },
@@ -43,7 +37,11 @@ export const Header = observer(() => {
     { name: lang.t("vision"), path: "https://iott.network/about", blank: true },
     { name: lang.t("press"), path: "/press", blank: false },
     { name: lang.t("research"), path: "/research", blank: false },
-    { name: lang.t("roadmap"), path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03", blank: true },
+    {
+      name: lang.t("roadmap"),
+      path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
+      blank: true,
+    },
     { name: lang.t("blog"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
   ];
@@ -182,36 +180,37 @@ export const Header = observer(() => {
       icon: "/images/explore/icon_twitter_n.png",
       icon_active: "/images/explore/icon_twitter_s.png",
       blank: true,
-      href: 'https://twitter.com/iotex_io'
+      href: "https://twitter.com/iotex_io",
     },
     {
       icon: "/images/explore/icon_discord_n.png",
       icon_active: "/images/explore/icon_discord_s.png",
       blank: true,
-      href: 'https://iotex.io/devdiscord'
+      href: "https://iotex.io/devdiscord",
     },
     {
       icon: "/images/explore/icon_youtube_n.png",
       icon_active: "/images/explore/icon_youtube_s.png",
       blank: true,
-      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw"
+      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
     {
       icon: "/images/explore/icon_reddit_n.png",
       icon_active: "/images/explore/icon_reddit_s.png",
       blank: true,
-      href: "https://www.reddit.com/r/IoTeX/"
+      href: "https://www.reddit.com/r/IoTeX/",
     },
     {
       icon: "/images/explore/icon_telegram_n.png",
       icon_active: "/images/explore/icon_telegram_s.png",
       blank: true,
-      href: "https://t.me/iotexchannel"
+      href: "https://t.me/iotexchannel",
     },
   ];
 
   const store = useLocalObservable(() => ({
     isOpen: false,
+    openMenu: false,
     openExplore: false,
     get curLang() {
       if (!langGroups[lang.lang]) return langGroups.en;
@@ -223,7 +222,7 @@ export const Header = observer(() => {
     <Box
       w="100%"
       pl={{ base: "0.5rem", md: "1.125rem" }}
-      pr={{base: "0.5rem", md: 0}}
+      pr={{ base: "0.5rem", md: 0 }}
       py={{ base: "0.8rem", md: "0" }}
       boxSizing="border-box"
       position="absolute"
@@ -370,51 +369,49 @@ export const Header = observer(() => {
               </Box>
             </Box>
             <Box className="navDropDown">
-                <Text
-                  as={Text}
-                  fontWeight="semibold"
-                  pl={{
-                    base: "0.5rem",
-                    lg: "1rem",
-                    xl: "1.25rem",
-                    "2xl": "1.5rem",
-                  }}
-                  pr={{
-                    base: "0.5rem",
-                    lg: "1rem",
-                    xl: "1.25rem",
-                    "2xl": "1.5rem",
-                  }}
-                  css={{
-                    color: "#fff",
-                    background: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-                    "&:hover": {
-                      userSelect: "none",
-                      color: "#44FFB2",
-                    },
-                  }}
-                  cursor="pointer"
-                  lineHeight={{ base: "0", md: "4.5rem" }}
-                  fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
-                >
-                  {lang.t("discover.ioTeX")}
-                </Text>
-                <Box
+              <Text
+                as={Text}
+                fontWeight="semibold"
+                pl={{
+                  base: "0.5rem",
+                  lg: "1rem",
+                  xl: "1.25rem",
+                  "2xl": "1.5rem",
+                }}
+                pr={{
+                  base: "0.5rem",
+                  lg: "1rem",
+                  xl: "1.25rem",
+                  "2xl": "1.5rem",
+                }}
+                css={{
+                  background:
+                    "linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+                  color: "#44FFB2",
+                  userSelect: "none",
+                }}
+                cursor="pointer"
+                lineHeight={{ base: "0", md: "4.5rem" }}
+                fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
+              >
+                {lang.t("discover.ioTeX")}
+              </Text>
+              <Box
                 className="navDropDownUl"
-                  position="absolute"
-                  top={{ base: "4rem", lg: "4.5rem" }}
-                  left="0"
-                  w="100%"
-                  pt="1.5rem"
-                  pb="0.5rem"
-                  css={{
-                    background:
-                      "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-                    backdropFilter: "blur(50px)",
-                    animation: "fadeIn 0.3s linear",
-                  }}
-                >
-                  {/* <Image
+                position="absolute"
+                top={{ base: "4rem", lg: "4.5rem" }}
+                left="0"
+                w="100%"
+                pt="1.5rem"
+                pb="0.5rem"
+                css={{
+                  background:
+                    "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+                  backdropFilter: "blur(50px)",
+                  animation: "fadeIn 0.3s linear",
+                }}
+              >
+                {/* <Image
                     boxSize="1.5rem"
                     src="/images/explore/close.png"
                     position="absolute"
@@ -424,64 +421,68 @@ export const Header = observer(() => {
                     cursor="pointer"
                     onClick={() => (store.isOpen = false)}
                   ></Image> */}
-                  <Flex justifyContent="center">
-                    {exploreConfig.map((item, index) => {
-                      return (
-                        <Flex
-                          flexDirection="column"
-                          key={item.name}
-                          mx={index === 1 ? "10%" : ""}
-                          mr={index === 2 ? "10%" : ""}
+                <Flex justifyContent="center">
+                  {exploreConfig.map((item, index) => {
+                    return (
+                      <Flex
+                        flexDirection="column"
+                        key={item.name}
+                        mx={index === 1 ? "10%" : ""}
+                        mr={index === 2 ? "10%" : ""}
+                      >
+                        <Text
+                          fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
+                          color="grayColor3"
+                          fontWeight="semibold"
+                          mb="1.5rem"
                         >
-                          <Text
-                            fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
-                            color="grayColor3"
-                            fontWeight="semibold"
-                            mb="1.5rem"
-                          >
-                            {item.name}
-                          </Text>
-                          {item.lists.map((option) => {
-                            return (
-                              <a
-                                href={option.path}
-                                key={option.name}
-                                target={option.blank ? "_blank" : ""}
-                              >
-                                <Flex
-                                  mb={{ base: "0.8rem", "2xl": "1rem" }}
-                                  alignItems="center"
-                                  css={{
-                                    "&:hover": {
-                                      color: "#44FFB2 !important",
-                                      img: {
-                                        content: `url(${option.icon_active})`,
-                                      },
+                          {item.name}
+                        </Text>
+                        {item.lists.map((option) => {
+                          return (
+                            <a
+                              href={option.path}
+                              key={option.name}
+                              target={option.blank ? "_blank" : ""}
+                            >
+                              <Flex
+                                mb={{ base: "0.8rem", "2xl": "1rem" }}
+                                alignItems="center"
+                                css={{
+                                  "&:hover": {
+                                    color: "#44FFB2 !important",
+                                    img: {
+                                      content: `url(${option.icon_active})`,
                                     },
+                                  },
+                                }}
+                              >
+                                <Box w="1.5rem" h="1.5rem" mr="0.5rem">
+                                  <img src={option.icon} alt="" />
+                                </Box>
+                                <Text
+                                  fontSize={{
+                                    base: "0.875rem",
+                                    "2xl": "1.125rem",
                                   }}
+                                  letterSpacing="1px"
                                 >
-                                  <Box w="1.5rem" h="1.5rem" mr="0.5rem">
-                                    <img src={option.icon} alt="" />
-                                  </Box>
-                                  <Text
-                                    fontSize={{
-                                      base: "0.875rem",
-                                      "2xl": "1.125rem",
-                                    }}
-                                    letterSpacing="1px"
-                                  >
-                                    {option.name}
-                                  </Text>
-                                </Flex>
-                              </a>
-                            );
-                          })}
-                          {index === 3 && (
-                            <Flex>
-                              {links.map((item) => {
-                                return (
-                                  <a href={item.href} target={item.blank ? "_blank" : ""}  key={item.icon}>
-                                    <Image
+                                  {option.name}
+                                </Text>
+                              </Flex>
+                            </a>
+                          );
+                        })}
+                        {index === 3 && (
+                          <Flex>
+                            {links.map((item) => {
+                              return (
+                                <a
+                                  href={item.href}
+                                  target={item.blank ? "_blank" : ""}
+                                  key={item.icon}
+                                >
+                                  <Image
                                     boxSize="1.5rem"
                                     mr="1rem"
                                     src={item.icon}
@@ -492,17 +493,17 @@ export const Header = observer(() => {
                                       },
                                     }}
                                   ></Image>
-                                  </a>
-                                );
-                              })}
-                            </Flex>
-                          )}
-                        </Flex>
-                      );
-                    })}
-                  </Flex>
-                </Box>
+                                </a>
+                              );
+                            })}
+                          </Flex>
+                        )}
+                      </Flex>
+                    );
+                  })}
+                </Flex>
               </Box>
+            </Box>
           </Flex>
           {/* <Menu isLazy>
             <MenuButton
@@ -555,15 +556,47 @@ export const Header = observer(() => {
             },
           }}
         >
-          <Image boxSize="1.5rem" src="/images/menue.png" alt="" />
-          <Box
-            w="160px"
-            position="absolute"
+          <Image
+            boxSize="1.5rem"
+            src="/images/menue.png"
+            alt=""
+            onClick={() => (store.openMenu = true)}
+          />
+          {store.openMenu && <Box
+            w="100vw"
+            height="100vh"
+            position="fixed"
             right="0"
-            pt="2rem"
             top="0"
+            pt="4.5rem"
             className="menusMobile"
+            css={{
+              background:
+                "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+              backdropFilter: "blur(50px)",
+              animation: "fadeIn 0.3s linear",
+            }}
           >
+            <Link to={"/"}>
+              <Box
+                w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}
+                position="absolute"
+                left="0.5rem"
+                top="0.8rem"
+              >
+                <img src="/images/logo.png" alt="" />
+              </Box>
+            </Link>
+            <Image
+              boxSize="1.5rem"
+              src="/images/explore/close.png"
+              position="absolute"
+              right="1.5rem"
+              top="0.8rem"
+              opacity="0.5"
+              cursor="pointer"
+              onClick={() => (store.openMenu = false)}
+            ></Image>
             {navConfig.map((item) => {
               return (
                 <Link
@@ -573,7 +606,6 @@ export const Header = observer(() => {
                 >
                   <Box
                     color="#fff"
-                    background="#110F1C"
                     px="1rem"
                     py="0.8rem"
                     css={{
@@ -604,7 +636,6 @@ export const Header = observer(() => {
                 >
                   <Box
                     color="#fff"
-                    background="#110F1C"
                     px="1rem"
                     py="0.8rem"
                     css={{
@@ -630,7 +661,6 @@ export const Header = observer(() => {
 
             <Box
               color="#fff"
-              background="#110F1C"
               px="1rem"
               py="0.8rem"
               css={{
@@ -650,7 +680,7 @@ export const Header = observer(() => {
                 {lang.t("explore.now")}
               </Text>
             </Box>
-          </Box>
+          </Box>}
         </Box>
         {store.openExplore && (
           <Flex

@@ -20,6 +20,7 @@ import delegate from "@/assets/images/token/delegate.png";
 import iotexOverflowBanner from "@/assets/images/token/iotex_overflow_banner.png";
 // @ts-ignore
 import staking from "@/assets/images/token/staking.png";
+import { numberWithCommas } from "@/utils/index";
 
 
 
@@ -28,14 +29,23 @@ export const Investors = observer(() => {
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
  
   const store = useLocalStore(() => ({
+    maketStatus: false,
+    tokenStatus: false,
+    totalStatus: false,
     get marketCap() {
       return base.marketCap
+    },
+    get marketCapCommas() {
+      return numberWithCommas(base.marketCap)
     },
     get tokenPrice() {
       return base.tokenPrice
     },
     get totalSupply() {
       return Number(base.totalSupply.getFormat())
+    },
+    get totalSupplyCommas() {
+      return numberWithCommas(base.totalSupply.getFormat())
     }
   }))
 
@@ -246,10 +256,11 @@ export const Investors = observer(() => {
                   { lang.t("overview1")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
-                  $  <CountTo 
+                  $  {store.maketStatus ? store.marketCapCommas : <CountTo 
                     from={0} to={store.marketCap} speed={3000} 
                     digits={0}  
-                  />
+                    onComplete={() => store.maketStatus = true}
+                  />}
                 </Text>
               </Flex>
               <Flex direction="column" justifyContent="center" alignItems="flex-start" mb={{ base: "2rem", sm: "4rem" }}>
@@ -260,10 +271,10 @@ export const Investors = observer(() => {
                   { lang.t("overview3")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
-                  <CountTo 
-                    from={0} to={store.totalSupply} speed={3000} 
-                    digits={0}  // onComplete={() => changeAnimateStatus(index)}
-                  />
+                  {store.totalStatus ? store.totalSupplyCommas : <CountTo 
+                    from={0} to={store.totalSupply || 0} speed={3000} 
+                    digits={0}  onComplete={() => store.totalStatus = true}
+                  />}
                 </Text>
               </Flex>
               <Flex direction="column" justifyContent="center" alignItems="flex-start" mb={{ base: "2rem", sm: "4rem" }}>
@@ -276,7 +287,7 @@ export const Investors = observer(() => {
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
                   $  <CountTo 
                     from={0} to={store.tokenPrice} speed={3000} 
-                    digits={6}  // onComplete={() => changeAnimateStatus(index)}
+                    digits={6}
                   />
                 </Text>
               </Flex>
@@ -299,7 +310,7 @@ export const Investors = observer(() => {
               <Flex
                 pt={{ base: "", md: "7.5rem", lg: "13rem", xl: "18rem", "2xl": "24rem" }}
                 mb={{
-                  base: "3rem",
+                  base: "5rem",
                   sm: "4rem",
                   md: "7rem",
                   lg: "6rem",
@@ -348,7 +359,7 @@ export const Investors = observer(() => {
               <Box
                 w={{ base: "100%", md: "40%", xl: "38%" }}
                 mb={{
-                  base: "3rem",
+                  base: "7rem",
                   sm: "4rem",
                   md: "4.5rem",
                   lg: "8rem",
@@ -537,7 +548,7 @@ export const Investors = observer(() => {
                 fontWeight="medium"
                 opacity="0.85"
                 lineHeight="1.8"
-                mb="4rem"
+                mb={{base: "1.5rem", md: "4rem"}}
               >
                 {lang.t("investors.subtitle5.1")}
               </Text>

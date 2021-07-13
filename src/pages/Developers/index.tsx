@@ -186,19 +186,20 @@ export const Developers = observer(() => {
           <Flex
             justifyContent="space-between"
             alignItems="center"
-            mb="9.6rem"
+            mb={{base: "0", md: "9.6rem"}}
             flexDirection={{ base: "column", md: "row" }}
           >
             <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
               <Text
                 fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
                 fontWeight="semibold"
-                mb="1.8rem"
+                mb={{base: "0", md: "1.8rem"}}
                 whiteSpace="pre-line"
               >
                 {lang.t("dev.achieve.title")}
               </Text>
               <Image
+               display={{base: "none", md: "block"}}
                 boxSize={{base: "8rem", lg: "14rem"}}
                 objectFit="cover"
                 src="/images/dev_ball.png"
@@ -251,7 +252,7 @@ export const Developers = observer(() => {
 
         {/* award */}
         <Box
-          mb={{ base: "15rem", lg: "15rem", "2xl": "25rem" }}
+          mb={{ base: "5rem",md: "15rem", lg: "15rem", "2xl": "25rem" }}
           maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
           mx="auto"
         >
@@ -262,7 +263,7 @@ export const Developers = observer(() => {
           >
             <Box
               w={{ base: "100%", md: "40%", "2xl": "35%" }}
-              mb={{ base: "4rem", md: 0 }}
+              mb={{ base: "2rem", md: 0 }}
             >
               <Text
                 fontSize={{
@@ -334,7 +335,7 @@ export const Developers = observer(() => {
 
       {/* Develop on the World’s Most Technologically Advanced Blockchain Platform */}
       <Box
-        pb="10rem"
+        pb={{base: "5rem", md: "10rem"}}
         css={{
           backgroundImage: `url(${develop})`,
           backgroundSize: `${isMaxThan468 ? "50%" : "100%"}`,
@@ -438,20 +439,16 @@ export const Developers = observer(() => {
       {/*  Web3js, Solidity, and Native SDKs.  */}
       <Box
         pb={{ base: "0", md: "20rem", lg: "30rem" }}
-        css={
-          isMaxThan768
-            ? {
-                backgroundImage: "url(/images/dev/bg_4.svg)",
-                backgroundSize: "60%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "0 100%",
-              }
-            : {}
-        }
+        css={{
+          backgroundImage: "url(/images/dev/bg_4.svg)",
+          backgroundSize: isMaxThan468 ? "60%" : "100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: isMaxThan468 ? "0 100%" : "0 0",
+        }}
       >
-        <Box display={{ base: "block", md: "none" }}>
+        {/* <Box display={{ base: "block", md: "none" }}>
           <img src="/images/dev/bg_4.svg" alt="" />
-        </Box>
+        </Box> */}
         <Flex
           maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
           mx="auto"
@@ -574,7 +571,7 @@ export const Developers = observer(() => {
       </Box>
 
       <Box
-        pt={{ base: "15rem", md: 0 }}
+        pt={{ base: "5rem", md: 0 }}
         css={{
           backgroundImage: `url(/images/dev/connect_bg.png), url(${bgThree})`,
           backgroundSize: `70%, 100%`,
@@ -587,7 +584,7 @@ export const Developers = observer(() => {
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
           <Flex
             justifyContent="space-between"
-            mb="9.6rem"
+            mb={{base: "5rem", md: "9.6rem"}}
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <Box w={{ base: "100%", md: "35%", "2xl": "20vw" }}>
@@ -768,7 +765,7 @@ export const Developers = observer(() => {
 
       {/* discord */}
       <Box
-        mt={{ base: "8rem", md: "15rem" }}
+        mt={{ base: "5rem", md: "15rem" }}
         id="joinCommunity"
       >
         <Box

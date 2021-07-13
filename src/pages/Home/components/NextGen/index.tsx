@@ -23,21 +23,21 @@ export const NextGen = observer(() => {
       },
       {
         name: lang.t("mega.scalable"),
-        desc: lang.t("advantage1.tips"),
+        desc: lang.t("advantage2.tips"),
         icon: "/images/mining.png",
         selectedIcon: "/images/card2.png",
         show: false,
       },
       {
         name: lang.t("ultra.fast"),
-        desc: lang.t("advantage1.tips"),
+        desc: lang.t("advantage3.tips"),
         icon: "/images/real.png",
         selectedIcon: "/images/card3.png",
         show: false,
       },
       {
         name: lang.t("secure.cryptographic"),
-        desc: lang.t("advantage1.tips"),
+        desc: lang.t("advantage4.tips"),
         icon: "/images/deflot.png",
         selectedIcon: "/images/card4.png",
         show: false,
@@ -198,7 +198,7 @@ export const NextGen = observer(() => {
                       backgroundSize: "100% 100%",
                     },
                   }}
-                  onClick={() =>
+                  onMouseOver={() =>
                     isMaxThan468 ? store.changeCard(item, index) : ""
                   }
                   onMouseOut={() =>
@@ -529,12 +529,12 @@ export const NextGen = observer(() => {
         })}
       </Box>
       <Box
-        w={{ base: "8rem", sm: "10rem", xl: "14rem", "2xl": "20rem" }}
+        w={{ base: "50%", sm: "10rem", xl: "14rem", "2xl": "20rem" }}
         height={{ "2xl": "6rem" }}
         position="relative"
         cursor="pointer"
         mx="auto"
-        mt="3rem"
+        mt={{base: "0", md: "3rem"}}
       >
         <Box
           w="100%"

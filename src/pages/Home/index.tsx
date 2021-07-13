@@ -10,6 +10,7 @@ import {
 	ModalOverlay,
 	ModalContent,
 	ModalBody,
+  useMediaQuery
 } from "@chakra-ui/react";
 import BasicLayout from "../../Layouts/BasicLayout";
 import {Banner} from "@/components/Banner/index";
@@ -17,20 +18,22 @@ import {AwardWinning} from "./components/AwardWinning/index";
 import {NextGen} from "./components/NextGen/index";
 import {JoinRevolution} from "./components/JoinRevolution/index";
 import CountTo from "react-count-to";
+import { numberWithCommas } from '../../utils/index'
 
 export const Home = observer(() => {
 	const {lang} = useStore();
+  const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
 	const analysis = [
-		{name: lang.t("devices"), amount: 6000, coin: "+"},
-		{name: lang.t("dapps"), amount: 50, coin: "+"},
-		{name: lang.t("users"), amount: 125, coin: "K+"},
-		{name: lang.t("delegates"), amount: 69, coin: ""},
+		{name: lang.t("devices"), amount: 6000, coin: "+", result: '6,000'},
+		{name: lang.t("dapps"), amount: 50, coin: "+", result: 50},
+		{name: lang.t("users"), amount: 125, coin: "K+", result: 125},
+		{name: lang.t("delegates"), amount: 69, coin: "", result: 69},
 	];
-
 
 	const store = useLocalObservable(() => ({
 		isOpen: false,
 		hoverIndex: 0,
+    status: false,
 		open() {
 			store.isOpen = true;
 		},
@@ -81,7 +84,7 @@ export const Home = observer(() => {
 									}}
 									mb={{base: "0.5rem", md: "1rem"}}
 								>
-									<CountTo from={0} to={item.amount} speed={5000}/>
+									{store.status ? item.result : <CountTo from={0} to={item.amount} speed={5000} onComplete={() => store.status = true} />}
 									{item.coin}
 								</Text>
 								<Text
@@ -219,8 +222,8 @@ export const Home = observer(() => {
 			{/* award-winning */}
 			<Box
 				backgroundPosition={{base: "30% 12%", xl: "25% 0%"}}
-				pt="7.5rem"
-				pb={{base: "10rem", lg: "18rem"}}
+				pt={{base: "0", md: "7.5rem"}}
+				pb={{base: "4rem", md: "10rem", lg: "18rem"}}
 				css={{
 					backgroundImage: "url(/images/award_wing_bg.png)",
 					backgroundSize: "56%",
@@ -230,12 +233,14 @@ export const Home = observer(() => {
 				<Box
 					maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
 					mx="auto"
-					mb={{base: "8rem", xl: "12rem"}}
+					mb={{base: "4rem", md: "10rem", xl: "12rem"}}
 				>
 					<AwardWinning/>
 				</Box>
 				<Box w="100%" position="relative">
-					<img src="/images/mask_group.png" style={{opacity: 0}} alt=""/>
+					<Box height={{base: "10rem", md: "max-content"}}>
+            <img src="/images/mask_group.png" style={{opacity: 0}} alt=""/>
+          </Box>
 					<Flex
 						flexDirection="column"
 						w="100%"
@@ -249,8 +254,8 @@ export const Home = observer(() => {
 							css={{
 								height: "45%",
 								background: "url(/images/awind_line_1.png) center 0px repeat-x",
-								backgroundSize: "250% 100%",
-								backgroundPositionX: "250%",
+								backgroundSize: isMaxThan768 ? "250% 100%" : "650% 100%",
+								backgroundPositionX: isMaxThan768 ? "250%" : "650%",
 								animation: "awardLine1 90s infinite linear",
 							}}
 						/>
@@ -258,8 +263,8 @@ export const Home = observer(() => {
 							css={{
 								height: "45%",
 								background: "url(/images/awind_line_2.png) center 0px repeat-x",
-								backgroundSize: "240% 100%",
-								backgroundPositionX: "240%",
+								backgroundSize: isMaxThan768 ? "240% 100%" : "640% 100%",
+								backgroundPositionX: isMaxThan768 ? "240%" : "640%",
 								animation: "awardLine2 90s infinite linear",
 							}}
 						/>
@@ -273,7 +278,7 @@ export const Home = observer(() => {
 							bottom: "-1px",
 							zIndex: 2,
 							background: "url(/images/mask.png) center center no-repeat",
-							backgroundSize: "contain",
+							backgroundSize: isMaxThan768 ? "contain" : "100% 100%",
 						}}
 					/>
 				</Box>

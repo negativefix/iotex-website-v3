@@ -21,7 +21,7 @@ export const AwardWinning = observer(() => {
             <Flex flexWrap="wrap" maxWidth={{base: "100%", lg: "50%"}} justifyContent="space-between">
               {
                 logos.map((item) => {
-                  return <Box key={item.icon} width={{base: "90%", md: "47%"}} mb={{base: "1rem", md: "2rem", lg: "2rem", "2xl": "3rem"}} h={{base: "max-content", lg: "48%", xl: "10rem","2xl": "45%"}}>
+                  return <Box key={item.icon} width={{base: "48%", md: "47%"}} mb={{base: "1rem", md: "2rem", lg: "2rem", "2xl": "3rem"}} h={{base: "5rem", lg: "48%", xl: "10rem","2xl": "45%"}}>
                     <a href={item.href} target="blank">
                       <LogoCardItem item={item} width="100%" height="100%" />
                     </a>

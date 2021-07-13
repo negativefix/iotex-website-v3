@@ -21,12 +21,10 @@ export class BaseStore {
   async init() {
     const res = await axios.get(this.coingeckoUrl);
     if (res.data) {
-      console.log(res.data)
       this.marketCap = res.data.market_data.market_cap.usd
       this.tokenPrice = res.data.market_data.current_price.usd
     }
     this.fetchSupply().then(res => {
-      console.log(new BigNumber(res.totalSupply))
       this.totalSupply.setValue(new BigNumber(res.totalSupply))
     })
   }
