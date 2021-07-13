@@ -21,10 +21,10 @@ import CountTo from "react-count-to";
 export const Home = observer(() => {
 	const {lang} = useStore();
 	const analysis = [
-		{name: lang.t("devices"), amount: 5000, coin: "+"},
-		{name: lang.t("dapps"), amount: 150, coin: "+"},
-		{name: lang.t("users"), amount: 200, coin: "K+"},
-		{name: lang.t("delegates"), amount: 300, coin: "+"},
+		{name: lang.t("devices"), amount: 6000, coin: "+"},
+		{name: lang.t("dapps"), amount: 50, coin: "+"},
+		{name: lang.t("users"), amount: 125, coin: "K+"},
+		{name: lang.t("delegates"), amount: 69, coin: ""},
 	];
 
 

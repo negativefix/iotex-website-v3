@@ -423,6 +423,7 @@ export const JoinRevolution = observer(() => {
                         name="EMAIL"
                         className="email"
                         id="mce-EMAIL"
+                        placeholder="Email"
                         required
                       />
                     </Box>

@@ -73,8 +73,8 @@ export const Advanced = observer(() => {
         {icon: "/images/token/exchange/logo_gate_n.png", href: "https://www.gate.io/trade/IOTX_ETH"},
         {icon: "/images/token/exchange/logo_hotbit_n.png", href: "https://www.hotbit.io/exchange?symbol=IOTX_USDT"},
         {icon: "/images/token/exchange/logo_mxc_n.png", href: "https://www.mexc.com/exchange/IOTX_USDT"},
-        {icon: "/images/token/exchange/logo_citex_n.png", href: "https://citex.zendesk.com/hc/en-us/articles/360029942011-Announcement-on-the-Launch-of-IOTX-in-CITEX-Main-Board-Trade-Zone"},
-        {icon: "/images/token/exchange/logo_elitex_n.png", href: ""},
+        {icon: "/images/token/exchange/logo_citex_n.png", href: "https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX"},
+        {icon: "/images/token/exchange/logo_elitex_n.png", href: "https://trade.kucoin.com/IOTX-BTC"},
       ],
     },
     {

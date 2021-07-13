@@ -54,7 +54,7 @@ export const NextGen = observer(() => {
         name: lang.t("pebble"),
         desc: lang.t("pebble.desc"),
         icon: "/images/pebble.png",
-        href: "https://iotex.io/pebble",
+        href: "/pebble",
       },
       {
         name: lang.t("smart.lock"),
@@ -198,12 +198,12 @@ export const NextGen = observer(() => {
                       backgroundSize: "100% 100%",
                     },
                   }}
-                  // onClick={() =>
-                  //   isMaxThan468 ? store.changeCard(item, index) : ""
-                  // }
-                  // onMouseOut={() =>
-                  //   isMaxThan468 ? store.resetCard(item, index) : ""
-                  // }
+                  onClick={() =>
+                    isMaxThan468 ? store.changeCard(item, index) : ""
+                  }
+                  onMouseOut={() =>
+                    isMaxThan468 ? store.resetCard(item, index) : ""
+                  }
                 >
                   {item.show ? (
                     <>

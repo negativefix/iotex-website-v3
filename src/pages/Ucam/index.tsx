@@ -151,7 +151,7 @@ export const Ucam = observer(() => {
 						whiteSpace={{base: "inherit", md: 'inherit', lg: 'inherit', xl: "inherit", '2xl': 'pre-line'}}
 					>{lang.t('ucam.title3')}</Text>
 					<Button
-						name={'Connect with the IoTeX team'} href={'https://iotex.io/enterprise'}
+						name={'Connect with the IoTeX team'} href={'/enterprise'}
 						size={{base: "80%", md: "50%", lg: "60%", xl: '50%', "2xl": "50%"}}/>
 				</Box>
 			</SectionContainer>

@@ -103,7 +103,7 @@ export const Investors = observer(() => {
       name: lang.t("get.iotx.card3"),
       btn: lang.t("go.deep"),
       icon: "/images/get_start_card3.png",
-      href: "https://iotex.io/advanced",
+      href: "/advanced",
       lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("governance")],
     },
   ];
@@ -340,6 +340,7 @@ export const Investors = observer(() => {
                     whiteSpace={{ base: "inherit", lg: "pre-line" }}
                     fontWeight="semibold"
                     letterSpacing="4px"
+                    mb={{ base: "1.5rem", md: "3rem" }}
                   >
                     {lang.t("investors.title2")}
                   </Text>
@@ -623,9 +624,9 @@ export const Investors = observer(() => {
                 {lang.t("intro.subtitle4")}
               </Text>
               <Button
-                href="https://onboard.iotex.io/tokenomics/iotx-utility"
+                href="/advanced"
                 size={{ base: "100%", md: "80%" }}
-                name={lang.t("utility.details")}
+                name={lang.t("iotx.uses")}
               />
             </Box>
             <Box w={{base: "100%", lg: "55%"}} h="100%">
@@ -772,7 +773,7 @@ export const Investors = observer(() => {
                     w="68%"
                     mx="auto"
                   >
-                    <a href={item.href} style={{ width: "100%" }}>
+                    <a href={item.href} target="_blank" style={{ width: "100%" }}>
                       <Flex
                         bg="btnBgColor"
                         className="commonBtn"

@@ -35,7 +35,7 @@ export const Header = observer(() => {
 
   const startedConfig = [
     { name: lang.t("for.developers"), path: "/developers", blank: false },
-    { name: lang.t("for.investors"), path: "/for-investors", blank: false },
+    { name: lang.t("For.investors"), path: "/for-investors", blank: false },
     { name: lang.t("for.business"), path: "/enterprise", blank: false },
   ];
 
@@ -387,11 +387,9 @@ export const Header = observer(() => {
                   }}
                   css={{
                     color: "#fff",
-                    background: "transparent",
+                    background: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
                     "&:hover": {
                       userSelect: "none",
-                      background:
-                        "linear-gradient(147.16deg, rgba(255, 255, 255, 0.05) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
                       color: "#44FFB2",
                     },
                   }}

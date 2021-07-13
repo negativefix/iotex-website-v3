@@ -91,12 +91,12 @@ export const Developers = observer(() => {
     {
       icon: "/images/dev/logo_ucam_n.png",
       iocn_active: "/images/dev/logo_ucam_h.png",
-      href: "https://iotex.io/ucam"
+      href: "/ucam"
     },
     {
       icon: "/images/dev/logo_pebble_n.png",
       iocn_active: "/images/dev/logo_pebble_h.png",
-      href: "https://iotex.io/pebble"
+      href: "/pebble"
     },
     {
       icon: "/images/dev/logo_mimo_n.png",

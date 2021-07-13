@@ -178,7 +178,7 @@ export const customTheme = extendTheme({
                 animation: 'dropmenu 0.2s ease-in-out forwards',
                 animationDelay: '0.8s'
               },
-              '&:ast-of-type': {
+              '&:nth-of-type(6)': {
                 animation: 'dropmenu 0.2s ease-in-out forwards',
                 animationDelay: '1s'
               },
