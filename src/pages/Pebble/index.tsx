@@ -1,7 +1,7 @@
 import React from "react";
 import {observer} from "mobx-react-lite";
 import BasicLayout from "../../Layouts/BasicLayout";
-import {Box, Flex, Image, keyframes, SimpleGrid, Text} from "@chakra-ui/react";
+import {Box, Flex, Image, keyframes, Link, SimpleGrid, Text} from "@chakra-ui/react";
 import {useStore} from "@/store/index";
 import {Button} from "@/components/Button";
 import {Card} from "./Card";
@@ -268,13 +268,34 @@ const Pebble = () => {
 					</Flex>
 					<Flex  flexDirection={'column'} justifyContent={"center"}>
 						<Title text={lang.t('pebble.section5.title')} textAlign={'left'} fontSize={{base:'2rem',xl:'3.3rem'}}/>
-						<Text mt={10} fontSize={'1.25rem'}>{lang.t('pebble.section5.caption')}</Text>
+						<Text mt={10} fontSize={'1.25rem'}>{lang.t('pebble.section5.caption1')}</Text>
+						<Text mt={10} fontSize={'1.25rem'}>{lang.t('pebble.section5.caption2')}</Text>
 						<Box mt={20}>
 							<Button name={lang.t("get_started_with_iotex")}
 							        href={'https://docs.iotex.io/get-started/iotex-dapp-starter'}
 							        size={{base: "100%", xl: "60%", "2xl": "60%"}}
 							/>
 						</Box>
+						<Link
+							isExternal
+							href={'https://www.crowdsupply.com/iotex/pebble-tracker'}
+							cursor={"pointer"}
+							_hover={{}}
+							fontSize={{
+								base: "0.875rem",
+								md: "1rem",
+								lg: "1.25rem",
+								xl: "1.25rem",
+								"2xl": "1.75rem",
+							}}
+							fontWeight="medium"
+							mt={10}
+							textAlign="left"
+							color="brandColor"
+							lineHeight="1.275rem"
+						>
+							{lang.t('research.readmore')}
+						</Link>
 					</Flex>
 				</SimpleGrid>
 			</SectionContainer>

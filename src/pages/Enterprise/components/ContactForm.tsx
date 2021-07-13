@@ -68,7 +68,7 @@ const ContactForm = () => {
 					borderRadius:"1.125rem"
 				}}
 			>
-				<Heading fontSize={{xl:'2.1rem'}} textAlign={'center'} lineHeight={'2rem'}>{lang.t('enterprise.form.title')}</Heading>
+				<Heading fontSize={{base:'1.8rem',xl:'2.1rem'}} textAlign={'center'} lineHeight={{base:'2.5rem',xl:'2rem'}}>{lang.t('enterprise.form.title')}</Heading>
 				<Text mt={4} fontSize={'1.12rem'} textAlign={'center'}>{lang.t('enterprise.form.subtitle')}</Text>
 				<Flex flexDirection={'column'} mt={10}>
 

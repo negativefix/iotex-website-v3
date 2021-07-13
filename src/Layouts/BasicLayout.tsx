@@ -48,8 +48,8 @@ const BasicLayout = ({children, name}) => {
         meta: 'IOTX is the native cryptocurrency of IoTeX. Use IOTX to buy, trade, stake, and contribute to the IoTeX connected world. Learn more...'
       },
       'ucam':{
-        title:'',
-        meat:''
+        title:'Ucam - Blockchain Security Camera Powered by IoTeX',
+        meat:'Ucam security camera offers home/business security while protecting your data on the blockchain.'
       }
     }
     globalStyle()

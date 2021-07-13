@@ -546,7 +546,7 @@ const Faq = () => {
 					</Box>
 
 				</Flex>
-				<Footer/>
+				{/*<Footer/>*/}
 			</Container>
 		</BasicLayout>
 	)

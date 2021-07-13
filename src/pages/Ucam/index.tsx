@@ -102,11 +102,11 @@ export const Ucam = observer(() => {
 				</Flex>
 			</SectionContainer>
 			<SectionContainer mt={40}>
-				<Flex justifyContent={'space-between'} flexDirection={{base:'column-reverse',lg: 'column-reverse', xl: 'row'}}>
-					<Box w={'40%'} mx={{base:'auto',md:'unset'}}>
+				<Flex justifyContent={'space-between'} flexDirection={{base:'column',lg: 'column-reverse', xl: 'row'}}>
+					<Box w={{base:'80%',md:'40%'}} mx={{base:'auto',md:'unset'}}>
 						<Image src={imgTwo} mt={20}/>
 					</Box>
-					<Box w={{lg: '100%', xl: '56%'}} mt={{base:5}}>
+					<Box w={{lg: '100%', xl: '56%'}} mt={{base:10}}>
 						<Text
 							fontWeight="semibold"
 							fontSize={{base: "2.25rem", sm: "3rem", lg: "3.5rem", xl: "3.2rem", "2xl": "4.5rem"}}
@@ -129,8 +129,8 @@ export const Ucam = observer(() => {
 			<SectionContainer mt={40}>
 				<Box
 					mx={'auto'}
-					px={20}
-					py={20}
+					px={{base:10,md:20}}
+					py={{base:10,md:20}}
 					display={'flex'}
 					flexDirection={'column'}
 					alignItems={'center'}
@@ -150,13 +150,13 @@ export const Ucam = observer(() => {
 					<Text
 						fontWeight={'600'}
 						textAlign={'center'}
-						fontSize={'2rem'}
+						fontSize={{base:'1.25rem',md:'2rem '}}
 						pb={20}
 						whiteSpace={{base: "inherit", md: 'inherit', lg: 'inherit', xl: "inherit", '2xl': 'pre-line'}}
 					>{lang.t('ucam.title3')}</Text>
 					<Button
 						name={'Connect with the IoTeX team'} href={'/enterprise'}
-						size={{base: "80%", md: "50%", lg: "60%", xl: '50%', "2xl": "50%"}}/>
+						size={{base: "100%", md: "50%", lg: "60%", xl: '50%', "2xl": "50%"}}/>
 				</Box>
 			</SectionContainer>
 			<SectionContainer mt={40}>
@@ -178,7 +178,7 @@ export const Ucam = observer(() => {
 							<Text mt={10}>{lang.t("ucam.caption42")}</Text>
 						</Box>
 					</Box>
-					<Box w={'52%'} mt={20} mx={'auto'}>
+					<Box w={{base:'70%',md:'52%'}} mt={20} mx={'auto'}>
 						<Image src={imgThree}/>
 					</Box>
 				</Flex>

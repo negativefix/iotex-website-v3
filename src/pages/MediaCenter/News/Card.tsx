@@ -22,12 +22,14 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 		<Flex
 			css={{
 				background: 'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%);',
-				cursor: 'pointer'
+				cursor: 'pointer',
+				backdropFilter: "blur(100px)",
+
 			}}
 			flexDirection={'column'}
 			width={width}
 			height={'100%'}
-			padding={{xl:'2rem','2xl':'3.125rem'}}
+			padding={{base:'2rem',xl:'2rem','2xl':'3.125rem'}}
 			borderRadius={'20px'}
 			maxWidth={maxWidth}
 			onMouseEnter={() => setHover(true)}
@@ -73,3 +75,4 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 	)
 }
 export default observer(Card)
+
