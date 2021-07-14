@@ -226,7 +226,7 @@ export const NextGen = observer(() => {
                         <Text
                           fontSize={{
                             base: "1rem",
-                            lg: "1.5rem",
+                            lg: "1.25rem",
                             "2xl": "2rem",
                           }}
                           fontWeight="semibold"
