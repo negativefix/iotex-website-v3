@@ -24,20 +24,29 @@ const MediaCenter = () => {
 	// }))
 	return (
 		<BasicLayout name="media-center">
-			<Image src={bg1} position={'absolute'} width={'100%'}/>
-			<SectionContainer marginTop={{base:'10rem',md:'11rem',lg:'13rem'}}>
-				<Title text={'IoTeX In The Media'} textAlign={'center'}/>
-				<Flex marginTop={{base: '3rem', md: '4.8rem'}} justifyContent={'space-evenly'}>
-					{/*<TabButton text={'IoTeX In the News'} isActive={true}*/}
-					{/*           onClick={() => {}}/>*/}
-					{/*<TabButton text={'IoTeX Content'} isActive={Tab.CONTENT === store.tabIndex}*/}
-					{/*           onClick={() => store.tabIndex = Tab.CONTENT}/>*/}
-				</Flex>
-			</SectionContainer>
+			<Box
+				bgImg={`url(${bg1})`}
+				bgPosition={'top'}
+				bgSize={'100%'}
+				bgRepeat={'no-repeat'}
+				pt={3}
+			>
+				<SectionContainer marginTop={{base:'10rem',md:'11rem',lg:'13rem'}}>
+					<Title text={'IoTeX In The Media'} textAlign={'center'}/>
+					<Flex marginTop={{base: '3rem', md: '4.8rem'}} justifyContent={'space-evenly'}>
+						{/*<TabButton text={'IoTeX In the News'} isActive={true}*/}
+						{/*           onClick={() => {}}/>*/}
+						{/*<TabButton text={'IoTeX Content'} isActive={Tab.CONTENT === store.tabIndex}*/}
+						{/*           onClick={() => store.tabIndex = Tab.CONTENT}/>*/}
+					</Flex>
+				</SectionContainer>
+				<NewsTab/>
+
+			</Box>
+
 			{/*{*/}
 			{/*	store.tabIndex === Tab.NEWS ? <NewsTab/> : <ContentTab/>*/}
 			{/*}*/}
-			<NewsTab/>
 			<Footer/>
 		</BasicLayout>
 	)

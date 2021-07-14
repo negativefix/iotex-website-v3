@@ -77,7 +77,7 @@ export const Research = observer(() => {
 					mb={20}
 				>
 					<Text fontSize={{md: '2rem'}} fontWeight={'600'}>Industry Awards</Text>
-					<SimpleGrid columns={[1, 2, 2]} spacing={{base:'1rem',md: '1.75rem', lg: '4rem'}} mt={10}>
+					<SimpleGrid columns={[1, 2, 2]} spacing={{base:'2rem',md: '1.75rem', lg: '4rem'}} mt={10}>
 						{
 							AWARDS.map((award, index) => {
 								return (
