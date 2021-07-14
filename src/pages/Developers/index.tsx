@@ -12,7 +12,7 @@ import { BuildOnIotex } from "./components/BuildOnIotex/index";
 
 import bgThree from "@/assets/images/dev/bg_3.png";
 import develop from "@/assets/images/dev/develop.png";
-
+import dcBg from '@/assets/images/dev/bg_hover.png'
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -782,6 +782,22 @@ export const Developers = observer(() => {
             //   backdropFilter: "blur(50px)",
             // },
           }}
+
+          _hover={{
+            _after: {
+              top: '0',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              position: "absolute",
+              content: `""`,
+              backgroundImage: `url('${dcBg}')`,
+              backgroundSize: '100% 100%',
+              transition: 'opacity .3s',
+              borderRadius: '20px',
+              zIndex: -1,
+            }
+          }}
         >
           <Flex
             pt="5rem"
@@ -809,7 +825,7 @@ export const Developers = observer(() => {
             <a href="https://iotex.io/devdiscord" target="_blank">
             <Box textAlign="center" maxWidth="9.5rem">
               <Image
-                boxSize={{ base: "6rem", sm: "8rem", md: "7.5rem" }}
+                boxSize={{ base: "4rem", sm: "8rem", md: "7.5rem" }}
                 objectFit="cover"
                 src="/images/icon_discord.png"
                 alt=""
