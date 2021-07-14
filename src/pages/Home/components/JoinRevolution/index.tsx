@@ -461,8 +461,10 @@ export const JoinRevolution = observer(() => {
           </Box>
         </Flex>
       </Box>
-
-      <Footer />
+      <Box mt={{base: '4rem', md: 0}} />
+      <Box display={{base: "none", md: "block"}}>
+        <Footer />
+      </Box>
     </Box>
   );
 });

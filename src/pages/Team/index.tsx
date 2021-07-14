@@ -399,7 +399,7 @@ export const Team = observer(() => {
               fontSize={{base: "0.75rem", sm: "1rem", lg: "1.25rem", xl: "1.5rem", "2xl": "1.75rem"}}  opacity="0.85"
               width={{base: "90%", lg: "80%", xl: "81%", "2xl": "70%"}}
               fontWeight="medium" textAlign="center">
-              {lang.t("team.subtitle")}
+              {lang.t("team.subtitle")} <br /> <a href="mailto:hello@iotex.io" style={{color: "#44FFB2"}}>{lang.t("team.email")}</a>
             </Text>
           </Flex>
         </Box>
