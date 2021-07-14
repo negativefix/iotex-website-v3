@@ -676,7 +676,6 @@ export const Investors = observer(() => {
           maxWidth={{ base: "90%", md: "80%", "2xl": "1554px" }}
           mb={{ base: "10rem", lg: "15rem", "2xl": "15rem" }}
           mx="auto"
-          id="getStarted"
         >
           <Text
             fontSize={{

@@ -1,26 +1,18 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Menu,
-  MenuButton,
-  useDisclosure,
-  MenuList,
-  MenuItem,
-  Image,
-  Text,
-  IconButton,
-  Center,
-} from "@chakra-ui/react";
-import { useHistory } from "react-router-dom";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { useStore } from "../../store";
-import { Link } from "@chakra-ui/react";
-import { observer, useLocalStore } from "mobx-react-lite";
-import { IoMenu } from "react-icons/io5";
+import { observer } from "mobx-react-lite";
+import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
+import { publicConfig } from "../../config/public";
 
 export const Footer = observer(() => {
   const { lang } = useStore();
-
+  const { loading, error, success, message, handleSubmit } = useMailChimpForm(
+    publicConfig.MAIL_CHIMP
+  );
+  const { fields, handleFieldChange } = useFormFields({
+    EMAIL: "",
+  });
   const config = [
     {
       name: lang.t("GET.STARTED"),
@@ -155,31 +147,31 @@ export const Footer = observer(() => {
       icon: "/images/explore/icon_twitter_n.png",
       icon_active: "/images/explore/icon_twitter_s.png",
       blank: true,
-      href: 'https://twitter.com/iotex_io'
+      href: "https://twitter.com/iotex_io",
     },
     {
       icon: "/images/explore/icon_discord_n.png",
       icon_active: "/images/explore/icon_discord_s.png",
       blank: true,
-      href: 'https://iotex.io/devdiscord'
+      href: "https://iotex.io/devdiscord",
     },
     {
       icon: "/images/explore/icon_youtube_n.png",
       icon_active: "/images/explore/icon_youtube_s.png",
       blank: true,
-      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw"
+      href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
     {
       icon: "/images/explore/icon_reddit_n.png",
       icon_active: "/images/explore/icon_reddit_s.png",
       blank: true,
-      href: "https://www.reddit.com/r/IoTeX/"
+      href: "https://www.reddit.com/r/IoTeX/",
     },
     {
       icon: "/images/explore/icon_telegram_n.png",
       icon_active: "/images/explore/icon_telegram_s.png",
       blank: true,
-      href: "https://t.me/iotexchannel"
+      href: "https://t.me/iotexchannel",
     },
   ];
 
@@ -198,7 +190,7 @@ export const Footer = observer(() => {
           return (
             <Box
               key={item.name}
-              display={{base: "none", md: "block"}}
+              display={{ base: "none", md: "block" }}
               w={{ base: "100%", md: "auto" }}
               mb={{ base: "2rem", md: "0" }}
             >
@@ -218,7 +210,11 @@ export const Footer = observer(() => {
               <Flex direction="column">
                 {item.lists.map((option) => {
                   return (
-                    <a href={option.path}  key={option.name}  target={option.blank ? "_blank" : ""}>
+                    <a
+                      href={option.path}
+                      key={option.name}
+                      target={option.blank ? "_blank" : ""}
+                    >
                       <Text
                         key={option.name}
                         fontSize={{
@@ -232,12 +228,12 @@ export const Footer = observer(() => {
                         mt="1rem"
                         fontWeight="medium"
                         css={{
-                          '&:hover': {
-                            color: '#44FFB2'
-                          }
+                          "&:hover": {
+                            color: "#44FFB2",
+                          },
                         }}
                       >
-                      {option.name}
+                        {option.name}
                       </Text>
                     </a>
                   );
@@ -246,19 +242,23 @@ export const Footer = observer(() => {
                   <Flex mt="1rem">
                     {links.map((item) => {
                       return (
-                        <a href={item.href} target={item.blank ? "_blank" : ""}  key={item.icon}>
-                                    <Image
-                                    boxSize="1.5rem"
-                                    mr="1rem"
-                                    src={item.icon}
-                                    cursor="pointer"
-                                    css={{
-                                      "&:hover": {
-                                        content: `url(${item.icon_active})`,
-                                      },
-                                    }}
-                                  ></Image>
-                                  </a>
+                        <a
+                          href={item.href}
+                          target={item.blank ? "_blank" : ""}
+                          key={item.icon}
+                        >
+                          <Image
+                            boxSize="1.5rem"
+                            mr="1rem"
+                            src={item.icon}
+                            cursor="pointer"
+                            css={{
+                              "&:hover": {
+                                content: `url(${item.icon_active})`,
+                              },
+                            }}
+                          ></Image>
+                        </a>
                       );
                     })}
                   </Flex>
@@ -267,71 +267,76 @@ export const Footer = observer(() => {
             </Box>
           );
         })}
-        <Box mt={{base: "5rem", lg: 0}} w={{base: "max-content", lg: "27%", "2xl": "max-content"}}>
-          <div id="mc_embed_signup">
-            <form
-              action="https://Iotex.us6.list-manage.com/subscribe/post?u=76695f0cff963129d31cdaae6&amp;id=a82d76e093"
-              method="post"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              className="validate"
-              target="_blank"
+        <Box
+          mt={{ base: "5rem", lg: 0 }}
+          w={{ base: "max-content", lg: "27%", "2xl": "max-content" }}
+        >
+          <Text
+            fontSize={{
+              base: "1rem",
+              md: "1rem",
+              lg: "0.875rem",
+              xl: "1rem",
+              "2xl": "1.125rem",
+            }}
+            fontWeight="semibold"
+          >
+            SUBSCRIBE TO RECEIVE OUR LATEST UPDATES
+          </Text>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              handleSubmit(fields, null);
+            }}
+          >
+            <Flex
+              mt="2rem"
+              css={{
+                background: "rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: 5,
+                height: "40px",
+                "&:hover": {
+                  borderColor: "#44FFB2",
+                },
+              }}
             >
-              <div id="mc_embed_signup_scroll">
-                <label htmlFor="mce-EMAIL">
-                  <Text
-                    fontSize={{
-                      base: "1rem",
-                      md: "1rem",
-                      lg: "0.875rem",
-                      xl: "1rem",
-                      "2xl": "1.125rem",
-                    }}
-                    fontWeight="semibold"
-                  >
-                    SUBSCRIBE TO RECEIVE OUR LATEST UPDATES
-                  </Text>
-                </label>
-                <Flex mt="2rem" css={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  borderRadius: 5,
-                  height: '50px',
-                  '&:hover': {
-                    borderColor: '#44FFB2'
-                  }
-                }}>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    className="email"
-                    id="mce-EMAIL"
-                    placeholder="Email"
-                    required
-                  />
-                  <div
-                    style={{ position: "absolute", left: " -5000px" }}
-                    aria-hidden="true"
-                  >
-                    <input
-                      type="text"
-                      name="b_76695f0cff963129d31cdaae6_a82d76e093"
-                      tabIndex={-1}
-                    />
-                  </div>
-                  <div className="clear">
-                    <input
-                      type="submit"
-                      value="Submit"
-                      name="Submit"
-                      id="mc-embedded-subscribe"
-                      className="button"
-                    />
-                  </div>
-                </Flex>
-              </div>
-            </form>
-          </div>
+              <Box
+                flex="1"
+                fontSize="0.75rem"
+                css={{
+                  borderRadius: "5px",
+                }}
+              >
+                <input
+                  id="EMAIL"
+                  type="email"
+                  className="emailInput"
+                  placeholder="Email"
+                  value={fields.EMAIL}
+                  onChange={handleFieldChange}
+                />
+              </Box>
+              <Flex
+                px="0.3rem"
+                borderRadius="5px"
+                fontFamily="Montserrat"
+                fontWeight="semibold"
+                color="bgColor"
+                fontSize="0.875rem"
+                h="100%"
+                bg="discord"
+                justifyContent="center"
+              >
+                <button className="emainBtn">{lang.t("submit")}</button>
+              </Flex>
+            </Flex>
+          </form>
+          <Box mt="0.5rem">
+            {loading && <Text color="discord" fontSize="0.75rem">{lang.t("loading")}</Text>}
+            {success && <Text color="discord" fontSize="0.75rem">{message}</Text>}
+            {error && <Text color="discord" fontSize="0.75rem">{lang.t("error.tips")}</Text>}
+          </Box>
         </Box>
       </Flex>
       <Text

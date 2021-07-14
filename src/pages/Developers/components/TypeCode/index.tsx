@@ -4,9 +4,6 @@ import { observer } from 'mobx-react-lite';
 import Typewriter from 'typewriter-effect';
 
 export const TypeCode = observer(() => {
-
-  
-
     return (
       <Box fontSize={{base: "10px", md: "16px", lg: "12px", xl: "14px",  "2xl": "16px"}} transform={{base: "scale(0.9)", md: "scale(1)", lg: "scale(0.9)", xl: "scale(1)"}} lineHeight={{base: "18px", md: "20px", "2xl": "24px"}} fontWeight="medium" fontFamily="Noto Sans" w="100%" h="100%">
         <Typewriter
@@ -32,14 +29,6 @@ export const TypeCode = observer(() => {
               .pauseFor(500)
               .typeString('<span style="color: #78808F">// Initialize Web3js </span> <br/> ')
               .typeString('<span style="color: #D87EF4">const</span> <span style="color: #F9AC6E;">web3</span> = <span style="color: #D87EF4">new</span> <span style="color: #CCCCCC;">Web3</span>(<span style="color: #CCCCCC;">TestnetProvider</span>); ')
-              // .typeString('<span style="color: #78808F">// Query the balance of an IoTeX address </span>  <br/> ')
-              // .typeString('<span style="color: rgba(52, 217, 255, 0.85)">const</span> address = <span style="color: #44FFB2">"0x009EA04f3dda1b0C847c9C7307638d4287c9C2B6"</span> <br/> ')
-              // .typeString('web3.eth.getBalance(address).then( <br/> ')
-              // .typeString('&nbsp;&nbsp;<span style="color: rgba(52, 217, 255, 0.85)">function</span> (balance) { <br/> ')
-              // .typeString('&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgba(52, 217, 255, 0.85)">let</span> iotxBalance = Big(balance).div(10**18); <br/> ')
-              // .typeString('&nbsp;&nbsp;&nbsp;&nbsp;console.log("Balance of %s is %s IOTX", address, iotxBalance.toFixed(18)) <br/> ')
-              // .typeString('}); ')
-              // .pauseFor(5000)
               .start();
           }}
         />

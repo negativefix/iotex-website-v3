@@ -1,141 +1,181 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { useStore } from "@/store/index";
 import { observer, useLocalStore } from "mobx-react-lite";
+import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
+import { publicConfig } from "../../config/public";
 
 export const EmailPopup = observer(({}) => {
   const { lang } = useStore();
   const [isOpen, setIsOpen] = useState(false);
 
+  const { loading, error, success, message, handleSubmit } = useMailChimpForm(
+    publicConfig.MAIL_CHIMP
+  );
+  const { fields, handleFieldChange } = useFormFields({
+    EMAIL: "",
+  });
+
   const onClose = () => {
     setIsOpen(false);
-    window.localStorage.setItem('isShowEmail', 'show')
+    window.localStorage.setItem("isShowEmail", "show");
   };
-  
+
   useEffect(() => {
-    if(window.localStorage.getItem('isShowEmail') === null ) {
+    setIsOpen(true);
+    if (window.localStorage.getItem("isShowEmail") === null) {
       setTimeout(() => {
-        setIsOpen(true)
+      
       }, 2000);
     }
-  }, [])
+  }, []);
 
   return (
     <>
       {isOpen && (
         <Box w="100vw" h="100vh" overflow="hidden" position="absolute" top="0">
-          <Box
+          {/* <Box
             position="fixed"
             top="0"
             left="0"
             zIndex="999"
             w="100%"
             h="100%"
-            bg="rgba(0,0,0,0.5)"
             onClick={onClose}
-          ></Box>
+          ></Box> */}
           <Box
             position="fixed"
             top="50%"
             left="50%"
-            zIndex="1001"
+            zIndex="999999"
             transform="translateX(-50%) translateY(-50%)"
             outline="none"
-            bg="white"
-            w={{ base: "90%", md: "50vw" }}
+            w={{ base: "90%", md: "70%", "2xl": "50%" }}
             display="flex"
+            alignItems="center"
+            flexDirection={{ base: "column", lg: "row" }}
+            css={{
+              backgroundColor:
+                "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
+              boxShadow: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)",
+              backdropFilter: "blur(100px)",
+              borderRadius: "20px",
+            }}
           >
-            <Box w="40%"></Box>
-            <Box w="60%" py="1.5rem" px="2rem">
+            <Box
+              w={{ base: "50%", lg: "50%" }}
+              px={{ base: "0", lg: "10%" }}
+              mt={{ base: "3rem", lg: 0 }}
+            >
+              <img src="/images/email_banner.png" alt="" />
+            </Box>
+            <Box
+              w={{ base: "100%", lg: "50%" }}
+              py="1.5rem"
+              px={{ base: "1rem", lg: "2rem" }}
+            >
+              <Image
+                boxSize="1.25rem"
+                src="/images/explore/close.png"
+                position="absolute"
+                right="1.5rem"
+                top="1.5rem"
+                opacity="0.8"
+                cursor="pointer"
+                zIndex="11111"
+                onClick={onClose}
+              ></Image>
               <Text
-                fontSize={{ base: "1.5rem", lg: "1.75rem" }}
-                fontWeight="medium"
+                fontSize={{
+                  base: "1.5rem",
+                  lg: "2rem",
+                  xl: "2.5rem",
+                  "2xl": "3rem",
+                }}
+                fontWeight="semibold"
                 lineHeight="2rem"
-                mb="3rem"
-                color="bgColor"
+                mt="1.25rem"
+                mb={{ base: "1.5rem", lg: "2.5rem" }}
+                textAlign={{ base: "center", lg: "left" }}
               >
                 {lang.t("stay.updated")}
               </Text>
-              <div id="mc_embed_signup">
+              <Text
+                fontSize={{
+                  base: "1rem",
+                  sm: "1rem",
+                  lg: "1.25rem",
+                  "2xl": "1.25rem",
+                }}
+                fontWeight="medium"
+              >
+                {lang.t("email")}
+              </Text>
+              <Box mt={{ base: "0.5rem", lg: "1.25rem" }}>
                 <form
-                  action="https://Iotex.us6.list-manage.com/subscribe/post?u=76695f0cff963129d31cdaae6&amp;id=a82d76e093"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  className="validate"
-                  target="_blank"
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSubmit(fields, onClose);
+                  }}
                 >
-                  <div id="mc_embed_signup_scroll">
-                    <label htmlFor="mce-EMAIL">
-                      <Text
-                        fontSize={{
-                          base: "0.75rem",
-                          sm: "1rem",
-                          lg: "1.25rem",
-                          "2xl": "1.25rem",
-                        }}
-                        fontWeight="normal"
-                        color="bgColor"
-                      >
-                        {lang.t("email")}
-                      </Text>
-                    </label>
-                    <Box
-                        fontSize="1.25rem"
-                        border="1px"
-                        borderColor="bgColor"
-                        h="60px"
-                        css={{
-                          ".email": {
-                            fontSize: "1.25rem !important",
-                            width: "100%",
-                          },
-                        }}
-                      >
-                        <input
-                          type="email"
-                          name="EMAIL"
-                          className="email"
-                          id="mce-EMAIL"
-                          required
-                        />
-                      </Box>
-                      <div
-                        style={{ position: "absolute", left: " -5000px" }}
-                        aria-hidden="true"
-                      >
-                        <input
-                          type="text"
-                          name="b_76695f0cff963129d31cdaae6_a82d76e093"
-                          tabIndex={-1}
-                        />
-                      </div>
-                      <Flex
-                        justifyContent="flex-end"
-                        w="100%"
-                        my="3rem"
-                        css={{
-                          ".button": {
-                            width: "100% !important",
-                            fontSize: "1.375rem !important",
-                            padding: "10px 15px !important",
-                          },
-                        }}
-                      >
-                        <div className="clear">
-                          <input
-                            type="submit"
-                            value={lang.t("join.mailing.list")}
-                            name="Submit"
-                            id="mc-embedded-subscribe"
-                            className="button"
-                          />
-                        </div>
-                      </Flex>
-                      <Text color="bgColor">{lang.t("emailpopup.tips")}</Text>
-                  </div>
+                  <Box
+                    flex="1"
+                    fontSize="1.25rem"
+                    h={{ base: "3rem", lg: "4rem" }}
+                    css={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      borderRadius: "10px",
+                      "&:hover": {
+                        borderColor: "#44FFB2",
+                      },
+                      ".email": {
+                        fontSize: "1.25rem !important",
+                        width: "100%",
+                      },
+                    }}
+                  >
+                    <input
+                      id="EMAIL"
+                      autoFocus
+                      type="email"
+                      className="emailInput"
+                      value={fields.EMAIL}
+                      onChange={handleFieldChange}
+                    />
+                  </Box>
+                  <Text color="discord" fontSize="0.875rem" textAlign="center" mt={{ base: "2rem", lg: "3rem" }} mb="0.2rem">
+                    {loading && lang.t("loading")} {!loading && success && message}
+                    {!loading && error && lang.t("error.tips")}
+                  </Text>
+                  <Flex
+                    p="10px 15px"
+                    borderRadius="10px"
+                    fontFamily="Montserrat"
+                    fontWeight="semibold"
+                    color="bgColor"
+                    fontSize="1.375rem"
+                    h="100%"
+                    bg="linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)"
+                    mb="1.5rem"
+                    justifyContent="center"
+                  >
+                    <button className="emainBtn">
+                      {lang.t("join.mailing.list")}
+                    </button>
+                  </Flex>
                 </form>
-              </div>
+              </Box>
+              <Text
+                fontSize={{ base: "1rem", md: "1.125rem", xl: "1.25rem" }}
+                fontWeight="medium"
+                opacity="0.85"
+                mb="1.25rem"
+                lineHeight="1.8"
+                textAlign={{ base: "center", lg: "left" }}
+              >
+                {lang.t("emailpopup.tips")}
+              </Text>
             </Box>
           </Box>
         </Box>

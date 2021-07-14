@@ -647,7 +647,7 @@
   "build.item4": "Robust API",
   "build.item4.tips": "Integrate with IoTeX",
   "decentralized": "Decentralized",
-  "mega.scalable": "Mega Scalable",
+  "mega.scalable": "Device Ready",
   "ultra.fast": "Ultra Fast",
   "secure.cryptographic": "Secure & Cryptographic",
   "awards": "Awards",
@@ -694,5 +694,8 @@
   "Ben.Clossey": "Ben Clossey",
   "Ben.Clossey.research": "Ben Clossey",
   "Ben.Clossey.desc": "Junior at Tufts University majoring in Film and Media Studies. Strong passion for marketing and writing.",
-  "For.investors": "For Investors"
+  "For.investors": "For Investors",
+  "loading": "loading...",
+  "success": "Success",
+  "error.tips": "Email is already subscribed to list iotex. "
 }

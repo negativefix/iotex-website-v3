@@ -18,7 +18,7 @@ export const Banner = observer(() => {
                   <img src="/images/smallball.png"alt="" />
                 </Box>
             </Box>
-            <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0"
+            <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0" pointerEvents="none"
               left="0" alignItems="center"  direction="column"
               pt={{base: "4rem", sm: "8rem", md: "8rem", lg: "12rem", xl: "14rem", "2xl": "14rem"}}>
               <Text

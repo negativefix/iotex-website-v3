@@ -47,13 +47,13 @@ export const Developers = observer(() => {
       title: lang.t("launch.dapp"),
       icon: "/images/dev/app.png",
       desc: lang.t("launch.dapp.desc"),
-      href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts"
+      href: "https://docs.iotex.io/get-started/iotex-dapp-starter"
     },
     {
       title: lang.t("launch.token"),
       icon: "/images/dev/token.png",
       desc: lang.t("launch.token.desc"),
-      href: "https://docs.iotex.io/get-started/ethereum-tools/smart-contracts/introduction"
+      href: "https://docs.iotex.io/smart-contracts/introduction"
     },
     {
       title: lang.t("run.node"),

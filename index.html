@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="src/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IoTeX - Building the Connected World</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -50,8 +49,14 @@
     #mc_embed_signup input.button:hover  {
       background: #44FFB2 !important;
     }
-    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition-delay: 111111s;
+        transition: color 11111s ease-out, background-color 111111s ease-out;
+    }
   </style>
   <!-- Hotjar Tracking Code for iotex.io -->
   <script>

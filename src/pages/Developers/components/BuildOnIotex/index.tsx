@@ -10,7 +10,7 @@ export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
 
   const configs =   [
-    {name: lang.t("advantage1"), desc: lang.t("build.item1.tips"), icon: '/images/build1.png', href: " https://docs.iotex.io/ethereum-copmpatibility" },
+    {name: lang.t("advantage1"), desc: lang.t("build.item1.tips"), icon: '/images/build1.png', href: "https://docs.iotex.io/smart-contracts/introduction" },
     {name: lang.t("advantage2"), desc: lang.t("build.item2.tips"), icon: '/images/build2.png', href: "https://tube.iotex.io/" },
     {name: lang.t("build.item3"), desc: lang.t("build.item3.tips"), icon: '/images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
     {name: lang.t("build.item4"), desc: lang.t("build.item4.tips"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },

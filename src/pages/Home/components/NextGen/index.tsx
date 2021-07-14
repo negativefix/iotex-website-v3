@@ -198,6 +198,7 @@ export const NextGen = observer(() => {
                       backgroundSize: "100% 100%",
                     },
                   }}
+                  cursor="pointer"
                   onMouseOver={() =>
                     isMaxThan468 ? store.changeCard(item, index) : ""
                   }
@@ -214,13 +215,14 @@ export const NextGen = observer(() => {
                           "2xl": "1.5rem",
                         }}
                         fontWeight="semibold"
+                        pointerEvents="none"
                       >
                         {item.desc}
                       </Text>
                     </>
                   ) : (
                     <>
-                      <Box w={{ base: "100%", sm: "40%", xl: "max-content" }}>
+                      <Box w={{ base: "100%", sm: "60%", xl: "max-content" }} pointerEvents="none">
                         <Text
                           fontSize={{
                             base: "1rem",
@@ -242,7 +244,7 @@ export const NextGen = observer(() => {
                         </Text>
                       </Box>
                       <Image
-                        boxSize={{ base: "5rem", lg: "7rem", "2xl": "10rem" }}
+                        boxSize={{ base: "5rem", md: "6rem", "2xl": "8rem" }}
                         objectFit="cover"
                         src={item.icon}
                         alt={item.name}

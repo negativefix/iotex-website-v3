@@ -238,6 +238,18 @@ export const customTheme = extendTheme({
         opacity: 0,
         filter: 'alpha(opacity=0)',
         transition: '0.3S ease',
+      },
+      '.emailInput': {
+        backgroundColor: 'transparent',
+        width: '100%',
+        height: '100%',
+        flex: 1,
+        paddingLeft: '0.5rem',
+        outline: 'none'
+      },
+      '.emainBtn': {
+        fontWeight: "600",
+        fontFamily: 'Montserrat'
       }
     }
   }

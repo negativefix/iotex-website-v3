@@ -677,7 +677,7 @@ export const Header = observer(() => {
                 color="white"
                 fontWeight="bold"
               >
-                {lang.t("explore.now")}
+                {lang.t("discover.ioTeX")}
               </Text>
             </Box>
           </Box>}
