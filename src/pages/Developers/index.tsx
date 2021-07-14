@@ -185,11 +185,19 @@ export const Developers = observer(() => {
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto" marginTop="-8rem">
           <Flex
             justifyContent="space-between"
-            alignItems="center"
+            alignItems="flex-start"
             mb={{base: "0", md: "9.6rem"}}
             flexDirection={{ base: "column", md: "row" }}
           >
-            <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
+            <Box
+              w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}
+              bgImg={{base:'none',md:`url(/images/dev_ball.png)`}}
+              bgRepeat={'no-repeat'}
+              bgPosition={'bottom left 5rem'}
+              bgSize={'30%'}
+              pt={20}
+              pb={36}
+            >
               <Text
                 fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
                 fontWeight="semibold"
@@ -198,16 +206,28 @@ export const Developers = observer(() => {
               >
                 {lang.t("dev.achieve.title")}
               </Text>
-              <Image
-               display={{base: "none", md: "block"}}
-                boxSize={{base: "8rem", lg: "14rem"}}
-                objectFit="cover"
-                src="/images/dev_ball.png"
-                alt="img_circular3"
-                ml="10%"
-                mt={{base: "5rem", md: "11.8125rem"}}
-                mb="10%"
-              />
+              <Flex justifyContent={'flex-start'} alignItems={'center'} mt={10}>
+                <Button name={'Build Now'} href={'https://docs.iotex.io/'} size={{base:'100%',xl:'50%'}}/>
+                <a href="https://github.com/iotexproject" target="_blank" style={{flex: 'none'}}>
+                  <Image
+                    boxSize="3.75rem"
+                    objectFit="fill"
+                    src="/images/github_empty.png"
+                    alt=""
+                    ml="3rem"
+                  />
+                </a>
+              </Flex>
+              {/*<Image*/}
+              {/*  display={{base: "none", md: "block"}}*/}
+              {/*  boxSize={{base: "8rem", lg: "14rem"}}*/}
+              {/*  objectFit="cover"*/}
+              {/*  src="/images/dev_ball.png"*/}
+              {/*  alt="img_circular3"*/}
+              {/*  ml="10%"*/}
+              {/*  mt={{base: "5rem", md: "11.8125rem"}}*/}
+              {/*  mb="10%"*/}
+              {/*/>*/}
             </Box>
             <Box w={{ base: "100%", md: "40%", xl: "42%", "2xl": "40%" }}>
               {achieve.map((item) => {
@@ -792,10 +812,15 @@ export const Developers = observer(() => {
               position: "absolute",
               content: `""`,
               backgroundImage: `url('${dcBg}')`,
-              backgroundSize: '100% 100%',
+              backgroundSize: {
+                base:'0%',
+                md:'cover'
+              },
+              bgRepeat:'no-repeat',
               transition: 'opacity .3s',
               borderRadius: '20px',
               zIndex: -1,
+              bgPosition:'center'
             }
           }}
         >
