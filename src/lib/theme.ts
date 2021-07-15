@@ -182,6 +182,10 @@ export const customTheme = extendTheme({
                 animation: 'dropmenu 0.2s ease-in-out forwards',
                 animationDelay: '1s'
               },
+              '&:nth-of-type(7)': {
+                animation: 'dropmenu 0.2s ease-in-out forwards',
+                animationDelay: '1.2s'
+              },
             }
           }
         }

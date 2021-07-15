@@ -42,7 +42,8 @@ export const Header = observer(() => {
       path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
       blank: true,
     },
-    { name: lang.t("blog"), path: "https://iotex.medium.com/", blank: true },
+    { name: lang.t("blog"), path: "/blog", blank: true },
+    { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
   ];
 
