@@ -25,7 +25,7 @@ export const EmailPopup = observer(({}) => {
     if (window.localStorage.getItem("isShowEmail") === null) {
       setTimeout(() => {
         setIsOpen(true);
-      }, 5000);
+      }, 30000);
     }
   }, []);
 
