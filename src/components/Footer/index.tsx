@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import {Box, Flex, Image, Link, Text} from "@chakra-ui/react";
 import { useStore } from "../../store";
 import { observer } from "mobx-react-lite";
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
@@ -339,16 +339,18 @@ export const Footer = observer(() => {
           </Box>
         </Box>
       </Flex>
-      <Text
-        fontSize={{ base: "0.875rem", lg: "1rem" }}
-        lineHeight="1.875rem"
-        mt="8.125rem"
-        textAlign="center"
-        mb="1rem"
-      >
-        ©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        {lang.t("footer.tips")}
-      </Text>
+      <Link href={'https://iotex-new-website.onrender.com/policy'} _hover={{}}>
+        <Text
+          fontSize={{ base: "0.875rem", lg: "1rem" }}
+          lineHeight="1.875rem"
+          mt="8.125rem"
+          textAlign="center"
+          mb="1rem"
+        >
+          ©2021 IoTeX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {lang.t("footer.tips")}
+        </Text>
+      </Link>
     </Box>
   );
 });
