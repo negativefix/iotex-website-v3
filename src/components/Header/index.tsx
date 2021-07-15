@@ -21,7 +21,7 @@ export const Header = observer(() => {
     { name: lang.t("team"), path: "/team", blank: false },
     {
       name: lang.t("ecosystem"),
-      path: "https://iotex-ecosystem-pr-53.onrender.com",
+      path: "https://https://ecosystem.iotex.io/",
       blank: true,
     },
     { name: lang.t("developers"), path: "/developers", blank: false },
@@ -87,7 +87,7 @@ export const Header = observer(() => {
         },
         {
           name: lang.t("ecosystem"),
-          path: "https://iotex-ecosystem-pr-53.onrender.com/",
+          path: "https://ecosystem.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_ecopage_n.png",
           icon_active: "/images/explore/icon_ecopage_s.png",

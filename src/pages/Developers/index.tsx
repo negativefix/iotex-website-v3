@@ -718,7 +718,7 @@ export const Developers = observer(() => {
             >
               {lang.t("dev.subtitle5")}
             </Text>
-            <a href="https://iotex-ecosystem-pr-53.onrender.com/projects" target="_blank">
+            <a href="https://ecosystem.iotex.io/projects" target="_blank">
             <Text
               fontSize={{
                 base: "0.875rem",

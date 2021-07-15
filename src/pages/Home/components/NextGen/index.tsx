@@ -157,7 +157,7 @@ export const NextGen = observer(() => {
           flexDirection={{ base: "column", xl: "row" }}
         >
           <Button
-            href="https://iotex-ecosystem-pr-53.onrender.com/projects"
+            href="https://ecosystem.iotex.io/projects"
             size={{ base: "100%", md: "375px" }}
             name={lang.t("explore.ecosystem")}
           />
