@@ -21,7 +21,7 @@ export const Header = observer(() => {
     { name: lang.t("team"), path: "/team", blank: false },
     {
       name: lang.t("ecosystem"),
-      path: "https://https://ecosystem.iotex.io/",
+      path: "https://ecosystem.iotex.io/",
       blank: true,
     },
     { name: lang.t("developers"), path: "/developers", blank: false },
