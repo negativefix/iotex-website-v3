@@ -49,7 +49,11 @@ const BasicLayout = ({children, name}) => {
       },
       'ucam':{
         title:'Ucam - Blockchain Security Camera Powered by IoTeX',
-        meat:'Ucam security camera offers home/business security while protecting your data on the blockchain.'
+        meta:'Ucam security camera offers home/business security while protecting your data on the blockchain.'
+      },
+      'policy':{
+        title:'',
+        meta:''
       }
     }
     globalStyle()

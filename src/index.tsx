@@ -17,6 +17,7 @@ import Pebble from "./pages/Pebble";
 import { EmailPopup } from './components/EmailPopup'
 import { hotjar } from 'react-hotjar';
 import {Ucam} from "@/pages/Ucam";
+import Policy from "@/pages/Policy";
 
 hotjar.initialize(2494554, 6);
 
@@ -34,6 +35,7 @@ export const App = observer(() => {
     { path: '/advanced', component: Advanced},
     { path: '/for-investors', component: Investors},
     { path: '/ucam', component: Ucam},
+	  { path:'/policy', component:Policy}
   ]
 	useEffect(() => {
 		lang.init();
