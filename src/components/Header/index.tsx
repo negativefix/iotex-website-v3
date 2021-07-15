@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
-import { Link, useHistory } from "react-router-dom";
+import { Box, Flex, Image, Text, useDisclosure,Link } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { useStore } from "../../store";
 import { observer, useLocalObservable } from "mobx-react-lite";
@@ -645,7 +645,7 @@ export const Header = observer(() => {
             {aboutConfig.map((item) => {
               return (
                 <Link
-                  to={item.path}
+                  href={item.path}
                   key={item.name}
                   style={{ textDecoration: "none", display: "block" }}
                 >
