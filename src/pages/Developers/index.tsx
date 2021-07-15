@@ -12,7 +12,7 @@ import { BuildOnIotex } from "./components/BuildOnIotex/index";
 
 import bgThree from "@/assets/images/dev/bg_3.png";
 import develop from "@/assets/images/dev/develop.png";
-
+import dcBg from '@/assets/images/dev/bg_hover.png'
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -185,11 +185,19 @@ export const Developers = observer(() => {
         <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto" marginTop="-8rem">
           <Flex
             justifyContent="space-between"
-            alignItems="center"
+            alignItems="flex-start"
             mb={{base: "0", md: "9.6rem"}}
             flexDirection={{ base: "column", md: "row" }}
           >
-            <Box w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}>
+            <Box
+              w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}
+              bgImg={{base:'none',md:`url(/images/dev_ball.png)`}}
+              bgRepeat={'no-repeat'}
+              bgPosition={'bottom left 5rem'}
+              bgSize={'30%'}
+              pt={20}
+              pb={36}
+            >
               <Text
                 fontSize={{base: "2rem", sm: "1.875rem", lg: "2.5rem", xl: "4rem"}}
                 fontWeight="semibold"
@@ -198,16 +206,28 @@ export const Developers = observer(() => {
               >
                 {lang.t("dev.achieve.title")}
               </Text>
-              <Image
-               display={{base: "none", md: "block"}}
-                boxSize={{base: "8rem", lg: "14rem"}}
-                objectFit="cover"
-                src="/images/dev_ball.png"
-                alt="img_circular3"
-                ml="10%"
-                mt={{base: "5rem", md: "11.8125rem"}}
-                mb="10%"
-              />
+              <Flex justifyContent={'flex-start'} alignItems={'center'} mt={10}>
+                <Button name={'Build Now'} href={'https://docs.iotex.io/'} size={{base:'100%',xl:'50%'}}/>
+                <a href="https://github.com/iotexproject" target="_blank" style={{flex: 'none'}}>
+                  <Image
+                    boxSize="3.75rem"
+                    objectFit="fill"
+                    src="/images/github_empty.png"
+                    alt=""
+                    ml="3rem"
+                  />
+                </a>
+              </Flex>
+              {/*<Image*/}
+              {/*  display={{base: "none", md: "block"}}*/}
+              {/*  boxSize={{base: "8rem", lg: "14rem"}}*/}
+              {/*  objectFit="cover"*/}
+              {/*  src="/images/dev_ball.png"*/}
+              {/*  alt="img_circular3"*/}
+              {/*  ml="10%"*/}
+              {/*  mt={{base: "5rem", md: "11.8125rem"}}*/}
+              {/*  mb="10%"*/}
+              {/*/>*/}
             </Box>
             <Box w={{ base: "100%", md: "40%", xl: "42%", "2xl": "40%" }}>
               {achieve.map((item) => {
@@ -782,6 +802,27 @@ export const Developers = observer(() => {
             //   backdropFilter: "blur(50px)",
             // },
           }}
+
+          _hover={{
+            _after: {
+              top: '0',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              position: "absolute",
+              content: `""`,
+              backgroundImage: `url('${dcBg}')`,
+              backgroundSize: {
+                base:'0%',
+                md:'cover'
+              },
+              bgRepeat:'no-repeat',
+              transition: 'opacity .3s',
+              borderRadius: '20px',
+              zIndex: -1,
+              bgPosition:'center'
+            }
+          }}
         >
           <Flex
             pt="5rem"
@@ -809,7 +850,7 @@ export const Developers = observer(() => {
             <a href="https://iotex.io/devdiscord" target="_blank">
             <Box textAlign="center" maxWidth="9.5rem">
               <Image
-                boxSize={{ base: "6rem", sm: "8rem", md: "7.5rem" }}
+                boxSize={{ base: "4rem", sm: "8rem", md: "7.5rem" }}
                 objectFit="cover"
                 src="/images/icon_discord.png"
                 alt=""

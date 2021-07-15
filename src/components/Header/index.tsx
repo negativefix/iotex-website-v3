@@ -28,8 +28,8 @@ export const Header = observer(() => {
   ];
 
   const startedConfig = [
-    { name: lang.t("for.developers"), path: "/developers", blank: false },
     { name: lang.t("For.investors"), path: "/for-investors", blank: false },
+    { name: lang.t("for.developers"), path: "/developers", blank: false },
     { name: lang.t("for.business"), path: "/enterprise", blank: false },
   ];
 
@@ -51,32 +51,46 @@ export const Header = observer(() => {
       name: lang.t("GET.STARTED"),
       lists: [
         {
-          name: lang.t("What.is.IoTeX"),
-          path: "https://onboard.iotex.io/introduction",
+          name: lang.t("ioPay.wallet"),
+          path: "https://iopay-wallet.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_wallet_n.png",
           icon_active: "/images/explore/icon_wallet_s.png",
         },
-        {
-          name: lang.t("vision"),
-          path: "https://iott.network/about",
-          blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
-        },
-        {
-          name: lang.t("roadmap"),
-          path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
-          blank: true,
-          icon: "/images/explore/icon_map_n.png",
-          icon_active: "/images/explore/icon_map_s.png",
-        },
+        // {
+        //   name: lang.t("What.is.IoTeX"),
+        //   path: "https://onboard.iotex.io/introduction",
+        //   blank: true,
+        //   icon: "/images/explore/icon_wallet_n.png",
+        //   icon_active: "/images/explore/icon_wallet_s.png",
+        // },
+        // {
+        //   name: lang.t("vision"),
+        //   path: "https://iott.network/about",
+        //   blank: true,
+        //   icon: "/images/explore/icon_getiotx_n.png",
+        //   icon_active: "/images/explore/icon_getiotx_n.png",
+        // },
+        // {
+        //   name: lang.t("roadmap"),
+        //   path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
+        //   blank: true,
+        //   icon: "/images/explore/icon_map_n.png",
+        //   icon_active: "/images/explore/icon_map_s.png",
+        // },
         {
           name: lang.t("onboarding.Pack"),
           path: "https://onboard.iotex.io/",
           blank: true,
           icon: "/images/explore/icon_getiotx_n.png",
           icon_active: "/images/explore/icon_getiotx_n.png",
+        },
+        {
+          name: lang.t("ecosystem"),
+          path: "https://iotex-ecosystem-pr-53.onrender.com/",
+          blank: true,
+          icon: "/images/explore/icon_ecopage_n.png",
+          icon_active: "/images/explore/icon_ecopage_s.png",
         },
       ],
     },
@@ -112,13 +126,6 @@ export const Header = observer(() => {
           icon: "/images/explore/icon_brun-drop_n.png",
           icon_active: "/images/explore/icon_brun-drop_n.png",
         },
-        {
-          name: lang.t("explore"),
-          path: "https://iotexscan.io/",
-          blank: true,
-          icon: "/images/explore/icon_explorer_n.png",
-          icon_active: "/images/explore/icon_explorer_s.png",
-        },
       ],
     },
     {
@@ -144,6 +151,13 @@ export const Header = observer(() => {
           blank: true,
           icon: "/images/explore/icon_halo_n.png",
           icon_active: "/images/explore/icon_halo_s.png",
+        },
+        {
+          name: lang.t("explore"),
+          path: "https://iotexscan.io/",
+          blank: true,
+          icon: "/images/explore/icon_explorer_n.png",
+          icon_active: "/images/explore/icon_explorer_s.png",
         },
       ],
     },

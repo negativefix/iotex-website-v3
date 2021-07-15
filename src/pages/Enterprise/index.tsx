@@ -254,7 +254,7 @@ const Enterprise = () => {
 							</Flex>
 							<Flex alignItems='center' flexDirection='column'>
 								<Image src='images/icon_camera.png' width={'7.5rem'} height={'7.5rem'}/>
-								<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case3.title')} textAlign={'center'}/>
+								<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case3.title')} textAlign={'center'} whiteSpace={{base:'pre-line'}}/>
 								<Caption text={lang.t('enterprise.group3.case3.desc')} fontSize={'1.125rem'} textAlign={'center'}/>
 							</Flex>
 						</SimpleGrid>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
-import { useStore } from '../../store';
-import { observer } from 'mobx-react-lite';
+import {Box, Flex, Image, Text} from '@chakra-ui/react';
+import {useStore} from '../../store';
+import {observer} from 'mobx-react-lite';
 // @ts-ignore
 import bigBall from '@/assets/images/banner/bigball.png'
+
 export const Banner = observer(() => {
-  const { lang } = useStore();
+	const {lang} = useStore();
 
     return (
         <Box position="relative" pt={{base: "6rem", md: "4rem", lg: "5rem", xl: "6rem", "2xl": "5rem"}} minHeight={{base: "max-content", lg: "610px", xl: "800px", "2xl": "1004px"}}>

@@ -323,6 +323,7 @@ export const JoinRevolution = observer(() => {
                   key={item.title}
                   textAlign="center"
                   maxWidth={{ base: "46%", sm: "24%" }}
+                  width={{base:'46%',xl:'auto'}}
                   cursor="pointer"
                   mb={{ base: "2rem", lg: 0 }}
                 >

@@ -7365,14 +7365,6 @@ use-callback-ref@^1.2.1, use-callback-ref@^1.2.3:
   resolved "https://registry.npm.taobao.org/use-callback-ref/download/use-callback-ref-1.2.5.tgz?cache=0&sync_timestamp=1610846067534&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuse-callback-ref%2Fdownload%2Fuse-callback-ref-1.2.5.tgz#6115ed242cfbaed5915499c0a9842ca2912f38a5"
   integrity sha1-YRXtJCz7rtWRVJnAqYQsopEvOKU=
 
-use-mailchimp-form@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.nlark.com/use-mailchimp-form/download/use-mailchimp-form-2.0.3.tgz#d34edd0feaafb4d62518f3c95255a1863844f9d9"
-  integrity sha1-007dD+qvtNYlGPPJUlWhhjhE+dk=
-  dependencies:
-    jsonp "^0.2.1"
-    query-string "^7.0.0"
-
 use-sidecar@^1.0.1:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/use-sidecar/download/use-sidecar-1.0.5.tgz#ffff2a17c1df42e348624b699ba6e5c220527f2b"
