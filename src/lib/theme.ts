@@ -250,6 +250,9 @@ export const customTheme = extendTheme({
       '.emainBtn': {
         fontWeight: "600",
         fontFamily: 'Montserrat'
+      },
+      '.CookieConsent':{
+        bottom:'1rem!important'
       }
     }
   }

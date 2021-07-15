@@ -18,6 +18,7 @@ import { EmailPopup } from './components/EmailPopup'
 import { hotjar } from 'react-hotjar';
 import {Ucam} from "@/pages/Ucam";
 import Policy from "@/pages/Policy";
+import Cookie from "@/components/Cookie";
 
 hotjar.initialize(2494554, 6);
 
@@ -43,6 +44,7 @@ export const App = observer(() => {
 	return (
     <ChakraProvider theme={customTheme}>
       <EmailPopup />
+	    <Cookie/>
       <Router>
         <Switch>
           {
