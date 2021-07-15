@@ -1,5 +1,6 @@
-# IoTeX Website (Live website https://iotex.io/)
+# IoTeX Website V3 
 
+Live website https://iotex.io/
 
 ## How to run
 
