@@ -25,9 +25,9 @@ export const Home = observer(() => {
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
 	const analysis = [
 		{name: lang.t("devices"), amount: 6000, coin: "+", result: '6,000'},
-		{name: lang.t("dapps"), amount: 50, coin: "+", result: 50},
-		{name: lang.t("users"), amount: 125, coin: "K+", result: 125},
-		{name: lang.t("delegates"), amount: 69, coin: "", result: 69},
+		{name: lang.t("transactions"), amount: 50, coin: "+", result: 50},
+		{name: lang.t("communitys"), amount: 200, coin: "K+", result: 200},
+		{name: lang.t("stakers"), amount: 69, coin: "", result: 69},
 	];
 
 	const store = useLocalObservable(() => ({

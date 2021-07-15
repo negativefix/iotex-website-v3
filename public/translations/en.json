@@ -699,5 +699,8 @@
   "For.investors": "For Investors",
   "loading": "loading...",
   "success": "Success",
-  "error.tips": "Email is already subscribed to list IoTeX. "
+  "error.tips": "Email is already subscribed to list IoTeX. ",
+  "transactions": "TRANSACTIONS",
+  "communitys": "COMMUNITY",
+  "stakers": "STAKERS"
 }
