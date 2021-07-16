@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -12,86 +13,51 @@
   <link href="https://fonts.font.im/css?family=Noto+Sans" rel="stylesheet">
   <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
   <style type="text/css">
-    #mc_embed_signup form {
-      padding: 0;
-      font-family: 'Montserrat' !important;
-    }
-
-    #mc_embed_signup input.email {
-      margin: 0;
-      padding: 0;
-      border: none;
-      flex: 1;
-      height: 100%;
-      background: transparent !important;
-      color: #fff;
-      padding-left: 10px;
-      width: 100%;
-    }
-
-    #mc_embed_signup input.email:hover {
-      border: none;
-      outline: none;
-    }
-
-    #mc_embed_signup input.button {
-      margin: 0;
-      border-radius: 5px;
-      background: #44ffb2;
-      font-weight: 600;
-      color: #1C1F24;
-      width: max-content;
-      height: 100%;
-      font-family: 'Montserrat' !important;
-      transition: none;
-    }
-
-    #mc_embed_signup input.button:hover  {
-      background: #44FFB2 !important;
-    }
-
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-        transition-delay: 111111s;
-        transition: color 11111s ease-out, background-color 111111s ease-out;
+      transition-delay: 111111s;
+      transition: color 11111s ease-out, background-color 111111s ease-out;
     }
   </style>
-<!--  &lt;!&ndash; Hotjar Tracking Code for iotex.io &ndash;&gt;-->
-<!--  <script>-->
-<!--    (function(h,o,t,j,a,r){-->
-<!--        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};-->
-<!--        h._hjSettings={hjid:2494554,hjsv:6};-->
-<!--        a=o.getElementsByTagName('head')[0];-->
-<!--        r=o.createElement('script');r.async=1;-->
-<!--        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;-->
-<!--        a.appendChild(r);-->
-<!--    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');-->
-<!--  </script>-->
-<!--  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/76695f0cff963129d31cdaae6/b18bd1136e3ab4e401c058cc7.js");</script>-->
-
-<!--  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111756489-1"></script>-->
-<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
-<!--  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111756489-1"></script>-->
-<!--  <script>-->
-<!--		window.dataLayer = window.dataLayer || [];-->
-<!--		function gtag(){dataLayer.push(arguments);}-->
-<!--		gtag('js', new Date());-->
-
-<!--		gtag('config', 'UA-111756489-1');-->
-<!--  </script>-->
-<script
-  type="text/javascript"
-  src="https://app.termly.io/embed.min.js"
-  data-auto-block="on"
-  data-website-uuid="af99731f-e99c-4181-9c7f-47296729662c"
-  ></script>
+  <!-- Hotjar -->
+  <script type="text/javascript" src="https://app.termly.io/embed.min.js" data-auto-block="on" data-website-uuid="af99731f-e99c-4181-9c7f-47296729662c"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111756489-1"></script>
+  <!-- mailchimp -->
+  <script id="mcjs">
+    !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/76695f0cff963129d31cdaae6/b18bd1136e3ab4e401c058cc7.js");
+  </script>
 </head>
 
 <body>
+
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // check termly accept
+    function getUpdatedCookieWhitelistByTermly(data) {
+      // console.log('getUpdatedCookieWhitelistByTermly', data);
+      if (data.uuid) {
+        //  Hotjar Tracking Code for iotex.io
+        (function (h, o, t, j, a, r) {
+          h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+          h._hjSettings = { hjid: 2494554, hjsv: 6 };
+          a = o.getElementsByTagName('head')[0];
+          r = o.createElement('script'); r.async = 1;
+          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        
+        // Global site tag (gtag.js) - Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-111756489-1');
+      }
+    }
+  </script>
 </body>
 
 </html>

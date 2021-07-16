@@ -20,7 +20,7 @@ import {Ucam} from "@/pages/Ucam";
 import Policy from "@/pages/Policy";
 import Cookie from "@/components/Cookie";
 
-hotjar.initialize(2494554, 6);
+// hotjar.initialize(2494554, 6);
 
 export const App = observer(() => {
 	const { lang } = useStore();

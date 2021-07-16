@@ -88,7 +88,7 @@ export const DevBanner = observer(() => {
                 fontWeight="normal"
                 opacity="0.5"
               >
-                Subscribe to receive latest dev updates!
+                {lang.t("dev.banner.desc")}
               </Text>
             </Box>
             <Box mb="0.5rem">
