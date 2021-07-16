@@ -22,9 +22,9 @@ export const EmailPopup = observer(({}) => {
   };
 
   useEffect(() => {
-    setIsOpen(true);
     if (window.localStorage.getItem("isShowEmail") === null && window.localStorage.getItem('uuid') !== null) {
       setTimeout(() => {
+        setIsOpen(true);
       }, 5000);
     }
   }, []);
