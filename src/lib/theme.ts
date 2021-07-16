@@ -253,6 +253,22 @@ export const customTheme = extendTheme({
       },
       '.CookieConsent':{
         bottom:'1rem!important'
+      },
+      '@keyframes cookieTipFadein': {
+        '0%': {
+          display: 'none',
+          opacity: 0
+        },
+        '1%': {
+          display: 'block',
+          opacity: 0,
+          bottom: '-320px'
+        },
+        '100%': {
+          display: 'block',
+          opacity: '0.98',
+          bottom: 0
+        }
       }
     }
   }
