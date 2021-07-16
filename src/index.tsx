@@ -44,7 +44,7 @@ export const App = observer(() => {
 	return (
     <ChakraProvider theme={customTheme}>
       <EmailPopup />
-	    <Cookie/>
+	    {/* <Cookie/> */}
       <Router>
         <Switch>
           {
