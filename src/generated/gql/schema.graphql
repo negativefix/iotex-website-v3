@@ -182,23 +182,6 @@ type KV_variance_fields {
   id: Float
 }
 
-scalar numeric
-
-"""
-Boolean expression to compare columns of type "numeric". All fields are combined with logical 'AND'.
-"""
-input numeric_comparison_exp {
-  _eq: numeric
-  _gt: numeric
-  _gte: numeric
-  _in: [numeric!]
-  _is_null: Boolean
-  _lt: numeric
-  _lte: numeric
-  _neq: numeric
-  _nin: [numeric!]
-}
-
 """
 column ordering options
 """
@@ -371,10 +354,10 @@ columns and relationships of "RewardRecord"
 """
 type RewardRecord {
   address: String!
-  burndropReward: numeric
+  burndropReward: String
   date: timestamp!
   id: Int!
-  stakingReward: numeric
+  stakingReward: String
 }
 
 """
@@ -406,9 +389,7 @@ type RewardRecord_aggregate_fields {
 aggregate avg on columns
 """
 type RewardRecord_avg_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
@@ -419,10 +400,10 @@ input RewardRecord_bool_exp {
   _not: RewardRecord_bool_exp
   _or: [RewardRecord_bool_exp!]
   address: String_comparison_exp
-  burndropReward: numeric_comparison_exp
+  burndropReward: String_comparison_exp
   date: timestamp_comparison_exp
   id: Int_comparison_exp
-  stakingReward: numeric_comparison_exp
+  stakingReward: String_comparison_exp
 }
 
 """
@@ -430,10 +411,10 @@ aggregate max on columns
 """
 type RewardRecord_max_fields {
   address: String
-  burndropReward: numeric
+  burndropReward: String
   date: timestamp
   id: Int
-  stakingReward: numeric
+  stakingReward: String
 }
 
 """
@@ -441,10 +422,10 @@ aggregate min on columns
 """
 type RewardRecord_min_fields {
   address: String
-  burndropReward: numeric
+  burndropReward: String
   date: timestamp
   id: Int
-  stakingReward: numeric
+  stakingReward: String
 }
 
 """
@@ -492,63 +473,49 @@ enum RewardRecord_select_column {
 aggregate stddev on columns
 """
 type RewardRecord_stddev_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
 aggregate stddev_pop on columns
 """
 type RewardRecord_stddev_pop_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
 aggregate stddev_samp on columns
 """
 type RewardRecord_stddev_samp_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
 aggregate sum on columns
 """
 type RewardRecord_sum_fields {
-  burndropReward: numeric
   id: Int
-  stakingReward: numeric
 }
 
 """
 aggregate var_pop on columns
 """
 type RewardRecord_var_pop_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
 aggregate var_samp on columns
 """
 type RewardRecord_var_samp_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """
 aggregate variance on columns
 """
 type RewardRecord_variance_fields {
-  burndropReward: Float
   id: Float
-  stakingReward: Float
 }
 
 """

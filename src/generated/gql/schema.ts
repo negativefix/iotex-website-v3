@@ -163,17 +163,15 @@ export enum RewardRecord_select_column {
   stakingReward = 'stakingReward',
 }
 
-export type numeric = any
-
 export type timestamp = any
 
 /** columns and relationships of "RewardRecord" */
 export interface RewardRecord {
   address: String
-  burndropReward: numeric | null
+  burndropReward: String | null
   date: timestamp
   id: Int
-  stakingReward: numeric | null
+  stakingReward: String | null
   __typename: 'RewardRecord'
 }
 
@@ -202,85 +200,69 @@ export interface RewardRecord_aggregate_fields {
 
 /** aggregate avg on columns */
 export interface RewardRecord_avg_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_avg_fields'
 }
 
 /** aggregate max on columns */
 export interface RewardRecord_max_fields {
   address: String | null
-  burndropReward: numeric | null
+  burndropReward: String | null
   date: timestamp | null
   id: Int | null
-  stakingReward: numeric | null
+  stakingReward: String | null
   __typename: 'RewardRecord_max_fields'
 }
 
 /** aggregate min on columns */
 export interface RewardRecord_min_fields {
   address: String | null
-  burndropReward: numeric | null
+  burndropReward: String | null
   date: timestamp | null
   id: Int | null
-  stakingReward: numeric | null
+  stakingReward: String | null
   __typename: 'RewardRecord_min_fields'
 }
 
 /** aggregate stddev on columns */
 export interface RewardRecord_stddev_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_stddev_fields'
 }
 
 /** aggregate stddev_pop on columns */
 export interface RewardRecord_stddev_pop_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_stddev_pop_fields'
 }
 
 /** aggregate stddev_samp on columns */
 export interface RewardRecord_stddev_samp_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_stddev_samp_fields'
 }
 
 /** aggregate sum on columns */
 export interface RewardRecord_sum_fields {
-  burndropReward: numeric | null
   id: Int | null
-  stakingReward: numeric | null
   __typename: 'RewardRecord_sum_fields'
 }
 
 /** aggregate var_pop on columns */
 export interface RewardRecord_var_pop_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_var_pop_fields'
 }
 
 /** aggregate var_samp on columns */
 export interface RewardRecord_var_samp_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_var_samp_fields'
 }
 
 /** aggregate variance on columns */
 export interface RewardRecord_variance_fields {
-  burndropReward: Float | null
   id: Float | null
-  stakingReward: Float | null
   __typename: 'RewardRecord_variance_fields'
 }
 
@@ -567,23 +549,10 @@ export interface RewardRecord_bool_exp {
   _not?: RewardRecord_bool_exp | null
   _or?: RewardRecord_bool_exp[] | null
   address?: String_comparison_exp | null
-  burndropReward?: numeric_comparison_exp | null
+  burndropReward?: String_comparison_exp | null
   date?: timestamp_comparison_exp | null
   id?: Int_comparison_exp | null
-  stakingReward?: numeric_comparison_exp | null
-}
-
-/** Boolean expression to compare columns of type "numeric". All fields are combined with logical 'AND'. */
-export interface numeric_comparison_exp {
-  _eq?: numeric | null
-  _gt?: numeric | null
-  _gte?: numeric | null
-  _in?: numeric[] | null
-  _is_null?: Boolean | null
-  _lt?: numeric | null
-  _lte?: numeric | null
-  _neq?: numeric | null
-  _nin?: numeric[] | null
+  stakingReward?: String_comparison_exp | null
 }
 
 /** Boolean expression to compare columns of type "timestamp". All fields are combined with logical 'AND'. */
@@ -637,9 +606,7 @@ export interface RewardRecord_aggregate_fieldsRequest {
 
 /** aggregate avg on columns */
 export interface RewardRecord_avg_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
@@ -668,63 +635,49 @@ export interface RewardRecord_min_fieldsRequest {
 
 /** aggregate stddev on columns */
 export interface RewardRecord_stddev_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate stddev_pop on columns */
 export interface RewardRecord_stddev_pop_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate stddev_samp on columns */
 export interface RewardRecord_stddev_samp_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate sum on columns */
 export interface RewardRecord_sum_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate var_pop on columns */
 export interface RewardRecord_var_pop_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate var_samp on columns */
 export interface RewardRecord_var_samp_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
 
 /** aggregate variance on columns */
 export interface RewardRecord_variance_fieldsRequest {
-  burndropReward?: boolean | number
   id?: boolean | number
-  stakingReward?: boolean | number
   __typename?: boolean | number
   __scalar?: boolean | number
 }
@@ -1408,19 +1361,19 @@ export interface KV_variance_fieldsObservableChain {
 /** columns and relationships of "RewardRecord" */
 export interface RewardRecordPromiseChain {
   address: { execute: (request?: boolean | number, defaultValue?: String) => Promise<String> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp) => Promise<timestamp> }
   id: { execute: (request?: boolean | number, defaultValue?: Int) => Promise<Int> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
 }
 
 /** columns and relationships of "RewardRecord" */
 export interface RewardRecordObservableChain {
   address: { execute: (request?: boolean | number, defaultValue?: String) => Observable<String> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp) => Observable<timestamp> }
   id: { execute: (request?: boolean | number, defaultValue?: Int) => Observable<Int> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
 }
 
 /** aggregated selection of "RewardRecord" */
@@ -1587,150 +1540,118 @@ export interface RewardRecord_aggregate_fieldsObservableChain {
 
 /** aggregate avg on columns */
 export interface RewardRecord_avg_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate avg on columns */
 export interface RewardRecord_avg_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate max on columns */
 export interface RewardRecord_max_fieldsPromiseChain {
   address: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp | null) => Promise<timestamp | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Promise<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
 }
 
 /** aggregate max on columns */
 export interface RewardRecord_max_fieldsObservableChain {
   address: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp | null) => Observable<timestamp | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Observable<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
 }
 
 /** aggregate min on columns */
 export interface RewardRecord_min_fieldsPromiseChain {
   address: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp | null) => Promise<timestamp | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Promise<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Promise<String | null> }
 }
 
 /** aggregate min on columns */
 export interface RewardRecord_min_fieldsObservableChain {
   address: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  burndropReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
   date: { execute: (request?: boolean | number, defaultValue?: timestamp | null) => Observable<timestamp | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Observable<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
+  stakingReward: { execute: (request?: boolean | number, defaultValue?: String | null) => Observable<String | null> }
 }
 
 /** aggregate stddev on columns */
 export interface RewardRecord_stddev_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate stddev on columns */
 export interface RewardRecord_stddev_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate stddev_pop on columns */
 export interface RewardRecord_stddev_pop_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate stddev_pop on columns */
 export interface RewardRecord_stddev_pop_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate stddev_samp on columns */
 export interface RewardRecord_stddev_samp_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate stddev_samp on columns */
 export interface RewardRecord_stddev_samp_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate sum on columns */
 export interface RewardRecord_sum_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Promise<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Promise<numeric | null> }
 }
 
 /** aggregate sum on columns */
 export interface RewardRecord_sum_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Int | null) => Observable<Int | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: numeric | null) => Observable<numeric | null> }
 }
 
 /** aggregate var_pop on columns */
 export interface RewardRecord_var_pop_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate var_pop on columns */
 export interface RewardRecord_var_pop_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate var_samp on columns */
 export interface RewardRecord_var_samp_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate var_samp on columns */
 export interface RewardRecord_var_samp_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 /** aggregate variance on columns */
 export interface RewardRecord_variance_fieldsPromiseChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Promise<Float | null> }
 }
 
 /** aggregate variance on columns */
 export interface RewardRecord_variance_fieldsObservableChain {
-  burndropReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
   id: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
-  stakingReward: { execute: (request?: boolean | number, defaultValue?: Float | null) => Observable<Float | null> }
 }
 
 export interface subscription_rootPromiseChain {
