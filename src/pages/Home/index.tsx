@@ -136,7 +136,7 @@ export const Home = observer(() => {
 						mx="auto"
 						textAlign="center"
 						mb={{base: "1rem", md: "1.75rem"}}
-					>
+					> 
 						{lang.t("title2")}
 					</Text>
 					<Text
