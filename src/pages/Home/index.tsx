@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import {useStore} from "@/store/index";
 import {
@@ -18,29 +18,59 @@ import {AwardWinning} from "./components/AwardWinning/index";
 import {NextGen} from "./components/NextGen/index";
 import {JoinRevolution} from "./components/JoinRevolution/index";
 import CountTo from "react-count-to";
-import { numberWithCommas } from '../../utils/index'
+import { subgraphAPI } from '../../lib/iotexGraphApi'
+import { numberWithCommas } from "@/utils/index";
 
 export const Home = observer(() => {
 	const {lang} = useStore();
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
-	const analysis = [
-		{name: lang.t("devices"), amount: 6280, coin: "", result: '6,208'},
-		{name: lang.t("transactions"), amount: 16, coin: "M+", result: 16},
-		{name: lang.t("communitys"), amount: 200, coin: "K+", result: 200},
-		{name: lang.t("stakers"), amount: 69, coin: "", result: '8K+'},
-	];
+	// const analysis = [
+	// 	{name: lang.t("devices"), amount: 6280, coin: "", result: '6,208'},
+	// 	{name: lang.t("transactions"), amount: 16, coin: "M+", result: 16},
+	// 	{name: lang.t("community"), amount: 200, coin: "K+", result: 200},
+	// 	{name: lang.t("stakers"), amount: 8, coin: "", result: '8K+'},
+	// ];
 
 	const store = useLocalObservable(() => ({
 		isOpen: false,
 		hoverIndex: 0,
     status: false,
+    deviceCount: 0,
+    transactions: 0,
+    stakers: 0,
+    commiunity: 0,
+    analysis: [],
 		open() {
 			store.isOpen = true;
 		},
 		onClose() {
 			store.isOpen = false;
 		},
+    getAnalysisData: async() => {
+      const response = await subgraphAPI.query({
+        KV: [
+          {
+            where: {
+              key: {
+                _in: ["deviceCount", "transactions", "commiunity", "stakers"]
+              }
+            }
+          },
+          {
+            key: true,
+            value: true
+          }
+        ]
+      });
+      response.data.KV.forEach(item => {
+        store[`${item.key}`] = Number(item.value)
+      })
+    }
 	}));
+
+  useEffect(() => {
+    store.getAnalysisData()
+  }, [])
 
   return (
     <BasicLayout name="home">
@@ -65,43 +95,54 @@ export const Home = observer(() => {
 					mx="auto"
 					mt={{base: "5rem", md: "2rem"}}
 				>
-					{analysis.map((item) => {
-						return (
-							<Box
-								key={item.name}
-								textAlign="center"
-								w={{base: "45%", md: "25%"}}
-								mb={{base: "3rem", md: "0"}}
-							>
-								<Text
-									fontWeight="medium"
-									fontSize={{
-										base: "1.5rem",
-										md: "1.5rem",
-										lg: "2rem",
-										xl: "3rem",
-										"2xl": "4rem",
-									}}
-									mb={{base: "0.5rem", md: "1rem"}}
-								>
-									{store.status ? item.result : <CountTo from={0} to={item.amount} speed={5000} onComplete={() => store.status = true} />}
-									{item.coin}
-								</Text>
-								<Text
-									fontSize={{
-										base: "1rem",
-										lg: "0.875rem",
-										xl: "1rem",
-										"2xl": "1.25rem",
-									}}
-									color="#CCCCCC"
-									fontWeight="bold"
-								>
-									{item.name}
-								</Text>
-							</Box>
-						);
-					})}
+					<Box
+            textAlign="center"
+            w={{base: "45%", md: "25%"}}
+            mb={{base: "3rem", md: "0"}}
+          >
+            <Text fontWeight="medium" fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem", }} mb={{base: "0.5rem", md: "1rem"}}>
+              {store.status ? numberWithCommas(store.deviceCount) : <CountTo from={0} to={store.deviceCount} speed={5000} onComplete={() => store.status = true} />}
+            </Text>
+            <Text fontSize={{ base: "1rem", lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold" >
+              {lang.t("devices")}
+            </Text>
+          </Box>
+          <Box
+            textAlign="center"
+            w={{base: "45%", md: "25%"}}
+            mb={{base: "3rem", md: "0"}}
+          >
+            <Text fontWeight="medium" fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem", }} mb={{base: "0.5rem", md: "1rem"}}>
+              <CountTo from={0} to={store.transactions / 1000000} speed={2000} onComplete={() => store.status = true} />M+
+            </Text>
+            <Text fontSize={{ base: "1rem", lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold" >
+              {lang.t("transactions")}
+            </Text>
+          </Box>
+          <Box
+            textAlign="center"
+            w={{base: "45%", md: "25%"}}
+            mb={{base: "3rem", md: "0"}}
+          >
+            <Text fontWeight="medium" fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem", }} mb={{base: "0.5rem", md: "1rem"}}>
+              <CountTo from={0} to={store.commiunity} speed={5000} onComplete={() => store.status = true} />K+
+            </Text>
+            <Text fontSize={{ base: "1rem", lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold" >
+              {lang.t("community")}
+            </Text>
+          </Box>
+          <Box
+            textAlign="center"
+            w={{base: "45%", md: "25%"}}
+            mb={{base: "3rem", md: "0"}}
+          >
+            <Text fontWeight="medium" fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem", }} mb={{base: "0.5rem", md: "1rem"}}>
+              <CountTo from={0} to={store.stakers} speed={2000} onComplete={() => store.status = true} />K+
+            </Text>
+            <Text fontSize={{ base: "1rem", lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold" >
+              {lang.t("stakers")}
+            </Text>
+          </Box>
 				</Flex>
 				<Box
 					mt={{base: "1rem", md: "2rem", lg: "2.5rem", xl: "4rem"}}

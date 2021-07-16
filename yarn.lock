@@ -4207,10 +4207,10 @@ graphql-tools@^4.0.6:
     iterall "^1.1.3"
     uuid "^3.1.0"
 
-graphql-typed-client-hotfix@^1.7.4:
+graphql-typed-client@^1.7.4:
   version "1.7.4"
-  resolved "https://registry.nlark.com/graphql-typed-client-hotfix/download/graphql-typed-client-hotfix-1.7.4.tgz#fd00d421d8defcd010c6f5f20a57062372b30f76"
-  integrity sha1-/QDUIdje/NAQxvXyClcGI3KzD3Y=
+  resolved "https://registry.nlark.com/graphql-typed-client/download/graphql-typed-client-1.7.4.tgz#7153bc19ce0dd2ffe162c535141a517728dacef9"
+  integrity sha1-cVO8Gc4N0v/hYsU1FBpRdyjazvk=
   dependencies:
     "@types/graphql" "^14.5.0"
     "@types/isomorphic-fetch" "^0.0.35"
