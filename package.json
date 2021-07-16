@@ -15,7 +15,8 @@
     "preview": "vite preview",
     "start": "tsc && yarn dev",
     "test": "concurrently \"yarn start \" \"cypress open\"",
-    "test:ci": "cypress run --headless"
+    "test:ci": "cypress run --headless",
+    "gen:home": "generate-graphql-client -p -e https://nsv3-hasura.iotex.io/v1/graphql -o ./generated/homeGql"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",
@@ -61,6 +62,9 @@
     "vite": "^2.0.1",
     "vite-aliases": "^0.5.0",
     "vite-imagetools": "^3.6.8",
-    "vite-plugin-imp": "^2.0.5"
+    "vite-plugin-imp": "^2.0.5",
+    "graphql": "^15.4.0",
+    "graphql-request": "^3.4.0",
+    "graphql-typed-client-hotfix": "^1.7.4"
   }
 }
