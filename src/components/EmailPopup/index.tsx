@@ -22,8 +22,6 @@ export const EmailPopup = observer(({}) => {
   };
 
   useEffect(() => {
-
-    
     if (window.localStorage.getItem("isShowEmail") === null && window.localStorage.getItem('uuid') !== null) {
       setTimeout(() => {
         setIsOpen(true);
