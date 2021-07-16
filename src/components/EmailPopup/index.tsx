@@ -38,7 +38,7 @@ export const EmailPopup = observer(({}) => {
             zIndex="999999"
             w={{ base: "90%", md: "70%", "2xl": "50%" }}
             transform="translateX(-50%) translateY(-50%)"
-            outline="none" borderRadius="20px">
+            outline="none" borderRadius="20px" bg="bgColor">
           <Box
             w="100%"
             h="100%"
