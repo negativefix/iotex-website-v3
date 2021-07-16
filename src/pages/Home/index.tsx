@@ -113,7 +113,7 @@ export const Home = observer(() => {
             mb={{base: "3rem", md: "0"}}
           >
             <Text fontWeight="medium" fontSize={{ base: "1.5rem", md: "1.5rem", lg: "2rem", xl: "3rem", "2xl": "4rem", }} mb={{base: "0.5rem", md: "1rem"}}>
-              <CountTo from={0} to={store.transactions / 1000000} speed={2000} onComplete={() => store.status = true} />M+
+            {store.status ? numberWithCommas(store.transactions) : <CountTo from={0} to={store.transactions} speed={5000} onComplete={() => store.status = true} />}
             </Text>
             <Text fontSize={{ base: "1rem", lg: "0.875rem", xl: "1rem", "2xl": "1.25rem"}} color="#CCCCCC" fontWeight="bold" >
               {lang.t("transactions")}
