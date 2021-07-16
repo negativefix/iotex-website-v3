@@ -246,7 +246,7 @@ export const Header = observer(() => {
       zIndex="5"
     >
       <Flex justifyContent="space-between" alignItems="center">
-        <Link to={"/"}>
+        <Link href={"/"} _focus={{}}>
           <Box w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}>
             <img src="/images/logo.png" alt="" />
           </Box>
@@ -592,7 +592,7 @@ export const Header = observer(() => {
               animation: "fadeIn 0.3s linear",
             }}
           >
-            <Link to={"/"}>
+            <Link href={"/"} _focus={{}}>
               <Box
                 w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}
                 position="absolute"
@@ -615,7 +615,7 @@ export const Header = observer(() => {
             {navConfig.map((item) => {
               return (
                 <Link
-                  to={item.path}
+                  href={item.path}
                   key={item.name}
                   style={{ textDecoration: "none", display: "block" }}
                 >
