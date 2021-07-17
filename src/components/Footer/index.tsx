@@ -339,7 +339,7 @@ export const Footer = observer(() => {
           </Box>
         </Box>
       </Flex>
-      <Link href={'https://iotex-new-website.onrender.com/policy'} _hover={{}}>
+      <Link href={'/policy'} _hover={{}}>
         <Text
           fontSize={{ base: "0.875rem", lg: "1rem" }}
           lineHeight="1.875rem"

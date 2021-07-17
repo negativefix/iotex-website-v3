@@ -361,7 +361,7 @@ export const Ucam = observer(() => {
 				<Flex justifyContent={{base:'',md:'center',xl:'center'}} mt={28} flexDirection={{base:'column',md:'row'}}>
 					<Button name={'Buy it here'} href={'https://ucam.iotex.io/'} size={{base: "100%", md: "40%",xl:'30%'}}/>
 					<Box w={'5%'} mt={10}/>
-					<Button name={'Build on IoTeX'} href={'https://iotex-new-website.onrender.com/enterprise'} size={{base: "100%", md: "40%",xl:'30%'}}/>
+					<Button name={'Build on IoTeX'} href={'/enterprise'} size={{base: "100%", md: "40%",xl:'30%'}}/>
 				</Flex>
 			</SectionContainer>
 			<Footer/>

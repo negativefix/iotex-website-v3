@@ -57,6 +57,5 @@ lib-cov
 *.lock
 package-lock.json
 
-generated
 
 dist

@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
-import { Link, useHistory } from "react-router-dom";
+import { Box, Flex, Image, Text, useDisclosure,Link } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { useStore } from "../../store";
 import { observer, useLocalObservable } from "mobx-react-lite";
@@ -42,7 +42,8 @@ export const Header = observer(() => {
       path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
       blank: true,
     },
-    { name: lang.t("blog"), path: "https://iotex.medium.com/", blank: true },
+    { name: lang.t("blog"), path: "/blog", blank: true },
+    { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
   ];
 
@@ -245,7 +246,7 @@ export const Header = observer(() => {
       zIndex="5"
     >
       <Flex justifyContent="space-between" alignItems="center">
-        <Link to={"/"}>
+        <Link href={"/"} _focus={{}}>
           <Box w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}>
             <img src="/images/logo.png" alt="" />
           </Box>
@@ -591,7 +592,7 @@ export const Header = observer(() => {
               animation: "fadeIn 0.3s linear",
             }}
           >
-            <Link to={"/"}>
+            <Link href={"/"} _focus={{}}>
               <Box
                 w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}
                 position="absolute"
@@ -614,7 +615,7 @@ export const Header = observer(() => {
             {navConfig.map((item) => {
               return (
                 <Link
-                  to={item.path}
+                  href={item.path}
                   key={item.name}
                   style={{ textDecoration: "none", display: "block" }}
                 >
@@ -644,7 +645,7 @@ export const Header = observer(() => {
             {aboutConfig.map((item) => {
               return (
                 <Link
-                  to={item.path}
+                  href={item.path}
                   key={item.name}
                   style={{ textDecoration: "none", display: "block" }}
                 >

@@ -35,14 +35,14 @@ export const AWARDS = [
 		content:(<Content title={'Member'} subtitle={'Confidential Computing Consortium'}/>),
 		link: 'https://medium.com/iotex/iotex-joins-executive-committee-of-china-mobile-iot-alliance-unveils-new-enterprise-iot-solutions-b6a8b6183afd'
 	},
-	{
-		icon: 'images/research/logo_cmia.png',
-		iconActive: 'images/research/logo_cmia_active.png',
-		bgColorActive: '#009DF2',
-		imgWidth:'40%',
-		content:(<Content title={'Executive Committee'} subtitle={'China Mobile IoT Alliance'}/>),
-		link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium'
-	},
+	// {
+	// 	icon: 'images/research/logo_cmia.png',
+	// 	iconActive: 'images/research/logo_cmia_active.png',
+	// 	bgColorActive: '#009DF2',
+	// 	imgWidth:'40%',
+	// 	content:(<Content title={'Executive Committee'} subtitle={'China Mobile IoT Alliance'}/>),
+	// 	link: 'https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium'
+	// },
 	{
 		icon: 'images/research/ces_icon.png',
 		iconActive: 'images/research/ces_icon_active.png',

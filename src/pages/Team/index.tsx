@@ -58,7 +58,7 @@ export const Team = observer(() => {
       job: lang.t("qevan.research"),
       intros: lang.t("qevan.desc"),
     },
-    
+
     {
       name: lang.t("dean.name"),
       avatar: "/images/team/0.jpg",
@@ -165,7 +165,7 @@ export const Team = observer(() => {
       job: lang.t("seedlet.research"),
       intros: lang.t("seedlet.desc"),
     },
-    
+
     {
       name: lang.t("saul.name"),
       avatar: "/images/team/0-1.jpg",
@@ -178,7 +178,7 @@ export const Team = observer(() => {
       job: lang.t("saul.research"),
       intros: lang.t("saul.desc"),
     },
-    
+
     {
       name: lang.t("dorothy.name"),
       avatar: Dorothy,
@@ -324,7 +324,7 @@ export const Team = observer(() => {
       job: lang.t("heslei.research"),
       intros: lang.t("heslei.desc"),
     },
-   
+
     {
       name: lang.t("frank.name"),
       avatar: "/images/team/Frank-Sun.png",
@@ -354,18 +354,18 @@ export const Team = observer(() => {
       job: lang.t("zhefeng.research"),
       intros: lang.t("zhefeng.desc"),
     },
-    {
-      name: lang.t("jikun.name"),
-      avatar: "/images/team/0-3-1.jpg",
-      links: [
-        {
-          src: "/images/icons/icon_linkedIn.svg",
-          href: "https://www.linkedin.com/in/jikun-liao-794b61162/",
-        },
-      ],
-      job: lang.t("jikun.research"),
-      intros: lang.t("jikun.desc"),
-    },
+    // {
+    //   name: lang.t("jikun.name"),
+    //   avatar: "/images/team/0-3-1.jpg",
+    //   links: [
+    //     {
+    //       src: "/images/icons/icon_linkedIn.svg",
+    //       href: "https://www.linkedin.com/in/jikun-liao-794b61162/",
+    //     },
+    //   ],
+    //   job: lang.t("jikun.research"),
+    //   intros: lang.t("jikun.desc"),
+    // },
     {
       name: lang.t("le.name"),
       avatar: "/images/team/Hungl.jpeg",
