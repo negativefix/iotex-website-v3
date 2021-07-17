@@ -22,7 +22,8 @@ export const EmailPopup = observer(({}) => {
   };
 
   useEffect(() => {
-    if (window.localStorage.getItem("isShowEmail") === null) {
+    console.log('uuid', window.localStorage.getItem("isShowEmail"), window.localStorage.getItem('uuid'))
+    if (window.localStorage.getItem("isShowEmail") === null && window.localStorage.getItem('uuid') !== null) {
       setTimeout(() => {
         setIsOpen(true);
       }, 30000);
@@ -32,31 +33,22 @@ export const EmailPopup = observer(({}) => {
   return (
     <>
       {isOpen && (
-        <Box w="100vw" h="100vh" overflow="hidden" position="absolute" top="0">
-          {/* <Box
-            position="fixed"
-            top="0"
-            left="0"
-            zIndex="999"
-            w="100%"
-            h="100%"
-            onClick={onClose}
-          ></Box> */}
-          <Box
-            position="fixed"
+        <Box overflow="hidden" position="fixed"
             top="50%"
             left="50%"
             zIndex="999999"
-            transform="translateX(-50%) translateY(-50%)"
-            outline="none"
             w={{ base: "90%", md: "70%", "2xl": "50%" }}
+            transform="translateX(-50%) translateY(-50%)"
+            outline="none" borderRadius="20px" >
+          <Box
+            w="100%"
+            h="100%"
             display="flex"
             alignItems="center"
             flexDirection={{ base: "column", lg: "row" }}
+            bg={{base: "url(images/email_popup.svg)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+            boxShadow={{base: "none", md: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)"}}
             css={{
-              backgroundColor:
-                "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-              boxShadow: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)",
               backdropFilter: "blur(100px)",
               borderRadius: "20px",
             }}

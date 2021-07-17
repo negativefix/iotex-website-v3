@@ -815,5 +815,9 @@
   "policy.Cookies": "Use of Cookies",
   "policy.Cookies.desc1": "Cookies are files or pieces of information that may be stored on your computer (or other internet enabled devices, such as a smartphone or tablet) when you visit a website. They are sent by a server to your computer and stored on your hard drive to allow a website to recognise you when you visit. A cookie will usually contain the name of the website from which the cookie has come from, the “lifetime” of the cookie (i.e. how long it will remain on your device), and a value, which is usually a randomly generated unique number.",
   "policy.Cookies.desc2": "Our website uses cookies. They collect statistical data about your browsing actions and behaviour and do not identify you as an individual. Cookies may for example be used to store your country or language preference. This helps to improve our website and deliver a better service.",
-  "policy.Cookies.desc3": "You may adjust the settings on your browser to refuse cookies but some of the services on our website(s) may not work if you do so."
+  "policy.Cookies.desc3": "You may adjust the settings on your browser to refuse cookies but some of the services on our website(s) may not work if you do so.",
+  "cookie.tips1": "We use cookies to improve user experience, and analyze website traffic. For these reasons, we may share your site usage data with our analytics partners. By clicking “Accept Cookies,” \n you consent to store on your device all the technologies described in our Privacy. You can check our",
+  "privacy.policy": "Privacy Policy",
+  "cookie.tips3": "for more details.",
+  "accept.cookies": "Accept Cookies"
 }

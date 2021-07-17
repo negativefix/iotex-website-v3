@@ -9,11 +9,21 @@ import ucamN from "/images/home/img_ucam_n.png";
 import pebbleS from "/images/home/img_pebble_s.png";
 import pebbleN from "/images/home/img_pebble_n.png";
 
+import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
+import { publicConfig } from "../../../../config/public";
+
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
   const [ucamSrc, setUcamSrc] = useState(ucamS);
   const [pebbleSrc, setPebbleSrc] = useState(pebbleS);
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
+
+  const { loading, error, success, message, handleSubmit } = useMailChimpForm(
+    publicConfig.MAIL_CHIMP
+  );
+  const { fields, handleFieldChange } = useFormFields({
+    EMAIL: "",
+  });
 
   const infos = [
     {
@@ -323,7 +333,7 @@ export const JoinRevolution = observer(() => {
                   key={item.title}
                   textAlign="center"
                   maxWidth={{ base: "46%", sm: "24%" }}
-                  width={{base:'46%',xl:'auto'}}
+                  width={{ base: "46%", xl: "auto" }}
                   cursor="pointer"
                   mb={{ base: "2rem", lg: 0 }}
                 >
@@ -375,95 +385,84 @@ export const JoinRevolution = observer(() => {
             {lang.t("stay.updated")}
           </Text>
           <Box w={{ base: "90%", md: "40vw" }}>
-            <div id="mc_embed_signup">
+            <Text
+              fontSize={{
+                base: "0.75rem",
+                sm: "1rem",
+                lg: "1.25rem",
+                "2xl": "1.25rem",
+              }}
+              fontWeight="normal"
+              textAlign="center"
+              mb="2.5rem"
+              color="#fff"
+            >
+              {lang.t("stay.updated.desc")}
+            </Text>
+            <Box mb="0.5rem">
+              <Text color="discord" fontSize="0.875rem" textAlign="center" mt={{ base: "2rem", lg: "3rem" }} mb="0.2rem">
+                {loading && lang.t("loading")} {!loading && success && message}
+                {!loading && error && lang.t("error.tips")}
+              </Text>
               <form
-                action="https://Iotex.us6.list-manage.com/subscribe/post?u=76695f0cff963129d31cdaae6&amp;id=a82d76e093"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  handleSubmit(fields, null);
+                }}
               >
-                <div id="mc_embed_signup_scroll">
-                  <label htmlFor="mce-EMAIL">
-                    <Text
-                      fontSize={{
-                        base: "0.75rem",
-                        sm: "1rem",
-                        lg: "1.25rem",
-                        "2xl": "1.25rem",
-                      }}
-                      fontWeight="normal"
-                      textAlign="center"
-                      mb="2.5rem"
-                      color="#fff"
-                    >
-                      {lang.t("stay.updated.desc")}
-                    </Text>
-                  </label>
-                  <Flex
-                    mt="0.5rem"
-                    h={{ base: "3rem", lg: "4.5rem" }}
+                <Flex
+                  mt="0.5rem"
+                  h={{ base: "3rem", lg: "4.5rem" }}
+                  css={{
+                    background: "rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(255, 255, 255, 0.2)",
+                    borderRadius: 5,
+                    "&:hover": {
+                      borderColor: "#44FFB2",
+                    },
+                  }}
+                >
+                  <Box
+                    flex="1"
+                    fontSize="1.25rem"
                     css={{
-                      background: "rgba(255, 255, 255, 0.1)",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: 5,
-                      "&:hover": {
-                        borderColor: "#44FFB2",
+                      borderRadius: "5px",
+                      ".email": {
+                        fontSize: "1.25rem !important",
+                        width: "100%",
                       },
                     }}
                   >
-                    <Box flex="1" fontSize="1.25rem" css={{
-                      '.email': {
-                        fontSize: '1.25rem !important',
-                        width: '100%'
-                      }
-                    }}>
-                      <input
-                        type="email"
-                        name="EMAIL"
-                        className="email"
-                        id="mce-EMAIL"
-                        placeholder="Email"
-                        required
-                      />
-                    </Box>
-                    <div
-                      style={{ position: "absolute", left: " -5000px" }}
-                      aria-hidden="true"
-                    >
-                      <input
-                        type="text"
-                        name="b_76695f0cff963129d31cdaae6_a82d76e093"
-                        tabIndex={-1}
-                      />
-                    </div>
-                    <Box css={{
-                      '.button': {
-                        width: "100% !important",
-                        fontSize: isMaxThan768 ? "1.375rem !important" : "15px !important",
-                        padding: '0 10px !important'
-                      }
-                    }}>
-                      <div className="clear">
-                        <input
-                          type="submit"
-                          value="Submit"
-                          name="Submit"
-                          id="mc-embedded-subscribe"
-                          className="button"
-                        />
-                      </div>
-                    </Box>
+                    <input
+                      id="EMAIL"
+                      type="email"
+                      className="emailInput"
+                      placeholder="Email"
+                      value={fields.EMAIL}
+                      onChange={handleFieldChange}
+                    />
+                  </Box>
+                  <Flex
+                    px="1rem"
+                    borderRadius="5px"
+                    fontFamily="Montserrat"
+                    fontWeight="semibold"
+                    color="bgColor"
+                    fontSize="1.25rem"
+                    h="100%"
+                    bg="discord"
+                    justifyContent="center"
+                  >
+                    <button className="emainBtn">{lang.t("submit")}</button>
                   </Flex>
-                </div>
+                </Flex>
               </form>
-            </div>
+            </Box>
           </Box>
         </Flex>
       </Box>
-      <Box mt={{base: '4rem', md: 0}} />
-      <Box display={{base: "none", md: "block"}}>
+      <Box mt={{ base: "4rem", md: 0 }} />
+      <Box display={{ base: "none", md: "block" }}>
         <Footer />
       </Box>
     </Box>
