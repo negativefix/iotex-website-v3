@@ -22,6 +22,7 @@ export const EmailPopup = observer(({}) => {
   };
 
   useEffect(() => {
+    console.log('uuid', window.localStorage.getItem("isShowEmail"), window.localStorage.getItem('uuid'))
     if (window.localStorage.getItem("isShowEmail") === null && window.localStorage.getItem('uuid') !== null) {
       setTimeout(() => {
         setIsOpen(true);
@@ -38,17 +39,16 @@ export const EmailPopup = observer(({}) => {
             zIndex="999999"
             w={{ base: "90%", md: "70%", "2xl": "50%" }}
             transform="translateX(-50%) translateY(-50%)"
-            outline="none" borderRadius="20px" bg={{base: "bgColor", md: "transparent"}}>
+            outline="none" borderRadius="20px" >
           <Box
             w="100%"
             h="100%"
             display="flex"
             alignItems="center"
             flexDirection={{ base: "column", lg: "row" }}
+            bg={{base: "url(images/email_popup.svg)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+            boxShadow={{base: "none", md: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)"}}
             css={{
-              background:
-                "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
-              boxShadow: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)",
               backdropFilter: "blur(100px)",
               borderRadius: "20px",
             }}

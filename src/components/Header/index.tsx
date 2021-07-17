@@ -551,7 +551,6 @@ export const Header = observer(() => {
               top="0"
               w="100vw"
               h="100vh"
-              bg={{ base: "bgColor", md: "transparent" }}
               overflow="auto"
             >
               <Box
@@ -559,9 +558,8 @@ export const Header = observer(() => {
                 h="100%"
                 pt="4.5rem"
                 className="menusMobile"
+                bg={{base: "url(images/email_popup.png)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
                 css={{
-                  background:
-                    "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
                   backdropFilter: "blur(50px)",
                   animation: "fadeIn 0.3s linear",
                 }}
@@ -687,9 +685,8 @@ export const Header = observer(() => {
               alignItems="flex-start"
               py="1.5rem"
               px="2rem"
+              bg={{base: "url(images/email_popup.png)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
               css={{
-                background:
-                  "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)",
                 backdropFilter: "blur(50px)",
                 animation: "fadeIn 0.3s linear",
               }}

@@ -22,13 +22,26 @@
     }
 
     #termly-code-snippet-support {
-      background:  #110F1C !important;
+      background: #000 !important;
     }
 
     #termly-code-snippet-support .t-consentPrompt {
       background: linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%) !important;
       backdrop-filter: blur(50px) !important;
       z-index: 1000000 !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      #termly-code-snippet-support .t-consentPrompt {
+        background: url('/public/images/email_popup.png') !important;
+        z-index: 1000000 !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+      }
+
+      #termly-code-snippet-support .t-declineButton, .t-acceptAllButton {
+        width: 150px !important;
+      }
     }
 
     #termly-code-snippet-support .t-preference-button, 
