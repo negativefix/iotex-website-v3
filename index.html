@@ -33,12 +33,14 @@
     }
 
     @media screen and (max-width: 768px) {
-      #termly-code-snippet-support .t-declineButton, .t-acceptAllButton {
+
+      #termly-code-snippet-support .t-declineButton,
+      .t-acceptAllButton {
         width: 150px !important;
       }
     }
 
-    #termly-code-snippet-support .t-preference-button, 
+    #termly-code-snippet-support .t-preference-button,
     .t-declineButton {
       border-color: #44FFB2 !important;
       font-weight: 500 !important;
@@ -53,7 +55,7 @@
     }
   </style>
   <!-- termly -->
-  <script type="text/javascript" src="https://app.termly.io/embed.min.js" data-auto-block="off"
+  <script type="text/javascript" src="https://app.termly.io/embed.min.js" data-auto-block="on"
     data-website-uuid="0c0be776-2c41-480a-894c-49f3d4d02b90"></script>
   <!-- Google Analytics -->
   <script data-categories="analytics" async src="https://www.googletagmanager.com/gtag/js?id=UA-111756489-1"></script>
@@ -64,12 +66,22 @@
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
   <script>
+
     // check termly accept
     function getUpdatedCookieWhitelistByTermly(data) {
-      // console.log('getUpdatedCookieWhitelistByTermly', data);
       if (data.uuid) {
         window.localStorage.setItem('uuid', data.uuid)
-         // mailchimp
+        // decline > 12 hours show again
+        const hjViewportId = window.sessionStorage.getItem('hjViewportId')
+        if (window.localStorage.getItem('_hjid') == null && hjViewportId === null) {
+          const lastTime = Number(window.localStorage.getItem('lastActiveTime'))
+          if(getInervalHour(lastTime) > 12) {
+            window.localStorage.clear()
+            window.sessionStorage.clear()
+            window.location.reload()
+          }
+        }
+        // mailchimp
         !function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/76695f0cff963129d31cdaae6/b18bd1136e3ab4e401c058cc7.js");
 
         //  Hotjar Tracking Code for iotex.io
@@ -87,7 +99,17 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-111756489-1');
+      } else {
+        window.localStorage.setItem('lastActiveTime', new Date().getTime())
       }
+    }
+
+    // diff cookie decline time 
+    function getInervalHour(startDate) {
+      const now = new Date()
+      const ms = now.getTime() - startDate;
+      if (ms < 0) return 0;
+      return Math.floor(ms / 1000 / 60 / 60);
     }
   </script>
 </body>
