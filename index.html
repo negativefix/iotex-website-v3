@@ -26,19 +26,13 @@
     }
 
     #termly-code-snippet-support .t-consentPrompt {
-      background: linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%) !important;
-      backdrop-filter: blur(50px) !important;
+      background: url('/images/email_popup.png') !important;
       z-index: 1000000 !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
     }
 
     @media screen and (max-width: 768px) {
-      #termly-code-snippet-support .t-consentPrompt {
-        background: url('/images/email_popup.png') !important;
-        z-index: 1000000 !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-      }
-
       #termly-code-snippet-support .t-declineButton, .t-acceptAllButton {
         width: 150px !important;
       }
@@ -59,7 +53,7 @@
     }
   </style>
   <!-- termly -->
-  <script type="text/javascript" src="https://app.termly.io/embed.min.js" data-auto-block="on"
+  <script type="text/javascript" src="https://app.termly.io/embed.min.js" data-auto-block="off"
     data-website-uuid="0c0be776-2c41-480a-894c-49f3d4d02b90"></script>
   <!-- Google Analytics -->
   <script data-categories="analytics" async src="https://www.googletagmanager.com/gtag/js?id=UA-111756489-1"></script>
