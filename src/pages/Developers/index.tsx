@@ -182,7 +182,7 @@ export const Developers = observer(() => {
       >
         <DevBanner />
 
-        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto" marginTop="-8rem">
+        <Box maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }} mx="auto">
           <Flex
             justifyContent="space-between"
             alignItems="flex-start"

@@ -27,7 +27,7 @@ export const DevBanner = observer(() => {
     >
       <Box
         position="absolute"
-        top={{ base: "5.5rem", sm: "4rem" }}
+        top={{ base: "5.5rem", sm: "5rem" }}
         left=" 0"
         w="100%"
         h="60%"
@@ -151,7 +151,52 @@ export const DevBanner = observer(() => {
             {error && <Text color="discord">{lang.t("error.tips")}</Text>}
           </Box>
         </Flex>
+        <Box w="100%" position="relative" mt={0}>
+          <img src="/images/mask_group.png" style={{opacity: 0}} alt=""/>
+          <Flex
+            flexDirection="column"
+            w="100%"
+            height="100%"
+            position="absolute"
+            zIndex="2"
+            top="0"
+          >
+            <Box
+              mb="5%"
+              css={{
+                height: "45%",
+                background: "url(/images/dev/img_dev_page_logo1.png) center 0px repeat-x",
+                backgroundSize: "200% 100%",
+                backgroundPositionX: "250%",
+                animation: "awardLine1 90s infinite linear",
+              }}
+            />
+            <Box
+              css={{
+                height: "45%",
+                background: "url(/images/dev/img_dev_page_logo2.png) center 0px repeat-x",
+                backgroundSize: "200% 100%",
+                backgroundPositionX: "240%",
+                animation: "awardLine2 90s infinite linear",
+              }}
+            />
+          </Flex>
+          <Box
+            css={{
+              position: "absolute",
+              top: "-1px",
+              left: "-1px",
+              right: "-1px",
+              bottom: "-1px",
+              zIndex: 2,
+              background: "url(/images/mask.png) center center no-repeat",
+              backgroundSize: "contain",
+            }}
+          />
+        </Box>
+
       </Box>
+
     </Box>
   );
 });
