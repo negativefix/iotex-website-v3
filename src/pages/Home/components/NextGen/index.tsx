@@ -60,7 +60,7 @@ export const NextGen = observer(() => {
         name: lang.t("smart.lock"),
         desc: lang.t("smart.lock.desc"),
         icon: "/images/logo_samrtlock.png",
-        href: "https://ecosystem.iotex.io/post/52",
+        href: "https://iotexlab.io/delegates",
       },
     ],
     dapps2: [
