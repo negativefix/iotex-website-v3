@@ -95,7 +95,7 @@ export const DevBanner = observer(() => {
               <form
                 onSubmit={(event) => {
                   event.preventDefault();
-                  handleSubmit(fields, null);
+                  handleSubmit({...fields,'group[53458][4]':4}, null);
                 }}
               >
                 <Flex

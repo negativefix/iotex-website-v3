@@ -54,6 +54,10 @@ const BasicLayout = ({children, name}) => {
       'policy':{
         title:'',
         meta:''
+      },
+      'starter-pack':{
+        title:'',
+        meta:''
       }
     }
     globalStyle()

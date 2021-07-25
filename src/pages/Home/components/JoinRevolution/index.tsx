@@ -407,7 +407,7 @@ export const JoinRevolution = observer(() => {
               <form
                 onSubmit={(event) => {
                   event.preventDefault();
-                  handleSubmit(fields, null);
+                  handleSubmit({...fields,'group[53458][1]':1}, null);
                 }}
               >
                 <Flex
