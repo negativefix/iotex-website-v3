@@ -37,10 +37,18 @@ const LearnPart = () => {
 					LEARN
 				</Text>
 				<Divider mt={3} mb={10}/>
+
+			</Box>
+			<VideoSection/>
+
+			<Box
+				maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
+				mx={'auto'}
+			>
 				<Text
 					fontSize={{xl: '1.2rem', '2xl': '3rem'}}
 					fontWeight={600}
-					mt={10}
+					mt={20}
 				>
 					READ ONBOARDING PACK
 				</Text>
@@ -71,9 +79,7 @@ const LearnPart = () => {
 						</Flex>
 					</Link>
 				</Flex>
-
 			</Box>
-			<VideoSection/>
 			<Box
 				maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
 				mx={'auto'}

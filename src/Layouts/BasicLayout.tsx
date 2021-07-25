@@ -56,8 +56,8 @@ const BasicLayout = ({children, name}) => {
         meta:''
       },
       'starter-pack':{
-        title:'',
-        meta:''
+        title:'Coin Market Cap + IoTeX (IOTX) Campaign: Staking, Token, and Wallet',
+        meta:'As a CMC Stake & Earn Campaign partner. IoTeX is launching one of the most extensive educational campaigns in the crypto space, where 25,000 winners will be selected.'
       }
     }
     globalStyle()
