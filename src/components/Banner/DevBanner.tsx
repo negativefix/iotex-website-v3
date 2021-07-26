@@ -4,6 +4,7 @@ import { useStore } from "../../store";
 import { observer } from "mobx-react-lite";
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
 import { publicConfig } from "../../config/public";
+import { helper } from "../../utils/helper";
 
 export const DevBanner = observer(() => {
   const { lang } = useStore();
@@ -95,7 +96,7 @@ export const DevBanner = observer(() => {
               <form
                 onSubmit={(event) => {
                   event.preventDefault();
-                  handleSubmit({...fields,'group[53458][4]':4}, null);
+                  handleSubmit({ ...fields, "group[53458][4]": 4 }, null);
                 }}
               >
                 <Flex
@@ -152,7 +153,11 @@ export const DevBanner = observer(() => {
           </Box>
         </Flex>
         <Box w="100%" position="relative" mt={0}>
-          <img src="/images/mask_group.png" style={{opacity: 0}} alt=""/>
+          <img
+            src={helper.cdn("/images/mask_group.png")}
+            style={{ opacity: 0 }}
+            alt=""
+          />
           <Flex
             flexDirection="column"
             w="100%"
@@ -165,7 +170,8 @@ export const DevBanner = observer(() => {
               mb="5%"
               css={{
                 height: "45%",
-                background: "url(/images/dev/img_dev_page_logo1.png) center 0px repeat-x",
+                background:
+                  "url(/images/dev/img_dev_page_logo1.png) center 0px repeat-x",
                 backgroundSize: "200% 100%",
                 backgroundPositionX: "250%",
                 animation: "awardLine1 90s infinite linear",
@@ -174,7 +180,8 @@ export const DevBanner = observer(() => {
             <Box
               css={{
                 height: "45%",
-                background: "url(/images/dev/img_dev_page_logo2.png) center 0px repeat-x",
+                background:
+                  "url(/images/dev/img_dev_page_logo2.png) center 0px repeat-x",
                 backgroundSize: "200% 100%",
                 backgroundPositionX: "240%",
                 animation: "awardLine2 90s infinite linear",
@@ -194,9 +201,7 @@ export const DevBanner = observer(() => {
             }}
           />
         </Box>
-
       </Box>
-
     </Box>
   );
 });
