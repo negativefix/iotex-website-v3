@@ -344,10 +344,10 @@ export const Home = observer(() => {
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/gIVskvgzG9M?rel=0&amp&autoplay=1"
+                    src="https://www.youtube.com/embed/videoseries?list=PLCnT-5tXQ-huHpzBxM5feYKgoyGlmpXJU&autoplay=1"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe>
+                  />
                 </ModalBody>
               </ModalContent>
             </Modal>
