@@ -154,7 +154,7 @@ export const DownloadSection = observer(() => {
 
 			<Box textAlign={'center'} mt={{base: 20}} whiteSpace={{base: 'pre-line'}} fontWeight={600}
 			     fontSize={{base: '1rem', md: '1.5rem'}}>
-				<HighLight sourceStr={'CMC Campaign Code \n Join-IoTeX-100'} keyArr={[{word: 'Join-IoTeX-100', link: ''}]}
+				<HighLight sourceStr={'CMC Earn Code \n Join-IoTeX-100'} keyArr={[{word: 'Join-IoTeX-100', link: ''}]}
 				           markActiveStyle={{color: "rgba(68, 255, 178, 1)", fontSize: keyWordFontSize}}
 				/>
 			</Box>
