@@ -4,7 +4,7 @@ import { useStore } from "../../store";
 import { observer } from "mobx-react-lite";
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
 import { publicConfig } from "../../config/public";
-import { helper } from "../../utils/helper";
+import { helper } from '@/utils/helper';
 
 export const DevBanner = observer(() => {
   const { lang } = useStore();
@@ -154,7 +154,7 @@ export const DevBanner = observer(() => {
         </Flex>
         <Box w="100%" position="relative" mt={0}>
           <img
-            src={helper.cdn("/images/mask_group.png")}
+            src={helper.cdn('images/mask_group.png')}
             style={{ opacity: 0 }}
             alt=""
           />
