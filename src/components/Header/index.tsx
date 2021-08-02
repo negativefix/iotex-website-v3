@@ -166,6 +166,13 @@ export const Header = observer(() => {
       name: lang.t("for.community"),
       lists: [
         {
+          name: lang.t("iotx.utility.card2"),
+          path: "https://iotex.io/blog/snapshot-voting-decentralized-governance/\n",
+          blank: true,
+          icon: "/images/explore/icon_governance.png",
+          icon_active: "/images/explore/icon_governance_s.png",
+        },
+        {
           name: lang.t("ecosystem"),
           path: "https://ecosystem.iotex.io/projects",
           blank: true,
@@ -751,18 +758,24 @@ export const Header = observer(() => {
                       <Flex>
                         {links.map((item) => {
                           return (
-                            <Image
-                              boxSize="1.5rem"
-                              mr="1rem"
+                            <a
+                              href={item.href}
+                              target={item.blank ? "_blank" : ""}
                               key={item.icon}
-                              src={item.icon}
-                              cursor="pointer"
-                              css={{
-                                "&:hover": {
-                                  content: `url(${item.icon_active})`,
-                                },
-                              }}
-                            ></Image>
+                            >
+                              <Image
+                                boxSize="1.5rem"
+                                mr="1rem"
+                                key={item.icon}
+                                src={item.icon}
+                                cursor="pointer"
+                                css={{
+                                  "&:hover": {
+                                    content: `url(${item.icon_active})`,
+                                  },
+                                }}
+                              />
+                            </a>
                           );
                         })}
                       </Flex>
