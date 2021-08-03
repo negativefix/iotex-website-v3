@@ -827,5 +827,14 @@
   "starter.pack.section1.subtitle2": "REQUIREMENT 2. SUBSCRIBE TO NEWSLETTER",
   "starter.pack.section1.subtitle3": "REQUIREMENT 3. DOWNLOAD IOPAY WALLET TO RECEIVE YOUR CMC REWARDS",
   "complete": "COMPLETED",
-  "starter.pack.product": "PRODUCTS POWERED BY IOTEX"
+  "starter.pack.product": "PRODUCTS POWERED BY IOTEX",
+  "iopay.desc": "IoTeX Official Wallet & More",
+  "iopay.experience.title": "Great User Experience",
+  "iopay.experience.content": "Everybody loves the clean, simpliﬁed ioPay UX. ",
+  "iopay.safe.title": "Safe & Secure",
+  "iopay.safe.content": "We don't store your keys, or track your data. ",
+  "iopay.integrated.title": "Integrated App Store",
+  "iopay.integrated.content": "Explore crypto applications with just one click. ",
+  "iopay.mobile": "Mobile",
+  "iopay.desktop": "Desktop"
 }

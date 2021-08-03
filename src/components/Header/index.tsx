@@ -54,7 +54,7 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("ioPay.wallet"),
-          path: "https://iopay-wallet.iotex.io/",
+          path: "/iopay/",
           blank: true,
           icon: "images/explore/icon_wallet_n.png",
           icon_active: "images/explore/icon_wallet_s.png",
@@ -102,7 +102,7 @@ export const Header = observer(() => {
       lists: [
         {
           name: lang.t("ioPay.wallet"),
-          path: "https://iopay-wallet.iotex.io/",
+          path: "/iopay/",
           blank: true,
           icon: "images/explore/icon_wallet_n.png",
           icon_active: "images/explore/icon_wallet_s.png",

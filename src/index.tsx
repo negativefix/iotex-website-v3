@@ -20,6 +20,7 @@ import {Ucam} from "@/pages/Ucam";
 import Policy from "@/pages/Policy";
 import Cookie from "@/components/Cookie";
 import StarterPack from "@/pages/StarterPack";
+import Iopay from '@/pages/Iopay'
 
 // hotjar.initialize(2494554, 6);
 
@@ -38,7 +39,8 @@ export const App = observer(() => {
     { path: '/for-investors', component: Investors},
     { path: '/ucam', component: Ucam},
 	  { path:'/policy', component:Policy},
-	  { path: '/cmc', component: StarterPack}
+	  { path: '/cmc', component: StarterPack},
+      { path: '/iopay', component: Iopay}
   ]
 	useEffect(() => {
 		lang.init();

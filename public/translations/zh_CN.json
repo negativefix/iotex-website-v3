@@ -27,5 +27,14 @@
   "research.auth.title": "Decentralized IoT Data Authorization with Pebble Tracker",
   "research.auth.desc": "Decentralized identifiers (DIDs) and verifiable cre- dentials (VCs) are emerging concepts for creating verifiable self- sovereign digital identities for people, organizations and Internet of things (IoT). ",
   "research.auth.desc2": "In this demo, we share the implementation details and experiences for realizing a decentralized IoT data authorization framework with a Pebble tracker, an in-house built trusted GPS tracking device with 4G connectivity and sensor technologies. ",
-  "research.auth.desc3": "Our implementation demonstrates great flexibility and tremendous advantages towards building decentralized and global-scale IoT applications. To the best of our knowledge, this is the first real-world demo for enabling decentralized IoT data authorization with DIDs and VCs."
+  "research.auth.desc3": "Our implementation demonstrates great flexibility and tremendous advantages towards building decentralized and global-scale IoT applications. To the best of our knowledge, this is the first real-world demo for enabling decentralized IoT data authorization with DIDs and VCs.",
+  "iopay.desc": "IoTeX 官方钱包 & 更多",
+  "iopay.experience.title": "良好的用户体验",
+  "iopay.experience.content": "大家都喜欢页面干净, 整洁的 ioPay UX",
+  "iopay.safe.title": "安全",
+  "iopay.safe.content": "我们不会存储您的密钥或跟踪您的数据",
+  "iopay.integrated.title": "集成的应用程序商店",
+  "iopay.integrated.content": "只需单击一下即可探索密码货币应用程序",
+  "iopay.mobile": "移动端",
+  "iopay.desktop": "桌面端"
 }

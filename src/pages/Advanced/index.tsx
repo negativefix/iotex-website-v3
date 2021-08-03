@@ -73,7 +73,7 @@ export const Advanced = observer(() => {
     {
       name: lang.t("wallet"),
       list: [
-        {icon: "images/token/wallet/logo_iopay_n.png", href: "https://iopay-wallet.iotex.io/"},
+        {icon: "images/token/wallet/logo_iopay_n.png", href: "/iopay/"},
         {icon: "images/token/wallet/logo_huobi_wallet_n.png", href: "https://www.huobiwallet.com/en/"},
         {icon: "images/token/wallet/logo_cobo_wallet_n.png", href: "https://cobo.com/"},
         {icon: "images/token/wallet/logo_trust_wallet_n.png", href: "https://trustwallet.com/"},
