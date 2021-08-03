@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
 import { observer, useLocalStore } from 'mobx-react-lite';
+import {helper} from "@/utils/helper";
 
 
 interface ComponentsProps {
@@ -15,13 +16,13 @@ interface ComponentsProps {
 export const DropCard = observer(({index, icon, title, desc, hoverIndex, changeHoverIndex} : ComponentsProps) => {
 
     return (
-      <Box key={title} flex="1" cursor="pointer" 
-        borderRight={index === 3 ? '1px' : '0'} 
-        pb="0" borderBottom="1px" borderColor="borderColor" 
+      <Box key={title} flex="1" cursor="pointer"
+        borderRight={index === 3 ? '1px' : '0'}
+        pb="0" borderBottom="1px" borderColor="borderColor"
         h={hoverIndex === index ? {base: "max-content"} :{base: '36%', md: "42%", lg: '40%', xl: "45%"}}
         css={hoverIndex === index ? {
           height: "max-content",
-          background: 'url(/images/bg_tab.png)',
+          background: `url(${helper.cdn('images/bg_tab.png')})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 100%',
           border: 'none',
@@ -31,7 +32,7 @@ export const DropCard = observer(({index, icon, title, desc, hoverIndex, changeH
           overflow: 'hidden',
           '&:hover': {
             height: "100%",
-            background: 'url(/images/bg_tab.png)',
+            background: `url(${helper.cdn('images/bg_tab.png')})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
             borderColor: 'transparent',

@@ -1,5 +1,6 @@
 import {Flex, Image, Link} from "@chakra-ui/react";
 import React from "react";
+import {helper} from "@/utils/helper";
 
 const LogoCard = ({img, width, url}) => {
 	return (
@@ -16,7 +17,7 @@ const LogoCard = ({img, width, url}) => {
 				h={{base: '3rem', xl: '4rem'}}
 			>
 				<Image _focusVisible={{outline: 0}}
-				       src={img} w={width}/>
+				       src={helper.cdn(img)} w={width}/>
 			</Flex>
 		</Link>
 	)

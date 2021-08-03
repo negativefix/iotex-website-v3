@@ -5,6 +5,7 @@ import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import {useStore} from "@/store/index";
 import VideoSection from "@/pages/StarterPack/components/VideoSection";
+import {helper} from "@/utils/helper";
 
 
 const LearnPart = () => {
@@ -72,7 +73,7 @@ const LearnPart = () => {
 							flexDirection={'column'}
 							alignItems={'center'}
 						>
-							<Image src={'images/starter-pack/Onboarding.png'} w={{base:'30%',md:'55%'}} mt={{base:5,md:0}}/>
+							<Image src={helper.cdn('images/starter-pack/Onboarding.png')} w={{base:'30%',md:'55%'}} mt={{base:5,md:0}}/>
 							<Text fontWeight={600}>{lang.t('onboarding.Pack')}</Text>
 							<Text whiteSpace={'pre-line'} textAlign={'center'} mt={2}
 							      fontSize={'0.75rem'}>{'Explore the Multiple Facets \n of IoTeX'}</Text>
@@ -120,20 +121,20 @@ const LearnPart = () => {
 
 					<Link href={'https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03'} isExternal _hover={{}}>
 						<Flex w={'90%'} flexDirection={'column'} h={'18rem'} mx={'auto'} justifyContent={{base:'center',md:'unset'}}>
-							<Image src={'images/starter-pack/bg1.png'} mb={3} mt={8}/>
+							<Image src={helper.cdn('images/starter-pack/bg1.png')} mb={3} mt={8}/>
 							<Text fontWeight={'semibold'}>IoTeX 2021: The Year Ahead</Text>
 						</Flex>
 					</Link>
 
 					<Link href={'https://medium.com/iotex/mainnet-v1-2-activating-the-cambrian-explosion-on-iotex-704ab8a056e3'} isExternal _hover={{}}>
 						<Flex w={'90%'} flexDirection={'column'} h={'18rem'} mx={'auto'} justifyContent={{base:'center',md:'unset'}}>
-							<Image src={'images/starter-pack/bg2.png'} mb={3} mt={8}/>
+							<Image src={helper.cdn('images/starter-pack/bg2.png')} mb={3} mt={8}/>
 							<Text fontWeight={'semibold'}>Mainnet v1.2 — Activating the Cambrian Explosion on IoTeX</Text>
 						</Flex>
 					</Link>
 					<Link href={'https://iotex.io/blog/iotex-eating-iota-marketshare/'} isExternal _hover={{}}>
 						<Flex w={'90%'} flexDirection={'column'} h={'18rem'} mx={'auto'} justifyContent={{base:'center',md:'unset'}}>
-							<Image src={'images/starter-pack/bg3.png'} mb={3} mt={8}/>
+							<Image src={helper.cdn('images/starter-pack/bg3.png')} mb={3} mt={8}/>
 							<Text fontWeight={'semibold'}> In the News: IoTeX is Eating IOTA Market Share With 1.3 Update. </Text>
 						</Flex>
 					</Link>

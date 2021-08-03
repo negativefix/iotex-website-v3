@@ -13,21 +13,18 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import CountTo from "react-count-to";
-import axios from 'axios';
-// @ts-ignore
-import delegate from "@/assets/images/token/delegate.png";
-// @ts-ignore
-import iotexOverflowBanner from "@/assets/images/token/iotex_overflow_banner.png";
-// @ts-ignore
-import staking from "@/assets/images/token/staking.png";
 import { numberWithCommas } from "@/utils/index";
+import {helper} from "@/utils/helper";
 
 
 
 export const Investors = observer(() => {
   const { base, lang } = useStore();
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
- 
+  const delegate = "images/token/delegate.png";
+  const iotexOverflowBanner = "images/token/iotex_overflow_banner.png";
+  const staking = "images/token/staking.png";
+
   const store = useLocalStore(() => ({
     maketStatus: false,
     tokenStatus: false,
@@ -52,25 +49,25 @@ export const Investors = observer(() => {
   const physical = [
     {
       title: lang.t("do1"),
-      icon: "/images/investors/buy.png",
+      icon: "images/investors/buy.png",
       desc: lang.t("do1.tips"),
       href: "https://ecosystem.iotex.io/exchanges-wallets"
     },
     {
       title: lang.t("do2"),
-      icon: "/images/dev/trade.png",
+      icon: "images/dev/trade.png",
       desc: lang.t("do2.tips"),
       href: "https://mimo.finance/"
     },
     {
       title: lang.t("do3"),
-      icon: "/images/investors/stake.png",
+      icon: "images/investors/stake.png",
       desc: lang.t("do3.tips"),
       href: "https://onboard.iotex.io/hardware/staking-voting"
     },
     {
       title: lang.t("do4"),
-      icon: "/images/investors/contribute.png",
+      icon: "images/investors/contribute.png",
       desc: lang.t("do4.tips"),
       href: "https://onboard.iotex.io/hardware/delegates"
     },
@@ -80,21 +77,21 @@ export const Investors = observer(() => {
     {
       name: lang.t("get.iotx.card1"),
       btn: lang.t("explore"),
-      icon: "/images/get_start_card1.png",
+      icon: "images/get_start_card1.png",
       href: "https://ecosystem.iotex.io/exchanges-wallets",
       lists: [lang.t("exchanges"), lang.t("wallet"), lang.t("dex")],
     },
     {
       name: lang.t("get.iotx.card2"),
       btn: lang.t("discover"),
-      icon: "/images/get_start_card2.png",
+      icon: "images/get_start_card2.png",
       href: "https://ecosystem.iotex.io/projects",
       lists: [lang.t("projects"), lang.t("partners"), lang.t("awards")],
     },
     {
       name: lang.t("get.iotx.card3"),
       btn: lang.t("go.deep"),
-      icon: "/images/get_start_card3.png",
+      icon: "images/get_start_card3.png",
       href: "/advanced",
       lists: [lang.t("staking"), lang.t("burn.drop"), lang.t("governance")],
     },
@@ -103,22 +100,22 @@ export const Investors = observer(() => {
   const utility = [
     {
       title: lang.t("iotx.utility.card1"),
-      bg: "/images/card1.png",
+      bg: "images/card1.png",
       desc: lang.t("iotx.utility.card1.desc"),
     },
     {
       title: lang.t("iotx.utility.card2"),
-      bg: "/images/card2.png",
+      bg: "images/card2.png",
       desc: lang.t("iotx.utility.card2.desc"),
     },
     {
       title: lang.t("iotx.utility.card3"),
-      bg: "/images/card4.png",
+      bg: "images/card4.png",
       desc: lang.t("iotx.utility.card3.desc"),
     },
     {
       title: lang.t("iotx.utility.card4"),
-      bg: "/images/card3.png",
+      bg: "images/card3.png",
       desc: lang.t("iotx.utility.card4.desc"),
     },
   ];
@@ -131,7 +128,7 @@ export const Investors = observer(() => {
     <BasicLayout name="investors">
       <Box
         css={{
-          backgroundImage: `url(/images/investors/banner.png)`,
+          backgroundImage: `url(${helper.cdn('images/investors/banner.png')})`,
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
         }}
@@ -193,7 +190,7 @@ export const Investors = observer(() => {
 
         <Box
           css={{
-            backgroundImage: `url(${iotexOverflowBanner})`,
+            backgroundImage: `url(${helper.cdn(iotexOverflowBanner)})`,
             backgroundSize: isMaxThan768 ? "60%" : "100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "0 0",
@@ -256,9 +253,9 @@ export const Investors = observer(() => {
                   { lang.t("overview1")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
-                  $  {store.maketStatus ? store.marketCapCommas : <CountTo 
-                    from={0} to={store.marketCap} speed={3000} 
-                    digits={0}  
+                  $  {store.maketStatus ? store.marketCapCommas : <CountTo
+                    from={0} to={store.marketCap} speed={3000}
+                    digits={0}
                     onComplete={() => store.maketStatus = true}
                   />}
                 </Text>
@@ -271,8 +268,8 @@ export const Investors = observer(() => {
                   { lang.t("overview3")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
-                  {store.totalStatus ? store.totalSupplyCommas : <CountTo 
-                    from={0} to={store.totalSupply || 0} speed={3000} 
+                  {store.totalStatus ? store.totalSupplyCommas : <CountTo
+                    from={0} to={store.totalSupply || 0} speed={3000}
                     digits={0}  onComplete={() => store.totalStatus = true}
                   />}
                 </Text>
@@ -285,8 +282,8 @@ export const Investors = observer(() => {
                   { lang.t("token.price")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
-                  $  <CountTo 
-                    from={0} to={store.tokenPrice} speed={3000} 
+                  $  <CountTo
+                    from={0} to={store.tokenPrice} speed={3000}
                     digits={6}
                   />
                 </Text>
@@ -297,7 +294,7 @@ export const Investors = observer(() => {
           {/* What is IOTX? */}
           <Box
             css={{
-              backgroundImage: `url(/images/investors/what_is_iotx.png)`,
+              backgroundImage: `url(${helper.cdn('images/investors/what_is_iotx.png')})`,
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
             }}
@@ -452,7 +449,7 @@ export const Investors = observer(() => {
 
       <Box
         css={{
-          backgroundImage: `url(${delegate})`,
+          backgroundImage: `url(${helper.cdn(delegate)})`,
           backgroundSize: isMaxThan768 ? "58%" : "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: isMaxThan768 ? "100% 50%" : "100% 55%",
@@ -478,7 +475,7 @@ export const Investors = observer(() => {
                     <Image
                       boxSize="4rem"
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.title}
                       mb="1rem"
                     />
@@ -497,7 +494,7 @@ export const Investors = observer(() => {
                       <Image
                         boxSize="2rem"
                         objectFit="cover"
-                        src="/images/dev/link2.svg"
+                        src={helper.cdn('images/dev/link2.svg')}
                         alt="arrow"
                       />
                     </Flex>
@@ -632,7 +629,7 @@ export const Investors = observer(() => {
                       py={{ base: "2rem", xl: "3rem", "2xl": "4rem" }}
                       key={item.title}
                       css={{
-                        backgroundImage: `url(${item.bg})`,
+                        backgroundImage: `url(${helper.cdn(item.bg)})`,
                         backgroundSize: "100% 100%",
                         backgroundRepeat: "no-repeat",
                         borderRadius: "20px",
@@ -666,7 +663,7 @@ export const Investors = observer(() => {
       {/* start.using.iotx */}
       <Box
         css={{
-          backgroundImage: `url(/images/investors/start_using_iotx.png)`,
+          backgroundImage: `url(${helper.cdn('images/investors/start_using_iotx.png')})`,
           backgroundSize: "50%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: '100% 0'
@@ -705,7 +702,7 @@ export const Investors = observer(() => {
                   py="3rem"
                   mb={{ base: "4rem", lg: 0 }}
                   css={{
-                    backgroundImage: `url(${item.icon})`,
+                    backgroundImage: `url(${helper.cdn(item.icon)})`,
                     backgroundSize: "100% 100%",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "100% 0%",
@@ -736,7 +733,7 @@ export const Investors = observer(() => {
                         <Flex alignItems="center" mb="1rem" key={option}>
                           <Image
                             boxSize="0.5rem"
-                            src="/images/right-arrow.png"
+                            src={helper.cdn('images/right-arrow.png')}
                             alt=""
                             mr="0.5rem"
                           />

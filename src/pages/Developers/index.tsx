@@ -1,43 +1,41 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import { useStore } from "../../store/index";
+import { useStore } from "@/store/index";
 import { Flex, Box, Text, Image } from "@chakra-ui/react";
 import BasicLayout from "../../Layouts/BasicLayout";
 import { DevBanner } from "@/components/Banner/DevBanner";
-import { LogoCardItem } from "@/components/LogoCardItem/index";
-import { Footer } from "@/components/Footer/index";
-import { Button } from "@/components/Button/index";
+import { LogoCardItem } from "@/components/LogoCardItem";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import { BuildOnIotex } from "./components/BuildOnIotex/index";
 
-import bgThree from "@/assets/images/dev/bg_3.png";
-import develop from "@/assets/images/dev/develop.png";
-import dcBg from '@/assets/images/dev/bg_hover.png'
+import {helper} from "@/utils/helper";
 export const Developers = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
   const tools = [
-    { name: lang.t("tool1"), icon: "/images/dev/tool1.png" },
-    { name: lang.t("tool2"), icon: "/images/dev/tool2.png" },
-    { name: lang.t("tool3"), icon: "/images/dev/smart-contracts.png" },
-    { name: lang.t("tool4"), icon: "/images/dev/evm-compatible.png" },
-    { name: lang.t("tool5"), icon: "/images/dev/tool5.png" },
-    { name: lang.t("tool6"), icon: "/images/dev/tool6.png" },
-    { name: lang.t("tool7"), icon: "/images/dev/tool7.png" },
+    { name: lang.t("tool1"), icon: "images/dev/tool1.png" },
+    { name: lang.t("tool2"), icon: "images/dev/tool2.png" },
+    { name: lang.t("tool3"), icon: "images/dev/smart-contracts.png" },
+    { name: lang.t("tool4"), icon: "images/dev/evm-compatible.png" },
+    { name: lang.t("tool5"), icon: "images/dev/tool5.png" },
+    { name: lang.t("tool6"), icon: "images/dev/tool6.png" },
+    { name: lang.t("tool7"), icon: "images/dev/tool7.png" },
   ];
 
   const achieve = [
     {
-      icon: "/images/dev/app.png",
+      icon: "images/dev/app.png",
       desc: lang.t("achieve.item1"),
     },
     {
-      icon: "/images/dev/icon_world.png",
+      icon: "images/dev/icon_world.png",
       desc: lang.t("achieve.item2"),
     },
     {
-      icon: "/images/dev/icon_smart_contract.png",
+      icon: "images/dev/icon_smart_contract.png",
       desc: lang.t("achieve.item3"),
     },
   ];
@@ -45,43 +43,43 @@ export const Developers = observer(() => {
   const physical = [
     {
       title: lang.t("launch.dapp"),
-      icon: "/images/dev/app.png",
+      icon: "images/dev/app.png",
       desc: lang.t("launch.dapp.desc"),
       href: "https://docs.iotex.io/get-started/iotex-dapp-starter"
     },
     {
       title: lang.t("launch.token"),
-      icon: "/images/dev/token.png",
+      icon: "images/dev/token.png",
       desc: lang.t("launch.token.desc"),
       href: "https://docs.iotex.io/smart-contracts/introduction"
     },
     {
       title: lang.t("run.node"),
-      icon: "/images/dev/node.png",
+      icon: "images/dev/node.png",
       desc: lang.t("run.node.desc"),
       href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263"
     },
     {
       title: lang.t("intergrate.iot.devices"),
-      icon: "/images/dev/iot.png",
+      icon: "images/dev/iot.png",
       desc: lang.t("intergrate.iot.devices.desc"),
       href: "https://docs.iotex.io/"
     },
     {
       title: lang.t("go.cross.chain"),
-      icon: "/images/dev/chain.png",
+      icon: "images/dev/chain.png",
       desc: lang.t("go.cross.chain.desc"),
       href: "https://tube.iotex.io "
     },
     {
       title: lang.t("trad.assets"),
-      icon: "/images/dev/trade.png",
+      icon: "images/dev/trade.png",
       desc: lang.t("trad.assets.desc"),
       href: "https://ecosystem.iotex.io/exchanges-wallets"
     },
     {
       title: lang.t("mine.tracker"),
-      icon: "/images/dev/pebble.png",
+      icon: "images/dev/pebble.png",
       desc: lang.t("mine.tracker.desc"),
       href: "https://docs.iotex.io/secure-hardware/pebble-tracker"
     },
@@ -89,79 +87,79 @@ export const Developers = observer(() => {
 
   const logos = [
     {
-      icon: "/images/dev/logo_ucam_n.png",
-      iocn_active: "/images/dev/logo_ucam_h.png",
+      icon: "images/dev/logo_ucam_n.png",
+      iocn_active: "images/dev/logo_ucam_h.png",
       href: "/ucam"
     },
     {
-      icon: "/images/dev/logo_pebble_n.png",
-      iocn_active: "/images/dev/logo_pebble_h.png",
+      icon: "images/dev/logo_pebble_n.png",
+      iocn_active: "images/dev/logo_pebble_h.png",
       href: "/pebble"
     },
     {
-      icon: "/images/dev/logo_mimo_n.png",
-      iocn_active: "/images/dev/logo_mimo_h.png",
+      icon: "images/dev/logo_mimo_n.png",
+      iocn_active: "images/dev/logo_mimo_h.png",
       href: "https://mimo.finance/"
     },
     {
-      icon: "/images/dev/logo_healthblocks_n.png",
-      iocn_active: "/images/dev/logo_healthblocks_h.png",
+      icon: "images/dev/logo_healthblocks_n.png",
+      iocn_active: "images/dev/logo_healthblocks_h.png",
       href: "https://ecosystem.iotex.io/post/944"
     },
     {
-      icon: "/images/dev/logo_pebble_go_n.png",
-      iocn_active: "/images/dev/logo_pebble_go_h.png",
+      icon: "images/dev/logo_pebble_go_n.png",
+      iocn_active: "images/dev/logo_pebble_go_h.png",
       href: "https://pebblego.io/"
     },
     {
-      icon: "/images/dev/logo_scaleout_n.png",
-      iocn_active: "/images/dev/logo_scaleout_h.png",
+      icon: "images/dev/logo_scaleout_n.png",
+      iocn_active: "images/dev/logo_scaleout_h.png",
       href: "https://ecosystem.iotex.io/post/1042"
     },
     {
-      icon: "/images/dev/logo_cyclone_n.png",
-      iocn_active: "/images/dev/logo_cyclone_h.png",
+      icon: "images/dev/logo_cyclone_n.png",
+      iocn_active: "images/dev/logo_cyclone_h.png",
       href: "https://cyclone.xyz/"
     },
     {
-      icon: "/images/dev/logo_Pantheon_n.png",
-      iocn_active: "/images/dev/logo_Pantheon_h.png",
+      icon: "images/dev/logo_Pantheon_n.png",
+      iocn_active: "images/dev/logo_Pantheon_h.png",
       href: "https://ecosystem.iotex.io/post/217"
     },
     {
-      icon: "/images/dev/logo_Multisender_n.png",
-      iocn_active: "/images/dev/logo_Multisender_h.png",
+      icon: "images/dev/logo_Multisender_n.png",
+      iocn_active: "images/dev/logo_Multisender_h.png",
       href: "https://ecosystem.iotex.io/post/1163"
     },
   ];
 
   const awards = [
-    {icon: '/images/icon-logo1.png', iocn_active: '/images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
-    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.htm"},
-    {icon: '/images/icon-logo3.png', iocn_active: '/images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
-    {icon: '/images/research/ces_icon.png', iocn_active: '/images/research/ces_icon_active.png', href: "https://www.ces.tech/Innovation-Awards/Honorees/2020/Honorees/U/Ucam-by-IoTeX-Fully-Private-Home-IP-Camera.aspx"},
+    {icon: 'images/icon-logo1.png', iocn_active: 'images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
+    {icon: 'images/icon-logo2.png', iocn_active: 'images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.htm"},
+    {icon: 'images/icon-logo3.png', iocn_active: 'images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
+    {icon: 'images/research/ces_icon.png', iocn_active: 'images/research/ces_icon_active.png', href: "https://www.ces.tech/Innovation-Awards/Honorees/2020/Honorees/U/Ucam-by-IoTeX-Fully-Private-Home-IP-Camera.aspx"},
   ]
 
   const apps = [
     {
       name: lang.t("app1"),
       desc: lang.t("app1.desc"),
-      icon: "/images/dev/Solidity.png",
-      selectedIcon: "/images/card1.png",
+      icon: "images/dev/Solidity.png",
+      selectedIcon: "images/card1.png",
       href: "https://docs.iotex.io/software-tools/smart-contracts/introduction"
     },
     {
       name: lang.t("app2"),
       desc: lang.t("app2.desc"),
-      icon: "/images/dev/web3js.png",
-      selectedIcon: "/images/card3.png",
+      icon: "images/dev/web3js.png",
+      selectedIcon: "images/card3.png",
       href: "https://docs.iotex.io/ethereum-copmpatibility"
     },
     {
       name: lang.t("app3"),
       desc: lang.t("app3.desc"),
-      icon: "/images/dev/sdk.png",
-      selectedIcon: "/images/card2.png",
+      icon: "images/dev/sdk.png",
+      selectedIcon: "images/card2.png",
       href: "https://docs.iotex.io/software-tools/iotex-antenna-sdk"
     },
   ];
@@ -172,8 +170,8 @@ export const Developers = observer(() => {
         css={{
           backgroundImage: `url(${
             isMaxThan468
-              ? "/images/dev/banner.svg"
-              : "/images/dev/banner_mobile_bg.svg"
+              ? helper.cdn("images/dev/banner.svg")
+              : helper.cdn("images/dev/banner_mobile_bg.svg")
           })`,
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
@@ -191,7 +189,7 @@ export const Developers = observer(() => {
           >
             <Box
               w={{ base: "100%", md: "50%" }} mb={{ base: "4rem", md: 0 }}
-              bgImg={{base:'none',md:`url(/images/dev_ball.png)`}}
+              bgImg={{base:'none',md:`url(${helper.cdn('images/dev_ball.png')})`}}
               bgRepeat={'no-repeat'}
               bgPosition={'bottom left 5rem'}
               bgSize={'30%'}
@@ -212,7 +210,7 @@ export const Developers = observer(() => {
                   <Image
                     boxSize="3.75rem"
                     objectFit="fill"
-                    src="/images/github_empty.png"
+                    src={helper.cdn('images/github_empty.png')}
                     alt=""
                     ml="3rem"
                   />
@@ -222,7 +220,7 @@ export const Developers = observer(() => {
               {/*  display={{base: "none", md: "block"}}*/}
               {/*  boxSize={{base: "8rem", lg: "14rem"}}*/}
               {/*  objectFit="cover"*/}
-              {/*  src="/images/dev_ball.png"*/}
+              {/*  src="images/dev_ball.png"*/}
               {/*  alt="img_circular3"*/}
               {/*  ml="10%"*/}
               {/*  mt={{base: "5rem", md: "11.8125rem"}}*/}
@@ -242,7 +240,7 @@ export const Developers = observer(() => {
                     <Image
                       boxSize={{base: "3rem", md: "4rem"}}
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.desc}
                       mb="1rem"
                     />
@@ -357,7 +355,7 @@ export const Developers = observer(() => {
       <Box
         pb={{base: "5rem", md: "10rem"}}
         css={{
-          backgroundImage: `url(${develop})`,
+          backgroundImage: `url(${helper.cdn('images/dev/develop.png')})`,
           backgroundSize: `${isMaxThan468 ? "50%" : "100%"}`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0 10%",
@@ -441,7 +439,7 @@ export const Developers = observer(() => {
                   w={{ base: "2.5rem", sm: "4rem" }}
                   h={{ base: "2.5rem", sm: "4rem" }}
                 >
-                  <img src={item.icon} alt={item.name} />
+                  <img src={helper.cdn(item.icon)} alt={item.name} />
                 </Box>
                 <Text
                   fontSize={{ base: "0.75rem", md: "0.875rem" }}
@@ -460,14 +458,14 @@ export const Developers = observer(() => {
       <Box
         pb={{ base: "0", md: "20rem", lg: "30rem" }}
         css={{
-          backgroundImage: "url(/images/dev/bg_4.svg)",
+          backgroundImage: `${helper.cdn('images/dev/bg_4.svg')}`,
           backgroundSize: isMaxThan468 ? "60%" : "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: isMaxThan468 ? "0 100%" : "0 0",
         }}
       >
         {/* <Box display={{ base: "block", md: "none" }}>
-          <img src="/images/dev/bg_4.svg" alt="" />
+          <img src="images/dev/bg_4.svg" alt="" />
         </Box> */}
         <Flex
           maxWidth={{ base: "90%", lg: "80%", "2xl": "1554px" }}
@@ -538,13 +536,13 @@ export const Developers = observer(() => {
                   justifyContent="center"
                   alignItems="center"
                   css={{
-                    background: "url(/images/next_card.png)",
+                    background: `url(${helper.cdn('images/next_card.png')})`,
                     mixBlendMode: "normal",
                     borderRadius: "0.625rem",
                     backgroundSize: "100% 100%",
                     transition: "background 0.6s linear",
                     "&:hover": {
-                      background: `url(${item.selectedIcon})`,
+                      background: `url(${helper.cdn(item.selectedIcon)})`,
                       backgroundSize: "100% 100%",
                     },
                   }}
@@ -557,7 +555,7 @@ export const Developers = observer(() => {
                       lg: "7.5rem",
                     }}
                     objectFit="cover"
-                    src={item.icon}
+                    src={helper.cdn(item.icon)}
                     alt={item.name}
                   />
                   <Text
@@ -593,7 +591,7 @@ export const Developers = observer(() => {
       <Box
         pt={{ base: "5rem", md: 0 }}
         css={{
-          backgroundImage: `url(/images/dev/connect_bg.png), url(${bgThree})`,
+          backgroundImage: `url(${helper.cdn('images/dev/connect_bg.png')}), url(${helper.cdn('images/dev/bg_3.png')})`,
           backgroundSize: `70%, 100%`,
           backgroundRepeat: "no-repeat, no-repeat",
           backgroundPosition: `-5% 0%, ${
@@ -620,7 +618,7 @@ export const Developers = observer(() => {
                     <Image
                       boxSize="4rem"
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.title}
                       mb="1rem"
                     />
@@ -639,7 +637,7 @@ export const Developers = observer(() => {
                       <Image
                         boxSize="2rem"
                         objectFit="cover"
-                        src="/images/dev/link.svg"
+                        src={helper.cdn('images/dev/link.svg')}
                         alt="arrow"
                       />
                     </Flex>
@@ -811,7 +809,7 @@ export const Developers = observer(() => {
               bottom: 0,
               position: "absolute",
               content: `""`,
-              backgroundImage: `url('${dcBg}')`,
+              backgroundImage: `url('${helper.cdn('images/dev/bg_hover.png')}')`,
               backgroundSize: {
                 base:'0%',
                 md:'cover'
@@ -852,7 +850,7 @@ export const Developers = observer(() => {
               <Image
                 boxSize={{ base: "4rem", sm: "8rem", md: "7.5rem" }}
                 objectFit="cover"
-                src="/images/icon_discord.png"
+                src={helper.cdn('images/icon_discord.png')}
                 alt=""
                 mx="auto"
                 css={{

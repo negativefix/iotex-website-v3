@@ -4,10 +4,11 @@ import { useHistory } from "react-router-dom";
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { useStore } from "../../store";
 import { observer, useLocalObservable } from "mobx-react-lite";
+import {helper} from "@/utils/helper";
 
 const langGroups = {
-  en: { name: "EN", src: "/images/EN.png", text: "en" },
-  zh_CN: { name: "CN", src: "/images/CN.png", text: "zh_CN" },
+  en: { name: "EN", src: "images/EN.png", text: "en" },
+  zh_CN: { name: "CN", src: "images/CN.png", text: "zh_CN" },
 };
 
 export const Header = observer(() => {
@@ -55,43 +56,43 @@ export const Header = observer(() => {
           name: lang.t("ioPay.wallet"),
           path: "https://iopay-wallet.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_wallet_n.png",
-          icon_active: "/images/explore/icon_wallet_s.png",
+          icon: "images/explore/icon_wallet_n.png",
+          icon_active: "images/explore/icon_wallet_s.png",
         },
         // {
         //   name: lang.t("What.is.IoTeX"),
         //   path: "https://onboard.iotex.io/introduction",
         //   blank: true,
-        //   icon: "/images/explore/icon_wallet_n.png",
-        //   icon_active: "/images/explore/icon_wallet_s.png",
+        //   icon: "images/explore/icon_wallet_n.png",
+        //   icon_active: "images/explore/icon_wallet_s.png",
         // },
         // {
         //   name: lang.t("vision"),
         //   path: "https://iott.network/about",
         //   blank: true,
-        //   icon: "/images/explore/icon_getiotx_n.png",
-        //   icon_active: "/images/explore/icon_getiotx_n.png",
+        //   icon: "images/explore/icon_getiotx_n.png",
+        //   icon_active: "images/explore/icon_getiotx_n.png",
         // },
         // {
         //   name: lang.t("roadmap"),
         //   path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
         //   blank: true,
-        //   icon: "/images/explore/icon_map_n.png",
-        //   icon_active: "/images/explore/icon_map_s.png",
+        //   icon: "images/explore/icon_map_n.png",
+        //   icon_active: "images/explore/icon_map_s.png",
         // },
         {
           name: lang.t("onboarding.Pack"),
           path: "https://onboard.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
+          icon: "images/explore/icon_getiotx_n.png",
+          icon_active: "images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("ecosystem"),
           path: "https://ecosystem.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_ecopage_n.png",
-          icon_active: "/images/explore/icon_ecopage_s.png",
+          icon: "images/explore/icon_ecopage_n.png",
+          icon_active: "images/explore/icon_ecopage_s.png",
         },
       ],
     },
@@ -103,29 +104,29 @@ export const Header = observer(() => {
           name: lang.t("ioPay.wallet"),
           path: "https://iopay-wallet.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_wallet_n.png",
-          icon_active: "/images/explore/icon_wallet_s.png",
+          icon: "images/explore/icon_wallet_n.png",
+          icon_active: "images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("get.iotx"),
           path: "https://ecosystem.iotex.io/exchanges-wallets",
           blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
+          icon: "images/explore/icon_getiotx_n.png",
+          icon_active: "images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("staking.portal"),
           path: "https://member.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_stake_n.png",
-          icon_active: "/images/explore/icon_stake_s.png",
+          icon: "images/explore/icon_stake_n.png",
+          icon_active: "images/explore/icon_stake_s.png",
         },
         {
           name: lang.t("burn.drop"),
           path: "https://burndrop.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_brun-drop_n.png",
-          icon_active: "/images/explore/icon_brun-drop_n.png",
+          icon: "images/explore/icon_brun-drop_n.png",
+          icon_active: "images/explore/icon_brun-drop_n.png",
         },
       ],
     },
@@ -136,29 +137,29 @@ export const Header = observer(() => {
           name: lang.t("github"),
           path: "https://github.com/iotexproject",
           blank: true,
-          icon: "/images/explore/icon_gitHub_n.png",
-          icon_active: "/images/explore/icon_gitHub_s.png",
+          icon: "images/explore/icon_gitHub_n.png",
+          icon_active: "images/explore/icon_gitHub_s.png",
         },
         {
           name: lang.t("dev.docs"),
           path: "https://docs.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_docs_n.png",
-          icon_active: "/images/explore/icon_docs_s.png",
+          icon: "images/explore/icon_docs_n.png",
+          icon_active: "images/explore/icon_docs_s.png",
         },
         {
           name: lang.t("halo.grants"),
           path: "https://iotex.io/halo",
           blank: true,
-          icon: "/images/explore/icon_halo_n.png",
-          icon_active: "/images/explore/icon_halo_s.png",
+          icon: "images/explore/icon_halo_n.png",
+          icon_active: "images/explore/icon_halo_s.png",
         },
         {
           name: lang.t("explore"),
           path: "https://iotexscan.io/",
           blank: true,
-          icon: "/images/explore/icon_explorer_n.png",
-          icon_active: "/images/explore/icon_explorer_s.png",
+          icon: "images/explore/icon_explorer_n.png",
+          icon_active: "images/explore/icon_explorer_s.png",
         },
       ],
     },
@@ -169,29 +170,29 @@ export const Header = observer(() => {
           name: lang.t("iotx.utility.card2"),
           path: "https://iotex.io/blog/snapshot-voting-decentralized-governance/\n",
           blank: true,
-          icon: "/images/explore/icon_governance.png",
-          icon_active: "/images/explore/icon_governance_s.png",
+          icon: "images/explore/icon_governance.png",
+          icon_active: "images/explore/icon_governance_s.png",
         },
         {
           name: lang.t("ecosystem"),
           path: "https://ecosystem.iotex.io/projects",
           blank: true,
-          icon: "/images/explore/icon_ecopage_n.png",
-          icon_active: "/images/explore/icon_ecopage_s.png",
+          icon: "images/explore/icon_ecopage_n.png",
+          icon_active: "images/explore/icon_ecopage_s.png",
         },
         {
           name: lang.t("live.ioTT.network"),
           path: "https://iott.network/",
           blank: true,
-          icon: "/images/explore/icon_iott_n.png",
-          icon_active: "/images/explore/icon_iott_s.png",
+          icon: "images/explore/icon_iott_n.png",
+          icon_active: "images/explore/icon_iott_s.png",
         },
         {
           name: lang.t("blog"),
           path: "https://iotex.medium.com/",
           blank: true,
-          icon: "/images/explore/icon_blog_n.png",
-          icon_active: "/images/explore/icon_blog_s.png",
+          icon: "images/explore/icon_blog_n.png",
+          icon_active: "images/explore/icon_blog_s.png",
         },
       ],
     },
@@ -199,32 +200,32 @@ export const Header = observer(() => {
 
   const links = [
     {
-      icon: "/images/explore/icon_twitter_n.png",
-      icon_active: "/images/explore/icon_twitter_s.png",
+      icon: "images/explore/icon_twitter_n.png",
+      icon_active: "images/explore/icon_twitter_s.png",
       blank: true,
       href: "https://twitter.com/iotex_io",
     },
     {
-      icon: "/images/explore/icon_discord_n.png",
-      icon_active: "/images/explore/icon_discord_s.png",
+      icon: "images/explore/icon_discord_n.png",
+      icon_active: "images/explore/icon_discord_s.png",
       blank: true,
       href: "https://iotex.io/devdiscord",
     },
     {
-      icon: "/images/explore/icon_youtube_n.png",
-      icon_active: "/images/explore/icon_youtube_s.png",
+      icon: "images/explore/icon_youtube_n.png",
+      icon_active: "images/explore/icon_youtube_s.png",
       blank: true,
       href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
     {
-      icon: "/images/explore/icon_reddit_n.png",
-      icon_active: "/images/explore/icon_reddit_s.png",
+      icon: "images/explore/icon_reddit_n.png",
+      icon_active: "images/explore/icon_reddit_s.png",
       blank: true,
       href: "https://www.reddit.com/r/IoTeX/",
     },
     {
-      icon: "/images/explore/icon_telegram_n.png",
-      icon_active: "/images/explore/icon_telegram_s.png",
+      icon: "images/explore/icon_telegram_n.png",
+      icon_active: "images/explore/icon_telegram_s.png",
       blank: true,
       href: "https://t.me/iotexchannel",
     },
@@ -256,7 +257,7 @@ export const Header = observer(() => {
       <Flex justifyContent="space-between" alignItems="center">
         <Link href={"/"} _focus={{}}>
           <Box w={{ base: "6rem", md: "8rem", "2xl": "12rem" }}>
-            <img src="/images/logo.png" alt="" />
+            <img src={helper.cdn('images/logo.png')} alt="" />
           </Box>
         </Link>
         <Flex
@@ -475,13 +476,13 @@ export const Header = observer(() => {
                                   "&:hover": {
                                     color: "#44FFB2 !important",
                                     img: {
-                                      content: `url(${option.icon_active})`,
+                                      content: `url(${helper.cdn(option.icon_active)})`,
                                     },
                                   },
                                 }}
                               >
                                 <Box w="1.5rem" h="1.5rem" mr="0.5rem">
-                                  <img src={option.icon} alt="" />
+                                  <img src={helper.cdn(option.icon)} alt="" />
                                 </Box>
                                 <Text
                                   fontSize={{
@@ -508,14 +509,15 @@ export const Header = observer(() => {
                                   <Image
                                     boxSize="1.5rem"
                                     mr="1rem"
-                                    src={item.icon}
+                                    src={helper.cdn(item.icon)}
+                                    alt={item.icon}
                                     cursor="pointer"
                                     css={{
                                       "&:hover": {
-                                        content: `url(${item.icon_active})`,
+                                        content: `url(${helper.cdn(item.icon_active)})`,
                                       },
                                     }}
-                                  ></Image>
+                                  />
                                 </a>
                               );
                             })}
@@ -546,7 +548,7 @@ export const Header = observer(() => {
         >
           <Image
             boxSize="1.5rem"
-            src="/images/menue.png"
+            src={helper.cdn('images/menue.png')}
             alt=""
             onClick={() => (store.openMenu = true)}
           />
@@ -565,7 +567,7 @@ export const Header = observer(() => {
                 h="100%"
                 pt="4.5rem"
                 className="menusMobile"
-                bg={{base: "url(images/email_popup.png)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+                bg={{base: `url(${helper.cdn('images/email_popup.png')})`, md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
                 css={{
                   backdropFilter: "blur(50px)",
                   animation: "fadeIn 0.3s linear",
@@ -578,19 +580,20 @@ export const Header = observer(() => {
                     left="0.5rem"
                     top="0.8rem"
                   >
-                    <img src="/images/logo.png" alt="" />
+                    <img src={helper.cdn('images/logo.png')} alt="logo" />
                   </Box>
                 </Link>
                 <Image
+                  alt='close'
                   boxSize="1.5rem"
-                  src="/images/explore/close.png"
+                  src={helper.cdn('images/explore/close.png')}
                   position="absolute"
                   right="1.5rem"
                   top="0.8rem"
                   opacity="0.5"
                   cursor="pointer"
                   onClick={() => (store.openMenu = false)}
-                ></Image>
+                />
                 {navConfig.map((item) => {
                   return (
                     <Link
@@ -692,7 +695,7 @@ export const Header = observer(() => {
               alignItems="flex-start"
               py="1.5rem"
               px="2rem"
-              bg={{base: "url(images/email_popup.png)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+              bg={{base: `url(${helper.cdn('images/email_popup.png')})`, md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
               css={{
                 backdropFilter: "blur(50px)",
                 animation: "fadeIn 0.3s linear",
@@ -700,14 +703,15 @@ export const Header = observer(() => {
             >
               <Image
                 boxSize="1.5rem"
-                src="/images/explore/close.png"
+                src={`${helper.cdn('images/explore/close.png')}`}
                 position="absolute"
                 right="1.5rem"
                 top="1.5rem"
                 opacity="0.5"
+                alt={'close'}
                 cursor="pointer"
                 onClick={() => (store.openExplore = false)}
-              ></Image>
+              />
               {exploreConfig.map((item, index) => {
                 return (
                   <Flex flexDirection="column" key={item.name} mb="10%">
@@ -733,13 +737,13 @@ export const Header = observer(() => {
                               "&:hover": {
                                 color: "#44FFB2 !important",
                                 img: {
-                                  content: `url(${option.icon_active})`,
+                                  content: `url(${helper.cdn(option.icon_active)})`,
                                 },
                               },
                             }}
                           >
                             <Box w="1.5rem" h="1.5rem" mr="0.5rem">
-                              <img src={option.icon} alt="" />
+                              <img src={helper.cdn(option.icon)} alt="" />
                             </Box>
                             <Text
                               fontSize={{
@@ -767,11 +771,11 @@ export const Header = observer(() => {
                                 boxSize="1.5rem"
                                 mr="1rem"
                                 key={item.icon}
-                                src={item.icon}
+                                src={helper.cdn(item.icon)}
                                 cursor="pointer"
                                 css={{
                                   "&:hover": {
-                                    content: `url(${item.icon_active})`,
+                                    content: `url(${helper.cdn(item.icon_active)})`,
                                   },
                                 }}
                               />

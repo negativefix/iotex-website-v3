@@ -7,24 +7,17 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
 import CountTo from "react-count-to";
-// @ts-ignore
-import Banner from '@/assets/images/token/banner.png'
-// @ts-ignore
-import burnDrop from '@/assets/images/token/burn_drop.png'
-// @ts-ignore
-import burnToCertify from '@/assets/images/token/burn_to_certify.png'
-// @ts-ignore
-import delegate from '@/assets/images/token/delegate.png'
-// @ts-ignore
-import iotexOverflowBanner from '@/assets/images/token/iotex_overflow_banner.png'
-// @ts-ignore
-import staking from '@/assets/images/token/staking.png'
+import {helper} from "@/utils/helper";
 
 export const Advanced = observer(() => {
   const { lang } = useStore();
   const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
-
+  const Banner = 'images/token/banner.png'
+  const burnDrop = 'images/token/burn_drop.png'
+  const burnToCertify = 'images/token/burn_to_certify.png'
+  const delegate = 'images/token/delegate.png'
+  const staking = 'images/token/staking.png'
   const iotexOverview = [
     {
       name: lang.t("overview1"),
@@ -67,34 +60,34 @@ export const Advanced = observer(() => {
     {
       name: lang.t("exchanges"),
       list: [
-        {icon: "/images/token/exchange/logo_binance_n.png", href: "https://www.binance.com/it/trade/IOTX_BTC?type=spot"},
-        {icon: "/images/token/exchange/logo_huobi_n.png", href: "https://www.huobi.com/en-us/exchange/iotx_usdt"},
-        {icon: "/images/token/exchange/logo_bittrex_n.png", href: "https://global.bittrex.com/Market/Index?MarketName=BTC-IOTX"},
-        {icon: "/images/token/exchange/logo_gate_n.png", href: "https://www.gate.io/trade/IOTX_ETH"},
-        {icon: "/images/token/exchange/logo_hotbit_n.png", href: "https://www.hotbit.io/exchange?symbol=IOTX_USDT"},
-        {icon: "/images/token/exchange/logo_mxc_n.png", href: "https://www.mexc.com/exchange/IOTX_USDT"},
-        {icon: "/images/token/exchange/logo_upbit_n.png", href: "https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX"},
-        {icon: "/images/token/exchange/logo_Kucoin_n.png", href: "https://trade.kucoin.com/IOTX-BTC"},
+        {icon: "images/token/exchange/logo_binance_n.png", href: "https://www.binance.com/it/trade/IOTX_BTC?type=spot"},
+        {icon: "images/token/exchange/logo_huobi_n.png", href: "https://www.huobi.com/en-us/exchange/iotx_usdt"},
+        {icon: "images/token/exchange/logo_bittrex_n.png", href: "https://global.bittrex.com/Market/Index?MarketName=BTC-IOTX"},
+        {icon: "images/token/exchange/logo_gate_n.png", href: "https://www.gate.io/trade/IOTX_ETH"},
+        {icon: "images/token/exchange/logo_hotbit_n.png", href: "https://www.hotbit.io/exchange?symbol=IOTX_USDT"},
+        {icon: "images/token/exchange/logo_mxc_n.png", href: "https://www.mexc.com/exchange/IOTX_USDT"},
+        {icon: "images/token/exchange/logo_upbit_n.png", href: "https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX"},
+        {icon: "images/token/exchange/logo_Kucoin_n.png", href: "https://trade.kucoin.com/IOTX-BTC"},
       ],
     },
     {
       name: lang.t("wallet"),
       list: [
-        {icon: "/images/token/wallet/logo_iopay_n.png", href: "https://iopay-wallet.iotex.io/"},
-        {icon: "/images/token/wallet/logo_huobi_wallet_n.png", href: "https://www.huobiwallet.com/en/"},
-        {icon: "/images/token/wallet/logo_cobo_wallet_n.png", href: "https://cobo.com/"},
-        {icon: "/images/token/wallet/logo_trust_wallet_n.png", href: "https://trustwallet.com/"},
+        {icon: "images/token/wallet/logo_iopay_n.png", href: "https://iopay-wallet.iotex.io/"},
+        {icon: "images/token/wallet/logo_huobi_wallet_n.png", href: "https://www.huobiwallet.com/en/"},
+        {icon: "images/token/wallet/logo_cobo_wallet_n.png", href: "https://cobo.com/"},
+        {icon: "images/token/wallet/logo_trust_wallet_n.png", href: "https://trustwallet.com/"},
       ],
     },
     {
       name: lang.t("dex"),
       list: [
-       {icon: "/images/token/dex/logo_mimo_n.png", href: "https://mimo.finance/"},
-       {icon: "/images/token/dex/logo_sifchain_n.png", href: "https://sifchain.finance/"},
-       {icon: "/images/token/dex/logo_pancake_swap_n.png", href: "https://pancakeswap.finance/"},
-       {icon: "/images/token/dex/logo_polygon_n.png", href: "https://polygon.technology/"},
-       {icon: "/images/token/dex/logo_uniswap_n.png", href: "https://uniswap.org/"},
-       {icon: "/images/token/dex/logo_unifi_n.png", href: "https://unifiprotocol.com/"},
+       {icon: "images/token/dex/logo_mimo_n.png", href: "https://mimo.finance/"},
+       {icon: "images/token/dex/logo_sifchain_n.png", href: "https://sifchain.finance/"},
+       {icon: "images/token/dex/logo_pancake_swap_n.png", href: "https://pancakeswap.finance/"},
+       {icon: "images/token/dex/logo_polygon_n.png", href: "https://polygon.technology/"},
+       {icon: "images/token/dex/logo_uniswap_n.png", href: "https://uniswap.org/"},
+       {icon: "images/token/dex/logo_unifi_n.png", href: "https://unifiprotocol.com/"},
       ],
     },
   ];
@@ -102,22 +95,22 @@ export const Advanced = observer(() => {
   const utility = [
     {
       title: lang.t("iotx.utility.card1"),
-      bg: "/images/card1.png",
+      bg: "images/card1.png",
       desc: lang.t("iotx.utility.card1.desc"),
     },
     {
       title: lang.t("iotx.utility.card2"),
-      bg: "/images/card3.png",
+      bg: "images/card3.png",
       desc: lang.t("iotx.utility.card2.desc"),
     },
     {
       title: lang.t("iotx.utility.card3"),
-      bg: "/images/card2.png",
+      bg: "images/card2.png",
       desc: lang.t("iotx.utility.card3.desc"),
     },
     {
       title: lang.t("iotx.utility.card4"),
-      bg: "/images/card4.png",
+      bg: "images/card4.png",
       desc: lang.t("iotx.utility.card4.desc"),
     },
   ];
@@ -125,19 +118,19 @@ export const Advanced = observer(() => {
   const burndrops = [
     {
       name: lang.t("burn"),
-      icon: "/images/token/icon_burnt.png",
+      icon: "images/token/icon_burnt.png",
       amount: 50,
       desc: lang.t("burn.tip"),
     },
     {
       name: lang.t("drop"),
-      icon: "/images/token/icon_dropped.png",
+      icon: "images/token/icon_dropped.png",
       amount: 25,
       desc: lang.t("drop.tip"),
     },
     {
       name: lang.t("drip"),
-      icon: "/images/token/icon_airdrip.png",
+      icon: "images/token/icon_airdrip.png",
       amount: 25,
       desc: lang.t("drip.tip"),
     },
@@ -149,8 +142,8 @@ export const Advanced = observer(() => {
         css={{
           backgroundImage: `url(${
             isMaxThan468
-              ? Banner
-              : Banner
+              ? helper.cdn(Banner)
+              : helper.cdn(Banner)
           })`,
           backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
@@ -230,7 +223,7 @@ export const Advanced = observer(() => {
         <Box
           pb={{ base: "5rem", lg: "12rem", "2xl": "15rem" }}
           css={{
-            backgroundImage: `url("/images/token/get.iotx_bg.png")`,
+            backgroundImage: `url(${helper.cdn('images/token/get.iotx_bg.png')})`,
             backgroundSize: "100%",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "0 30%",
@@ -287,7 +280,7 @@ export const Advanced = observer(() => {
                         return (
                           <Box key={child.icon}>
                            <a href={child.href} target="_blank">
-                            <img src={child.icon} alt="" />
+                            <img src={helper.cdn(child.icon)} alt="" />
                            </a>
                           </Box>
                         );
@@ -332,7 +325,7 @@ export const Advanced = observer(() => {
                       py={{base: "2rem", xl: "3rem", "2xl": "4rem"}}
                       key={item.title}
                       css={{
-                        backgroundImage: `url(${item.bg})`,
+                        backgroundImage: `url(${helper.cdn(item.bg)})`,
                         backgroundSize: "100% 100%",
                         backgroundRepeat: "no-repeat",
                         borderRadius: "20px",
@@ -396,13 +389,13 @@ export const Advanced = observer(() => {
       </Box>
 
       <Box display={{base: "block", md: "none"}}>
-        <img src={delegate} alt="delegate" />
+        <img src={helper.cdn(delegate)} alt="delegate" />
       </Box>
 
       <Box
         css={{
           backgroundImage: isMaxThan768 ?
-            `url(${delegate}), url(${staking})` : `url(${staking})`,
+            `url(${helper.cdn(delegate)}), url(${helper.cdn(staking)})` : `url(${helper.cdn(staking)})`,
           backgroundSize: isMaxThan768 ? "55%, 80%" : "100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: isMaxThan768 ? "100% 0, 100% 30%" : "100% 30%",
@@ -471,7 +464,7 @@ export const Advanced = observer(() => {
             <Flex flexDirection={{ base: "column", md: "row" }} mt={{base: "4rem", md: "8.9rem"}}>
               <Flex w={{base: "100%", lg: "40%", "2xl": "40%"}} mr="5rem" flexDirection="column" mb={{base: "5rem", md: 0}}>
                 <Image
-                  src="/images/token/icon_voter.png"
+                  src={helper.cdn('images/token/icon_voter.png')}
                   alt=""
                   htmlWidth="62px"
                   htmlHeight="38px"
@@ -499,7 +492,7 @@ export const Advanced = observer(() => {
               </Flex>
               <Flex w={{base: "100%", lg: "45%", "2xl": "40%"}} flexDirection="column">
                 <Image
-                  src="/images/token/icon_delegate_red.png"
+                  src={helper.cdn('images/token/icon_delegate_red.png')}
                   alt=""
                   htmlWidth="62px"
                   htmlHeight="38px"
@@ -529,7 +522,7 @@ export const Advanced = observer(() => {
             borderRadius="15px"
             py={{ base: "1.2rem", sm: "1.5rem", lg: "1.2rem" }}
             px={{ base: "1.5rem", sm: "2.5rem", lg: "2rem" }}
-            bg="url('/images/read_build_bg.png')"
+            bg={`url(${helper.cdn('images/read_build_bg.png')})`}
             css={{
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
@@ -570,7 +563,7 @@ export const Advanced = observer(() => {
             flexDirection={{ base: "column-reverse", md: "row" }}
           >
             <Box w={{ base: "100%", md: "50%" }}>
-              <Image src={burnDrop} />
+              <Image src={helper.cdn(burnDrop)} />
             </Box>
             <Box
               w={{ base: "100%", md: "46%", "2xl": "40%" }}
@@ -651,7 +644,7 @@ export const Advanced = observer(() => {
         >
           <Flex w={{base: "90%", md: "40%"}} flexDirection="column">
             <Image
-              src="/images/token/icon_device.png"
+              src={helper.cdn('images/token/icon_device.png')}
               alt=""
               htmlWidth="64px"
               htmlHeight="64px"
@@ -673,10 +666,10 @@ export const Advanced = observer(() => {
               </Text>
             </a>
           </Flex>
-          <Image boxSize="8rem" src="/images/token/icon_right.png" alt="" />
+          <Image boxSize="8rem" src={helper.cdn('images/token/icon_right.png')} alt="" />
           <Flex w={{base: "90%", md: "40%"}} flexDirection="column">
             <Image
-              src="/images/token/icon_$iotx.png"
+              src={helper.cdn('images/token/icon_$iotx.png')}
               alt=""
               boxSize="4rem"
               mb="2rem"
@@ -714,7 +707,7 @@ export const Advanced = observer(() => {
             <Box w={{base: "90%", md: "28%"}} key={item.name} mt={{base: "4rem", md: 0}}>
               <Flex alignItems="flex-end" justifyContent="space-between" pr="1rem" mb="0.5rem">
                 <Box textAlign="center" >
-                  <Image boxSize={{base: "6rem",sm: "12rem", md: "8rem"}} src={item.icon} />
+                  <Image boxSize={{base: "6rem",sm: "12rem", md: "8rem"}} src={helper.cdn(item.icon)} />
                   <Text fontSize={{ base: "1.25rem", sm: "2.5rem", md: "1.25rem", xl: "2.5rem" }} fontWeight="bold">{item.name}</Text>
                 </Box>
                 <Text fontSize={{ base: "2rem", sm: "3rem", md: "2rem", xl: "5rem" }} fontWeight="medium" lineHeight="initial">
@@ -744,7 +737,7 @@ export const Advanced = observer(() => {
         }}
       >
         <Flex alignItems='flex-start' flexDirection={{base: "column", md: "row"}}>
-          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src="/images/token/icon_Burn-to-Certify.png" mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}/>
+          <Image boxSize={{base: "60%", sm: "100%", md: "16rem"}} src={helper.cdn('images/token/icon_Burn-to-Certify.png')} mr={{base: 0, md: "2rem"}} mb={{base: "2rem", md: 0}}/>
           <Box>
             <Text fontSize={{ base: "1rem", sm: "1.6rem", md: "2rem", xl: "3rem" }} fontWeight="bold" letterSpacing="2px" mb={{base: "1rem", md: "0.5rem"}}>{lang.t("burn.to.certify")}</Text>
             <Text fontSize={{base: "0.75rem", sm: "1.25rem", lg: "1rem", xl: "1.25rem"}} flex="1">

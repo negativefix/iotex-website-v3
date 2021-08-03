@@ -6,6 +6,7 @@ import {Title} from "../../Pebble/Title";
 import {Button} from "@/components/Button";
 import {useStore} from "@/store/index";
 import {Caption} from "../../Pebble/Caption";
+import {helper} from "@/utils/helper";
 
 const ContentTab = () => {
 	const {lang} = useStore()
@@ -26,7 +27,7 @@ const ContentTab = () => {
 			<Flex
 				flexDirection={'column'}
 			>
-				<Image src={image}/>
+				<Image src={helper.cdn(image)}/>
 				<Caption text={text} marginTop={'35px'}/>
 			</Flex>
 		)
@@ -41,7 +42,7 @@ const ContentTab = () => {
 						<Button name={lang.t('learn.more')} href={'/'} size={{base: "100%", md: "20rem"}}/>
 					</Box>
 					<Box>
-						<Image borderRadius={'20px'} src={'images/media-center/img_When_Privacy_Hits_Home.png'}/>
+						<Image borderRadius={'20px'} src={helper.cdn('images/media-center/img_When_Privacy_Hits_Home.png')}/>
 					</Box>
 				</Flex>
 			</SectionContainer>

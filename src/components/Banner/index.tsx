@@ -2,21 +2,20 @@ import React from 'react';
 import {Box, Flex, Image, Text} from '@chakra-ui/react';
 import {useStore} from '../../store';
 import {observer} from 'mobx-react-lite';
-// @ts-ignore
-import bigBall from '@/assets/images/banner/bigball.png'
+
+import {helper} from "@/utils/helper";
 
 export const Banner = observer(() => {
 	const {lang} = useStore();
-
     return (
         <Box position="relative" pt={{base: "6rem", md: "4rem", lg: "5rem", xl: "6rem", "2xl": "5rem"}} minHeight={{base: "max-content", lg: "610px", xl: "800px", "2xl": "1004px"}}>
-            <img src="/images/animation.svg" alt="" />
+            <img src={`${helper.cdn('images/animation.svg')}`} alt="" />
             <Box position="absolute" zIndex="2" w="100%" h="100%" top="0" left="0">
                 <Box w={{base: "25vw", md: "25vw", lg: "28vw"}} position="absolute" top="20%" left="10%" css={{animation: 'bigBall 1.8s linear infinite alternate running'}}>
-                  <img src={bigBall} alt="" />
+                  <img src={helper.cdn('images/banner/bigball.png')} alt="" />
                 </Box>
                 <Box w={{base: "8vw", md: "8vw", lg: "12vw"}}  position="absolute" left="75%" top="50%">
-                  <img src="/images/smallball.png"alt="" />
+                  <img src={`${helper.cdn('images/smallball.png')}`} alt="" />
                 </Box>
             </Box>
             <Flex position="absolute" zIndex="3" w="100%" h="100%" top="0"
@@ -46,7 +45,7 @@ export const Banner = observer(() => {
                     },
                   }}>
                     <a href="#getStarted">
-                      <img src="/images/getStarted.png" alt="" />
+                      <img src={`${helper.cdn('images/getStarted.png')}`} alt="" />
                     </a>
                   </Box>
                 </Box>

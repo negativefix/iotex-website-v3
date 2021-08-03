@@ -13,13 +13,14 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import BasicLayout from "../../Layouts/BasicLayout";
-import { Banner } from "@/components/Banner/index";
+import { Banner } from "@/components/Banner";
 import { AwardWinning } from "./components/AwardWinning/index";
 import { NextGen } from "./components/NextGen/index";
 import { JoinRevolution } from "./components/JoinRevolution/index";
 import CountTo from "react-count-to";
-import { subgraphAPI } from "../../lib/iotexGraphApi";
+import { subgraphAPI } from "@/lib/iotexGraphApi";
 import { numberWithCommas } from "@/utils/index";
+import {helper} from "@/utils/helper";
 
 export const Home = observer(() => {
   const { lang } = useStore();
@@ -77,7 +78,7 @@ export const Home = observer(() => {
       <Box
         css={{
           backgroundImage:
-            "url(/images/banner_left_bg.png),url(/images/banner_r_bg.png) ",
+            `url(${helper.cdn('images/banner_left_bg.png')}),url(${helper.cdn('images/banner_r_bg.png')})`,
           backgroundSize: "100%, 100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0 0, 100% 0",
@@ -262,7 +263,7 @@ export const Home = observer(() => {
           <Image
             boxSize={{ base: "2rem", md: "4rem", xl: "5.25rem" }}
             objectFit="cover"
-            src="/images/img_circular3.png"
+            src={helper.cdn('images/img_circular3.png')}
             alt="img_circular3"
             mx={{ base: "5%", md: "5%", lg: "8%", xl: "10%" }}
           />
@@ -312,7 +313,7 @@ export const Home = observer(() => {
         >
           <Box mx="auto" position="relative">
             <Box onClick={store.open}>
-              <img src="/images/video.png" alt="" />
+              <img src={helper.cdn('images/video.png')} alt="" />
               <Flex
                 w="100%"
                 h="100%"
@@ -325,7 +326,7 @@ export const Home = observer(() => {
                 <Image
                   boxSize={{ base: "40px", md: "80px" }}
                   objectFit="cover"
-                  src="/images/play-icon.png"
+                  src={helper.cdn('images/play-icon.png')}
                   alt="img_circular3"
                   mx="10%"
                   cursor="pointer"
@@ -375,7 +376,7 @@ export const Home = observer(() => {
         pt={{ base: "0", md: "7.5rem" }}
         pb={{ base: "4rem", md: "10rem", lg: "18rem" }}
         css={{
-          backgroundImage: "url(/images/award_wing_bg.png)",
+          backgroundImage: `url(${helper.cdn('images/award_wing_bg.png')})`,
           backgroundSize: "56%",
           backgroundRepeat: "no-repeat",
         }}
@@ -389,7 +390,7 @@ export const Home = observer(() => {
         </Box>
         <Box w="100%" position="relative">
           <Box height={{ base: "10rem", md: "max-content" }}>
-            <img src="/images/mask_group.png" style={{ opacity: 0 }} alt="" />
+            <img src={helper.cdn('images/mask_group.png')} style={{ opacity: 0 }} alt="" />
           </Box>
           <Flex
             flexDirection="column"
@@ -403,7 +404,7 @@ export const Home = observer(() => {
               mb="5%"
               css={{
                 height: "45%",
-                background: "url(/images/awind_line_1.png) center 0px repeat-x",
+                background: `url(${helper.cdn('images/awind_line_1.png')}) center 0px repeat-x`,
                 backgroundSize: isMaxThan768 ? "250% 100%" : "650% 100%",
                 backgroundPositionX: isMaxThan768 ? "250%" : "650%",
                 animation: "awardLine1 90s infinite linear",
@@ -412,7 +413,7 @@ export const Home = observer(() => {
             <Box
               css={{
                 height: "45%",
-                background: "url(/images/awind_line_2.png) center 0px repeat-x",
+                background: `url(${helper.cdn('images/awind_line_2.png')}) center 0px repeat-x`,
                 backgroundSize: isMaxThan768 ? "240% 100%" : "640% 100%",
                 backgroundPositionX: isMaxThan768 ? "240%" : "640%",
                 animation: "awardLine2 90s infinite linear",
@@ -427,7 +428,7 @@ export const Home = observer(() => {
               right: "-1px",
               bottom: "-1px",
               zIndex: 2,
-              background: "url(/images/mask.png) center center no-repeat",
+              background: `url(${helper.cdn('images/mask.png')}) center center no-repeat`,
               backgroundSize: isMaxThan768 ? "contain" : "100% 100%",
             }}
           />

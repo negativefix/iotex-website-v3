@@ -1,10 +1,9 @@
 import React from 'react';
-import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
-import {  useHistory } from 'react-router-dom';
-import { useStore } from '../../../../store';
-import { Button } from "../../../../components/Button/index"
-import { observer, useLocalStore } from 'mobx-react-lite';
-import {DropLinkItem} from '@/components/DropLinkItem/index'
+import { Box, Flex,  Text } from '@chakra-ui/react';
+import { useStore } from '@/store/index';
+import { Button } from "@/components/Button"
+import { observer } from 'mobx-react-lite';
+import {DropLinkItem} from '@/components/DropLinkItem'
 
 
 

@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
 import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
-import { Footer } from "@/components/Footer/index";
+import { Footer } from "@/components/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
-import ucamS from "/images/home/img_ucam_s.png";
-import ucamN from "/images/home/img_ucam_n.png";
-import pebbleS from "/images/home/img_pebble_s.png";
-import pebbleN from "/images/home/img_pebble_n.png";
-
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
 import { publicConfig } from "../../../../config/public";
+import {helper} from "@/utils/helper";
 
 export const JoinRevolution = observer(() => {
   const { lang } = useStore();
+  const ucamS = 'images/home/img_ucam_s.png';
+  const ucamN = 'images/home/img_ucam_n.png';
+  const pebbleS = 'images/home/img_pebble_s.png';
+  const pebbleN = 'images/home/img_pebble_n.png';
+
   const [ucamSrc, setUcamSrc] = useState(ucamS);
   const [pebbleSrc, setPebbleSrc] = useState(pebbleS);
   const [isMaxThan768] = useMediaQuery("(min-width: 768px)");
@@ -28,25 +29,25 @@ export const JoinRevolution = observer(() => {
   const infos = [
     {
       title: lang.t("telegram"),
-      icon: "/images/icon_telegram.png",
+      icon: "images/icon_telegram.png",
       desc: lang.t("telegram.desc"),
       href: "https://t.me/iotexchannel",
     },
     {
       title: lang.t("twitter"),
-      icon: "/images/icon_twitter.png",
+      icon: "images/icon_twitter.png",
       desc: lang.t("twitter.desc"),
       href: "https://twitter.com/iotex_io",
     },
     {
       title: lang.t("github"),
-      icon: "/images/icon_gitHub.png",
+      icon: "images/icon_gitHub.png",
       desc: lang.t("github.desc"),
       href: "https://github.com/iotexproject",
     },
     {
       title: lang.t("youtube"),
-      icon: "/images/icon_youtube.png",
+      icon: "images/icon_youtube.png",
       desc: lang.t("youtube.desc"),
       href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
@@ -56,7 +57,7 @@ export const JoinRevolution = observer(() => {
     {
       name: lang.t("investors"),
       btn: lang.t("explore"),
-      icon: "/images/get_start_card1.png",
+      icon: "images/get_start_card1.png",
       href: "/for-investors",
       lists: [
         lang.t("investors.tips1"),
@@ -67,7 +68,7 @@ export const JoinRevolution = observer(() => {
     {
       name: lang.t("developer"),
       btn: lang.t("build"),
-      icon: "/images/get_start_card2.png",
+      icon: "images/get_start_card2.png",
       href: "/developers",
       lists: [
         lang.t("developer.tips1"),
@@ -78,7 +79,7 @@ export const JoinRevolution = observer(() => {
     {
       name: lang.t("business"),
       btn: lang.t("connect"),
-      icon: "/images/get_start_card3.png",
+      icon: "images/get_start_card3.png",
       href: "/enterprise",
       lists: [
         lang.t("business.tip1"),
@@ -92,7 +93,7 @@ export const JoinRevolution = observer(() => {
     <Box
       mt={{ base: "10rem", lg: "15rem" }}
       css={{
-        backgroundImage: `url(/images/join_bg2.png)`,
+        backgroundImage: `url(${helper.cdn('images/join_bg2.png')})`,
         backgroundSize: "60%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "100% 90%",
@@ -132,7 +133,7 @@ export const JoinRevolution = observer(() => {
           w={{ base: "100%", md: "90%" }}
           mx="auto"
           css={{
-            background: "url(/images/home/img_device.png)",
+            background: `url(${helper.cdn('images/home/img_device.png')})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% 100%",
           }}
@@ -144,7 +145,7 @@ export const JoinRevolution = observer(() => {
               cursor="pointer"
             >
               <a href="/pebble" target="_blank">
-                <img src={pebbleSrc} alt="" />
+                <img src={helper.cdn(pebbleSrc)} alt="" />
               </a>
             </Box>
             <Box
@@ -153,7 +154,7 @@ export const JoinRevolution = observer(() => {
               cursor="pointer"
             >
               <a href="/ucam" target="_blank">
-                <img src={ucamSrc} alt="" />
+                <img src={helper.cdn(pebbleSrc)} alt="" />
               </a>
             </Box>
           </Flex>
@@ -195,7 +196,7 @@ export const JoinRevolution = observer(() => {
                 py="3rem"
                 mb={{ base: "4rem", lg: 0 }}
                 css={{
-                  backgroundImage: `url(${item.icon})`,
+                  backgroundImage: `url(${helper.cdn(item.icon)})`,
                   backgroundSize: "100% 100%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "100% 0%",
@@ -226,7 +227,7 @@ export const JoinRevolution = observer(() => {
                       <Flex alignItems="center" mb="1rem" key={option}>
                         <Image
                           boxSize="0.5rem"
-                          src="/images/right-arrow.png"
+                          src={helper.cdn('images/right-arrow.png')}
                           alt=""
                           mr="0.5rem"
                         />
@@ -348,7 +349,7 @@ export const JoinRevolution = observer(() => {
                     >
                       <Image
                         w={{ base: "1.5rem", lg: "4.5rem" }}
-                        src={item.icon}
+                        src={helper.cdn(item.icon)}
                         alt={item.title}
                         css={{
                           filter:

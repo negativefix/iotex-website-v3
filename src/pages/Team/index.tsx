@@ -2,16 +2,9 @@ import React from 'react';
 import { observer } from "mobx-react-lite"
 import { useStore } from "../../store"
 import BasicLayout from '../../Layouts/BasicLayout'
-import { Footer } from "@/components/Footer/index";
-import { Flex, Box, Text, SimpleGrid, Image, Avatar, } from '@chakra-ui/react';
-//@ts-ignore
-import Artboard from '@/assets/images/team/Artboard-1.png'
-//@ts-ignore
-import Banner from '@/assets/images/team/banner.png'
-//@ts-ignore
-import Dorothy from '@/assets/images/team/Dorothy.png'
-//@ts-ignore
-import k from '@/assets/images/team/k.png'
+import { Footer } from "@/components/Footer";
+import { Flex, Box, Text, SimpleGrid, Image, } from '@chakra-ui/react';
+import {helper} from "@/utils/helper";
 export const Team = observer(() => {
   const { lang } = useStore()
 
@@ -74,7 +67,7 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("ken.name"),
-      avatar: k,
+      avatar: 'images/team/k.png',
       links: [{ src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seiff/" }],
       job: lang.t("ken.research"),
       intros: lang.t("ken.desc"),
@@ -181,7 +174,7 @@ export const Team = observer(() => {
 
     {
       name: lang.t("dorothy.name"),
-      avatar: Dorothy,
+      avatar: 'images/team/Dorothy.png',
       links: [
         {
           src: "/images/icons/icon_linkedIn.svg",
@@ -221,26 +214,26 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("mukul.name"),
-      avatar: Artboard,
+      avatar: 'images/team/Artboard-1.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/agarwalmukul/" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/agarwalmukul/" },
       ],
       job: lang.t("mukul.research"),
       intros: lang.t("mukul.desc"),
     },
     {
       name: lang.t("leonid.name"),
-      avatar: "/images/team/Leo.png",
+      avatar: "images/team/Leo.png",
       links: null,
       job: lang.t("leonid.research"),
       intros: lang.t("leonid.desc"),
     },
     {
       name: lang.t("jake.name"),
-      avatar: "/images/team/Jack.png",
+      avatar: "images/team/Jack.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/jack-lee-89059a29/",
         },
       ],
@@ -249,19 +242,19 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("Alexis.Baydoun"),
-      avatar: '/images/team/alexis_baydoun.png',
+      avatar: 'images/team/alexis_baydoun.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/alexis-baydoun-7a1b8784/"},
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/alexis-baydoun-7a1b8784/"},
       ],
       job: lang.t("Alexis.Baydoun.research"),
       intros: lang.t("Alexis.Baydoun.desc"),
     },
     {
       name: lang.t("guang.name"),
-      avatar: "/images/team/Gong.png",
+      avatar: "images/team/Gong.png",
       links: [
         {
-          src: "/images/icons/icon_link.svg",
+          src: "images/icons/icon_link.svg",
           href: "https://scholar.google.com/citations?user=i2vwkRMAAAAJ&hl=en",
         },
       ],
@@ -270,10 +263,10 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("sergey.name"),
-      avatar: "/images/team/Sergey.png",
+      avatar: "images/team/Sergey.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/sergey-romanov1/",
         },
       ],
@@ -282,42 +275,42 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("Harrison.Wright"),
-      avatar: '/images/team/harrison_wright.png',
+      avatar: 'images/team/harrison_wright.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/the-blockchain-recruiter/"},
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/the-blockchain-recruiter/"},
       ],
       job: lang.t("Harrison.Wright.research"),
       intros: lang.t("Harrison.Wright.desc"),
     },
     {
       name: lang.t("Ben.Clossey"),
-      avatar: '/images/team/ben_clossey.png',
+      avatar: 'images/team/ben_clossey.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/benjamin-clossey-3b17aa1a3/"},
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/benjamin-clossey-3b17aa1a3/"},
       ],
       job: lang.t("Ben.Clossey.research"),
       intros: lang.t("Ben.Clossey.desc"),
     },
     {
       name: lang.t("winter.name"),
-      avatar: "/images/team/Mei.png",
+      avatar: "images/team/Mei.png",
       links: null,
       job: lang.t("winter.research"),
       intros: lang.t("winter.desc"),
     },
     {
       name: lang.t("nguyen.name"),
-      avatar: "/images/team/Hoang.png",
+      avatar: "images/team/Hoang.png",
       links: null,
       job: lang.t("nguyen.research"),
       intros: lang.t("nguyen.desc"),
     },
     {
       name: lang.t("heslei.name"),
-      avatar: "/images/team/Heslei.png",
+      avatar: "images/team/Heslei.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/heslei-oliveira-36b5aaa0/",
         },
       ],
@@ -327,10 +320,10 @@ export const Team = observer(() => {
 
     {
       name: lang.t("frank.name"),
-      avatar: "/images/team/Frank-Sun.png",
+      avatar: "images/team/Frank-Sun.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/yuan-frank-sun/",
         },
       ],
@@ -339,27 +332,27 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("adejumo.name"),
-      avatar: "/images/team/A.jpg",
+      avatar: "images/team/A.jpg",
       links: null,
       job: lang.t("adejumo.research"),
       intros: lang.t("adejumo.desc"),
     },
     {
       name: lang.t("zhefeng.name"),
-      avatar: "/images/team/zhefeng.png",
+      avatar: "images/team/zhefeng.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zhefengli/" },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/lizhefeng" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zhefengli/" },
+        { src: "images/icons/icon_gitHub.svg", href: "https://github.com/lizhefeng" },
       ],
       job: lang.t("zhefeng.research"),
       intros: lang.t("zhefeng.desc"),
     },
     // {
     //   name: lang.t("jikun.name"),
-    //   avatar: "/images/team/0-3-1.jpg",
+    //   avatar: "images/team/0-3-1.jpg",
     //   links: [
     //     {
-    //       src: "/images/icons/icon_linkedIn.svg",
+    //       src: "images/icons/icon_linkedIn.svg",
     //       href: "https://www.linkedin.com/in/jikun-liao-794b61162/",
     //     },
     //   ],
@@ -368,9 +361,9 @@ export const Team = observer(() => {
     // },
     {
       name: lang.t("le.name"),
-      avatar: "/images/team/Hungl.jpeg",
+      avatar: "images/team/Hungl.jpeg",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/hunglmtb/" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/hunglmtb/" },
       ],
       job: lang.t("le.research"),
       intros: lang.t("le.desc"),
@@ -380,7 +373,7 @@ export const Team = observer(() => {
   return (
     <BasicLayout name="team">
       <Box css={{
-        backgroundImage: `url(${Banner})`,
+        backgroundImage: `url(${helper.cdn('images/team/banner.png')})`,
         backgroundSize: "100%",
         backgroundRepeat: 'no-repeat',
       }}>
@@ -425,7 +418,7 @@ export const Team = observer(() => {
                     htmlWidth="100%"
                     borderRadius="10px"
                     objectFit="cover"
-                    src={item.avatar}
+                    src={helper.cdn(item.avatar)}
                     alt="Dan Abramov"
                   />
                   <Text fontSize={{base: "1rem", md: "1.25rem"}} fontWeight="bold" mt="0.5rem">{item.name}</Text>
@@ -460,7 +453,7 @@ export const Team = observer(() => {
         backdropFilter: 'blur(100px)',
         borderRadius: '20px'
       }}>
-        <img src="/images/team/investors.png" alt="" />
+        <img src={helper.cdn('images/team/investors.png')} alt="investors" />
       </Box>
 
       <Footer />

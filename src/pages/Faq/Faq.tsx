@@ -14,14 +14,8 @@ import SideBar from "./components/SideBar";
 import Sticky from 'react-sticky-el';
 import {useMediaQuery} from "@chakra-ui/react";
 import {Title} from "../Pebble/Title";
-//@ts-ignore
-import faqBg from '@/assets/images/faq/faq-bg.png'
-//@ts-ignore
-import faqBurnDrop from '@/assets/images/faq/faq-burn-drop.png'
-//@ts-ignore
-import faqJourney from '@/assets/images/faq/faq-journey.png'
-//@ts-ignore
-import faqPlatform from '@/assets/images/faq/faq_platform.png'
+
+import {helper} from "@/utils/helper";
 const Faq = () => {
 	const {lang} = useStore()
 	const [isMaxThan468] = useMediaQuery("(min-width: 468px)");
@@ -36,7 +30,7 @@ const Faq = () => {
 				css={{
 					maxWidth: '100%',
 					marginTop: '2rem',
-					backgroundImage: `url(${faqBg})`,
+					backgroundImage: `url(${helper.cdn('images/faq/faq-bg.png')})`,
 					zIndex:-1,
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'top center',
@@ -134,7 +128,7 @@ const Faq = () => {
 								markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
 							/>
 							<Box marginTop='1rem'>
-								<Image src={faqPlatform} alt="faq_platform"/>
+								<Image src={helper.cdn('images/faq/faq_platform.png')} alt="faq_platform"/>
 							</Box>
 						</FaqCard>
 
@@ -163,7 +157,7 @@ const Faq = () => {
 								text={[lang.t('faq.block4.caption2'), lang.t('faq.block4.caption3'), lang.t('faq.block4.caption4')]}/>
 							<FaqArticle text={lang.t('faq.block4.caption5')}/>
 							<Box paddingBottom='1rem'>
-								<img src="/images/faq-token.png" alt=""/>
+								<img src={helper.cdn('images/faq-token.png')} alt="faq-token"/>
 							</Box>
 							<FaqArticle text={lang.t('faq.block4.caption6')}/>
 							<FaqArticle text={lang.t('faq.block4.caption7')} type='subtitle'/>
@@ -222,7 +216,7 @@ const Faq = () => {
 								markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
 							/>
 							<Box marginTop='1rem'>
-								<Image src={faqBurnDrop} alt="faq_burn_drop"/>
+								<Image src={helper.cdn('images/faq/faq-burn-drop.png')} alt="faq_burn_drop"/>
 							</Box>
 						</FaqCard>
 
@@ -310,7 +304,7 @@ const Faq = () => {
 						<FaqCard id='block8'>
 							<FaqCardHeading text={lang.t("faq.block8.title")}/>
 							<Box paddingBottom='1rem'>
-								<Image src={faqJourney} alt="faq_journey"/>
+								<Image src={helper.cdn('images/faq/faq-journey.png')} alt="faq_journey"/>
 							</Box>
 							<FaqArticle text={lang.t("faq.block8.caption1")}/>
 							<FaqArticle text={lang.t("faq.block8.caption2")}/>

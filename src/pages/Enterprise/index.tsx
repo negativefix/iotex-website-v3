@@ -13,13 +13,9 @@ import {Footer} from "@/components/Footer";
 import ContactForm from "./components/ContactForm";
 import Caption from "./components/Caption";
 import SubTitle from "./components/SubTitle";
-// @ts-ignore
-import bg3 from '@/assets/images/enterprise/bg_enterprise_3.png'
-// @ts-ignore
-import coreRight from '@/assets/images/enterprise/core_right.png'
-// @ts-ignore
-import bgOne from '@/assets/images/enterprise/bg_enterprise_1.png'
+
 import {Title} from "../Pebble/Title";
+import {helper} from "@/utils/helper";
 
 const Enterprise = () => {
 	const {lang} = useStore()
@@ -50,14 +46,14 @@ const Enterprise = () => {
 	return (
 		<BasicLayout name="enterprise">
 			<Box
-				backgroundImage={'url(images/enterprise/form_bg.png)'}
+				backgroundImage={`url(${helper.cdn('images/enterprise/form_bg.png')})`}
 				backgroundPosition={{base: 'right bottom 80rem', md: 'right 5rem bottom 15rem'}}
 				backgroundSize={{base: '100%', md: '50%'}}
 				backgroundRepeat={"no-repeat"}
 			>
 				<Box
 
-					bgImg={`url(${bgOne})`}
+					bgImg={`url(${helper.cdn('images/enterprise/bg_enterprise_1.png')})`}
 					backgroundRepeat={'no-repeat'}
 					backgroundPosition={{base: 'top 5% center', md: 'top'}}
 					backgroundSize={"contain"}
@@ -102,7 +98,7 @@ const Enterprise = () => {
 					{/*part 2*/}
 					<Box
 						marginTop={'10rem'} width={'100%'}
-						backgroundImage={{base: 'none', md: 'url(images/bg_enterprise_2.png)'}}
+						backgroundImage={{base: 'none', md: `url(${helper.cdn('images/bg_enterprise_2.png')})`}}
 						backgroundRepeat={'no-repeat'}
 						backgroundPosition={{md: 'right 230% center', lg: 'right -30rem top 40rem'}}
 					>
@@ -130,7 +126,7 @@ const Enterprise = () => {
 					</Box>
 				</Box>
 				<Box w="100%" position="relative" mt={20}>
-					<img src="/images/mask_group.png" style={{opacity: 0}} alt=""/>
+					<img src={helper.cdn('images/mask_group.png')} style={{opacity: 0}} alt=""/>
 					<Flex
 						flexDirection="column"
 						w="100%"
@@ -143,7 +139,7 @@ const Enterprise = () => {
 							mb="5%"
 							css={{
 								height: "45%",
-								background: "url(/images/enterprise/img_logo1.png) center 0px repeat-x",
+								background: `url(${helper.cdn('images/enterprise/img_logo1.png')}) center 0px repeat-x`,
 								backgroundSize: "350% 100%",
 								backgroundPositionX: "250%",
 								animation: "awardLine1 90s infinite linear",
@@ -152,7 +148,7 @@ const Enterprise = () => {
 						<Box
 							css={{
 								height: "45%",
-								background: "url(/images/enterprise/img_logo2.png) center 0px repeat-x",
+								background: `url(${helper.cdn('images/enterprise/img_logo2.png')}) center 0px repeat-x`,
 								backgroundSize: "350% 100%",
 								backgroundPositionX: "240%",
 								animation: "awardLine2 90s infinite linear",
@@ -167,7 +163,7 @@ const Enterprise = () => {
 							right: "-1px",
 							bottom: "-1px",
 							zIndex: 2,
-							background: "url(/images/mask.png) center center no-repeat",
+							background: `url(${helper.cdn('images/mask.png')}) center center no-repeat`,
 							backgroundSize: "contain",
 						}}
 					/>
@@ -222,7 +218,7 @@ const Enterprise = () => {
 							</Box>
 						</Flex>
 						<Box width={{base: '100%', md: '60%'}} marginTop={{base: '1rem', md: '0'}}>
-							<Image src={coreRight} alt="core_right"/>
+							<Image src={helper.cdn('images/enterprise/core_right.png')} alt="core_right"/>
 						</Box>
 					</Flex>
 				</Box> */}
@@ -232,7 +228,7 @@ const Enterprise = () => {
 				<Flex
 					justifyContent='center'
 					backgroundSize={{base: 'contain', md: '80% 90%'}}
-					backgroundImage={`url(${bg3})`}
+					backgroundImage={`url(${helper.cdn('images/enterprise/bg_enterprise_3.png')})`}
 					backgroundRepeat={'no-repeat'}
 					flexDirection="column"
 					mt="6.25rem"
@@ -243,17 +239,17 @@ const Enterprise = () => {
 						<SimpleGrid columns={[1, 3]} spacing={{base: '5rem', md: '2rem', lg: '2rem', 'xl': '2.5rem'}}
 						            marginTop='5rem'>
 							<Flex alignItems='center' flexDirection='column'>
-								<Image src='images/icon_supply_chain.png' width={'7.5rem'} height={'7.5rem'}/>
+								<Image src={helper.cdn('images/icon_supply_chain.png')} width={'7.5rem'} height={'7.5rem'}/>
 								<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case1.title')} textAlign={'center'}/>
 								<Caption text={lang.t('enterprise.group3.case1.desc')} fontSize={'1.125rem'} textAlign={'center'}/>
 							</Flex>
 							<Flex alignItems='center' flexDirection='column'>
-								<Image src='images/icon_trust.png' width={'7.5rem'} height={'7.5rem'}/>
+								<Image src={helper.cdn('images/icon_trust.png')} width={'7.5rem'} height={'7.5rem'}/>
 								<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case2.title')} textAlign={'center'}/>
 								<Caption text={lang.t('enterprise.group3.case2.desc')} fontSize={'1.125rem'} textAlign={'center'}/>
 							</Flex>
 							<Flex alignItems='center' flexDirection='column'>
-								<Image src='images/icon_camera.png' width={'7.5rem'} height={'7.5rem'}/>
+								<Image src={helper.cdn('images/icon_camera.png')} width={'7.5rem'} height={'7.5rem'}/>
 								<SubTitle fontSize='1.75rem' text={lang.t('enterprise.group3.case3.title')} textAlign={'center'} whiteSpace={{base:'pre-line'}}/>
 								<Caption text={lang.t('enterprise.group3.case3.desc')} fontSize={'1.125rem'} textAlign={'center'}/>
 							</Flex>

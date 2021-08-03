@@ -1,5 +1,6 @@
 import React from "react";
 import {Flex, Image, Text} from "@chakra-ui/react";
+import {helper} from "@/utils/helper";
 
 export const Card = ({url, text,...props}) => {
 	return (
@@ -17,7 +18,7 @@ export const Card = ({url, text,...props}) => {
 		      }}
 					{...props}
 		>
-			<Image src={url} alt={text} width={{md:'4rem',lg:'3rem'}} height={{md:'5rem',lg:'3rem'}}/>
+			<Image src={helper.cdn(url)} alt={text} width={{md:'4rem',lg:'3rem'}} height={{md:'5rem',lg:'3rem'}}/>
 			<Text textAlign='center' fontSize='1.12rem' fontWeight={'semibold'}>{text}</Text>
 		</Flex>
 	)

@@ -4,6 +4,7 @@ import { useStore } from "@/store/index";
 import { observer, useLocalStore } from "mobx-react-lite";
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
 import { publicConfig } from "../../config/public";
+import {helper} from "@/utils/helper";
 
 export const EmailPopup = observer(({}) => {
   const { lang } = useStore();
@@ -46,7 +47,7 @@ export const EmailPopup = observer(({}) => {
             display="flex"
             alignItems="center"
             flexDirection={{ base: "column", lg: "row" }}
-            bg={{base: "url(images/email_popup.svg)", md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+            bg={{base: `url(${helper.cdn('images/email_popup.svg')})`, md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
             boxShadow={{base: "none", md: "inset -1px -1px 0px rgba(255, 255, 255, 0.25)"}}
             css={{
               backdropFilter: "blur(100px)",
@@ -58,7 +59,7 @@ export const EmailPopup = observer(({}) => {
               px={{ base: "0", lg: "10%" }}
               mt={{ base: "3rem", lg: 0 }}
             >
-              <img src="/images/email_banner.png" alt="" />
+              <img src={helper.cdn('images/email_banner.png')} alt="" />
             </Box>
             <Box
               w={{ base: "100%", lg: "50%" }}
@@ -67,7 +68,7 @@ export const EmailPopup = observer(({}) => {
             >
               <Image
                 boxSize="1.25rem"
-                src="/images/explore/close.png"
+                src={helper.cdn('images/explore/close.png')}
                 position="absolute"
                 right="1.5rem"
                 top="1.5rem"
@@ -75,7 +76,7 @@ export const EmailPopup = observer(({}) => {
                 cursor="pointer"
                 zIndex="11111"
                 onClick={onClose}
-              ></Image>
+              />
               <Text
                 fontSize={{
                   base: "1.5rem",

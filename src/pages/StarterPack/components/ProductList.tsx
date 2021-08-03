@@ -1,6 +1,7 @@
 import React from "react";
 import {Flex, Image, Link, Text} from "@chakra-ui/react";
 import {useStore} from "@/store/index";
+import {helper} from "@/utils/helper";
 
 export const ProductBox = ({bgImg, contentImg, text,url,...props}) => {
 	return (
@@ -18,10 +19,10 @@ export const ProductBox = ({bgImg, contentImg, text,url,...props}) => {
 				w={{base:'10rem',md:'13rem',xl: '15rem'}}
 				h={{base:'10rem',md:'13rem',xl: '15rem'}}
 				position={'relative'}
-				backgroundImage={bgImg ? `url(images/starter-pack/${bgImg})` : null}
+				backgroundImage={bgImg ? `url(${helper.cdn(`images/starter-pack/${bgImg}`)})` : null}
 				{...props}
 			>
-				<Image src={contentImg ? `images/starter-pack/${contentImg}` : null} h={{base:'5rem',md:'8rem'}}/>
+				<Image src={contentImg ? helper.cdn(`images/starter-pack/${contentImg}`) : null} h={{base:'5rem',md:'8rem'}}/>
 				<Text fontWeight={600} fontSize={'1.25rem'} whiteSpace={{base:'pre-line',md:'unset'}} textAlign={'center'}>{text}</Text>
 			</Flex>
 		</Link>

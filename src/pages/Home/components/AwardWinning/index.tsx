@@ -1,18 +1,18 @@
 import React from 'react';
 import { Box, Flex, Text  } from '@chakra-ui/react';
-import { useStore } from '../../../../store';
-import { LogoCardItem } from "../../../../components/LogoCardItem/index"
-import { Button } from "../../../../components/Button/index"
+import { useStore } from '@/store/index';
+import { LogoCardItem } from "@/components/LogoCardItem"
+import { Button } from "@/components/Button"
 import { observer } from 'mobx-react-lite';
 
 export const AwardWinning = observer(() => {
   const { lang } = useStore();
 
   const logos = [
-    {icon: '/images/icon-logo1.png', iocn_active: '/images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
-    {icon: '/images/icon-logo2.png', iocn_active: '/images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.htm"},
-    {icon: '/images/icon-logo3.png', iocn_active: '/images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
-    {icon: '/images/research/ces_icon.png', iocn_active: '/images/research/ces_icon_active.png', href: "https://www.ces.tech/Innovation-Awards/Honorees/2020/Honorees/U/Ucam-by-IoTeX-Fully-Private-Home-IP-Camera.aspx"},
+    {icon: 'images/icon-logo1.png', iocn_active: 'images/icon-logo1_s.png', href: "https://medium.com/iotex/iotex-amazon-and-huawei-selected-as-co-chairs-of-the-iic-blockchain-task-group-9032b7b7443f"},
+    {icon: 'images/icon-logo2.png', iocn_active: 'images/icon-logo2_s.png', href: "https://www.prweb.com/releases/ieee_blockchain_iot_standards_working_group_appoints_iotex_head_of_cryptography_as_vice_chair/prweb17921245.htm"},
+    {icon: 'images/icon-logo3.png', iocn_active: 'images/icon-logo3_s.png', href: "https://www.coindesk.com/facebook-iotex-and-r3-among-new-members-of-confidential-computing-consortium"},
+    {icon: 'images/research/ces_icon.png', iocn_active: 'images/research/ces_icon_active.png', href: "https://www.ces.tech/Innovation-Awards/Honorees/2020/Honorees/U/Ucam-by-IoTeX-Fully-Private-Home-IP-Camera.aspx"},
   ]
 
     return (

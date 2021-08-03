@@ -1,13 +1,14 @@
 import {Box, Flex, Text} from "@chakra-ui/react";
 import React from "react";
 import {useStore} from "@/store/index";
+import {helper} from "@/utils/helper";
 
 export const Banner=()=>{
 	const {lang} = useStore()
 	return(
 		<Box
 			css={{
-				backgroundImage: `url(/images/starter-pack/banner_bg.png)`,
+				backgroundImage: `url(${helper.cdn('images/starter-pack/banner_bg.png')})`,
 				backgroundSize: "100% 80%",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: 'top 3rem center'

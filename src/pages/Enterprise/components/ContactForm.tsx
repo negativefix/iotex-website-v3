@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import {observer} from "mobx-react-lite";
 import {useStore} from "@/store/index";
+import {helper} from "@/utils/helper";
 
 
 
@@ -34,7 +35,7 @@ const ContactForm = () => {
 	return (
 		<Box
 			css={{
-				backgroundImage: "url(/images/enterprise/form_bg_2.png)",
+				backgroundImage: `url(${helper.cdn('images/enterprise/form_bg_2.png')})`,
 				backgroundRepeat: "no-repeat",
 			}}
 			backgroundPosition={{base:'left top 5rem',md:'left top'}}

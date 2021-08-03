@@ -171,7 +171,7 @@ export const DevBanner = observer(() => {
               css={{
                 height: "45%",
                 background:
-                  "url(/images/dev/img_dev_page_logo1.png) center 0px repeat-x",
+                  `url(${helper.cdn('images/dev/img_dev_page_logo1.png')}) center 0px repeat-x`,
                 backgroundSize: "200% 100%",
                 backgroundPositionX: "250%",
                 animation: "awardLine1 90s infinite linear",
@@ -181,7 +181,7 @@ export const DevBanner = observer(() => {
               css={{
                 height: "45%",
                 background:
-                  "url(/images/dev/img_dev_page_logo2.png) center 0px repeat-x",
+                  `url(${helper.cdn('images/dev/img_dev_page_logo2.png')}) center 0px repeat-x`,
                 backgroundSize: "200% 100%",
                 backgroundPositionX: "240%",
                 animation: "awardLine2 90s infinite linear",
@@ -196,7 +196,7 @@ export const DevBanner = observer(() => {
               right: "-1px",
               bottom: "-1px",
               zIndex: 2,
-              background: "url(/images/mask.png) center center no-repeat",
+              background: `url(${'images/mask.png'}) center center no-repeat`,
               backgroundSize: "contain",
             }}
           />

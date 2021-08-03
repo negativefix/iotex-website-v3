@@ -2,11 +2,7 @@ import React from 'react';
 import {observer} from 'mobx-react-lite';
 import {useStore} from '../../store';
 import {Box, Text, Link, useBreakpointValue} from '@chakra-ui/react';
-import BgOne from '@/assets/images/research/card1.png';
-import BgTwo from '@/assets/images/research/card2.png';
-import BgThree from '@/assets/images/research/card3.png';
-import BgFour from '@/assets/images/research/card4.png';
-
+import {helper} from "@/utils/helper";
 export const Card = observer(
 	({
 		 title,
@@ -29,7 +25,7 @@ export const Card = observer(
 		const isSmallScreen = useBreakpointValue({base: true, lg: false});
 
 		const getBg = () => {
-			const cards = [BgOne, BgTwo, BgThree];
+			const cards = ['images/research/card1.png', 'images/research/card2.png', 'images/research/card3.png'];
 			return cards[cardIndex];
 		};
 		return (
@@ -41,7 +37,7 @@ export const Card = observer(
 				     bottom: 0,
 				     position: "absolute",
 				     content: `""`,
-				     backgroundImage: `url('${getBg()}')`,
+				     backgroundImage: `url(${helper.cdn(getBg())})`,
 				     opacity: '0.05',
 				     backgroundSize: '100% 100%',
 				     transition: 'opacity .3s',
@@ -57,7 +53,7 @@ export const Card = observer(
 					     bottom: 0,
 					     position: "absolute",
 					     content: `""`,
-					     backgroundImage: `url('${getBg()}')`,
+					     backgroundImage: `url(${helper.cdn(getBg())})`,
 					     opacity: '0.1',
 					     backgroundSize: '100% 100%',
 					     transition: 'opacity .3s',

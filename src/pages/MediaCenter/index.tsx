@@ -1,17 +1,12 @@
 import React from "react";
 import BasicLayout from "../../Layouts/BasicLayout";
-import {observer, useLocalStore} from "mobx-react-lite";
-import {ARTICLES, NEWS} from "./constants";
+import {observer} from "mobx-react-lite";
 import {Title} from "../Pebble/Title";
 import {Footer} from "@/components/Footer";
 import {SectionContainer} from "../Pebble/SectionContainer";
-import {Box, Flex, Image} from "@chakra-ui/react";
+import {Box, Flex} from "@chakra-ui/react";
 import NewsTab from "./News";
-import TabButton from "./TabButton";
-import {useStore} from "@/store/index";
-import ContentTab from "./Content";
-//@ts-ignore
-import bg1 from '@/assets/images/media-center/bg_1.png'
+import {helper} from "@/utils/helper";
 enum Tab {
 	NEWS = 'NEWS',
 	CONTENT = 'CONTENT'
@@ -25,7 +20,7 @@ const MediaCenter = () => {
 	return (
 		<BasicLayout name="media-center">
 			<Box
-				bgImg={`url(${bg1})`}
+				bgImg={`url(${helper.cdn('images/media-center/bg_1.png')})`}
 				bgPosition={'top'}
 				bgSize={'100%'}
 				bgRepeat={'no-repeat'}

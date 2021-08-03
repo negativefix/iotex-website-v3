@@ -14,6 +14,7 @@ import {useStore} from "@/store/index";
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import React from "react";
 import Carousel, {arrowsPlugin, slidesToShowPlugin} from "@brainhubeu/react-carousel";
+import {helper} from "@/utils/helper";
 
 const VideoItem = ({bgImg, onClickFunc, videoUrl}) => {
 	return (
@@ -52,7 +53,7 @@ const VideoItem = ({bgImg, onClickFunc, videoUrl}) => {
 				<Image
 					boxSize={{base: "40px",md:'50px' ,xl: "80px"}}
 					objectFit="cover"
-					src="/images/play-icon.png"
+					src={helper.cdn('images/play-icon.png')}
 					alt="img_circular3"
 					mx="10%"
 					cursor="pointer"

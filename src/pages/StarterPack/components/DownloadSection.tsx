@@ -4,6 +4,7 @@ import React from "react";
 import {useStore} from "@/store/index";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import Completed from "@/pages/StarterPack/components/Completed";
+import {helper} from "@/utils/helper";
 
 export const DownloadSection = observer(() => {
 	const {lang} = useStore()
@@ -90,7 +91,7 @@ export const DownloadSection = observer(() => {
 				justifyContent={{base: 'center', md: 'unset'}}
 				borderRadius={{base: '15px', md: '20px'}}
 				bg={' linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%)'}>
-				<Image src={'images/starter-pack/download.png'} w={{base: '50%', md: '35%', xl: '30%'}}
+				<Image src={helper.cdn('images/starter-pack/download.png')} w={{base: '50%', md: '35%', xl: '30%'}}
 				       px={{base: 0, md: 10, xl: 20}}
 				       py={{base: 5, md: 10, xl: 20}} mx={{base: 'auto', md: 'unset'}}/>
 				<Flex flexDirection={'column'} justifyContent={'space-around'} mt={{base: 10, md: 0}} px={{base: 2, md: 0}}
@@ -108,7 +109,7 @@ export const DownloadSection = observer(() => {
 										store.setClick(true)
 										window.open(link.url)
 									}}>
-										<Image src={link.img} h={{base: '3rem', md: '2.2rem', xl: '3rem', lg: '3rem', '2xl': '3rem'}}
+										<Image src={helper.cdn(link.img)} h={{base: '3rem', md: '2.2rem', xl: '3rem', lg: '3rem', '2xl': '3rem'}}
 										       ml={link.ml}
 										       mt={link.mt}/>
 									</Box>
@@ -127,7 +128,7 @@ export const DownloadSection = observer(() => {
 									store.setClick(true)
 									window.open(link.url)
 								}}>
-									<Image src={link.img} h={{base: '2.2rem', md: '2.2rem',lg:'3rem' ,xl: '3rem', '2xl': '3rem'}} ml={link.ml}/>
+									<Image src={helper.cdn(link.img)} h={{base: '2.2rem', md: '2.2rem',lg:'3rem' ,xl: '3rem', '2xl': '3rem'}} ml={link.ml}/>
 								</Box>
 							))
 						}
@@ -141,7 +142,7 @@ export const DownloadSection = observer(() => {
 								store.setClick(true)
 								window.open('https://community.iotex.io/t/official-ledger-hw-wallet-thread/1132')
 							}}>
-							<Image src={'images/starter-pack/ledger.png'}
+							<Image src={helper.cdn('images/starter-pack/ledger.png')}
 							       h={{base: '2.2rem', md: '2.2rem', lg: '3rem', '2xl': '3rem'}} ml={{base: 5, md: 5, xl: 14}}/>
 						</Box>
 					</Flex>

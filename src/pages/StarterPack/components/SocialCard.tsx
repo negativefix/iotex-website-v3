@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Image, Text} from "@chakra-ui/react";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import Completed from "@/pages/StarterPack/components/Completed";
+import {helper} from "@/utils/helper";
 
 const SocialCard = ({img, text, desc, link}) => {
 	const store = useLocalObservable(() => ({
@@ -35,7 +36,7 @@ const SocialCard = ({img, text, desc, link}) => {
 				store.isClick ? (<Completed width={{base:'15%',xl:'30%'}}/>):<></>
 
 			}
-			<Image src={img} w={{base:'30%'}}/>
+			<Image src={helper.cdn(img)} w={{base:'30%'}}/>
 			<Text fontSize={{base:'1.25rem',md:"1rem",xl:'1.25rem'}} fontWeight={'semibold'}>{text}</Text>
 			<Text fontSize={'0.75rem'} color={'rgba(153, 153, 153, 1)'} mt={1} whiteSpace={{base:'pre-line', md:'unset'}}
 			      textAlign={'center'}>{desc}</Text>

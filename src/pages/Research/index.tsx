@@ -3,18 +3,11 @@ import {observer} from 'mobx-react-lite';
 import {useStore} from '../../store';
 import BasicLayout from '../../Layouts/BasicLayout';
 import {Footer} from '@/components/Footer';
-import {Flex, Box, Text, Image, Grid, GridItem, SimpleGrid} from '@chakra-ui/react';
-//@ts-ignore
-import researchTopImg from '@/assets/images/research/ing_research_top.png';
-//@ts-ignore
-import bgOne from '@/assets/images/research/ing_research_1.png';
-//@ts-ignore
-import bgTwo from '@/assets/images/research/ing_research_2.png';
-// @ts-ignore
-import bgThree from '@/assets/images/research/bg.png';
+import {Flex, Box, Text, Grid, GridItem, SimpleGrid} from '@chakra-ui/react';
 import AwardCard from '@/pages/MediaCenter/News/Card';
 import {Card} from './Card';
 import {AWARDS} from "./constants";
+import {helper} from "@/utils/helper";
 
 export const Research = observer(() => {
 	const {lang} = useStore();
@@ -27,7 +20,7 @@ export const Research = observer(() => {
 					backgroundSize: '100%,100%',
 					backgroundRepeat: 'no-repeat'
 				}}
-				bgImg={`url('${researchTopImg}'),url(${bgThree})`}
+				bgImg={`url(${helper.cdn('images/research/ing_research_top.png')}),url(${helper.cdn('images/research/bg.png')})`}
 				bgPosition={'top,bottom right'}
 			>
 				<Box
@@ -98,7 +91,7 @@ export const Research = observer(() => {
 					</SimpleGrid>
 				</Box>
 				<Box
-					bgImg={`url(${bgOne}),url(${bgTwo})`}
+					bgImg={`url(${helper.cdn('images/research/ing_research_1.png')}),url(${helper.cdn('images/research/ing_research_2.png')})`}
 					bgPosition={{xl:'left top 20rem,right  bottom 20rem','2xl':'left top 10rem,right  bottom 15rem'}}
 					bgRepeat={'no-repeat'}
 					bgSize={'80%,50%'}

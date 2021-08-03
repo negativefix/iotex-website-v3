@@ -10,20 +10,7 @@ import Form from "./Form";
 import {Title} from "./Title";
 import {SectionContainer} from "./SectionContainer";
 import {Caption} from "./Caption";
-//@ts-ignore
-import apertureBg from '@/assets/images/pebble/aperture.png'
-// @ts-ignore
-import apertureBlue from '@/assets/images/pebble/apertureBlue.png'
-// @ts-ignore
-import imgPebble from '@/assets/images/pebble/img_pebble.png'
-// @ts-ignore
-import imgPebbleRight from '@/assets/images/pebble/img_pebble_right.png'
-// @ts-ignore
-import pebbleSection4Bg from '@/assets/images/pebble/pebble_section4_bg.png'
-// @ts-ignore
-import pebbleOne from '@/assets/images/pebble/pebble_1.png'
-// @ts-ignore
-import pebbleSectionSixBg from '@/assets/images/pebble/pebble_section_6_bg.png'
+import {helper} from "@/utils/helper";
 
 const Pebble = () => {
 	const {lang} = useStore()
@@ -40,7 +27,7 @@ const Pebble = () => {
 		<BasicLayout name="pebble">
 			{/*part 1*/}
 			<Flex
-				backgroundImage={`url(${imgPebble})`}
+				backgroundImage={`url(${helper.cdn('images/pebble/img_pebble.png')})`}
 				marginTop='6rem'
 				justifyContent='center'
 				backgroundRepeat='no-repeat'
@@ -62,7 +49,7 @@ const Pebble = () => {
 							<Caption w={{base:'auto',lg:'33rem',xl:'43rem'}} text={lang.t('pebble.caption')} mt={6} fontSize={{xl:'1.35rem'}}/>
 						</Box>
 						<Flex justifyContent={'flex-end'}>
-							<Image src={pebbleOne} width={{base:'30%',md:'40%',lg:'80%',xl:'80%'}} h={{base:'30%',md:'40%',lg:'80%',xl:'auto'}}/>
+							<Image src={helper.cdn('images/pebble/pebble_1.png')} width={{base:'30%',md:'40%',lg:'80%',xl:'80%'}} h={{base:'30%',md:'40%',lg:'80%',xl:'auto'}}/>
 						</Flex>
 					</Flex>
 					<Flex mx={"auto"} mt={36}>
@@ -95,7 +82,7 @@ const Pebble = () => {
 			{/*part 3*/}
 
 			{/*<SectionContainer marginTop={'15rem'} position={'relative'}>*/}
-			{/*	<Image src={apertureBlue} position={'absolute'} top={'-50px'} width={'80%'} height={'80%'}/>*/}
+			{/*	<Image src={helper.cdn('images/pebble/apertureBlue.png')} position={'absolute'} top={'-50px'} width={'80%'} height={'80%'}/>*/}
 			{/*	<Flex justifyContent={'center'}*/}
 			{/*	      flexDirection={'column'}>*/}
 			{/*		<Title text={lang.t("pebble.section2.title")}/>*/}
@@ -169,7 +156,7 @@ const Pebble = () => {
 								PART_4_ICON_TEXT.map((item) => {
 									return (
 										<Flex flexDirection={'column'} justifyContent={'center'} alignItems={'center'} key={item.icon}>
-											<Image src={`images/pebble/${item.icon}`} alt={item.text} width={'3rem'}
+											<Image src={helper.cdn(`images/pebble/${item.icon}`)} alt={item.text} width={'3rem'}
 											     height={'3rem'}/>
 											<Text fontSize={{xl:'0.9rem','2xl':'1.25rem'}} marginTop={'1rem'} fontWeight={"semibold"}>{item.text}</Text>
 										</Flex>
@@ -185,7 +172,7 @@ const Pebble = () => {
 			<Box
 				marginTop={'11.25rem'}
 				pb={{base:'15rem',lg:'22rem'}}
-				backgroundImage={`url(${imgPebbleRight})`}
+				backgroundImage={`url(${helper.cdn('images/pebble/img_pebble_right.png')})`}
 				backgroundRepeat={'no-repeat'}
 				backgroundSize={'80%'}
 				backgroundPosition={'bottom 0 left 0px'}
@@ -203,8 +190,8 @@ const Pebble = () => {
 								alignItems={'center'}
 								borderRadius={'1.25rem'}
 							>
-								<Image src="images/pebble/Nordic_Semiconductor.png" alt="Nordic_Semiconductor" w={'55%'}/>
-								<Image src="images/pebble/IoTeX_logo.png" alt="IoTeX_logo" w={'55%'} />
+								<Image src={helper.cdn("images/pebble/Nordic_Semiconductor.png")} alt="Nordic_Semiconductor" w={'55%'}/>
+								<Image src={helper.cdn("images/pebble/IoTeX_logo.png")} alt="IoTeX_logo" w={'55%'} />
 							</Flex>
 						</Box>
 						<Box marginTop={{base: '5rem', md: '5rem',lg:'0'}}>
@@ -222,12 +209,12 @@ const Pebble = () => {
 			{/*part6*/}
 
 			<SectionContainer position={'relative'}>
-				<Image display={{base:'none',lg:'block'}} src={apertureBg} position={'absolute'} bottom={'-15rem'} right={'0'} width={'90%'} height={'60%'}/>
+				<Image display={{base:'none',lg:'block'}} src={helper.cdn('images/pebble/aperture.png')} position={'absolute'} bottom={'-15rem'} right={'0'} width={'90%'} height={'60%'}/>
 				<Flex flexDirection={'column'} alignItems={'center'}>
 					<Title text={lang.t('pebble.section4.title')}  textAlign={'center'}/>
 					<Caption text={lang.t('pebble.section4.caption')}  textAlign={'center'}
 					         mt={5}/>
-					<Image src={pebbleSection4Bg} alt="pebble_section4_bg" mt={12}/>
+					<Image src={helper.cdn('images/pebble/pebble_section4_bg.png')} alt="pebble_section4_bg" mt={12}/>
 					<SimpleGrid
 						columns={[1, 2, 2, 4]}
 						spacing={16}
@@ -235,16 +222,16 @@ const Pebble = () => {
 						padding={'0 5rem'}
 					>
 						<Box>
-							<img src="images/pebble/PMT_logo.png" alt="PMT_logo"/>
+							<img src={helper.cdn("images/pebble/PMT_logo.png")} alt="PMT_logo"/>
 						</Box>
 						<Box>
-							<img src="images/pebble/TDK-Logo.png" alt="TDK-Logo"/>
+							<img src={helper.cdn('images/pebble/TDK-Logo.png')} alt="TDK-Logo"/>
 						</Box>
 						<Box>
-							<img src="images/pebble/Bosch_logo.png" alt="Bosch_logo"/>
+							<img src={helper.cdn("images/pebble/Bosch_logo.png")} alt="Bosch_logo"/>
 						</Box>
 						<Box>
-							<img src="images/pebble/nordic_logo.png" alt="nordic_logo"/>
+							<img src={helper.cdn("images/pebble/nordic_logo.png")} alt="nordic_logo"/>
 						</Box>
 					</SimpleGrid>
 				</Flex>
@@ -255,11 +242,11 @@ const Pebble = () => {
 			<SectionContainer marginTop={'15rem'}>
 				<SimpleGrid columns={[1, 2]} spacing={{sm: '3rem', md: '3rem', lg: '4rem',xl:'4rem'}}>
 					<Flex
-						bgImg={'url(images/pebble/powered_by_IoTeX_bg.png)'}
+						bgImg={`url(${helper.cdn('images/pebble/powered_by_IoTeX_bg.png')})`}
 						justifyContent={'center'}
 						alignItems={'center'}
 					>
-						<img src="images/pebble/pebble_section5_bg.png" alt="pebble_section5_bg"
+						<img src={helper.cdn('images/pebble/pebble_section5_bg.png')} alt="pebble_section5_bg"
 						/>
 						{/*<Image*/}
 						{/*	animation='btnHover infinite 1s linear'*/}
@@ -302,7 +289,7 @@ const Pebble = () => {
 
 			{/*part 8*/}
 			{/*<Flex*/}
-			{/*	backgroundImage={`url(${pebbleSectionSixBg})`}*/}
+			{/*	backgroundImage={`url(${helper.cdn('images/pebble/pebble_section_6_bg.png')})`}*/}
 			{/*	minHeight={'34.125rem'}*/}
 			{/*	mx={"auto"}*/}
 			{/*	justifyContent={'center'}*/}

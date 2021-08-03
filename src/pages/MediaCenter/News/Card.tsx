@@ -1,6 +1,7 @@
 import {Box, Divider, Flex, Image, Text} from "@chakra-ui/react";
 import React, {useState} from "react";
 import {observer} from "mobx-react-lite";
+import {helper} from "@/utils/helper";
 
 
 interface CardProps{
@@ -51,8 +52,8 @@ const Card = ({icon, iconActive, bgColorActive, text, date, link,maxWidth='30rem
 			<Flex flexDirection={'column'} justifyContent={'space-between'} h={'100%'}>
 				<Box>
 					<Flex minH={{md: '85px', lg: '99px'}} alignItems={'center'} justifyContent={'center'}>
-						<Image src={icon} display={isHover?'none':'block'} w={imgWidth}/>
-						<Image src={iconActive} display={isHover?'block':'none'} w={imgWidth}/>
+						<Image src={helper.cdn(icon)} display={isHover?'none':'block'} w={imgWidth}/>
+						<Image src={helper.cdn(iconActive)} display={isHover?'block':'none'} w={imgWidth}/>
 					</Flex>
 					<Divider mt={3} opacity={'0.2'}/>
 					{

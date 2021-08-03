@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import { observer } from 'mobx-react-lite';
+import {helper} from "@/utils/helper";
 
 
 interface ComponentsProps {
@@ -26,12 +27,12 @@ export const LogoCardItem = observer(({item, width, height,imgWidth='60%',isAnim
         '&:hover': {
           background: isAnimation?'#fff':'linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)',
           img: {
-            content: `url(${item.iocn_active})`,
+            content: `url(${helper.cdn(item.iocn_active)})`,
             width: imgWidth
           }
         }
     }}>
-      <img src={item.icon} alt="" />
+      <img src={helper.cdn(item.icon)} alt="" />
     </Flex>
     );
 });

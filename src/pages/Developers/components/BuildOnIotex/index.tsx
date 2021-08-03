@@ -1,23 +1,24 @@
 import React from 'react';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import { useStore } from '../../../../store';
+import { useStore } from '@/store/index';
 import { observer } from 'mobx-react-lite';
-import { Button } from "../../../../components/Button/index"
+import { Button } from "@/components/Button"
 import { TypeCode } from '../TypeCode/index';
-import bulrBall from '@/assets/images/dev/bulr_ball.png'
+import {helper} from "@/utils/helper";
+
 
 export const BuildOnIotex = observer(() => {
   const { lang } = useStore();
 
   const configs =   [
-    {name: lang.t("advantage1"), desc: lang.t("build.item1.tips"), icon: '/images/build1.png', href: "https://docs.iotex.io/smart-contracts/introduction" },
-    {name: lang.t("advantage2"), desc: lang.t("build.item2.tips"), icon: '/images/build2.png', href: "https://tube.iotex.io/" },
-    {name: lang.t("build.item3"), desc: lang.t("build.item3.tips"), icon: '/images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
-    {name: lang.t("build.item4"), desc: lang.t("build.item4.tips"), icon: '/images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
+    {name: lang.t("advantage1"), desc: lang.t("build.item1.tips"), icon: 'images/build1.png', href: "https://docs.iotex.io/smart-contracts/introduction" },
+    {name: lang.t("advantage2"), desc: lang.t("build.item2.tips"), icon: 'images/build2.png', href: "https://tube.iotex.io/" },
+    {name: lang.t("build.item3"), desc: lang.t("build.item3.tips"), icon: 'images/build3.png', href: "https://community.iotex.io/t/official-iotex-delegates-thread/1263" },
+    {name: lang.t("build.item4"), desc: lang.t("build.item4.tips"), icon: 'images/build4.png', href: "https://docs.iotex.io/more-resources/exchange-integration/general-guide" },
   ]
     return (
       <Box mt={{base: "0", md: "4rem", lg: "10rem"}} pb={{base: "5rem", lg: "6rem"}} css={{
-        backgroundImage: `url(${bulrBall})`,
+        backgroundImage: `url(${helper.cdn('images/dev/bulr_ball.png')})`,
         backgroundSize: '70%',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '100% 0%'
@@ -26,7 +27,7 @@ export const BuildOnIotex = observer(() => {
           <Box w={{base: "100%", lg: "40%", xl: "44%"}} mx={{base: "auto", lg: "initial"}}>
             <Box position="relative" pb="36%">
               <Box width={{base: "90%", lg: "100%"}} height={{base: "90%", lg: "100%"}}>
-                <img src="/images/code.png" alt="" />
+                <img src={helper.cdn('images/code.png')} alt="code" />
               </Box>
               <Box position="absolute" width={{base: "90%", lg: "100%"}} height={{base: "80%", md: "60%", lg: "80%",  xl: "70%", "2xl": "58%"}} top={{base: "14%", lg: "10%", xl: "14%"}} left={{base: "10%", lg: "8%", "2xl": "10%"}} p={{base: "0.1rem", sm: "1rem", md: "1.5rem",  lg: "0", xl: "5%", "2xl": "2rem"}} css={{
                 background: 'linear-gradient(146.72deg, rgba(137, 137, 137, 0.1) 6.79%, rgba(255, 255, 255, 0) 107.21%)',
@@ -45,7 +46,7 @@ export const BuildOnIotex = observer(() => {
                     <Image
                       boxSize={{base: "3rem", lg: "2.5rem", "2xl": "3.875rem"}}
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.name}
                     />
                     <Text fontSize={{base: "1rem", lg: "1.25rem", "2xl": "2rem"}} fontWeight="semibold" lineHeight="3.25rem" mb="0.5rem" mt="1rem">{item.name}</Text>
@@ -77,7 +78,7 @@ export const BuildOnIotex = observer(() => {
               {/*  <Image*/}
               {/*    boxSize="3.75rem"*/}
               {/*    objectFit="fill"*/}
-              {/*    src="/images/github_empty.png"*/}
+              {/*    src="images/github_empty.png"*/}
               {/*    alt=""*/}
               {/*    mb={{base: "3rem", lg: 0}}*/}
               {/*    mr="3rem"*/}
@@ -85,7 +86,7 @@ export const BuildOnIotex = observer(() => {
               {/*</a>*/}
               <Button href="https://iotex.io/halo" size={{base: "100%", md: "375px"}} name={lang.t("read.documents")} />
             </Flex>
-            {/* <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('/images/read_build_bg.png')" css={{
+            {/* <Box mt={{base: "2rem", md: "3rem", xl: "5rem"}} borderRadius="15px" py={{base: "0.8rem", lg: "1.2rem"}} px={{base: "1rem", lg: "2rem"}} bg="url('images/read_build_bg.png')" css={{
               backgroundSize: '100% 100%',
               backgroundRepeat: 'no-repeat'
             }}>
@@ -99,8 +100,8 @@ export const BuildOnIotex = observer(() => {
             <Image
               boxSize={{base: "8rem", lg: "14rem"}}
               objectFit="fill"
-              src="/images/build_small_ball.png"
-              alt=""
+              src={helper.cdn('images/build_small_ball.png')}
+              alt="build_small_ball"
               mt={{base: "4rem", lg: "6.25rem"}}
               ml={{base: "60%", lg: "13.75rem"}}
               mb={{base: "4rem", lg: "0"}}

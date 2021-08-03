@@ -4,9 +4,7 @@ import { useStore } from "@/store/index";
 import { observer, useLocalObservable } from "mobx-react-lite";
 import { Button } from "@/components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
-// @ts-ignore
-import nextGenBg2 from "@/assets/images/home/next_gen_bg2.png";
-import nextGenBg from "@/assets/images/home/next_gen_bg.png";
+import {helper} from "@/utils/helper";
 
 export const NextGen = observer(() => {
   const { lang } = useStore();
@@ -17,29 +15,29 @@ export const NextGen = observer(() => {
       {
         name: lang.t("decentralized"),
         desc: lang.t("advantage1.tips"),
-        icon: "/images/user.png",
-        selectedIcon: "/images/card1.png",
+        icon: "images/user.png",
+        selectedIcon: "images/card1.png",
         show: false,
       },
       {
         name: lang.t("mega.scalable"),
         desc: lang.t("advantage2.tips"),
-        icon: "/images/mining.png",
-        selectedIcon: "/images/card2.png",
+        icon: "images/mining.png",
+        selectedIcon: "images/card2.png",
         show: false,
       },
       {
         name: lang.t("ultra.fast"),
         desc: lang.t("advantage3.tips"),
-        icon: "/images/real.png",
-        selectedIcon: "/images/card3.png",
+        icon: "images/real.png",
+        selectedIcon: "images/card3.png",
         show: false,
       },
       {
         name: lang.t("secure.cryptographic"),
         desc: lang.t("advantage4.tips"),
-        icon: "/images/deflot.png",
-        selectedIcon: "/images/card4.png",
+        icon: "images/deflot.png",
+        selectedIcon: "images/card4.png",
         show: false,
       },
     ],
@@ -47,19 +45,19 @@ export const NextGen = observer(() => {
       {
         name: lang.t("ucam"),
         desc: lang.t("ucam.desc"),
-        icon: "/images/ucam.png",
+        icon: "images/ucam.png",
         href: "https://ucam.iotex.io/",
       },
       {
         name: lang.t("pebble"),
         desc: lang.t("pebble.desc"),
-        icon: "/images/pebble.png",
+        icon: "images/pebble.png",
         href: "/pebble",
       },
       {
         name: lang.t("smart.lock"),
         desc: lang.t("smart.lock.desc"),
-        icon: "/images/logo_samrtlock.png",
+        icon: "images/logo_samrtlock.png",
         href: "https://iotexlab.io/delegates",
       },
     ],
@@ -67,19 +65,19 @@ export const NextGen = observer(() => {
       {
         name: lang.t("ioTube"),
         desc: lang.t("ioTube.desc"),
-        icon: "/images/logo_iotube.png",
+        icon: "images/logo_iotube.png",
         href: "https://ecosystem.iotex.io/post/240",
       },
       {
         name: lang.t("mimo"),
         desc: lang.t("mimo.desc"),
-        icon: "/images/mimo.png",
+        icon: "images/mimo.png",
         href: "https://ecosystem.iotex.io/post/232",
       },
       {
         name: lang.t("cyclone"),
         desc: lang.t("cyclone.desc"),
-        icon: "/images/cyc.png",
+        icon: "images/cyc.png",
         href: "https://ecosystem.iotex.io/post/953",
       },
     ],
@@ -87,19 +85,19 @@ export const NextGen = observer(() => {
       {
         name: lang.t("IoTT.portal"),
         desc: lang.t("IoTT.portal.desc"),
-        icon: "/images/logo_iott.png",
+        icon: "images/logo_iott.png",
         href: "https://ecosystem.iotex.io/post/1009",
       },
       {
         name: lang.t("hermes"),
         desc: lang.t("hermes.desc"),
-        icon: "/images/logo_hermes.png",
+        icon: "images/logo_hermes.png",
         href: "https://ecosystem.iotex.io/post/200",
       },
       {
         name: lang.t("minttoken"),
         desc: lang.t("minttoken.desc"),
-        icon: "/images/logo_minttoken.png",
+        icon: "images/logo_minttoken.png",
         href: "https://ecosystem.iotex.io/post/959",
       },
     ],
@@ -118,7 +116,7 @@ export const NextGen = observer(() => {
   return (
     <Box
       css={{
-        backgroundImage: `url(${nextGenBg2}), url(${nextGenBg})`,
+        backgroundImage: `url(${helper.cdn('images/home/next_gen_bg2.png')}), url(${helper.cdn('images/home/next_gen_bg.png')})`,
         backgroundSize: "60%, 30%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "0% 0% ,0% 80%",
@@ -187,14 +185,14 @@ export const NextGen = observer(() => {
                   alignItems="center"
                   css={{
                     background: isMaxThan468
-                      ? "url(/images/next_card.png)"
-                      : `url(${item.selectedIcon})`,
+                      ? `url(${helper.cdn('images/next_card.png')})`
+                      : `url(${helper.cdn(item.selectedIcon)})`,
                     mixBlendMode: "normal",
                     borderRadius: "0.625rem",
                     backgroundSize: "100% 100%",
                     transition: "background 0.6s",
                     "&:hover": {
-                      background: `url(${item.selectedIcon})`,
+                      background: `url(${helper.cdn(item.selectedIcon)})`,
                       backgroundSize: "100% 100%",
                     },
                   }}
@@ -246,7 +244,7 @@ export const NextGen = observer(() => {
                       <Image
                         boxSize={{ base: "5rem", md: "6rem", "2xl": "8rem" }}
                         objectFit="cover"
-                        src={item.icon}
+                        src={helper.cdn(item.icon)}
                         alt={item.name}
                         css={{
                           filter:
@@ -310,7 +308,7 @@ export const NextGen = observer(() => {
                     <Image
                       boxSize="3rem"
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.name}
                       mr="1rem"
                     />
@@ -378,7 +376,7 @@ export const NextGen = observer(() => {
                     <Image
                       boxSize="3rem"
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.name}
                       mr="1.25rem"
                     />
@@ -448,7 +446,7 @@ export const NextGen = observer(() => {
                     <Image
                       boxSize="3rem"
                       objectFit="cover"
-                      src={item.icon}
+                      src={helper.cdn(item.icon)}
                       alt={item.name}
                       mr="1.25rem"
                     />
@@ -513,7 +511,7 @@ export const NextGen = observer(() => {
                     <Image
                       boxSize="1.5rem"
                       objectFit="cover"
-                      src={option.icon}
+                      src={helper.cdn(option.icon)}
                       alt={option.name}
                       mr="0.5rem"
                     />
@@ -553,7 +551,7 @@ export const NextGen = observer(() => {
           }}
         >
           <a href="/developers">
-            <img src="/images/home/buildIotx.png" alt="" />
+            <img src={helper.cdn('images/home/buildIotx.png')} alt="" />
           </a>
         </Box>
       </Box>

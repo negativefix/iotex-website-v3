@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import { useStore } from "../../../../store";
+import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
-import { Button } from "../../../../components/Button/index";
-import { TypeCode } from "../TypeCode/index";
+import { Button } from "@/components/Button";
 import bulrBall from "@/assets/images/dev/bulr_ball.png";
 
 // @ts-ignore

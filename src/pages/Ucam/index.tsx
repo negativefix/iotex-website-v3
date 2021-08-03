@@ -1,71 +1,65 @@
 import {observer} from "mobx-react-lite";
 import {useStore} from "@/store/index";
 import BasicLayout from "../../Layouts/BasicLayout";
-import imgOne from '@/assets/images/ucam/img_ucam1.png'
-import imgTwo from '@/assets/images/ucam/img_ucam2.png'
-import imgThree from '@/assets/images/ucam/img_ucam3.png'
-import imgFour from '@/assets/images/ucam/img_ucam4.png'
-import iconLogin from '@/assets/images/ucam/icon_based_login.png'
-import iconEndToEnd from '@/assets/images/ucam/icon_End-to-End.png'
-import iconEdge from '@/assets/images/ucam/icon_Edge.png'
-import {Box, Flex, Image, Text, useBreakpointValue} from "@chakra-ui/react";
+import {Box, Flex, Image, Text} from "@chakra-ui/react";
 import {SectionContainer} from "@/pages/Pebble/SectionContainer";
 import React from "react";
 import {Footer} from "@/components/Footer";
 import {Button} from "@/components/Button";
 import {LogoCardItem} from "@/components/LogoCardItem";
 import HighLight from "@/components/HighLight";
+import {helper} from "@/utils/helper";
 
 export const Ucam = observer(() => {
 	const {lang} = useStore()
 	const logos = [
 		{
-			icon: "/images/media-center/newsweek.png",
-			iocn_active: "/images/media-center/newsweek_active.png",
+			icon: "images/media-center/newsweek.png",
+			iocn_active: "images/media-center/newsweek_active.png",
 			href: "https://www.newsweek.com/new-iotex-ucam-looks-provide-unrivaled-privacy-security-1517040"
 		},
 		{
-			icon: "/images/ucam/logo_zdnet.png",
-			iocn_active: "/images/ucam/logo_zdnet_active.png",
+			icon: "images/ucam/logo_zdnet.png",
+			iocn_active: "images/ucam/logo_zdnet_active.png",
 			href: "https://www.zdnet.com/article/new-ucam-security-camera-is-powered-by-the-blockchain/",
 			imgWidth:'35%'
 		},
 		{
-			icon: "/images/media-center/logo_CoinDesk.png",
-			iocn_active: "/images/media-center/logo_CoinDesk_active.png",
+			icon: "images/media-center/logo_CoinDesk.png",
+			iocn_active: "images/media-center/logo_CoinDesk_active.png",
 			href: "https://www.coindesk.com/hardware-is-hard-two-blockchain-devices-win-plaudits-at-ces-2020",
 
 		},
 		{
-			icon: "/images/media-center/logo_cointelegraph.png",
-			iocn_active: "/images/media-center/logo_cointelegraph_active.png",
+			icon: "images/media-center/logo_cointelegraph.png",
+			iocn_active: "images/media-center/logo_cointelegraph_active.png",
 			href: "https://cointelegraph.com/news/blockchain-technology-now-powers-a-privacy-focused-security-camera"
 		},
 		{
-			icon: "/images/media-center/logo_decrypt.png",
-			iocn_active: "/images/media-center/logo_decrypt_active.png",
+			icon: "images/media-center/logo_decrypt.png",
+			iocn_active: "images/media-center/logo_decrypt_active.png",
 			href: "https://decrypt.co/15991/forget-amazon-ring-how-blockchain-could-secure-your-home"
 		},
 		{
-			icon: "/images/ucam/logo_nerd_techy.png",
-			iocn_active: "/images/ucam/logo_nerd_techy.png",
+			icon: "images/ucam/logo_nerd_techy.png",
+			iocn_active: "images/ucam/logo_nerd_techy.png",
 			href: "https://nerdtechy.com/tenvis-ucam-review"
 		},
 		{
-			icon: "/images/ucam/911.png",
-			iocn_active: "/images/ucam/911.png",
+			icon: "images/ucam/911.png",
+			iocn_active: "images/ucam/911.png",
 			href: "https://www.youtube.com/watch?v=tRYcuzOZP5M",
 			imgWidth:'20%',
 		},
 		{
-			icon: "/images/ucam/logo_thenetgu.png",
-			iocn_active: "/images/ucam/logo_thenetgu_active.png",
+			icon: "images/ucam/logo_thenetgu.png",
+			iocn_active: "images/ucam/logo_thenetgu_active.png",
 			href: "https://www.youtube.com/watch?v=_BJ3cA2WcDI&t=44s",
 			imgWidth:'30%',
 		},
 		{
-			icon: "/images/ucam/logo_sarah.png",
-			iocn_active: "/images/ucam/logo_sarah_active.png",
+			icon: "images/ucam/logo_sarah.png",
+			iocn_active: "images/ucam/logo_sarah_active.png",
 			href: "https://sarahscoop.com/ucam-security-camera-product-review/"
 		},
 	];
@@ -97,14 +91,14 @@ export const Ucam = observer(() => {
 						</Text>
 					</Box>
 					<Box  width={{base:'60%',lg:'40%'}} mx={'auto'}>
-						<Image src={imgOne}/>
+						<Image src={helper.cdn('images/ucam/img_ucam1.png')}/>
 					</Box>
 				</Flex>
 			</SectionContainer>
 			<SectionContainer mt={{base:20,md:20,lg:40}}>
 				<Flex justifyContent={'space-between'} flexDirection={{base:'column',lg: 'column', xl: 'row'}}>
 					<Box w={{base:'80%',md:'80%',lg:'40%'}} mx={{base:'auto',xl:'unset'}}>
-						<Image src={imgTwo} mt={20}/>
+						<Image src={helper.cdn('images/ucam/img_ucam2.png')} mt={20}/>
 					</Box>
 					<Box w={{lg: '100%', xl: '56%'}} mt={{base:10}}>
 						<Text
@@ -179,13 +173,13 @@ export const Ucam = observer(() => {
 						</Box>
 					</Box>
 					<Box w={{base:'90%',lg:'52%'}} mt={20} mx={'auto'}>
-						<Image src={imgThree}/>
+						<Image src={helper.cdn('images/ucam/img_ucam3.png')}/>
 					</Box>
 				</Flex>
 			</SectionContainer>
 			<SectionContainer mt={{base:20,lg:40}}>
 				<Flex
-					bgImg={{base:'unset',lg:`url(${imgFour})`}}
+					bgImg={{base:'unset',lg:`url(${helper.cdn('images/ucam/img_ucam4.png')})`}}
 					bgSize={'60%'}
 					bgRepeat={'no-repeat'}
 					bgPosition={'bottom right'}
@@ -194,7 +188,7 @@ export const Ucam = observer(() => {
 				>
 					<Flex flexDirection={'column'} width={{base:'100%',lg:'32%'}} mt={{base:10,lg:0}}>
 						<Box>
-							<Image src={iconLogin} w={'10%'}/>
+							<Image src={helper.cdn('images/ucam/icon_based_login.png')} w={'10%'}/>
 							<Text mt={5}
 							      fontSize={{base: '1.75rem', md: '2rem',xl:'1.75rem'}} fontWeight="semibold"
 							>
@@ -209,7 +203,7 @@ export const Ucam = observer(() => {
 							</Text>
 						</Box>
 						<Box mt={16}>
-							<Image src={iconEndToEnd} w={'10%'}/>
+							<Image src={helper.cdn('images/ucam/icon_End-to-End.png')} w={'10%'}/>
 							<Text
 								mt={5}
 								fontSize={{base: '1.75rem', md: '2rem',xl:'1.75rem'}} fontWeight="semibold"
@@ -227,7 +221,7 @@ export const Ucam = observer(() => {
 							</Text>
 						</Box>
 						<Box mt={16}>
-							<Image src={iconEdge} w={'10%'}/>
+							<Image src={helper.cdn('images/ucam/icon_Edge.png')} w={'10%'}/>
 							<Text
 								mt={5}
 								fontSize={{base: '1.75rem', md: '1.75rem',xl:'1.75rem'}} fontWeight="semibold"
@@ -241,7 +235,7 @@ export const Ucam = observer(() => {
 						</Box>
 					</Flex>
 					<Box w={{base:'100%',lg:'60%'}}>
-						<Image src={imgFour} display={{base:'block',lg:'none'}}/>
+						<Image src={helper.cdn('images/ucam/img_ucam4.png')} display={{base:'block',lg:'none'}}/>
 						<Text
 							mt={{base:10,lg:0}}
 							fontWeight="semibold"

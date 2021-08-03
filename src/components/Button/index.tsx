@@ -1,9 +1,6 @@
 import React from 'react';
-import { Box, Flex, Menu, MenuButton, useDisclosure, MenuList, MenuItem, Image, Text,  IconButton, Center } from '@chakra-ui/react';
-import {  useHistory } from 'react-router-dom';
-import { useStore } from '../../store';
-import { Link } from "@chakra-ui/react"
-import { observer, useLocalStore } from 'mobx-react-lite';
+import { Box, Flex,  Text, } from '@chakra-ui/react';
+import { observer } from 'mobx-react-lite';
 
 
 interface ComponentsProps {

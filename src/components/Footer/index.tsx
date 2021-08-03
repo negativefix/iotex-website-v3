@@ -4,6 +4,7 @@ import { useStore } from "../../store";
 import { observer } from "mobx-react-lite";
 import { useFormFields, useMailChimpForm } from "@/components/MailchimpForm";
 import { publicConfig } from "../../config/public";
+import {helper} from "@/utils/helper";
 
 export const Footer = observer(() => {
   const { lang } = useStore();
@@ -21,29 +22,29 @@ export const Footer = observer(() => {
           name: lang.t("What.is.IoTeX"),
           path: "https://onboard.iotex.io/introduction",
           blank: true,
-          icon: "/images/explore/icon_wallet_n.png",
-          icon_active: "/images/explore/icon_wallet_s.png",
+          icon: "images/explore/icon_wallet_n.png",
+          icon_active: "images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("vision"),
           path: "https://iott.network/about",
           blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
+          icon: "images/explore/icon_getiotx_n.png",
+          icon_active: "images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("roadmap"),
           path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
           blank: true,
-          icon: "/images/explore/icon_map_n.png",
-          icon_active: "/images/explore/icon_map_s.png",
+          icon: "images/explore/icon_map_n.png",
+          icon_active: "images/explore/icon_map_s.png",
         },
         {
           name: lang.t("onboarding.Pack"),
           path: "https://onboard.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
+          icon: "images/explore/icon_getiotx_n.png",
+          icon_active: "images/explore/icon_getiotx_n.png",
         },
       ],
     },
@@ -55,36 +56,36 @@ export const Footer = observer(() => {
           name: lang.t("ioPay.wallet"),
           path: "https://iopay-wallet.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_wallet_n.png",
-          icon_active: "/images/explore/icon_wallet_s.png",
+          icon: "images/explore/icon_wallet_n.png",
+          icon_active: "images/explore/icon_wallet_s.png",
         },
         {
           name: lang.t("get.iotx"),
           path: "https://ecosystem.iotex.io/exchanges-wallets",
           blank: true,
-          icon: "/images/explore/icon_getiotx_n.png",
-          icon_active: "/images/explore/icon_getiotx_n.png",
+          icon: "images/explore/icon_getiotx_n.png",
+          icon_active: "images/explore/icon_getiotx_n.png",
         },
         {
           name: lang.t("staking.portal"),
           path: "https://member.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_stake_n.png",
-          icon_active: "/images/explore/icon_stake_s.png",
+          icon: "images/explore/icon_stake_n.png",
+          icon_active: "images/explore/icon_stake_s.png",
         },
         {
           name: lang.t("burn.drop"),
           path: "https://burndrop.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_brun-drop_n.png",
-          icon_active: "/images/explore/icon_brun-drop_n.png",
+          icon: "images/explore/icon_brun-drop_n.png",
+          icon_active: "images/explore/icon_brun-drop_n.png",
         },
         {
           name: lang.t("explore"),
           path: "https://iotexscan.io/",
           blank: true,
-          icon: "/images/explore/icon_explorer_n.png",
-          icon_active: "/images/explore/icon_explorer_s.png",
+          icon: "images/explore/icon_explorer_n.png",
+          icon_active: "images/explore/icon_explorer_s.png",
         },
       ],
     },
@@ -95,22 +96,22 @@ export const Footer = observer(() => {
           name: lang.t("github"),
           path: "https://github.com/iotexproject",
           blank: true,
-          icon: "/images/explore/icon_gitHub_n.png",
-          icon_active: "/images/explore/icon_gitHub_s.png",
+          icon: "images/explore/icon_gitHub_n.png",
+          icon_active: "images/explore/icon_gitHub_s.png",
         },
         {
           name: lang.t("dev.docs"),
           path: "https://docs.iotex.io/",
           blank: true,
-          icon: "/images/explore/icon_docs_n.png",
-          icon_active: "/images/explore/icon_docs_s.png",
+          icon: "images/explore/icon_docs_n.png",
+          icon_active: "images/explore/icon_docs_s.png",
         },
         {
           name: lang.t("halo.grants"),
           path: "https://iotex.io/halo",
           blank: true,
-          icon: "/images/explore/icon_halo_n.png",
-          icon_active: "/images/explore/icon_halo_s.png",
+          icon: "images/explore/icon_halo_n.png",
+          icon_active: "images/explore/icon_halo_s.png",
         },
       ],
     },
@@ -121,22 +122,22 @@ export const Footer = observer(() => {
           name: lang.t("ecosystem"),
           path: "https://ecosystem.iotex.io/projects",
           blank: true,
-          icon: "/images/explore/icon_ecopage_n.png",
-          icon_active: "/images/explore/icon_ecopage_s.png",
+          icon: "images/explore/icon_ecopage_n.png",
+          icon_active: "images/explore/icon_ecopage_s.png",
         },
         {
           name: lang.t("live.ioTT.network"),
           path: "https://iott.network/",
           blank: true,
-          icon: "/images/explore/icon_iott_n.png",
-          icon_active: "/images/explore/icon_iott_s.png",
+          icon: "images/explore/icon_iott_n.png",
+          icon_active: "images/explore/icon_iott_s.png",
         },
         {
           name: lang.t("blog"),
           path: "https://iotex.medium.com/",
           blank: true,
-          icon: "/images/explore/icon_blog_n.png",
-          icon_active: "/images/explore/icon_blog_s.png",
+          icon: "images/explore/icon_blog_n.png",
+          icon_active: "images/explore/icon_blog_s.png",
         },
       ],
     },
@@ -144,32 +145,32 @@ export const Footer = observer(() => {
 
   const links = [
     {
-      icon: "/images/explore/icon_twitter_n.png",
-      icon_active: "/images/explore/icon_twitter_s.png",
+      icon: "images/explore/icon_twitter_n.png",
+      icon_active: "images/explore/icon_twitter_s.png",
       blank: true,
       href: "https://twitter.com/iotex_io",
     },
     {
-      icon: "/images/explore/icon_discord_n.png",
-      icon_active: "/images/explore/icon_discord_s.png",
+      icon: "images/explore/icon_discord_n.png",
+      icon_active: "images/explore/icon_discord_s.png",
       blank: true,
       href: "https://iotex.io/devdiscord",
     },
     {
-      icon: "/images/explore/icon_youtube_n.png",
-      icon_active: "/images/explore/icon_youtube_s.png",
+      icon: "images/explore/icon_youtube_n.png",
+      icon_active: "images/explore/icon_youtube_s.png",
       blank: true,
       href: "https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
     },
     {
-      icon: "/images/explore/icon_reddit_n.png",
-      icon_active: "/images/explore/icon_reddit_s.png",
+      icon: "images/explore/icon_reddit_n.png",
+      icon_active: "images/explore/icon_reddit_s.png",
       blank: true,
       href: "https://www.reddit.com/r/IoTeX/",
     },
     {
-      icon: "/images/explore/icon_telegram_n.png",
-      icon_active: "/images/explore/icon_telegram_s.png",
+      icon: "images/explore/icon_telegram_n.png",
+      icon_active: "images/explore/icon_telegram_s.png",
       blank: true,
       href: "https://t.me/iotexchannel",
     },
@@ -250,14 +251,14 @@ export const Footer = observer(() => {
                           <Image
                             boxSize="1.5rem"
                             mr="1rem"
-                            src={item.icon}
+                            src={helper.cdn(item.icon)}
                             cursor="pointer"
                             css={{
                               "&:hover": {
-                                content: `url(${item.icon_active})`,
+                                content: `url(${helper.cdn(item.icon_active)})`,
                               },
                             }}
-                          ></Image>
+                          />
                         </a>
                       );
                     })}
