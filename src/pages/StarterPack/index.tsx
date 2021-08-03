@@ -19,6 +19,18 @@ const StarterPack = () => {
 
 	const socials = [
 		{
+			text:"Youtube",
+			desc:"Watch the latest videos",
+			link:"https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
+			image:"images/starter-pack/icon_"
+		},
+		{
+			text: "Reddit",
+			image: "images/starter-pack/icon_youtube.png",
+			desc: 'Chat with communities',
+			link: 'https://www.reddit.com/r/IoTeX/'
+		},
+		{
 			text: "Twitter",
 			image: "images/starter-pack/icon_twitter.png",
 			desc: 'Follow the latest \n IoTeX news',
@@ -30,18 +42,12 @@ const StarterPack = () => {
 			desc: 'Chat and read our \n announcements',
 			link: 'https://t.me/iotexchannel'
 		},
-		{
-			text: "Reddit",
-			image: "images/starter-pack/icon_Reddit.png",
-			desc: 'Chat with communities',
-			link: 'https://www.reddit.com/r/IoTeX/'
-		},
-		{
-			text: "Discord",
-			image: "images/starter-pack/icon_Discord.png",
-			desc: 'Discuss with communities',
-			link: 'https://iotex.io/devdiscord'
-		},
+		// {
+		// 	text: "Discord",
+		// 	image: "images/starter-pack/icon_Discord.png",
+		// 	desc: 'Discuss with communities',
+		// 	link: 'https://iotex.io/devdiscord'
+		// },
 	]
 
 
