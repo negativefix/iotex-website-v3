@@ -22,11 +22,11 @@ const StarterPack = () => {
 			text:"Youtube",
 			desc:"Watch the latest videos",
 			link:"https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
-			image:"images/starter-pack/icon_"
+			image:"images/starter-pack/icon_youtube.png"
 		},
 		{
 			text: "Reddit",
-			image: "images/starter-pack/icon_youtube.png",
+			image: "images/starter-pack/icon_Reddit.png",
 			desc: 'Chat with communities',
 			link: 'https://www.reddit.com/r/IoTeX/'
 		},
