@@ -19,8 +19,8 @@ const StarterPack = () => {
 
 	const socials = [
 		{
-			text:"Youtube",
-			desc:"Watch the latest videos",
+			text:"YouTube",
+			desc:"See latest panels, conferences, and updates",
 			link:"https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
 			image:"images/starter-pack/icon_youtube.png"
 		},
