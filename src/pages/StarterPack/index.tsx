@@ -1,6 +1,6 @@
 import React from "react";
 import BasicLayout from "../../Layouts/BasicLayout";
-import {Box, Divider, SimpleGrid, Text} from "@chakra-ui/react";
+import {Box, Divider, Flex, SimpleGrid, Text, Image} from "@chakra-ui/react";
 import {useStore} from "@/store/index";
 import {Footer} from "@/components/Footer";
 import SocialCard from "@/pages/StarterPack/components/SocialCard";
@@ -31,10 +31,10 @@ const StarterPack = () => {
 			link: 'https://t.me/iotexchannel'
 		},
 		{
-			text: "Github",
-			image: "images/starter-pack/icon_gitHub.png",
-			desc: 'Track our development',
-			link: 'https://github.com/iotexproject'
+			text: "Reddit",
+			image: "images/starter-pack/icon_Reddit.png",
+			desc: 'Chat with communities',
+			link: 'https://www.reddit.com/r/IoTeX/'
 		},
 		{
 			text: "Discord",

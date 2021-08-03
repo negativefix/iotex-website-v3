@@ -44,7 +44,7 @@ export const Header = observer(() => {
       blank: true,
     },
     { name: lang.t("blog"), path: "/blog", blank: true },
-    { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
+    // { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
   ];
 
@@ -189,7 +189,7 @@ export const Header = observer(() => {
         },
         {
           name: lang.t("blog"),
-          path: "https://iotex.medium.com/",
+          path: "https://iotex.io/blog",
           blank: true,
           icon: "images/explore/icon_blog_n.png",
           icon_active: "images/explore/icon_blog_s.png",

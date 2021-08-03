@@ -134,7 +134,7 @@ export const Footer = observer(() => {
         },
         {
           name: lang.t("blog"),
-          path: "https://iotex.medium.com/",
+          path: "https://iotex.io/blog",
           blank: true,
           icon: "images/explore/icon_blog_n.png",
           icon_active: "images/explore/icon_blog_s.png",

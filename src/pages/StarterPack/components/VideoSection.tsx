@@ -68,20 +68,20 @@ const VideoSection = () => {
 	const VIDEOS = [
 		{
 			bgImg: 'images/starter-pack/video1_bg.png',
-			videoUrl: 'https://iframe.mediadelivery.net/embed/9461/fddbdd9a-2804-4afc-9df7-69758f91bd6d?autoplay=true'
+			videoUrl: 'https://www.youtube.com/embed/9l6i_mtYP0Q?autoplay=true'
 		},
 		{
 			bgImg: 'images/starter-pack/video2_bg.png',
-			videoUrl: 'https://iframe.mediadelivery.net/embed/9461/364ec7c6-e370-48d2-8df0-e3e99636f86e?autoplay=true'
+			videoUrl: 'https://www.youtube.com/embed/9Zdwo1RQfzM?autoplay=true'
 
 		},
 		{
 			bgImg: 'images/starter-pack/video3_bg.png',
-			videoUrl: 'https://iframe.mediadelivery.net/embed/9461/f9d08197-3a3e-435b-b732-2c271b580a27?autoplay=true'
+			videoUrl: 'https://www.youtube.com/embed/MyW4ofSH7G0?autoplay=true'
 		},
 		{
 			bgImg: 'images/starter-pack/video4_bg.png',
-			videoUrl: 'https://iframe.mediadelivery.net/embed/9461/3d18fc5d-58d0-444f-a372-76aef9d4d33c?autoplay=true'
+			videoUrl: 'https://www.youtube.com/embed/PZh8Gojtv-A?autoplay=true'
 		},
 	]
 
