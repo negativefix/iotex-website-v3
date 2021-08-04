@@ -154,7 +154,7 @@ export const JoinRevolution = observer(() => {
               cursor="pointer"
             >
               <a href="/ucam" target="_blank">
-                <img src={helper.cdn(pebbleSrc)} alt="" />
+                <img src={helper.cdn(ucamSrc)} alt="" />
               </a>
             </Box>
           </Flex>
