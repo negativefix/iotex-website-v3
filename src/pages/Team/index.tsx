@@ -11,42 +11,42 @@ export const Team = observer(() => {
   const userConfig = [
     {
       name: lang.t("raullen.name"),
-      avatar: "/images/team/Raullen_c.png",
+      avatar: "images/team/Raullen_c.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/raullenchai/" },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/raullenchai" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/Raullen" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/raullenchai/" },
+        { src: "images/icons/icon_gitHub.svg", href: "https://github.com/raullenchai" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/Raullen" },
       ],
       job: lang.t("raullen.research"),
       intros: lang.t("raullen.desc"),
     },
     {
       name: lang.t("jin.name"),
-      avatar: "/images/team/Jing_c.png",
+      avatar: "images/team/Jing_c.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/cbetasun/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/cbetass" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/cbetasun/" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/cbetass" },
       ],
       job: lang.t("jin.research"),
       intros: lang.t("jin.desc"),
     },
     {
       name: lang.t("simone.name"),
-      avatar: "/images/team/simone-dark-bg-2-impr.jpg",
+      avatar: "images/team/simone-dark-bg-2-impr.jpg",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zimne/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/zimne1" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/zimne/" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/zimne1" },
       ],
       job: lang.t("simone.research"),
       intros: lang.t("simone.desc"),
     },
     {
       name: lang.t("qevan.name"),
-      avatar: "/images/team/qevan_headshot.png",
+      avatar: "images/team/qevan_headshot.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/donguo/" },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/guo" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/qevanguo" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/donguo/" },
+        { src: "images/icons/icon_gitHub.svg", href: "https://github.com/guo" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/qevanguo" },
       ],
       job: lang.t("qevan.research"),
       intros: lang.t("qevan.desc"),
@@ -54,13 +54,13 @@ export const Team = observer(() => {
 
     {
       name: lang.t("dean.name"),
-      avatar: "/images/team/0.jpg",
+      avatar: "images/team/0.jpg",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/deanpatrickprofessional/",
         },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/deanofprivacy?lang=en" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/deanofprivacy?lang=en" },
       ],
       job: lang.t("dean.research"),
       intros: lang.t("dean.desc"),
@@ -68,25 +68,25 @@ export const Team = observer(() => {
     {
       name: lang.t("ken.name"),
       avatar: 'images/team/k.png',
-      links: [{ src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seiff/" }],
+      links: [{ src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seiff/" }],
       job: lang.t("ken.research"),
       intros: lang.t("ken.desc"),
     },
     {
       name: lang.t("Art.Malkov"),
-      avatar: '/images/team/alina.png',
+      avatar: 'images/team/alina.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/digitalbrand/"},
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/digitalbrand/"},
       ],
       job: lang.t("Art.Malkov.research"),
       intros: lang.t("Art.Malkov.desc"),
     },
     {
       name: lang.t("robert.name"),
-      avatar: "/images/team/RobertParker.jpeg",
+      avatar: "images/team/RobertParker.jpeg",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href:
             "https://www.linkedin.com/public-profile/in/robert-parker-44b5024?challengeId=AQF1k9vkrp65uwAAAXdanQWY3LqNZyOYdcvVJ_NSIdTi39LSB1brz0XBosHDSZcBusyB7IUWnuk_-r1Qk_ox3HgSInXQdst2ng&submissionId=bd491868-6672-5f16-faec-17bf87297957",
         },
@@ -96,30 +96,30 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("larry.name"),
-      avatar: "/images/team/larry.png",
+      avatar: "images/team/larry.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/larry-pang/" },
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/larrypang" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/larry-pang/" },
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/larrypang" },
       ],
       job: lang.t("larry.research"),
       intros: lang.t("larry.desc"),
     },
     {
       name: lang.t("Marcos.Dinnerstein"),
-      avatar: '/images/team/marcos_dinnerstein.png',
+      avatar: 'images/team/marcos_dinnerstein.png',
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/marcosdinnerstein/"},
-        { src: "/images/icons/icon_twitter.svg", href: "https://twitter.com/marcosd "},
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/marcosdinnerstein/"},
+        { src: "images/icons/icon_twitter.svg", href: "https://twitter.com/marcosd "},
       ],
       job: lang.t("Marcos.Dinnerstein.research"),
       intros: lang.t("Marcos.Dinnerstein.desc"),
     },
     {
       name: lang.t("xin.name"),
-      avatar: "/images/team/Xinxin_c.png",
+      avatar: "images/team/Xinxin_c.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/xinxin-fan-crypto/",
         },
       ],
@@ -128,17 +128,17 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("dariya.name"),
-      avatar: "/images/team/Da.png",
+      avatar: "images/team/Da.png",
       links: null,
       job: lang.t("dariya.research"),
       intros: lang.t("dariya.desc"),
     },
     {
       name: lang.t("michael.name"),
-      avatar: "/images/team/Michael.png",
+      avatar: "images/team/Michael.png",
       links: [
         {
-          src: "/images/icons/icon_link.svg",
+          src: "images/icons/icon_link.svg",
           href: "http://www.sparklabs.co.kr/lb/modal/venture/Michael_Cho.php",
         },
       ],
@@ -147,13 +147,13 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("seedlet.name"),
-      avatar: "/images/team/seedlet.png",
+      avatar: "images/team/seedlet.png",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/zhi-zhong-a3660354/",
         },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/CoderZhi" },
+        { src: "images/icons/icon_gitHub.svg", href: "https://github.com/CoderZhi" },
       ],
       job: lang.t("seedlet.research"),
       intros: lang.t("seedlet.desc"),
@@ -161,10 +161,10 @@ export const Team = observer(() => {
 
     {
       name: lang.t("saul.name"),
-      avatar: "/images/team/0-1.jpg",
+      avatar: "images/team/0-1.jpg",
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/saul-hudson-2ab9228/",
         },
       ],
@@ -177,7 +177,7 @@ export const Team = observer(() => {
       avatar: 'images/team/Dorothy.png',
       links: [
         {
-          src: "/images/icons/icon_linkedIn.svg",
+          src: "images/icons/icon_linkedIn.svg",
           href: "https://www.linkedin.com/in/seoyoung-ko-25499b16a/",
         },
       ],
@@ -186,28 +186,28 @@ export const Team = observer(() => {
     },
     {
       name: lang.t("dustin.name"),
-      avatar: "/images/team/dustin.png",
+      avatar: "images/team/dustin.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/dustinxie/" },
-        { src: "/images/icons/icon_gitHub.svg", href: "https://github.com/dustinxie" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/dustinxie/" },
+        { src: "images/icons/icon_gitHub.svg", href: "https://github.com/dustinxie" },
       ],
       job: lang.t("dustin.research"),
       intros: lang.t("dustin.desc"),
     },
     {
       name: lang.t("lori.name"),
-      avatar: "/images/team/Lori.png",
+      avatar: "images/team/Lori.png",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/boruizhang/" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/boruizhang/" },
       ],
       job: lang.t("lori.research"),
       intros: lang.t("lori.desc"),
     },
     {
       name: lang.t("sean.name"),
-      avatar: "/images/team/0-2.jpg",
+      avatar: "images/team/0-2.jpg",
       links: [
-        { src: "/images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seanmedcalf/" },
+        { src: "images/icons/icon_linkedIn.svg", href: "https://www.linkedin.com/in/seanmedcalf/" },
       ],
       job: lang.t("sean.research"),
       intros: lang.t("sean.desc"),
