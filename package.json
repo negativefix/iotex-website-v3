@@ -17,8 +17,7 @@
     "test": "concurrently \"yarn start \" \"cypress open\"",
     "test:ci": "cypress run --headless",
     "gen:gql": "generate-graphql-client -p -e https://nsv3-hasura.iotex.io/v1/graphql -o ./src/generated/gql",
-    "sitemap": "npx ts-node --project tsconfig.node.json ./sitemap-builder.ts",
-    "postbuild": "yarn sitemap"
+    "sitemap": "npx ts-node --project tsconfig.node.json ./sitemap-builder.ts"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",

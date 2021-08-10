@@ -21,6 +21,7 @@ import CountTo from "react-count-to";
 import { subgraphAPI } from "@/lib/iotexGraphApi";
 import { numberWithCommas } from "@/utils/index";
 import {helper} from "@/utils/helper";
+import {News} from "@/pages/Home/components/News";
 
 export const Home = observer(() => {
   const { lang } = useStore();
@@ -374,7 +375,7 @@ export const Home = observer(() => {
       <Box
         backgroundPosition={{ base: "30% 12%", xl: "25% 0%" }}
         pt={{ base: "0", md: "7.5rem" }}
-        pb={{ base: "4rem", md: "10rem", lg: "18rem" }}
+        pb={{ base: "4rem", md: "10rem", lg: "10rem" }}
         css={{
           backgroundImage: `url(${helper.cdn('images/award_wing_bg.png')})`,
           backgroundSize: "56%",
@@ -434,27 +435,9 @@ export const Home = observer(() => {
           />
         </Box>
 
-        <a href="/press" target="_blank">
-          <Text
-            fontSize={{
-              base: "0.875rem",
-              md: "1rem",
-              lg: "1.25rem",
-              xl: "1.25rem",
-              "2xl": "1.75rem",
-            }}
-            fontWeight="medium"
-            mt={{ base: "4rem", xl: "5rem" }}
-            cursor="pointer"
-            textAlign="center"
-            color="brandColor"
-            lineHeight="1.275rem"
-          >
-            {lang.t("view.more")} &gt;&gt;
-          </Text>
-        </a>
       </Box>
 
+      <News/>
       {/* A Launchpad for Blockchain  Ideas and Projects */}
       <NextGen />
       <JoinRevolution />
