@@ -8,7 +8,7 @@ export const News = () => {
 		{
 			bg: 'images/home/news_bg1.png',
 			desc: lang.t('home.news1'),
-			link:"https://blog.coinbase.com/iotex-iotx-orion-protocol-orn-quickswap-quick-tribe-tribe-and-terrausd-ust-are-1c257deb6ed4?gi=cc3cbe315f54"
+			link:"https://iotex.io/blog/coinbase-lists-iotx-blockchain/"
 		},
 		{
 			bg: 'images/home/news_bg2.png',
