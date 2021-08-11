@@ -39,10 +39,10 @@ export const Investors = observer(() => {
       return base.tokenPrice
     },
     get totalSupply() {
-      return Number(base.totalSupply.getFormat())
+      return parseInt(String(base.circulatingSupply))
     },
     get totalSupplyCommas() {
-      return numberWithCommas(base.totalSupply.getFormat())
+      return numberWithCommas(parseInt(String(base.circulatingSupply)))
     }
   }))
 
@@ -265,7 +265,7 @@ export const Investors = observer(() => {
                   fontSize={{ base: "1rem", lg: "1.25rem", "2xl": "1.5rem" }} color="discord"
                   letterSpacing="1.5px" mr="0.5rem" fontWeight="medium"
                 >
-                  { lang.t("overview3")}
+                  { lang.t("overview4")}
                 </Text>
                 <Text fontSize={{ base: "1.75rem", lg: "2.75rem", "2xl": "3.75rem", }} letterSpacing="3.5px" fontWeight="medium" >
                   {store.totalStatus ? store.totalSupplyCommas : <CountTo
