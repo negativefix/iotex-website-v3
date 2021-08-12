@@ -43,7 +43,7 @@ export const Header = observer(() => {
     { name: lang.t("research"), path: "/research", blank: false },
     {
       name: lang.t("roadmap"),
-      path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
+      path: "https://iotex.io/blog/exciting-cryptocurrency-company/",
       blank: true,
     },
     { name: lang.t("blog"), path: "/blog", blank: true },

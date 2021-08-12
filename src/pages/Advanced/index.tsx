@@ -62,12 +62,13 @@ export const Advanced = observer(() => {
       list: [
         {icon: "images/token/exchange/logo_binance_n.png", href: "https://www.binance.com/it/trade/IOTX_BTC?type=spot"},
         {icon: "images/token/exchange/logo_huobi_n.png", href: "https://www.huobi.com/en-us/exchange/iotx_usdt"},
+        {icon: "images/token/exchange/logo_coinbase_n.png", href: "https://pro.coinbase.com/trade/IOTX-USD"},
         {icon: "images/token/exchange/logo_bittrex_n.png", href: "https://global.bittrex.com/Market/Index?MarketName=BTC-IOTX"},
         {icon: "images/token/exchange/logo_gate_n.png", href: "https://www.gate.io/trade/IOTX_ETH"},
         {icon: "images/token/exchange/logo_hotbit_n.png", href: "https://www.hotbit.io/exchange?symbol=IOTX_USDT"},
         {icon: "images/token/exchange/logo_mxc_n.png", href: "https://www.mexc.com/exchange/IOTX_USDT"},
         {icon: "images/token/exchange/logo_upbit_n.png", href: "https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX"},
-        {icon: "images/token/exchange/logo_Kucoin_n.png", href: "https://trade.kucoin.com/IOTX-BTC"},
+        // {icon: "images/token/exchange/logo_Kucoin_n.png", href: "https://trade.kucoin.com/IOTX-BTC"},
       ],
     },
     {

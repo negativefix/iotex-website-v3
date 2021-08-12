@@ -34,7 +34,7 @@ export const Footer = observer(() => {
         },
         {
           name: lang.t("roadmap"),
-          path: "https://medium.com/iotex/iotex-2021-the-year-ahead-acf743e2df03",
+          path: "https://iotex.io/blog/exciting-cryptocurrency-company/",
           blank: true,
           icon: "images/explore/icon_map_n.png",
           icon_active: "images/explore/icon_map_s.png",
