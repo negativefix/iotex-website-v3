@@ -13,7 +13,7 @@ export const News = () => {
 		{
 			bg: 'images/home/news_bg2.png',
 			desc: lang.t('home.news2'),
-			link:"https://cointelegraph.com/news/swipe-iotex-and-cybervein-lead-altcoins-higher-after-bitcoin-hits-46k"
+			link:"https://iotex.io/blog/iotx-skyrocket-growth-coinbase/"
 		},
 		{
 			bg: 'images/home/news_bg3.png',
