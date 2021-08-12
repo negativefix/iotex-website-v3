@@ -25,8 +25,11 @@ export const Header = observer(() => {
       path: "https://ecosystem.iotex.io/",
       blank: true,
     },
-    { name: lang.t("developers"), path: "/developers", blank: false },
   ];
+
+  const navConfig1 = [
+    { name: lang.t("developers"), path: "/developers", blank: false },
+  ]
 
   const startedConfig = [
     { name: lang.t("For.investors"), path: "/for-investors", blank: false },
@@ -46,6 +49,11 @@ export const Header = observer(() => {
     { name: lang.t("blog"), path: "/blog", blank: true },
     // { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
+  ];
+
+  const devicesConfig = [
+    { name: lang.t("ucam"), path: "/ucam", blank: false },
+    { name: lang.t("pebble"), path: "/pebble", blank: false },
   ];
 
   const exploreConfig = [
@@ -96,7 +104,6 @@ export const Header = observer(() => {
         },
       ],
     },
-
     {
       name: lang.t("for.investors"),
       lists: [
@@ -327,6 +334,84 @@ export const Header = observer(() => {
                       xl: "2.5rem",
                       "2xl": "3rem",
                     }}
+                    fontSize={{
+                      base: "0.875rem",
+                      lg: "1rem",
+                      "2xl": "1.25rem",
+                    }}
+                    textDecoration="none"
+                    fontWeight="semibold"
+                    css={{
+                      "&:hover": {
+                        color: "#44FFB2 !important",
+                      },
+                    }}
+                  >
+                    {item.name}
+                  </Text>
+                </a>
+              );
+            })}
+            <Box
+              className="dropHoverText"
+              position="relative"
+              mx={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
+              px={{
+                base: "0.5rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                "2xl": "1.5rem",
+              }}
+            >
+              <Text
+                as={Text}
+                fontWeight="semibold"
+                fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
+                cursor="pointer"
+                lineHeight={{ base: "0", md: "4.5rem" }}
+                className="dropMenuText"
+              >
+                {lang.t("devices.menu")} <TriangleDownIcon w="12px" />
+              </Text>
+              <Box className="dropMenuUl">
+                {devicesConfig.map((item) => {
+                  return (
+                    <Box
+                      key={item.name}
+                      className="dropMenuItem"
+                      px={{
+                        base: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.25rem",
+                        "2xl": "1.5rem",
+                      }}
+                    >
+                      <a href={item.path} target={item.blank ? "_blank" : ""}>
+                        {item.name}
+                      </a>
+                    </Box>
+                  );
+                })}
+              </Box>
+            </Box>
+            {navConfig1.map((item) => {
+              return (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target={item.blank ? "_blank" : ""}
+                >
+                  <Text
+                    lineHeight={{ base: "0", md: "4.5rem" }}
+                    color={
+                      location.pathname === item.path ? "brandColor2" : "white"
+                    }
+                    letterSpacing="0.5px"
                     fontSize={{
                       base: "0.875rem",
                       lg: "1rem",
@@ -595,6 +680,66 @@ export const Header = observer(() => {
                   onClick={() => (store.openMenu = false)}
                 />
                 {navConfig.map((item) => {
+                  return (
+                    <Link
+                      href={item.path}
+                      key={item.name}
+                      style={{ textDecoration: "none", display: "block" }}
+                    >
+                      <Box
+                        color="#fff"
+                        px="1rem"
+                        py="0.8rem"
+                        css={{
+                          "&:hover": {
+                            background:
+                              "linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #110F1C",
+                          },
+                        }}
+                      >
+                        <Text
+                          css={{ userSelect: "none" }}
+                          fontSize="0.875rem"
+                          color="white"
+                          fontWeight="bold"
+                        >
+                          {item.name}
+                        </Text>
+                      </Box>
+                    </Link>
+                  );
+                })}
+                {devicesConfig.map((item) => {
+                  return (
+                    <Link
+                      href={item.path}
+                      key={item.name}
+                      style={{ textDecoration: "none", display: "block" }}
+                    >
+                      <Box
+                        color="#fff"
+                        px="1rem"
+                        py="0.8rem"
+                        css={{
+                          "&:hover": {
+                            background:
+                              "linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), #110F1C",
+                          },
+                        }}
+                      >
+                        <Text
+                          css={{ userSelect: "none" }}
+                          fontSize="0.875rem"
+                          color="white"
+                          fontWeight="bold"
+                        >
+                          {item.name}
+                        </Text>
+                      </Box>
+                    </Link>
+                  );
+                })}
+                {navConfig1.map((item) => {
                   return (
                     <Link
                       href={item.path}

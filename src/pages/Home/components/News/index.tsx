@@ -45,7 +45,7 @@ export const News = () => {
 			>
 				{
 					NEWS_CONTENTS.map(content => (
-						<Box width={{base:'100%',md:'30%'}} mt={{base:8}} >
+						<Box width={{base:'100%',md:'30%'}} mt={{base:8}} key={content.link}>
 							<Link href={content.link} isExternal _hover={{}} _focus={{}}>
 								<Image src={content.bg}/>
 								<Text
