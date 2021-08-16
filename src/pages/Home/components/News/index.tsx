@@ -13,7 +13,7 @@ export const News = () => {
 		{
 			bg: 'images/home/news_bg2.png',
 			desc: lang.t('home.news2'),
-			link:"https://iotex.io/blog/iotx-skyrocket-growth-coinbase/"
+			link:"https://iotex.io/blog/blockchain-future-smart-devices-iot/"
 		},
 		{
 			bg: 'images/home/news_bg3.png',
