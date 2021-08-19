@@ -54,7 +54,24 @@ export const Banner=()=>{
 						textAlign="center"
 						whiteSpace={{base: "inherit", md: "pre-line"}}
 					>
-						{lang.t("starter.pack.title")}
+						{lang.t("cmc.starter.pack.title")}
+					</Text>
+					<Text
+						mt={5}
+						fontSize={{
+							base: "0.875rem",
+							sm: "1rem",
+							lg: "1.125rem",
+							xl: "1.75rem",
+							"2xl": "2.5rem",
+						}}
+						fontWeight="medium"
+						color="white"
+						w="80%"
+						textAlign="center"
+						whiteSpace={{base: "inherit", md: "pre-line"}}
+					>
+						{lang.t("cmc.starter.pack.subtitle")}
 					</Text>
 				</Flex>
 			</Box>

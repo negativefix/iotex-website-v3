@@ -4,7 +4,7 @@ import Carousel, {arrowsPlugin, slidesToShowPlugin} from "@brainhubeu/react-caro
 import {ChevronLeftIcon, ChevronRightIcon} from "@chakra-ui/icons";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import {useStore} from "@/store/index";
-import VideoSection from "@/pages/StarterPack/components/VideoSection";
+import VideoSection from "@/pages/CmcStarterPack/components/VideoSection";
 import {helper} from "@/utils/helper";
 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Image, Text} from "@chakra-ui/react";
 import {observer, useLocalObservable} from "mobx-react-lite";
-import Completed from "@/pages/StarterPack/components/Completed";
+import Completed from "@/pages/CmcStarterPack/components/Completed";
 import {helper} from "@/utils/helper";
 
 const SocialCard = ({img, text, desc, link}) => {

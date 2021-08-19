@@ -93,7 +93,6 @@ const VideoSection = () => {
 		isOpen: false,
 		videoUrl: '',
 		open(videoUrl) {
-			console.log('open')
 			store.videoUrl = videoUrl
 			store.isOpen = true;
 		},

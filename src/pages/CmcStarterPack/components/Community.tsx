@@ -1,6 +1,6 @@
 import {Flex, Text} from "@chakra-ui/react";
 import React from "react";
-import {ProductBox} from "@/pages/StarterPack/components/ProductList";
+import {ProductBox} from "@/pages/CmcStarterPack/components/ProductList";
 
 export const Community = () => {
 	const COMMUNITIES = [

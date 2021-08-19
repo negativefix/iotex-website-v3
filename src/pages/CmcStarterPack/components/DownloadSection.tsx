@@ -1,10 +1,10 @@
 import {Box, Flex, Image, Link, Text, useBreakpointValue} from "@chakra-ui/react";
+import HighLight from "@/components/HighLight";
 import React from "react";
 import {useStore} from "@/store/index";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import Completed from "@/pages/CmcStarterPack/components/Completed";
 import {helper} from "@/utils/helper";
-import HighLight from "@/components/HighLight";
 
 export const DownloadSection = observer(() => {
 	const {lang} = useStore()
@@ -67,23 +67,21 @@ export const DownloadSection = observer(() => {
 				fontSize={{base: '0.9rem', xl: '1.2rem', '2xl': '3rem'}}
 				mt={14}
 			>
-				<Text
-					fontSize={{xl: '1.2rem', '2xl': '3rem'}}
-					fontWeight={600}
-					mt={20}
-				>
-					<HighLight
+				<HighLight
 
-						sourceStr={lang.t("starter.pack.media.step3")}
-						keyArr={[
-							{
-								word: 'STEP 3.',
-								link: ""
-							},
-						]}
-						markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
-					/>
-				</Text>
+					sourceStr={lang.t("cmc.starter.pack.section1.subtitle3")}
+					keyArr={[
+						{
+							word: 'REQUIREMENT 3.',
+							link: ""
+						},
+						{
+							word: 'CMC REWARDS',
+							link: ""
+						},
+					]}
+					markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
+				/>
 			</Box>
 			<Flex
 				flexDirection={{base: 'column', md: 'row'}}
@@ -155,6 +153,12 @@ export const DownloadSection = observer(() => {
 				}
 			</Flex>
 
+			<Box textAlign={'center'} mt={{base: 20}} whiteSpace={{base: 'pre-line'}} fontWeight={600}
+			     fontSize={{base: '1rem', md: '1.5rem'}}>
+				<HighLight sourceStr={'CMC Earn Code \n Join-IoTeX-100'} keyArr={[{word: 'Join-IoTeX-100', link: ''}]}
+				           markActiveStyle={{color: "rgba(68, 255, 178, 1)", fontSize: keyWordFontSize}}
+				/>
+			</Box>
 
 		</>
 	)

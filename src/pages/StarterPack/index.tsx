@@ -1,205 +1,142 @@
 import React from "react";
-import BasicLayout from "../../Layouts/BasicLayout";
-import {Box, Divider, Flex, SimpleGrid, Text, Image} from "@chakra-ui/react";
+import {observer} from "mobx-react-lite";
 import {useStore} from "@/store/index";
-import {Footer} from "@/components/Footer";
-import SocialCard from "@/pages/StarterPack/components/SocialCard";
-
-import LogoCard from "@/pages/StarterPack/components/LogoCard";
-import ProductList from "@/pages/StarterPack/components/ProductList";
-import LearnPart from "@/pages/StarterPack/components/LearnPart";
-import HighLight from "@/components/HighLight";
-import {DownloadSection} from "@/pages/StarterPack/components/DownloadSection";
-import {Community} from "@/pages/StarterPack/components/Community";
+import BasicLayout from "../../Layouts/BasicLayout";
 import {Banner} from "@/pages/StarterPack/components/Banner";
-import {Subscribe} from "@/pages/StarterPack/components/Subscribe";
+import {Box, Divider, Flex, Image, Link, Text} from "@chakra-ui/react";
+import IntroSection from "@/pages/StarterPack/components/IntroSection";
+import {Footer} from "@/components/Footer";
+import {Subscribe} from "@/pages/CmcStarterPack/components/Subscribe";
+import {DownloadSection} from "@/pages/StarterPack/components/DownloadSection";
+import ExchangeSection from "@/pages/StarterPack/components/ExchangeSection";
+import {helper} from "@/utils/helper";
+import HighLight from "@/components/HighLight";
+import MediaChannel from "@/pages/StarterPack/components/MediaChannel";
+import ExploreContent from "@/pages/StarterPack/components/ExploreContent";
+import Technology from "@/pages/StarterPack/components/Technology";
+import LiveProject from "@/pages/StarterPack/components/LiveProject";
 
 const StarterPack = () => {
 	const {lang} = useStore()
 
-	const socials = [
-		{
-			text:"YouTube",
-			desc:"See latest panels, conferences, and updates",
-			link:"https://www.youtube.com/channel/UCdj3xY3LCktuamvuFusWOZw",
-			image:"images/starter-pack/icon_youtube.png"
-		},
-		{
-			text: "Reddit",
-			image: "images/starter-pack/icon_Reddit.png",
-			desc: 'Chat with communities',
-			link: 'https://www.reddit.com/r/IoTeX/'
-		},
-		{
-			text: "Twitter",
-			image: "images/starter-pack/icon_twitter.png",
-			desc: 'Follow the latest \n IoTeX news',
-			link: 'https://twitter.com/iotex_io'
-		},
-		{
-			text: "Telegram",
-			image: "images/starter-pack/icon_telegram.png",
-			desc: 'Chat and read our \n announcements',
-			link: 'https://t.me/iotexchannel'
-		},
-		// {
-		// 	text: "Discord",
-		// 	image: "images/starter-pack/icon_Discord.png",
-		// 	desc: 'Discuss with communities',
-		// 	link: 'https://iotex.io/devdiscord'
-		// },
-	]
-
-
-	const lineOneLogos = [
-		{img: 'images/starter-pack/Binance_logo.png', width: '60%',url:'https://www.binance.com/en/trade/IOTX_USDT?theme=dark&type=spot'},
-		{img: 'images/starter-pack/logo_heco.png', width: {base:'60%',xl:'auto'},url:'https://www.huobi.com/en-us/exchange/iotx_usdt'},
-		{img: 'images/starter-pack/gateio_h_en.png', width: '60%',url:'https://www.gate.io/trade/iotx_usdt'},
-		{img: 'images/starter-pack/logo_kucoin.png', width: {base:'60%',xl:'auto'},url:'https://trade.kucoin.com/IOTX-BTC'},
-		{img: 'images/starter-pack/bittrex-global-vector-logo.png', width: '60%',url:'https://bittrex.com/Market/Index?MarketName=BTC-IOTX'},
-		{img: 'images/starter-pack/logo_wazirx.png', width: {base:'60%',xl:'auto'},url:'https://wazirx.com/exchange/IOTX-USDT'},
-	]
-	const lineTwoLogos = [
-		{img: 'images/starter-pack/logo_upbit.png', width: '60%',url:'https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX'},
-		{img: 'images/starter-pack/logo_coinex.png', width: '60%',url:'https://www.coinex.com/exchange?currency=usdt&dest=iotx&tab=limit'},
-		{img: 'images/starter-pack/logo_coindcx.png', width: '60%',url:'https://coindcx.com/trade/IOTXBTC'},
-		{img: 'images/starter-pack/logo_pionex.png', width: '60%',url:'https://www.pionex.com/en-US/trade/IOTX_USDT/pionex.v2'},
-		{img: 'images/starter-pack/logo_mexc.png', width: '60%',url:'https://www.mexc.com/exchange/IOTX_USDT'},
-		{img: 'images/starter-pack/logo_hotbit.png', width: '60%',url:'https://www.hotbit.io/exchange?symbol=IOTX_USDT'},
-	]
-	const lineThreeLogos = [
-		{img: 'images/starter-pack/logo_bilaxy.png', width: '60%',url:'https://bilaxy.com/trade/IOTX_ETH'},
-		{img: 'images/starter-pack/logo_coinone.png', width: {base:'60%',xl:'auto'},url:'https://coinone.co.kr/exchange/trade/iotx/'},
-		{img: 'images/starter-pack/logo_bitmart.png', width: '60%',url:'https://www.bitmart.com/trade/en?symbol=IOTX_USDT&layout=basic'},
-		{img: 'images/starter-pack/logo_hitbtc.png', width: '60%',url:'https://hitbtc.com/iotx-to-btc'},
-		{img: 'images/starter-pack/logo_bhex.png', width: '60%',url:'https://www.bhex.com/en-us/exchange/IOTX/USDT'},
-
-	]
 	return (
 		<BasicLayout name={'starter-pack'}>
-
 			<Banner/>
+
 			<Box
 				maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
 				mx={'auto'}
-
+				mt={{base: 20, md: 20, xl: 40}}
 			>
-				<Box
-					fontWeight={600}
-					fontSize={{base:'1.15rem',xl: '1.8rem', '2xl': '3.5rem'}}
-				>
-					<HighLight
+				{/*5min intro*/}
+				<IntroSection/>
+				{/*<TechDeviceSection/>*/}
 
-						sourceStr={lang.t("starter.pack.section1.title")}
-						keyArr={[
-							{
-								word: 'CMC REWARDS',
-								link: ""
-							},
-						]}
-						markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
-					/>
-				</Box>
+				{/*HOW TO GET YOUR FIRST NFT WITH IOTEX?*/}
+				<Text
+					id='how-to-get-your-first-nft-with-iotex'
+					fontSize={{base: '1.15rem', xl: '2rem', '2xl': '3.5rem'}}
+					fontWeight={600}
+					mt={40}
+				>
+					{lang.t('starter.pack.title2')}
+				</Text>
+
 				<Divider mt={3} mb={10}/>
-
-				<Box
-					fontWeight={600}
-					fontSize={{base:'0.9rem',xl: '1.2rem', '2xl': '3rem'}}
+				<Text
+					mt={10}
+					fontSize={{'2xl': '1.25rem'}}
 				>
-					<HighLight
-
-						sourceStr={lang.t("starter.pack.section1.subtitle1")}
-						keyArr={[
-							{
-								word: 'REQUIREMENT 1.',
-								link: ""
-							},
-						]}
-						markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
-					/>
-				</Box>
-				<SimpleGrid columns={[2,4]} mt={10} spacing={5}>
-					{
-						socials.map((s, index) => {
-							return (
-								<SocialCard text={s.text} img={s.image} desc={s.desc} link={s.link} key={index}/>
-							)
-						})
-					}
-				</SimpleGrid>
-
-
-				<Box
-					fontWeight={600}
-					fontSize={{base:'0.9rem',xl: '1.2rem', '2xl': '3rem'}}
-					mt={14}
-				>
-					<HighLight
-
-						sourceStr={lang.t("starter.pack.section1.subtitle2")}
-						keyArr={[
-							{
-								word: 'REQUIREMENT 2.',
-								link: ""
-							},
-						]}
-						markActiveStyle={{color: "rgba(68, 255, 178, 1)"}}
-					/>
-				</Box>
+					{lang.t('starter.pack.caption2')}
+				</Text>
+				<MediaChannel/>
 				<Subscribe/>
 				<DownloadSection/>
-			</Box>
 
-			<Box
-				maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}}
-				mx={'auto'}
-				mt={40}
-			>
 				<Text
+					mt={40}
 					fontWeight={600}
-					fontSize={{base:'1.15rem',xl: '1.8rem', '2xl': '3.5rem'}}
+					fontSize={{base: '1.15rem', xl: '1.8rem', '2xl': '3.5rem'}}
 				>
-					ENGAGE
+					{lang.t('starter.pack.title3')}
 				</Text>
 				<Divider mt={3} mb={10}/>
 				<Text
-					fontSize={{base:'0.9rem',xl: '1.2rem', '2xl': '3rem'}}
-					fontWeight={600}
+					fontSize={{'2xl': '1.25rem'}}
+
 				>
-					PURCHASE IOTX IN EXCHANGES
+					{lang.t('starter.pack.caption3')}
 				</Text>
-				<SimpleGrid columns={[3,4,4,6]} mt={10} spacing={5}>
-					{
-						lineOneLogos.map((logo, index) => {
-							return (
-								<LogoCard img={logo.img} width={logo.width} key={index} url={logo.url}/>
-							)
-						})
-					}
-					{
-						lineTwoLogos.map((logo, index) => {
-							return (
-								<LogoCard img={logo.img} width={logo.width} key={index} url={logo.url}/>
-							)
-						})
-					}
-					{
-						lineThreeLogos.map((logo, index) => {
-							return (
-								<LogoCard img={logo.img} width={logo.width} key={index} url={logo.url}/>
-							)
-						})
-					}
-				</SimpleGrid>
+				<Technology/>
 
-				<ProductList/>
+				{/*IOTEX LIVE PROJECTS*/}
+				<Text
+					mt={40}
+					fontWeight={600}
+					fontSize={{base: '1.15rem', xl: '1.8rem', '2xl': '3.5rem'}}
+				>
+					{lang.t('starter.pack.title4')}
+				</Text>
+				<Divider mt={3} mb={10}/>
+				<Text mt={10} fontSize={{'2xl': '1.25rem'}}>{lang.t('starter.pack.caption4')}</Text>
+				<LiveProject/>
 
-				<Community/>
+				{/*ENGAGE WITH IOTEX*/}
+				<Text
+					mt={40}
+					fontWeight={600}
+					fontSize={{base: '1.15rem', xl: '1.8rem', '2xl': '3.5rem'}}
+				>
+					{lang.t('starter.pack.title5')}
+				</Text>
+				<Divider mt={3} mb={10}/>
+				<Link _hover={{}} href='#how-to-get-your-first-nft-with-iotex'>
+					<Text mt={10} color={'#44FFB2'} fontSize={{'2xl': '1.25rem'}}
+					>{lang.t('starter.pack.caption5')}</Text>
+				</Link>
+				<ExchangeSection/>
+				<Flex
+					bg={'linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 133.06%);'}
+					borderRadius={'20px'}
+					px={{base: 10, xl: 20}}
+					py={10}
+					mt={10}
+					justifyContent={'space-between'}
+					flexDirection={{base: 'column', md: 'row'}}
+					alignItems={'center'}
+				>
+					<Text whiteSpace={'pre-line'} fontSize={{base: '1.25rem', md: '1.3rem', 'xl': '2.25rem'}} fontWeight={600}
+					      textAlign={{base: 'center', md: 'unset'}}>
+						{'Your One-stop Shop for \n Must-know Information \n' +
+						'about IoTeX.'}
+					</Text>
+					<Link href={'https://onboard.iotex.io/'} isExternal _focus={{}} _hover={{}}>
+						<Flex
+							mr={5}
+							flexDirection={'column'}
+							alignItems={'center'}
+						>
+							<Image src={helper.cdn('images/starter-pack/Onboarding.png')} w={{base: '30%', md: '55%'}}
+							       mt={{base: 5, md: 0}}/>
+							<Text fontWeight={600}>{lang.t('onboarding.Pack')}</Text>
+							<Text whiteSpace={'pre-line'} textAlign={'center'} mt={2}
+							      fontSize={'0.75rem'}>{'Explore the Multiple Facets \n of IoTeX'}</Text>
+						</Flex>
+					</Link>
+				</Flex>
+
+				<Text
+					fontSize={{xl: '1.2rem', '2xl': '3rem'}}
+					fontWeight={600}
+					mt={20}
+				>
+					EXPLORE OUR CONTENT
+				</Text>
 			</Box>
-			<LearnPart/>
+			<ExploreContent/>
+
 			<Footer/>
 		</BasicLayout>
 	)
 }
-
-export default StarterPack
+export default observer(StarterPack)

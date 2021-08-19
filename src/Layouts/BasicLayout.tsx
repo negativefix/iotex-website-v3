@@ -55,9 +55,13 @@ const BasicLayout = ({children, name}) => {
         title:'',
         meta:''
       },
-      'starter-pack':{
+      'cmc-starter-pack':{
         title:'Coin Market Cap + IoTeX (IOTX) Campaign: Staking, Token, and Wallet',
         meta:'As a CMC Stake & Earn Campaign partner. IoTeX is launching one of the most extensive educational campaigns in the crypto space, where 25,000 winners will be selected.'
+      },
+      'starter-pack':{
+        title:'',
+        meta:''
       }
     }
     globalStyle()
