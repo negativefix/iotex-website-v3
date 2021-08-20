@@ -42,7 +42,7 @@ export const App = observer(() => {
 	  { path:'/policy', component:Policy},
 	  { path: '/cmc', component: CmcStarterPack},
 	  { path: '/iopay', component: Iopay},
-	  { path: '/get-started', component: StarterPack}
+	  { path: '/start', component: StarterPack}
   ]
 	useEffect(() => {
 		lang.init();
