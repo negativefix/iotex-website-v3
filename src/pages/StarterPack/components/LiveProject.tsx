@@ -113,17 +113,11 @@ const LiveProject = () => {
 						fontWeight={600}
 						whiteSpace={{base:'normal',lg:'pre-line'}}
 					>{lang.t('starter.pack.project.title2')}</Text>
-					<Text
-						mt={5}
-						fontSize={{xl: '1.5rem', '2xl': '3rem'}}
-						fontWeight={600}
-						whiteSpace={{base:'normal',lg:'pre-line'}}
-					>{lang.t('starter.pack.project.title2-1')}</Text>
 				</Box>
 
 				<Box w={{base:'100%',lg:'70%'}}
 				>
-					<Text mt={{base:5,lg:0}} whiteSpace={'pre-line'} fontSize={'0.9rem'}>{lang.t('starter.pack.project.caption4')}</Text>
+					<Text mt={{base:5,lg:0}} whiteSpace={'pre-line'} fontSize={'0.9rem'} dangerouslySetInnerHTML={{__html:lang.t('starter.pack.project.caption4')}}/>
 
 					<Box
 						bg={' linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)'}

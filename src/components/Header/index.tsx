@@ -49,6 +49,7 @@ export const Header = observer(() => {
     { name: lang.t("blog"), path: "/blog", blank: true },
     // { name: lang.t("medium"), path: "https://iotex.medium.com/", blank: true },
     { name: lang.t("faq"), path: "/faq", blank: false },
+    { name:lang.t('for.business'),path:'/enterprise',blank:false}
   ];
 
   const devicesConfig = [
@@ -455,6 +456,7 @@ export const Header = observer(() => {
               >
                 {lang.t("about")} &nbsp;&nbsp;
                 <TriangleDownIcon w="12px" />
+                &nbsp;&nbsp; &nbsp;
               </Text>
               <Box className="dropMenuUl">
                 {aboutConfig.map((item) => {
@@ -652,7 +654,7 @@ export const Header = observer(() => {
                 h="100%"
                 pt="4.5rem"
                 className="menusMobile"
-                bg={{base: `url(${helper.cdn('images/email_popup.png')})`, md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
+                bg={{base: `url(images/nav_mobile_bg.png)`, md: "linear-gradient(147.16deg, rgba(255, 255, 255, 0.1) 14.71%, rgba(255, 255, 255, 0) 114.16%)"}}
                 css={{
                   backdropFilter: "blur(50px)",
                   animation: "fadeIn 0.3s linear",
