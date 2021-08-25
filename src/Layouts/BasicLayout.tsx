@@ -60,8 +60,8 @@ const BasicLayout = ({children, name}) => {
         meta:'As a CMC Stake & Earn Campaign partner. IoTeX is launching one of the most extensive educational campaigns in the crypto space, where 25,000 winners will be selected.'
       },
       'starter-pack':{
-        title:'',
-        meta:''
+        title:'Get Started With IOTEX and Recive Your First IOTX NFT on us!',
+        meta:' Get started with IOTEX and receive your free NFT in a less than a minute. All you need to know about IOTX token, team and blockchain devices. Learn more...'
       }
     }
     globalStyle()
