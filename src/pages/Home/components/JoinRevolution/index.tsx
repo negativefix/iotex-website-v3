@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex, Input, Image, Text } from "@chakra-ui/react";
+import {Box, Flex, Input, Image, Text, Link} from "@chakra-ui/react";
 import { useStore } from "@/store/index";
 import { observer } from "mobx-react-lite";
 import { Footer } from "@/components/Footer";
@@ -175,13 +175,37 @@ export const JoinRevolution = observer(() => {
             xl: "4rem",
           }}
           fontWeight="semibold"
-          mb={{ base: "3rem", lg: "5rem" }}
           whiteSpace="pre-line"
           textAlign="center"
         >
           {lang.t("get.started")}
         </Text>
+        <Box
+          position="relative"
+          cursor="pointer"
+          height={{ "2xl": "6rem" }}
+        >
+          <Box
+            w="100%"
+            position="absolute"
+            top="0"
+            css={{
+              transition: "all 0.6s",
+              marginTop: 0,
+              opacity: 0.8,
+              "&:hover": {
+                marginTop: "-10px",
+                opacity: 1,
+              },
+            }}
+          >
+            <Link href={'/start'}>
+              <Image src='images/home/get_started.png' w={'30%'} mx={'auto'} my={{base:'1.5rem',lg:'2.5rem'}}/>
+            </Link>
+          </Box>
+        </Box>
         <Flex
+          mt={36}
           flexDirection={{ base: "column", md: "row" }}
           justifyContent="space-between"
           alignItems="stretch"

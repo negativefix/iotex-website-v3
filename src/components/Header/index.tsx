@@ -18,6 +18,7 @@ export const Header = observer(() => {
   const { isOpen, onToggle } = useDisclosure();
 
   const navConfig = [
+    {name:lang.t('get.started'),path:'/start',blank:false},
     { name: lang.t("iotx"), path: "/for-investors", blank: false },
     { name: lang.t("team"), path: "/team", blank: false },
     {
@@ -60,14 +61,15 @@ export const Header = observer(() => {
   const exploreConfig = [
     {
       name: lang.t("GET.STARTED"),
+      path:'/start',
       lists: [
-        {
-          name: lang.t("ioPay.wallet"),
-          path: "/iopay/",
-          blank: true,
-          icon: "images/explore/icon_wallet_n.png",
-          icon_active: "images/explore/icon_wallet_s.png",
-        },
+        // {
+        //   name: lang.t("ioPay.wallet"),
+        //   path: "/iopay/",
+        //   blank: true,
+        //   icon: "images/explore/icon_wallet_n.png",
+        //   icon_active: "images/explore/icon_wallet_s.png",
+        // },
         // {
         //   name: lang.t("What.is.IoTeX"),
         //   path: "https://onboard.iotex.io/introduction",
@@ -89,20 +91,20 @@ export const Header = observer(() => {
         //   icon: "images/explore/icon_map_n.png",
         //   icon_active: "images/explore/icon_map_s.png",
         // },
-        {
-          name: lang.t("onboarding.Pack"),
-          path: "https://onboard.iotex.io/",
-          blank: true,
-          icon: "images/explore/icon_getiotx_n.png",
-          icon_active: "images/explore/icon_getiotx_n.png",
-        },
-        {
-          name: lang.t("ecosystem"),
-          path: "https://ecosystem.iotex.io/",
-          blank: true,
-          icon: "images/explore/icon_ecopage_n.png",
-          icon_active: "images/explore/icon_ecopage_s.png",
-        },
+        // {
+        //   name: lang.t("onboarding.Pack"),
+        //   path: "https://onboard.iotex.io/",
+        //   blank: true,
+        //   icon: "images/explore/icon_getiotx_n.png",
+        //   icon_active: "images/explore/icon_getiotx_n.png",
+        // },
+        // {
+        //   name: lang.t("ecosystem"),
+        //   path: "https://ecosystem.iotex.io/",
+        //   blank: true,
+        //   icon: "images/explore/icon_ecopage_n.png",
+        //   icon_active: "images/explore/icon_ecopage_s.png",
+        // },
       ],
     },
     {
@@ -275,47 +277,6 @@ export const Header = observer(() => {
           display={{ base: "none", lg: "flex" }}
         >
           <Flex>
-            <Box
-              className="dropHoverText"
-              position="relative"
-              px={{
-                base: "0.5rem",
-                lg: "1rem",
-                xl: "1.25rem",
-                "2xl": "1.5rem",
-              }}
-            >
-              <Text
-                as={Text}
-                fontWeight="semibold"
-                fontSize={{ base: "0.875rem", lg: "1rem", "2xl": "1.25rem" }}
-                cursor="pointer"
-                lineHeight={{ base: "0", md: "4.5rem" }}
-                className="dropMenuText"
-              >
-                {lang.t("get.started")} <TriangleDownIcon w="12px" />
-              </Text>
-              <Box className="dropMenuUl">
-                {startedConfig.map((item) => {
-                  return (
-                    <Box
-                      key={item.name}
-                      className="dropMenuItem"
-                      px={{
-                        base: "0.5rem",
-                        lg: "1rem",
-                        xl: "1.25rem",
-                        "2xl": "1.5rem",
-                      }}
-                    >
-                      <a href={item.path} target={item.blank ? "_blank" : ""}>
-                        {item.name}
-                      </a>
-                    </Box>
-                  );
-                })}
-              </Box>
-            </Box>
             {navConfig.map((item) => {
               return (
                 <a
@@ -541,14 +502,33 @@ export const Header = observer(() => {
                         mx={index === 1 ? "10%" : ""}
                         mr={index === 2 ? "10%" : ""}
                       >
-                        <Text
-                          fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
-                          color="grayColor3"
-                          fontWeight="semibold"
-                          mb="1.5rem"
-                        >
-                          {item.name}
-                        </Text>
+                        {
+                          item.path?(
+                            <Link
+                              href={item.path}
+                              _hover={{}}
+                              _focus={{}}
+                            >
+                              <Text
+                                fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
+                                color="grayColor3"
+                                fontWeight="semibold"
+                                mb="1.5rem"
+                              >
+                                {item.name}
+                              </Text>
+                            </Link>
+                          ):(
+                            <Text
+                              fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
+                              color="grayColor3"
+                              fontWeight="semibold"
+                              mb="1.5rem"
+                            >
+                              {item.name}
+                            </Text>
+                          )
+                        }
                         {item.lists.map((option) => {
                           return (
                             <a
