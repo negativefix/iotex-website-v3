@@ -62,6 +62,10 @@ const BasicLayout = ({children, name}) => {
       'starter-pack':{
         title:'Get Started With IOTEX and Recive Your First IOTX NFT on us!',
         meta:' Get started with IOTEX and receive your free NFT in a less than a minute. All you need to know about IOTX token, team and blockchain devices. Learn more...'
+      },
+      'hackathon':{
+        title:'',
+        meta:''
       }
     }
     globalStyle()

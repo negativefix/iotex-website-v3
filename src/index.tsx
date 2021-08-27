@@ -22,6 +22,7 @@ import Cookie from "@/components/Cookie";
 import Iopay from '@/pages/Iopay'
 import CmcStarterPack from "@/pages/CmcStarterPack";
 import StarterPack from "@/pages/StarterPack";
+import Hackathon from "@/pages/Hackathon";
 
 // hotjar.initialize(2494554, 6);
 
@@ -42,7 +43,8 @@ export const App = observer(() => {
 	  { path:'/policy', component:Policy},
 	  { path: '/cmc', component: CmcStarterPack},
 	  { path: '/iopay', component: Iopay},
-	  { path: '/start', component: StarterPack}
+	  { path: '/start', component: StarterPack},
+	  { path: '/hackathon-india', component:Hackathon}
   ]
 	useEffect(() => {
 		lang.init();
