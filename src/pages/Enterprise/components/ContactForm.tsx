@@ -40,7 +40,7 @@ const ContactForm = () => {
 			}}
 			backgroundPosition={{base:'left top 5rem',md:'left top'}}
 			backgroundSize={{base:'100%',md:'50%'}}
-			pt={{base:10,xl:14}}
+			mt={{base:10,xl:-56}}
 		>
 
 			<Box

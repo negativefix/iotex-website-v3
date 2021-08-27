@@ -16,6 +16,7 @@ import SubTitle from "./components/SubTitle";
 
 import {Title} from "../Pebble/Title";
 import {helper} from "@/utils/helper";
+import Video from "@/pages/Enterprise/components/Video";
 
 const Enterprise = () => {
 	const {lang} = useStore()
@@ -256,6 +257,7 @@ const Enterprise = () => {
 						</SimpleGrid>
 					</Flex>
 				</Flex>
+				<Video/>
 				<ContactForm/>
 				<Footer/>
 			</Box>

@@ -17,7 +17,7 @@ const LogoCard = ({img, width, url}) => {
 				h={{base: '3rem', xl: '4rem'}}
 			>
 				<Image _focusVisible={{outline: 0}}
-				       src={helper.cdn(img)} w={width}/>
+				       src={img} w={width}/>
 			</Flex>
 		</Link>
 	)

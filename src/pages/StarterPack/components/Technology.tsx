@@ -123,7 +123,7 @@ const Technology = () => {
 
 			<Container>
 				<Flex justifyContent={'space-between'} flexDirection={{base: 'column', xl: "row"}}>
-					<Box w={{base: '100%', xl: '65%'}}>
+					<Box w={{base: '100%', xl: '70%'}}>
 						<Box
 							fontWeight={700}
 							fontSize={{base: '1.15rem', xl: '1.8rem', '2xl': '3.5rem'}}
@@ -144,16 +144,13 @@ const Technology = () => {
 						</UnorderedList>
 						<Text>And much more!</Text>
 						<Text>This revolutionary technology is shipping this September</Text>
-						<Text mt={5}>What can Pebble be used for? Broadly speaking, Pebble is an ideal solution for the ever-growing
-							yet rigid areas of supply chain, NFTs based on real-world objects, contract settlement, remote monitoring,
-							mobile asset tracking, and process automation. Anything that uses data and has a future, Pebble is primed
-							to disrupt.</Text>
+						<Text mt={5} dangerouslySetInnerHTML={{__html:lang.t('starter.pack.tech.caption8')}}/>
 					</Box>
 					<Flex
 						bgImg={'url(images/starter-pack/pebble_bg.png)'}
 						bgSize={'cover'}
 						bgPos={'center'}
-						w={{base: '100%', xl: '40%'}}
+						w={{base: '100%', xl: '35%'}}
 						mr={{md: -14}}
 						justifyContent={'center'}
 						bgRepeat={'no-repeat'}

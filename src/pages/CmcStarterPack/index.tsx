@@ -53,26 +53,30 @@ const CmcStarterPack = () => {
 
 	const lineOneLogos = [
 		{img: 'images/starter-pack/Binance_logo.png', width: '60%',url:'https://www.binance.com/en/trade/IOTX_USDT?theme=dark&type=spot'},
+		{img: "images/token/exchange/logo_coinbase_n.png", width: '60%',url: "https://pro.coinbase.com/trade/IOTX-USD"},
 		{img: 'images/starter-pack/logo_heco.png', width: {base:'60%',xl:'auto'},url:'https://www.huobi.com/en-us/exchange/iotx_usdt'},
-		{img: 'images/starter-pack/gateio_h_en.png', width: '60%',url:'https://www.gate.io/trade/iotx_usdt'},
-		{img: 'images/starter-pack/logo_kucoin.png', width: {base:'60%',xl:'auto'},url:'https://trade.kucoin.com/IOTX-BTC'},
+		{img: 'images/starter-pack/logo_upbit.png', width: '60%',url:'https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX'},
 		{img: 'images/starter-pack/bittrex-global-vector-logo.png', width: '60%',url:'https://bittrex.com/Market/Index?MarketName=BTC-IOTX'},
-		{img: 'images/starter-pack/logo_wazirx.png', width: {base:'60%',xl:'auto'},url:'https://wazirx.com/exchange/IOTX-USDT'},
+		{img: 'images/starter-pack/gateio_h_en.png', width: '60%',url:'https://www.gate.io/trade/iotx_usdt'},
 	]
 	const lineTwoLogos = [
-		{img: 'images/starter-pack/logo_upbit.png', width: '60%',url:'https://upbit.com/exchange?code=CRIX.UPBIT.BTC-IOTX'},
+		{img: 'images/starter-pack/logo_kucoin.png', width: {base:'60%',xl:'auto'},url:'https://trade.kucoin.com/IOTX-BTC'},
+		{img: 'images/starter-pack/logo_hotbit.png', width: '60%',url:'https://www.hotbit.io/exchange?symbol=IOTX_USDT'},
+		{img: 'images/starter-pack/logo_wazirx.png', width: {base:'60%',xl:'auto'},url:'https://wazirx.com/exchange/IOTX-USDT'},
 		{img: 'images/starter-pack/logo_coinex.png', width: '60%',url:'https://www.coinex.com/exchange?currency=usdt&dest=iotx&tab=limit'},
 		{img: 'images/starter-pack/logo_coindcx.png', width: '60%',url:'https://coindcx.com/trade/IOTXBTC'},
 		{img: 'images/starter-pack/logo_pionex.png', width: '60%',url:'https://www.pionex.com/en-US/trade/IOTX_USDT/pionex.v2'},
-		{img: 'images/starter-pack/logo_mexc.png', width: '60%',url:'https://www.mexc.com/exchange/IOTX_USDT'},
-		{img: 'images/starter-pack/logo_hotbit.png', width: '60%',url:'https://www.hotbit.io/exchange?symbol=IOTX_USDT'},
 	]
 	const lineThreeLogos = [
+		// {img: 'images/starter-pack/logo_pionex_n.png', width: '60%',url:''},
+		// {img: 'images/starter-pack/logo_vcc.png', width: '60%',url:''},
 		{img: 'images/starter-pack/logo_bilaxy.png', width: '60%',url:'https://bilaxy.com/trade/IOTX_ETH'},
-		{img: 'images/starter-pack/logo_coinone.png', width: {base:'60%',xl:'auto'},url:'https://coinone.co.kr/exchange/trade/iotx/'},
 		{img: 'images/starter-pack/logo_bitmart.png', width: '60%',url:'https://www.bitmart.com/trade/en?symbol=IOTX_USDT&layout=basic'},
 		{img: 'images/starter-pack/logo_hitbtc.png', width: '60%',url:'https://hitbtc.com/iotx-to-btc'},
+		{img: 'images/starter-pack/logo_coinone.png', width: {base:'60%',xl:'auto'},url:'https://coinone.co.kr/exchange/trade/iotx/'},
+		// {img: 'images/starter-pack/logo_zt.png', width: {base:'60%',xl:'auto'},url:''},
 		{img: 'images/starter-pack/logo_bhex.png', width: '60%',url:'https://www.bhex.com/en-us/exchange/IOTX/USDT'},
+		{img: 'images/starter-pack/logo_mexc.png', width: '60%',url:'https://www.mexc.com/exchange/IOTX_USDT'},
 
 	]
 	return (
