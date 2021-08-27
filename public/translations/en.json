@@ -902,6 +902,7 @@
   "hackathon.grow.caption": "In order to democratise IoT generated data with blockchain technology,\n we need your help! We welcome all builders and developers to come\n disrupt this world of data monopoly by creating innovative solutions\n using the IoTeX framework.",
   "hackathon.track.title": "Tracks",
   "hackathon.track.subtitle1": "Use Data as a Trigger",
+  "hackathon.track.caption1": "If-This-Then-That (IFTTT) ",
   "hackathon.track.caption1_1": "Use data to kick off a workflow - an AR experience, or mint an NFT, or ANYTHING",
   "hackathon.track.caption1_2": "Calculate & settle payments - Service level agreements (SLAs) + insurance",
   "hackathon.track.caption1_3": "Notification system - Use data to trigger a message one or more parties",

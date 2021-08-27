@@ -47,6 +47,7 @@ const Tracks = () => {
 							{lang.t("hackathon.track.subtitle1")}
 						</Text>
 						<UnorderedList mt={5} fontSize={{base:'1rem',md:'1.5rem','2xl':'2rem'}} fontWeight={'500'} opacity={'85.26%'}>
+							<ListItem>{lang.t('hackathon.track.caption1')}</ListItem>
 							<ListItem>{lang.t('hackathon.track.caption1_1')}</ListItem>
 							<ListItem mt={1}>{lang.t('hackathon.track.caption1_2')}</ListItem>
 							<ListItem mt={1}>{lang.t('hackathon.track.caption1_3')}</ListItem>
