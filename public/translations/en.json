@@ -901,7 +901,7 @@
   "hackathon.grow.title": "Help Us Grow \nThe Internet of Trusted Things",
   "hackathon.grow.caption": "In order to democratise IoT generated data with blockchain technology,\n we need your help! We welcome all builders and developers to come\n disrupt this world of data monopoly by creating innovative solutions\n using the IoTeX framework.",
   "hackathon.track.title": "Tracks",
-  "hackathon.track.subtitle1": "Use Data as a Trigger:\n If-This-Then-That\n (IFTTT)",
+  "hackathon.track.subtitle1": "Use Data as a Trigger",
   "hackathon.track.caption1_1": "Use data to kick off a workflow - an AR experience, or mint an NFT, or ANYTHING",
   "hackathon.track.caption1_2": "Calculate & settle payments - Service level agreements (SLAs) + insurance",
   "hackathon.track.caption1_3": "Notification system - Use data to trigger a message one or more parties",
@@ -922,5 +922,6 @@
   "hackathon.about.title": "About IoTeX",
   "hackathon.about.caption": "IoTeX was founded as an open-source platform in 2017 with a vision for the Internet of Trusted Things, a decentralized ecosystem where humans and machines can interact with guaranteed security and trust. We are on a mission to ensure everyday people and businesses can own and control their devices, as well as the data and value they generate. By connecting the physical and digital worlds, IoTeX will democratize access to machine-backed DApps, assets, and services to deliver value to users and fuel the new machine economy.",
   "hackathon.developer.title": "Developer Support",
-  "hackathon.paw.access": "Password to Access: <span style='font-weight:600'>lumoslabs2021</span>"
+  "hackathon.paw.access": "Type <span style='font-weight:600'>lumoslabs2021</span> in the Chat to Start",
+  "hackathon": "Hackathon"
 }

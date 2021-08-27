@@ -116,7 +116,7 @@ const Tracks = () => {
 							<ListItem mt={1}>{lang.t('hackathon.track.caption3_5')}</ListItem>
 						</UnorderedList>
 					</Box>
-					<Image mt={10} src={'images/hackathon/img_tracks3.png'} w={{base:'50%',md:'25%'}} h={{base:'50%',md:'25%'}} mx={{base:'auto',md:'unset'}}/>
+					<Image mt={10} src={'images/hackathon/img_tracks3.png'} w={{base:'50%',md:'40%'}} h={{base:'50%',md:'40%'}} mx={{base:'auto',md:'unset'}}/>
 				</Flex>
 			</Box>
 		</>

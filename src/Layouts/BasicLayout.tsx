@@ -64,8 +64,8 @@ const BasicLayout = ({children, name}) => {
         meta:' Get started with IOTEX and receive your free NFT in a less than a minute. All you need to know about IOTX token, team and blockchain devices. Learn more...'
       },
       'hackathon':{
-        title:'',
-        meta:''
+        title:' IoTeX Hackathon India 2021 is Here. Join in and change the world!',
+        meta:'IoTeX Hackathon India is calling for amazing developers to bring their ideas and creativity to build a better smart device filled world. Learn more about how you can win 16,000$ in prizes....'
       }
     }
     globalStyle()
