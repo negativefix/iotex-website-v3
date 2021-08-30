@@ -1,34 +1,10 @@
 import {useStore} from '../../store';
 import {Flex, Box, Image, Text, chakra} from '@chakra-ui/react'
 import React, {useEffect, useState} from 'react'
-import axios from "axios"
 import {publicConfig} from "../../config/public";
 import {observer} from 'mobx-react-lite';
 import IopayHelmet from "@/pages/Iopay/IopayHelmet";
-
-const getIopayDownloadUrl = async () => {
-	const axiosInstance = axios.create({timeout: 5000})
-	const resp = await axiosInstance.get(publicConfig.IOPAY_GITHUB_API_URL)
-	if (resp.status !== 200) {
-		return
-	}
-	if (!resp.data.assets || !resp.data.assets.length) {
-		return
-	}
-	const packages = {mac: "", linux: "", window: ""}
-	resp.data.assets.forEach((item) => {
-		if (/.dmg$/.test(item.name)) {
-			packages.mac = item.browser_download_url
-		}
-		if (/.snap$/.test(item.name)) {
-			packages.linux = item.browser_download_url
-		}
-		if (/.exe$/.test(item.name)) {
-			packages.window = item.browser_download_url
-		}
-	})
-	return packages
-}
+import {getIopayDownloadUrl} from "../../config/public";
 
 const IopayBg = (props) => {
 	return (

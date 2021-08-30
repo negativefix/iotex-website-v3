@@ -1,10 +1,11 @@
 import {Box, Flex, Image, Link, Text, useBreakpointValue} from "@chakra-ui/react";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useStore} from "@/store/index";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import Completed from "@/pages/CmcStarterPack/components/Completed";
 import {helper} from "@/utils/helper";
 import HighLight from "@/components/HighLight";
+import {getIopayDownloadUrl, getIopayMirroLinkUrl, getOS, publicConfig} from "../../../config/public";
 
 export const DownloadSection = observer(() => {
 	const {lang} = useStore()
@@ -14,7 +15,16 @@ export const DownloadSection = observer(() => {
 			this.isClick = val
 		}
 	}));
-
+	const [packages, setPackages] = useState<{ mac: string; linux: string; window: string; }>()
+	const [mirroLinks,setMirroLinks] = useState<{ mac: string; linux: string; window: string; }>()
+	useEffect(() => {
+		getIopayDownloadUrl().then((res) => {
+			setPackages(res)
+		})
+		getIopayMirroLinkUrl().then((res)=>{
+			setMirroLinks(res)
+		})
+	}, [])
 	const MOBILE_LINK = [
 		{
 			img: 'images/starter-pack/playstore.png',
@@ -36,7 +46,7 @@ export const DownloadSection = observer(() => {
 		},
 		{
 			img: 'images/starter-pack/btn_mirror.png',
-			url: "https://iopay-app-cn.s3.cn-northwest-1.amazonaws.com.cn/iopay-v1.2.14.apk",
+			url: publicConfig.IOPAY_MIRROR_DOWNLOAD,
 			ml: {base: 8, md: 5},
 			display: {base: 'none', md: 'block'},
 			mt:{base: 3, md: 3,lg:3, xl: 0}
@@ -46,12 +56,12 @@ export const DownloadSection = observer(() => {
 	const DESKTOP_LINK = [
 		{
 			img: 'images/starter-pack/desktop.png',
-			url: "https://github.com/iotexproject/iotex-explorer/releases/download/v1.0.15/ioPay-1.0.15.dmg",
+			url: packages&&packages[getOS()],
 			ml: {base: 5, md: 5, xl: 14}
 		},
 		{
 			img: 'images/starter-pack/btn_mirror.png',
-			url: "https://iopay-app-cn.s3.cn-northwest-1.amazonaws.com.cn/ioPay-1.0.15.dmg",
+			url: mirroLinks&&mirroLinks[getOS()],
 			ml: 5,
 			display: {base: 'none', md: 'block'}
 
