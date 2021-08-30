@@ -30,7 +30,7 @@ const Banner = () => {
 							base: "2.25rem",
 							sm: "3rem",
 							lg: "3rem",
-							xl: "5.5rem",
+							xl: "4.8rem",
 							"2xl": "7.5rem",
 						}}
 						textAlign={'center'}
