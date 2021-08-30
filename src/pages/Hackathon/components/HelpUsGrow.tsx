@@ -67,7 +67,7 @@ const HelpUsGrow=()=>{
 					</Text>
 
 					<Flex justifyContent={'center'} mt={20} w={'100%'}>
-						<Button name={lang.t('register.now')} href={'https://xathon.mettle.com/event/IotexHackathonIndia'} size={{base: "100%", lg: "16rem",xl:'30rem'}} boxHeight={{base:'4rem',md:'5rem'}}/>
+						<Button name={lang.t('register.now')} href={'https://xathon.mettl.com/event/IotexHackathonIndia'} size={{base: "100%", lg: "16rem",xl:'30rem'}} boxHeight={{base:'4rem',md:'5rem'}}/>
 					</Flex>
 				</Flex>
 

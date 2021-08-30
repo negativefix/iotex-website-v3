@@ -58,7 +58,7 @@ const Banner = () => {
 					<Image src={'images/hackathon/lumos.png'} w={{base: '40%', md: '18%'}}/>
 
 					<Flex justifyContent={'center'} mt={5} w={'100%'}>
-						<Button name={lang.t('register.now')} href='https://xathon.mettle.com/event/IotexHackathonIndia'
+						<Button name={lang.t('register.now')} href='https://xathon.mettl.com/event/IotexHackathonIndia'
 						        size={{base: "100%", lg: "16rem", xl: '30rem'}} boxHeight={{base: '4rem', md: '4.7rem'}}/>
 					</Flex>
 					<Link href={'https://discord.gg/CVburMW5bd'} isExternal _focus={{}}>
