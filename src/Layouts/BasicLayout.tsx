@@ -59,6 +59,10 @@ const BasicLayout = ({children, name}) => {
         title:'Coin Market Cap + IoTeX (IOTX) Campaign: Staking, Token, and Wallet',
         meta:'As a CMC Stake & Earn Campaign partner. IoTeX is launching one of the most extensive educational campaigns in the crypto space, where 25,000 winners will be selected.'
       },
+      'cmc-stake':{
+        title:'Coin Market Cap Earn and Stake: Here is How to Stake IOTX and Get Rewards',
+        meta:'Here is how to stake and earn reward on IOTX. There are many ways to earn with IOTEX.  Read this quick guide..'
+      },
       'starter-pack':{
         title:'Get Started With IOTEX and Recive Your First IOTX NFT on us!',
         meta:' Get started with IOTEX and receive your free NFT in a less than a minute. All you need to know about IOTX token, team and blockchain devices. Learn more...'
