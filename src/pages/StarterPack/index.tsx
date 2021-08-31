@@ -43,10 +43,20 @@ const StarterPack = () => {
 
 				<Divider mt={3} mb={10}/>
 				<Text
+					textColor={'#44FFB2'}
 					mt={10}
-					fontSize={{'2xl': '1.25rem'}}
+					fontWeight={'600'}
+					fontSize={{xl: '1.35rem', '2xl': '3.5rem'}}
 				>
-					{lang.t('starter.pack.caption2')}
+					{lang.t('starter.pack.caption2_1')}
+				</Text>
+				<Text
+					textColor={'#9746ff'}
+					mt={3}
+					fontWeight={'600'}
+					fontSize={{xl: '1.35rem', '2xl': '3.5rem'}}
+				>
+					{lang.t('starter.pack.caption2_2')}
 				</Text>
 				<MediaChannel/>
 				<Subscribe/>
