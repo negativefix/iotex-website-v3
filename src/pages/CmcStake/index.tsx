@@ -17,6 +17,7 @@ import {Footer} from "@/components/Footer";
 import HighLight from "@/components/HighLight";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import {subgraphAPI} from "@/lib/iotexGraphApi";
+import {numberWithCommas} from "@/utils/index";
 
 
 const StatItem = ({text, value}) => (
@@ -46,6 +47,7 @@ const CmcStake = () => {
 		isOpen: false,
 		imgUrl: '',
 		stakers: 0,
+		transactions:0,
 		onClose: () => {
 			store.isOpen = false
 		},
@@ -79,9 +81,9 @@ const CmcStake = () => {
 	}, []);
 	const STATS = [
 		{text: 'DELEGATES', value: '70+'},
-		{text: 'STAKERS', value: store.stakers},
-		{text: 'TOTAL IOTX STAKED', value: 'xxxK+'},
-		{text: 'TOTAL VALUE LOCKED', value: '$70M+'},
+		{text: 'STAKERS', value: numberWithCommas(store.stakers)},
+		{text: 'TOTAL IOTX STAKED', value: '27%'},
+		{text: 'TRANSACTIONS', value: numberWithCommas(store.transactions)}
 	]
 
 	const CARD_CONTENT = [
