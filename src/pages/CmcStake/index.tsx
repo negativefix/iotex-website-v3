@@ -22,7 +22,7 @@ import {numberWithCommas} from "@/utils/index";
 
 const StatItem = ({text, value}) => (
 	<Box textAlign={'center'}>
-		<Text fontWeight={'500'} fontSize={{base: '2rem', md: '3.5rem'}}>{value}</Text>
+		<Text fontWeight={'500'} fontSize={{base: '2rem', md: '3rem',xl:'3rem','2xl':'3.5rem'}}>{value}</Text>
 		<Text fontSize={{base: '1rem', md: '1.25rem'}} mt={2}>{text}</Text>
 	</Box>
 )
@@ -88,7 +88,7 @@ const CmcStake = () => {
 
 	const CARD_CONTENT = [
 		{img: 'images/cmc-stake/NFT.png', text: 'Exclusive NFT'},
-		{img: 'images/cmc-stake/IOTX.png', text: '10 IOTX'},
+		{img: 'images/cmc-stake/IOTX.png', text: '20 IOTX'},
 		{img: 'images/cmc-stake/APY.png', text: '10% APY'},
 		{img: 'images/cmc-stake/other_perks.png', text: 'Other Perks'},
 	];
@@ -118,7 +118,7 @@ const CmcStake = () => {
 				<SimpleGrid
 					maxWidth={{base: "90%", md: "80%", "2xl": "1554px"}} mx="auto"
 					mt={28}
-					columns={[2, 2, 4]}
+					columns={[2, 2,2,2, 4]}
 					spacingY={10}
 				>
 					{
