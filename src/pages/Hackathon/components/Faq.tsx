@@ -1,7 +1,17 @@
 import React from "react";
 import {useStore} from "@/store/index";
 import {observer} from "mobx-react-lite";
-import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Text} from "@chakra-ui/react";
+import {
+	Accordion,
+	AccordionButton,
+	AccordionIcon,
+	AccordionItem,
+	AccordionPanel,
+	Box,
+	Flex, Image, Link,
+	Text
+} from "@chakra-ui/react";
+import {Button} from "@/components/Button";
 
 const FaqItem = ({faq, answer}) => {
 	return (
@@ -86,6 +96,16 @@ const Faq = () => {
 						))
 					}
 				</Accordion>
+				<Flex justifyContent={'center'} mt={20} w={'100%'}>
+					<Button name={lang.t('register.now')} href='https://xathon.mettl.com/event/IotexHackathonIndia'
+					        size={{base: "100%", lg: "16rem", xl: '30rem'}} boxHeight={{base: '4rem', md: '4.7rem'}}/>
+				</Flex>
+				<Link href={'https://discord.gg/CVburMW5bd'} isExternal _focus={{}}>
+					<Image mt={2} src={'images/hackathon/join_community.png'} w={{base: '80%', md: '40%'}} mx={'auto'}/>
+				</Link>
+				<Text mt={-5} fontSize={{base: '0.9rem', '2xl': '1rem'}}
+				      textAlign={'center'}
+				      dangerouslySetInnerHTML={{__html: lang.t('hackathon.paw.access')}}/>
 			</Box>
 		</>
 	)

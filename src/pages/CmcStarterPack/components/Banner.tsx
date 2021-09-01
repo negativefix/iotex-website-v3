@@ -2,6 +2,7 @@ import {Box, Flex, Text} from "@chakra-ui/react";
 import React from "react";
 import {useStore} from "@/store/index";
 import {helper} from "@/utils/helper";
+import {Button} from "@/components/Button";
 
 export const Banner=()=>{
 	const {lang} = useStore()
@@ -45,7 +46,7 @@ export const Banner=()=>{
 							sm: "3rem",
 							lg: "3rem",
 							xl: "4rem",
-							"2xl": "7.5rem",
+							"2xl": "6rem",
 						}}
 						mt={5}
 						fontWeight="semibold"
@@ -62,17 +63,18 @@ export const Banner=()=>{
 							base: "0.875rem",
 							sm: "1rem",
 							lg: "1.125rem",
-							xl: "1.75rem",
-							"2xl": "2.5rem",
+							xl: "1.6rem",
+							"2xl": "2.3rem",
 						}}
 						fontWeight="medium"
 						color="white"
 						w="80%"
 						textAlign="center"
 						whiteSpace={{base: "inherit", md: "pre-line"}}
-					>
-						{lang.t("cmc.starter.pack.subtitle")}
-					</Text>
+						mb={10}
+						dangerouslySetInnerHTML={{__html:lang.t("cmc.starter.pack.subtitle")}}
+					/>
+					<Button name={lang.t('cmc.banner.btn')} href={'/cmc-staking'} size={{base: "100%", lg: "16rem",xl:'30rem'}} boxHeight={{base:'4rem',md:'5rem'}}/>
 				</Flex>
 			</Box>
 		</Box>

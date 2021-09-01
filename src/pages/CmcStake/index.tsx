@@ -104,11 +104,11 @@ const CmcStake = () => {
 					flexDirection={{base: 'column-reverse', xl: 'row'}}
 				>
 					<Box width={{base: '100%', xl: '50%'}}>
-						<Text fontWeight={'600'} fontSize={{base: '2rem', lg: '3rem', xl: '4rem'}} lineHeight={{xl: '5.5rem'}}
+						<Text fontWeight={'600'} fontSize={{base: '2rem', lg: '3rem', xl: '4rem','2xl':'5rem'}} lineHeight={{xl: '5.5rem','2xl':'6.5rem'}}
 						      whiteSpace={{xl: 'pre-line'}}>
 							{lang.t("cmc.stake.title")}
 						</Text>
-						<Text fontWeight={'500'} fontSize={{md: '1.25rem'}} mt={5} pb={10}>
+						<Text fontWeight={'500'} fontSize={{md: '1.25rem','2xl':'2rem'}} mt={5} pb={10}>
 							{lang.t("cmc.stake.desc")}
 						</Text>
 					</Box>
@@ -156,8 +156,8 @@ const CmcStake = () => {
 					>
 						<Image src={'images/cmc-stake/img_staking.png'} w={{base: '50%', lg: '30%'}}/>
 						<Box mt={{base: 10, lg: 0}}>
-							<Text ml={{base: 0, lg: 10}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.what.stake.desc1')}}/>
-							<Text ml={{base: 0, lg: 10}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.what.stake.desc2')}} mt={5}/>
+							<Text ml={{base: 0, lg: 10}} fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.what.stake.desc1')}}/>
+							<Text ml={{base: 0, lg: 10}} fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.what.stake.desc2')}} mt={{base:5,'2xl':10}}/>
 						</Box>
 					</Flex>
 
@@ -184,7 +184,7 @@ const CmcStake = () => {
 						fontWeight={'600'}
 					>
 
-						<Text dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible')}}/>
+						<Text fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible')}}/>
 					</Box>
 					<Flex
 						mt={5}
@@ -194,7 +194,7 @@ const CmcStake = () => {
 						css={{
 							backdropFilter: 'blur(100px)'
 						}}
-						p={8}
+						p={{base:8,'2xl':12}}
 						alignItems={'center'}
 						flexDirection={{base: 'column', lg: 'row'}}
 					>
@@ -204,12 +204,12 @@ const CmcStake = () => {
 								fontWeight={'600'}
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
 							>{lang.t('cmc.stake.eligible.title1')}</Text>
-							<Text dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption1_1')}} mt={5}/>
-							<Text mt={5} dangerouslySetInnerHTML={{__html:lang.t('cmc.stake.eligible.caption1_2')}}/>
+							<Text fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption1_1')}} mt={5}/>
+							<Text fontSize={{'2xl':'1.25rem'}} mt={5} dangerouslySetInnerHTML={{__html:lang.t('cmc.stake.eligible.caption1_2')}}/>
 							<Text
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
 								fontWeight={'500'} mt={14}>{lang.t("cmc.stake.eligible.title2")}</Text>
-							<Text dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption2_1')}} mt={5}/>
+							<Text fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption2_1')}} mt={5}/>
 
 						</Box>
 					</Flex>
@@ -247,17 +247,17 @@ const CmcStake = () => {
 					>
 						<Image src={'images/cmc-stake/img_staking2.png'} p={10} w={{base: '80%', lg: '40%'}}/>
 						<Box>
-							<Text dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.setp1.desc1')}}/>
+							<Text dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.setp1.desc1')}} fontSize={{'2xl':'1.25rem'}}/>
 							<Text
 								mt={12}
 								fontWeight={'700'}
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
 							>{lang.t('cmc.stake.step1.title')}</Text>
-							<Text mt={5}>IOTX is easy to acquire on the largest exchanges in the world.
+							<Text mt={5} fontSize={{'2xl':'1.25rem'}}>IOTX is easy to acquire on the largest exchanges in the world.
 								Here is two recommended exchanges where you can get IOTX:</Text>
-							<Text fontWeight={'700'} color={'#44FFB2'}>{'Binance >>'}</Text>
-							<Text fontWeight={'700'} color={'#44FFB2'}>{'Coinbase >>'}</Text>
-							<Text mt={5}> If you are a winner, your bucket is already prestaked.
+							<Text fontWeight={'700'} color={'#44FFB2'} fontSize={{'2xl':'1.25rem'}}>{'Binance >>'}</Text>
+							<Text fontWeight={'700'} color={'#44FFB2'} fontSize={{'2xl':'1.25rem'}}>{'Coinbase >>'}</Text>
+							<Text mt={5} fontSize={{'2xl':'1.25rem'}}> If you are a winner, your bucket is already prestaked.
 								You can see it in your panel.</Text>
 						</Box>
 					</Flex>
@@ -309,10 +309,11 @@ const CmcStake = () => {
 									color={'#44FFB2'}
 									fontWeight={'600'}
 									mt={{base: 10, md: 0}}
+									fontSize={{'2xl':'1.25rem'}}
 								>
 									For Desktop users
 								</Text>
-								<Text mt={{base: 5, md: 10}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.step3.desc')}}/>
+								<Text mt={{base: 5, md: 10}} fontSize={{'2xl':'1.25rem'}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.step3.desc')}}/>
 							</Box>
 						</Flex>
 
@@ -323,6 +324,7 @@ const CmcStake = () => {
 							</Box>
 							<Box w={{base: '100%', md: '35%'}}>
 								<Text
+									fontSize={{'2xl':'1.25rem'}}
 									color={'#44FFB2'}
 									fontWeight={'600'}
 									mt={{base: 10, md: 0}}
@@ -330,7 +332,7 @@ const CmcStake = () => {
 									For Mobile users
 
 								</Text>
-								<Text mt={{base: 5, md: 10}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.step3.desc2')}}/>
+								<Text fontSize={{'2xl':'1.25rem'}} mt={{base: 5, md: 10}} dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.step3.desc2')}}/>
 							</Box>
 						</Flex>
 					</Box>
@@ -350,7 +352,7 @@ const CmcStake = () => {
 						}}
 						py={{base: 5, md: 10}} px={{base: 5, md: 20}} mt={10}
 						justifyContent={'space-between'}
-						fontSize={{base: '0.9rem', xl: '1rem', '2xl': '3rem'}}
+						fontSize={{base: '0.9rem', xl: '1rem', '2xl': '1.25rem'}}
 						flexDirection={{base: 'column', lg: 'row'}}
 					>
 						<Box w={{base: '100%', lg: '50%'}}>
@@ -423,7 +425,7 @@ const CmcStake = () => {
 								<Image src={'images/cmc-stake/step5_1.png'}
 								       onClick={() => store.onOpen('images/cmc-stake/step5_1.png')}/>
 							</Box>
-							<Box w={{base: '100%', lg: '35%'}} mt={{base: 10, lg: 0}}>
+							<Box w={{base: '100%', lg: '35%'}} mt={{base: 10, lg: 0}} fontSize={{'2xl':'1.25rem'}}>
 								<Text>
 									After selecting your Delegate and voting options, click “Proceed to Vote” and confirm the
 									staking/voting transaction.
@@ -432,7 +434,7 @@ const CmcStake = () => {
 									For Desktop users
 								</Text>
 
-								<Text mt={5}>
+								<Text mt={5} >
 									Confirm the transaction details on the voting website. Then in the ioPay Desktop app, sign the
 									transaction. You will see a confirmation screen in ioPay with your transaction hash.
 								</Text>
@@ -444,7 +446,7 @@ const CmcStake = () => {
 								<Image src={'images/cmc-stake/step5_2.png'}
 								       onClick={() => store.onOpen('images/cmc-stake/step5_2.png')}/>
 							</Box>
-							<Box w={{base: '100%', lg: '35%'}} mt={{base: 10, lg: 0}}>
+							<Box w={{base: '100%', lg: '35%'}} mt={{base: 10, lg: 0}} fontSize={{'2xl':'1.25rem'}}>
 								<Text fontWeight={'600'} color={'#44FFB2'}>
 									For Mobile users
 								</Text>
@@ -455,7 +457,7 @@ const CmcStake = () => {
 							</Box>
 						</Flex>
 					</Box>
-					<Text fontWeight={'500'} mt={20} fontSize={{base: '0.9rem', xl: '1.2rem', '2xl': '3rem'}}
+					<Text fontWeight={'500'} mt={20} fontSize={{base: '0.9rem', xl: '1.2rem', '2xl': '1.5rem'}}
 					>CONGRATULATIONS, YOU STAKED/VOTED WITH NATIVE IOTX VIA IOPAY!</Text>
 				</Box>
 				<Footer/>

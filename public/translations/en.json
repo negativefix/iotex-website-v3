@@ -821,7 +821,7 @@
   "cookie.tips3": "for more details.",
   "accept.cookies": "Accept Cookies",
   "cmc.starter.pack.title": "IoTeX CoinMarketCap (CMC)",
-  "cmc.starter.pack.subtitle": "Campaign Activation",
+  "cmc.starter.pack.subtitle": "<span style='color:#44FFB2'>CMC Campaign is over</span>, to see if you won and how to get rewards",
   "cmc.starter.pack.section1.title": "COMPLETE AND BECOME ELIGIBLE TO RECEIVE CMC REWARDS",
   "cmc.starter.pack.section1.subtitle1": "REQUIREMENT 1. BECOME FOLLOWER OF ONE MEDIA CHANNEL",
   "cmc.starter.pack.section1.subtitle2": "REQUIREMENT 2. SUBSCRIBE TO NEWSLETTER",
@@ -943,6 +943,7 @@
   "cmc.stake.setp1.desc1": "Make sure that you have at least <span style='color:#44FFB2;font-weight:500'>101 IOTX</span> (minimum amount needed to stake is 100 IOTX) in your wallet before you can start staking. You will need some IOTX for transactions and staking. We always recommend having at least some extra IOTX in your wallet, as you stake and unstake, to pay for gas. 1 IOTX is enough for a lot of transactions.",
   "cmc.stake.step1.title": "Don't have IOTX?",
   "cmc.stake.step3.desc": "Make sure your ioPay Desktop app is open, and click “Vote for delegate”. Once redirected to the <span style='color:#44FFB2;font-weight:500'>voting website</span>, click My Stakes → +New Stake.",
-  "cmc.stake.step3.desc2": "Staking is now built into ioPay Mobile! Access it via the Home “Wallet” tab by clicking the <span style='font-weight:600'>Stake → New Stake.</span>"
+  "cmc.stake.step3.desc2": "Staking is now built into ioPay Mobile! Access it via the Home “Wallet” tab by clicking the <span style='font-weight:600'>Stake → New Stake.</span>",
+  "cmc.banner.btn": "Check CMC Rewards"
 }
 
