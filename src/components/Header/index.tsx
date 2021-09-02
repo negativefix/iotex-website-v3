@@ -61,15 +61,14 @@ export const Header = observer(() => {
   const exploreConfig = [
     {
       name: lang.t("GET.STARTED"),
-      path:'/start',
       lists: [
-        // {
-        //   name: lang.t("ioPay.wallet"),
-        //   path: "/iopay/",
-        //   blank: true,
-        //   icon: "images/explore/icon_wallet_n.png",
-        //   icon_active: "images/explore/icon_wallet_s.png",
-        // },
+        {
+          name: lang.t("get.started"),
+          path: "/start",
+          blank: false,
+          icon: "images/explore/icon_getstarted.png",
+          icon_active: "images/explore/icon_getstarted_h.png",
+        },
         // {
         //   name: lang.t("What.is.IoTeX"),
         //   path: "https://onboard.iotex.io/introduction",
@@ -175,8 +174,8 @@ export const Header = observer(() => {
           name: lang.t("hackathon"),
           path: "/hackathon-india",
           blank: false,
-          icon: "images/explore/icon_iott_n.png",
-          icon_active: "images/explore/icon_iott_s.png",
+          icon: "images/explore/icon_hackathon.png",
+          icon_active: "images/explore/icon_hackathon_h.png",
         },
       ],
     },
@@ -509,33 +508,14 @@ export const Header = observer(() => {
                         mx={index === 1 ? "10%" : ""}
                         mr={index === 2 ? "10%" : ""}
                       >
-                        {
-                          item.path?(
-                            <Link
-                              href={item.path}
-                              _hover={{}}
-                              _focus={{}}
-                            >
-                              <Text
-                                fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
-                                color="grayColor3"
-                                fontWeight="semibold"
-                                mb="1.5rem"
-                              >
-                                {item.name}
-                              </Text>
-                            </Link>
-                          ):(
-                            <Text
-                              fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
-                              color="grayColor3"
-                              fontWeight="semibold"
-                              mb="1.5rem"
-                            >
-                              {item.name}
-                            </Text>
-                          )
-                        }
+                        <Text
+                          fontSize={{ base: "1.125rem", "2xl": "1.25rem" }}
+                          color="grayColor3"
+                          fontWeight="semibold"
+                          mb="1.5rem"
+                        >
+                          {item.name}
+                        </Text>
                         {item.lists.map((option) => {
                           return (
                             <a
