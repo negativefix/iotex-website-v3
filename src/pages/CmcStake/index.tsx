@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 import {
-	Box,
+	Box, Button,
 	Divider,
 	Flex,
 	Image, Link,
@@ -35,7 +35,7 @@ const CardItem = ({img, text}) => (
 		alignItems={'center'}
 		py={{base: 5, lg: 10}}
 	>
-		<Image src={img} w={{base: '50%', lg: 'auto'}}/>
+		<Image src={img} w={{base: '50%', lg: '50%'}}/>
 		<Text fontSize={{base: '1rem', md: '1.25rem'}} fontWeight={'600'} mt={5}>{text}</Text>
 	</Flex>
 )
@@ -207,10 +207,31 @@ const CmcStake = () => {
 								fontWeight={'600'}
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
 							>{lang.t('cmc.stake.eligible.title1')}</Text>
-							<Text fontSize={{'2xl': '1.25rem'}}
+							<Text
+								mt={5}
+								fontWeight={'500'}
+								fontSize={{base: '1rem', xl: '1.25rem', '2xl': '3rem'}}
+							>{'Stake for 91+ days to maximize your IOTX rewards'}</Text>
+							<Text fontSize={{'2xl': '1.25rem'}} mb={5}
 							      dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption1_1')}} mt={5}/>
+
+							<Link href={'https://coinmarketcap.com/earn/token-distribution-status'} isExternal _hover={{}}>
+								<Button _active={{}} _hover={{}} _focus={{}} background={'linear-gradient(92.18deg, #44FFB2 19.21%, #00D3DC 105.06%)'} color={'black'}>Check If You Won Here</Button>
+							</Link>
+
 							<Text fontSize={{'2xl': '1.25rem'}} mt={5}
 							      dangerouslySetInnerHTML={{__html: lang.t('cmc.stake.eligible.caption1_2')}}/>
+							<UnorderedList color={'#44FFB2'} fontWeight={'500'}>
+								<ListItem>
+									<Link href={'https://iotex.io/iopay'} isExternal _hover={{}} _focus={{}}>{'Download ioPay >>'}</Link>
+								</ListItem>
+								{/*<ListItem>*/}
+								{/*	<Link isExternal _hover={{}} _focus={{}}>{'How to check prestaked bucket in ioPay >>'}</Link>*/}
+								{/*</ListItem>*/}
+								{/*<ListItem>*/}
+								{/*	<Link isExternal _hover={{}} _focus={{}}>{'I am staking with Trust Wallet >>'}</Link>*/}
+								{/*</ListItem>*/}
+							</UnorderedList>
 							<Text
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
 								fontWeight={'500'} mt={14}>{lang.t("cmc.stake.eligible.title2")}</Text>

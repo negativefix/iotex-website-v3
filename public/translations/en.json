@@ -935,15 +935,14 @@
   "cmc.stake.with.IOTX": "WHY STAKE WITH IOTEX?",
   "cmc.stake.with.IOTX.caption": "Lots of benefits for CoinMarketCap (CMC) Earn and Stake participants! Only for CMC participants:\n <span style='color:#44FFB2;font-weight:600'>Exclusive NFT + 20 IOTX + 11% APY + Other Perks</span>",
   "cmc.stake.eligible": "TO BE ELIGIBLE FOR <span style='color:#44FFB2'>EXTRA IOTX REWARDS, NFT, AND APY</span>?",
-  "cmc.stake.eligible.title1": "Stake for 91+ Days",
-  "cmc.stake.eligible.caption1_1": " See if you won by going to the CMC page <a style='color:#44FFB2;font-weight:500' href='https://coinmarketcap.com/earn/token-distribution-status' target='_blank'>here</a>, click “Check Status” and fill in your info.",
-  "cmc.stake.eligible.caption1_2": "If you have won, then you already have a prestaked bucket. The 200 IOTX you won should already be in your wallet! Check it now. <a style='color:#44FFB2;font-weight:500' href='https://iotex.io/iopay' target='_blank'>Here is how to get there >></a>",
+  "cmc.stake.eligible.title1": "See if you are winner of CMC Earn",
+  "cmc.stake.eligible.caption1_1": "Ready to stake? See if you won by going to the CMC page <a style='color:#44FFB2;font-weight:500' href='https://coinmarketcap.com/earn/token-distribution-status' target='_blank'>here</a>, click “Check Status” and fill in your info.",
+  "cmc.stake.eligible.caption1_2": "If you have won, then you already have a prestaked bucket. The 200 IOTX you won should already be in your wallet! Check it now.",
   "cmc.stake.eligible.title2": "Didn't win?",
-  "cmc.stake.eligible.caption2_1":"<span style='color:#44FFB2;font-weight:500'>Stake at least 100 IOTX for 91+ days</span> and get a bonus 20 IOTX, all the IOTX staking rewards of up to 11% APY, exclusive NFTs, and other perks. Here is how to get started: ",
+  "cmc.stake.eligible.caption2_1":"<span style='color:#44FFB2;font-weight:500'>Stake at least 100 IOTX in a new bucket for 91+ days with Stake-Lock turned on</span> and get a bonus 20 IOTX, all the IOTX staking rewards of up to 11% APY, exclusive NFTs, and other perks. Here is how to get started:",
   "cmc.stake.setp1.desc1": "Make sure that you have at least <span style='color:#44FFB2;font-weight:500'>101 IOTX</span> (minimum amount needed to stake is 100 IOTX) in your wallet before you can start staking. You will need some IOTX for transactions and staking. We always recommend having at least some extra IOTX in your wallet, as you stake and unstake, to pay for gas. 1 IOTX is enough for a lot of transactions.",
   "cmc.stake.step1.title": "Don't have IOTX?",
   "cmc.stake.step3.desc": "Make sure your ioPay Desktop app is open, and click “Vote for delegate”. Once redirected to the <span style='color:#44FFB2;font-weight:500'>voting website</span>, click My Stakes → +New Stake.",
   "cmc.stake.step3.desc2": "Staking is now built into ioPay Mobile! Access it via the Home “Wallet” tab by clicking the <span style='font-weight:600'>Stake → New Stake.</span>",
   "cmc.banner.btn": "Check CMC Rewards"
 }
-
