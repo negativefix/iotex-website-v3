@@ -228,9 +228,9 @@ const CmcStake = () => {
 								{/*<ListItem>*/}
 								{/*	<Link isExternal _hover={{}} _focus={{}}>{'How to check prestaked bucket in ioPay >>'}</Link>*/}
 								{/*</ListItem>*/}
-								{/*<ListItem>*/}
-								{/*	<Link isExternal _hover={{}} _focus={{}}>{'I am staking with Trust Wallet >>'}</Link>*/}
-								{/*</ListItem>*/}
+								<ListItem>
+									<Link isExternal href={'https://community.iotex.io/t/migrate-your-iotex-wallet-from-trust-wallet-to-iopay/2352'} _hover={{}} _focus={{}}>{'I am staking with Trust Wallet >>'}</Link>
+								</ListItem>
 							</UnorderedList>
 							<Text
 								fontSize={{base: '1.2rem', xl: '1.5rem', '2xl': '3.5rem'}}
