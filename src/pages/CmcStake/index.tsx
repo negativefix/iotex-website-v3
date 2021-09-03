@@ -18,11 +18,13 @@ import HighLight from "@/components/HighLight";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import {subgraphAPI} from "@/lib/iotexGraphApi";
 import {numberWithCommas} from "@/utils/index";
+import {BigNumberState} from "@/store/standard/BigNumberState";
+import BigNumber from "bignumber.js";
 
 
 const StatItem = ({text, value}) => (
 	<Box textAlign={'center'}>
-		<Text fontWeight={'500'} fontSize={{base: '2rem', md: '3rem', xl: '3rem', '2xl': '3.5rem'}}>{value}</Text>
+		<Text fontWeight={'500'} fontSize={{base: '1.5rem', md: '3rem', xl: '2.5rem', '2xl': '3.5rem'}}>{value}</Text>
 		<Text fontSize={{base: '1rem', md: '1.25rem'}} mt={2}>{text}</Text>
 	</Box>
 )
@@ -48,6 +50,10 @@ const CmcStake = () => {
 		imgUrl: '',
 		stakers: 0,
 		transactions: 0,
+		totalIotexStaked: 0,
+		iotexPrice:0,
+		totalIotexStakedState:new BigNumberState({}),
+		delegates: 0,
 		onClose: () => {
 			store.isOpen = false
 		},
@@ -61,7 +67,7 @@ const CmcStake = () => {
 					{
 						where: {
 							key: {
-								_in: ["deviceCount", "transactions", "commiunity", "stakers"],
+								_in: ["delegates", "totalIotexStaked", "iotexPrice", "stakers"],
 							},
 						},
 					},
@@ -74,16 +80,17 @@ const CmcStake = () => {
 			response.data.KV.forEach((item) => {
 				store[`${item.key}`] = Number(item.value);
 			});
+			store.totalIotexStakedState.setValue(new BigNumber(store.totalIotexStaked))
 		},
 	}))
 	useEffect(() => {
 		store.getAnalysisData();
 	}, []);
 	const STATS = [
-		{text: 'DELEGATES', value: '70+'},
+		{text: 'DELEGATES', value: numberWithCommas(store.delegates)},
 		{text: 'STAKERS', value: numberWithCommas(store.stakers)},
-		{text: 'TOTAL IOTX STAKED', value: '27%'},
-		{text: 'TRANSACTIONS', value: numberWithCommas(store.transactions)}
+		{text: 'TOTAL IOTX STAKED', value: numberWithCommas(store.totalIotexStakedState.format)},
+		{text: 'TOTAL VALUE LOCKED', value: numberWithCommas(parseInt(String(store.iotexPrice * store.totalIotexStakedState.format)))}
 	]
 
 	const CARD_CONTENT = [
