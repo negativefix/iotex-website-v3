@@ -13,8 +13,7 @@ import {
 import {observer} from "mobx-react-lite";
 import {useStore} from "@/store/index";
 import {helper} from "@/utils/helper";
-
-
+import axios from 'axios';
 
 const ContactForm = () => {
 	const {lang} = useStore()
@@ -31,6 +30,10 @@ const ContactForm = () => {
 			interest: !interest
 		}
 		setErrors(errors)
+		const ticket = {
+			name,email,company,interest
+		}
+		axios.post('http://localhost:3001/api/zendesk',{ticket})
 	}
 	return (
 		<Box

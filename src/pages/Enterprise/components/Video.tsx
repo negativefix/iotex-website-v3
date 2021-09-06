@@ -82,7 +82,7 @@ const Video = () => {
 						</ModalBody>
 					</ModalContent>
 				</Modal>
-			</Box>w
+			</Box>
 		</>
 	)
 }
